@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta name="robots" content="noindex, nofollow">
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi, I'm Aisha | A Data Enthusiast</title>
-    
+    <title>Aisha | Data Enthusiast</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
+        /* This ensures the Tableau dashboard fits the container exactly */
+        .tableauPlaceholder { width: 100% !important; height: 650px !important; }
+        object { height: 650px !important; }
     </style>
 </head>
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
@@ -25,11 +26,11 @@
         </div>
     </nav>
 
-    <header class="max-w-4xl mx-auto pt-24 pb-16 px-6">
+    <header class="max-w-4xl mx-auto pt-20 pb-12 px-6">
         <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 bg-gradient-to-r from-purple-900 to-purple-500 bg-clip-text text-transparent">
             Strategic Data Analyst
         </h1>
-        <p class="text-xl md:text-2xl text-gray-600 italic border-l-4 border-purple-300 pl-8 py-4 bg-white/40 backdrop-blur-sm rounded-r-2xl shadow-sm leading-relaxed mb-6">
+        <p class="text-xl md:text-2xl text-gray-600 italic border-l-4 border-purple-300 pl-8 py-4 bg-white/40 backdrop-blur-sm rounded-r-2xl shadow-sm mb-6">
             "As an Analyst, my site shouldn't just show that I can build a dashboard; it needs to show that I understand the numbers inside it."
         </p>
         <p class="text-gray-500 max-w-2xl font-medium">
@@ -43,34 +44,60 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
                 <div>
                     <h2 class="text-3xl font-black italic tracking-tight text-purple-900">CEC 2026 Orbital Audit</h2>
-                    <p class="text-gray-500 font-medium tracking-tight">Financial Modeling // Synthetic Python-Generated Telemetry</p>
+                    <p class="text-gray-500 font-medium tracking-tight uppercase text-xs tracking-widest">Financial Modeling // Synthetic Telemetry</p>
                 </div>
                 <div class="flex gap-2">
                     <span class="text-[10px] font-black bg-green-100 text-green-700 px-3 py-1 rounded-md uppercase tracking-widest">Live Terminal</span>
                 </div>
             </div>
             
-           div class="relative w-full overflow-hidden rounded-[2rem] bg-purple-50 border border-purple-100 shadow-inner group" style="padding-bottom: 65%;">
-                <iframe 
-                    src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true" 
-                    class="absolute inset-0 w-[110%] h-[110%] border-none origin-top-left"
-                    style="border-radius: 2rem; transform: scale(0.91); margin-top: -2%; margin-left: -2%;"
-                    allowfullscreen>
-                </iframe>
+            <div class="w-full overflow-hidden rounded-[2rem] bg-white border border-purple-100 shadow-inner">
+                <div class='tableauPlaceholder' id='viz1710113800000' style='position: relative'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='Dashboard 2' src='https://public.tableau.com/static/images/CE/CEC2026OrbitalResourceFinancialAudit/Dashboard2/1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                        <param name='embed_code_version' value='3' /> 
+                        <param name='site_root' value='' />
+                        <param name='name' value='CEC2026OrbitalResourceFinancialAudit/Dashboard2' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/CE/CEC2026OrbitalResourceFinancialAudit/Dashboard2/1.png' /> 
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                        <param name='filter' value='publish=yes' />
+                    </object>
+                </div>                
+                <script type='text/javascript'>                    
+                    var divElement = document.getElementById('viz1710113800000');                    
+                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                    vizElement.style.width='100%';
+                    vizElement.style.height='650px';                    
+                    var scriptElement = document.createElement('script');                    
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                </script>
             </div>
 
             <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-6 bg-white/50 rounded-3xl border border-purple-50">
-                    <span class="block text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-2">Primary Outcome</span>
-                    <span class="text-xl font-bold text-purple-900">116% Mission Efficiency</span>
+                    <span class="block text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-2 text-center md:text-left">Outcome</span>
+                    <span class="text-xl font-bold text-purple-900 block text-center md:text-left">116% Efficiency</span>
                 </div>
                 <div class="p-6 bg-white/50 rounded-3xl border border-purple-50">
-                    <span class="block text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-2">Data Scale</span>
-                    <span class="text-xl font-bold text-purple-900">10,000 Row Ledger</span>
+                    <span class="block text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-2 text-center md:text-left">Data Scale</span>
+                    <span class="text-xl font-bold text-purple-900 block text-center md:text-left">10,000 Row Ledger</span>
                 </div>
                 <div class="p-6 bg-white/50 rounded-3xl border border-purple-50">
-                    <span class="block text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-2">Tech Stack</span>
-                    <span class="text-xl font-bold text-purple-900">Python & Tableau</span>
+                    <span class="block text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-2 text-center md:text-left">Stack</span>
+                    <span class="text-xl font-bold text-purple-900 block text-center md:text-left">Python & Tableau</span>
                 </div>
             </div>
         </div>
@@ -78,8 +105,11 @@
 
     <footer class="text-center pb-20 px-6">
         <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.5em] mb-4">Inquiries Only</p>
-        <a href="mailto:hello@example.com" class="text-purple-600 font-black hover:text-purple-900 transition-colors">CONTACT FOR PROFESSIONAL HISTORY →</a>
+        <a href="mailto:your-email@example.com" class="text-purple-600 font-black hover:text-purple-900 transition-colors uppercase tracking-widest text-xs">Request Professional History →</a>
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
