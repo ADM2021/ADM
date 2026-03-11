@@ -4,7 +4,7 @@
     <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aisha | Data Enthusiast</title>
+    <title>Aisha | Analyst Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
@@ -14,12 +14,27 @@
         .tab-btn.active { background-color: #581c87; color: white; border-color: #581c87; }
         code { font-family: 'Courier New', Courier, monospace; }
         
-        /* Subtle pulse for the construction banner */
+        /* Construction Banner Pulse */
         @keyframes pulse-banner {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.9; transform: scale(0.99); }
         }
         .animate-banner { animation: pulse-banner 3s infinite ease-in-out; }
+
+        /* VERTICAL CAROUSEL LOGIC */
+        @keyframes vertical-carousel {
+            0%, 15% { transform: translateY(0); }
+            20%, 35% { transform: translateY(-16.66%); }
+            40%, 55% { transform: translateY(-33.33%); }
+            60%, 75% { transform: translateY(-50%); }
+            80%, 95% { transform: translateY(-66.66%); }
+            100% { transform: translateY(-83.33%); }
+        }
+        .animate-carousel {
+            display: flex;
+            flex-direction: column;
+            animation: vertical-carousel 12s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
     </style>
 </head>
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
@@ -42,13 +57,21 @@
         </div>
     </div>
 
-    <header class="max-w-3xl mx-auto pt-8 pb-8 px-6 text-center">
-        <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent leading-none">
-            Strategic Data Analyst
-        </h1>
-        <p class="text-lg text-gray-500 font-medium italic mb-8">
-            "Understanding the numbers inside the dashboard."
-        </p>
+    <header class="max-w-5xl mx-auto pt-8 pb-8 px-6 text-center">
+        <div class="inline-flex flex-col md:flex-row items-center justify-center text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent">
+            <div class="h-[1.2em] overflow-hidden relative mb-2 md:mb-0">
+                <div class="animate-carousel text-center md:text-right md:pr-4">
+                    <span class="h-[1.2em] flex items-center justify-center md:justify-end">Strategic Data</span>
+                    <span class="h-[1.2em] flex items-center justify-center md:justify-end">Sr. Operation And Research</span>
+                    <span class="h-[1.2em] flex items-center justify-center md:justify-end">Lead Operation And Research</span>
+                    <span class="h-[1.2em] flex items-center justify-center md:justify-end">Data Systems Engineer</span>
+                    <span class="h-[1.2em] flex items-center justify-center md:justify-end">Financial</span>
+                    <span class="h-[1.2em] flex items-center justify-center md:justify-end">Strategic Data</span>
+                </div>
+            </div>
+            <span class="text-purple-950">Analyst</span>
+        </div>
+        <p class="text-lg text-gray-500 font-medium italic mt-8 mb-8">"Understanding the numbers inside the dashboard."</p>
     </header>
 
     <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6">
@@ -84,15 +107,8 @@
                     <h2 class="text-2xl font-black italic text-purple-900 uppercase leading-none">CEC 2026 Orbital Audit</h2>
                     <span class="text-[9px] font-black bg-green-100 text-green-700 px-2 py-1 rounded uppercase tracking-widest">Live Viz</span>
                 </div>
-                
                 <div class="w-full bg-purple-50 rounded-2xl border border-purple-100 shadow-inner overflow-hidden relative" style="height: 580px;">
-                    <iframe 
-                        src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true" 
-                        class="absolute border-none origin-top-left" 
-                        style="width: 150%; height: 150%; transform: scale(0.67); border-radius: 1rem;" 
-                        allowfullscreen 
-                        scrolling="no">
-                    </iframe>
+                    <iframe src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true" class="absolute border-none origin-top-left" style="width: 150%; height: 150%; transform: scale(0.67); border-radius: 1rem;" allowfullscreen scrolling="no"></iframe>
                 </div>
             </div>
 
@@ -101,23 +117,24 @@
                 <div class="space-y-6 text-sm text-gray-600">
                     <div>
                         <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">The Challenge</h3>
-                        <p>Celestial Extraction Corp (CEC) required a high level financial oversight tool to evaluate mission efficiency across orbital sectors. I transformed raw mission telemetry into a strategic command center for C-Suite executives to identify **"Alpha"** in a high risk frontier economy.</p>
+                        <p>Celestial Extraction Corp (CEC) required a high level financial oversight tool to evaluate mission efficiency. I transformed raw mission telemetry into a strategic command center for C-Suite executives to identify **"Alpha"** in a high risk frontier economy.</p>
                     </div>
-
                     <div class="bg-purple-950 p-6 rounded-2xl border border-white/10 shadow-inner overflow-x-auto">
-                        <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest block mb-4">// Alpha Telemetry Generator</span>
                         <pre class="text-purple-100 text-[10px] leading-relaxed"><code>import pandas as pd
 import numpy as np
 
-# Simulate 10k rows of mission telemetry
+# Highlight Alphas via Python
 data = {
     'Sector': np.random.choice(['Inner Belt', 'Trojan Clouds', 'Lunar South Pole'], 10000),
     'Op_Cost_B': np.random.uniform(0.5, 4.5, 10000),
     'Yield_Tons': np.random.uniform(10, 500, 10000)
 }
-
 df = pd.DataFrame(data)
-df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B']) # Highlighting Alphas</code></pre>
+df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 2: Visual Architecture</h3>
+                        <p>Designed as a holographic "HUD" Command Center featuring a Resource Treemap and an Executive ROI scatter plot to distinguish high profit stars from problem sectors.</p>
                     </div>
                 </div>
             </div>
@@ -130,9 +147,9 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B']) # Highlighting Alphas</code><
                             <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Certifications</h3>
                             <ul class="space-y-4">
                                 <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Microsoft PL-900</li>
-                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Project Management <span class="text-[10px] font-medium text-purple-400 leading-none">(Cornell University)</span></li>
+                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Project Management <span class="text-[10px] font-medium text-purple-400 leading-none">(Cornell)</span></li>
                                 <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ AWS Fundamentals Specialization</li>
-                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Gen AI Learning Path <span class="text-[10px] font-medium text-purple-400 leading-none">(Google Cloud)</span></li>
+                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Gen AI Learning Path <span class="text-[10px] font-medium text-purple-400 leading-none">(Google)</span></li>
                                 <li class="text-sm font-bold text-purple-400 flex items-center gap-2">⚡ PL-300 Candidate (March 2026)</li>
                                 <li class="text-sm font-bold text-purple-400 flex items-center gap-2">⚡ Security+ Candidate (March 2026)</li>
                             </ul>
@@ -142,21 +159,18 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B']) # Highlighting Alphas</code><
                             <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-gray-500 leading-tight">
                                 <p class="flex justify-between border-b border-purple-50 pb-2"><span>Power Automate Cookbook</span> <span class="text-purple-300">Najjar</span></p>
                                 <p class="flex justify-between border-b border-purple-50 pb-2"><span>Data Viz with Power BI</span> <span class="text-purple-300">Kolokolov</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Learning Power Apps</span> <span class="text-purple-300">Shrivastava</span></p>
                                 <p class="flex justify-between border-b border-purple-50 pb-2"><span>Best Practices Experimentation</span> <span class="text-purple-300">Alberts (DoD)</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Show Your Work</span> <span class="text-purple-300">Kleon</span></p>
                                 <p class="flex justify-between border-b border-purple-50 pb-2"><span>Grokking Algorithms</span> <span class="text-purple-300">Bhargava</span></p>
                             </div>
                         </div>
                     </div>
-                    <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100 overflow-y-auto max-h-[600px]">
+                    <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100 max-h-[600px] overflow-y-auto">
                         <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Completed Courses</h3>
-                        <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-purple-900">
+                        <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-purple-900 leading-snug">
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Introduction to Power Platform</span> <span class="text-purple-300">Microsoft</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Google Data Analytics Capstone</span> <span class="text-purple-300">Google</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>The Ultimate Docker Course</span> <span class="text-purple-300">Mosh</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Generative AI with LLMs</span> <span class="text-purple-300">AWS</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>AWS Fundamentals Specialization</span> <span class="text-purple-300">AWS</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Unlock Foundations</span> <span class="text-purple-300">Google Cloud</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Play It Safe: Security Risks</span> <span class="text-purple-300">Google</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Connect and Protect: Networks</span> <span class="text-purple-300">Google</span></p>
