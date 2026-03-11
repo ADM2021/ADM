@@ -5,79 +5,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aisha | Data Enthusiast</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-btn.active { background-color: #581c87; color: white; border-color: #581c87; }
     </style>
 </head>
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
 
-    <nav class="p-8 flex justify-between items-center max-w-3xl mx-auto">
+    <nav class="p-8 flex justify-between items-center max-w-5xl mx-auto">
         <div class="flex flex-col leading-tight">
-            <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi,,, I'm Aisha</span>
+            <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
             <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
         </div>
         <div class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100">
-            Secure Terminal // 2026
+            Secure Terminal // 2026.03.10
         </div>
     </nav>
 
-    <header class="max-w-2xl mx-auto pt-12 pb-8 px-6 text-center">
-        <h1 class="text-4xl md:text-5xl font-black tracking-tighter mb-8 bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent leading-none">
+    <header class="max-w-3xl mx-auto pt-12 pb-8 px-6 text-center">
+        <h1 class="text-5xl md:text-6xl font-black tracking-tighter mb-8 bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent leading-none">
             Strategic Data Analyst
         </h1>
-        <p class="text-md text-gray-600 italic border-l-4 border-purple-200 pl-4 py-2 bg-white/40 rounded-r-lg inline-block text-left mb-8">
-            "As an Analyst, my site shouldn't just show that I can build a dashboard; <br class="hidden md:block"> it needs to show that I understand the numbers inside it."
-        </p>
-        <p class="text-sm text-gray-500 font-medium max-w-md mx-auto">
-            I am a data enthusiast who has held many data-related roles, specializing in transforming complex telemetry into actionable insights.
+        <p class="text-lg text-gray-500 font-medium italic mb-8">
+            "Understanding the numbers inside the dashboard."
         </p>
     </header>
 
-    <section class="max-w-3xl mx-auto p-4 mb-20">
-        <div class="bg-white/95 backdrop-blur-xl border border-white rounded-[2.5rem] p-6 shadow-2xl shadow-purple-100/50">
+    <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6">
+        <button onclick="openTab(event, 'about')" class="tab-btn active px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">01 // About Me</button>
+        <button onclick="openTab(event, 'portfolio')" class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">02 // Portfolio</button>
+        <button onclick="openTab(event, 'methodology')" class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">03 // How It Was Done</button>
+        <button onclick="openTab(event, 'resources')" class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">04 // Certs & Resources</button>
+    </div>
+
+    <section class="max-w-4xl mx-auto p-4 mb-20">
+        <div class="bg-white/95 backdrop-blur-xl border border-white rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-purple-100/50">
             
-            <div class="flex justify-between items-end mb-6 px-4">
-                <div>
-                    <h2 class="text-xl font-black italic tracking-tight text-purple-900 leading-none">CEC 2026 Orbital Audit</h2>
-                    <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.2em] mt-2 text-left">Python-Generated ROI Modeling</p>
+            <div id="about" class="tab-content active animate-in fade-in duration-500">
+                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase">The Strategic Specialist</h2>
+                
+                <div class="space-y-8 text-gray-600 leading-relaxed">
+                    <p class="text-lg font-medium text-purple-900/80">
+                        "I don’t just build dashboards; I engineer the intelligence that drives the enterprise."
+                    </p>
+                    
+                    <p>
+                        With **over 13 years of experience** in deep dive data analytics, I specialize in bridging the gap between raw technical telemetry and high stakes executive strategy. My career has been defined by a simple truth: data only matters when it is actionable. I build the automated systems that turn massive datasets into clear, decisive narratives.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-5 bg-purple-50/50 rounded-2xl border border-purple-100">
+                            <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">A Decade of Architecture</span>
+                            <p class="text-xs text-gray-500">From legacy systems to Python driven automation, I design end to end data pipelines that scale with the business.</p>
+                        </div>
+                        <div class="p-5 bg-purple-50/50 rounded-2xl border border-purple-100">
+                            <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Holistic Business Impact</span>
+                            <p class="text-xs text-gray-500">I leverage a deep understanding of organizational mechanics to ensure my insights impact every level of the company.</p>
+                        </div>
+                    </div>
+
+                    <p>
+                        Beyond the terminal, I am the founder of <strong>Zari LLC</strong> and a <strong>Hybrid Gamer</strong>. My methodology is defined by a dual perspective: the frame perfect precision of competitive gaming and the intuitive, human centered logic of cozy aesthetics.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <div class="px-4 py-2 bg-purple-900 text-white rounded-full text-[10px] font-bold uppercase tracking-widest shadow-md">Strategic Analysis</div>
+                        <div class="px-4 py-2 bg-purple-100 text-purple-900 rounded-full text-[10px] font-bold uppercase tracking-widest">Process Automation</div>
+                        <div class="px-4 py-2 bg-purple-50 text-purple-400 border border-purple-100 rounded-full text-[10px] font-bold uppercase tracking-widest">Enterprise Intelligence</div>
+                    </div>
                 </div>
-                <span class="text-[9px] font-black bg-green-100 text-green-700 px-2 py-1 rounded uppercase tracking-widest">Live</span>
-            </div>
-            
-                        <div class="w-full bg-purple-50 rounded-2xl border border-purple-100 shadow-inner overflow-hidden relative" style="height: 400px;">
-                <iframe 
-                    src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true" 
-                    class="absolute border-none origin-top-left"
-                    style="width: 200%; height: 200%; transform: scale(0.50); border-radius: 1.5rem;"
-                    allowfullscreen>
-                </iframe>
             </div>
 
-            <div class="mt-8 grid grid-cols-3 gap-4 px-2">
-                <div class="text-center">
-                    <span class="block text-[8px] font-black text-purple-300 uppercase tracking-widest mb-1">Efficiency</span>
-                    <span class="text-xl font-bold text-purple-900 italic leading-none">116%</span>
+            <div id="portfolio" class="tab-content animate-in fade-in duration-500">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-black italic text-purple-900 uppercase">CEC 2026 Orbital Audit</h2>
+                    <span class="text-[9px] font-black bg-green-100 text-green-700 px-2 py-1 rounded uppercase tracking-widest">Live Viz</span>
                 </div>
-                <div class="text-center border-x border-purple-50">
-                    <span class="block text-[8px] font-black text-purple-300 uppercase tracking-widest mb-1">Data Scale</span>
-                    <span class="text-xl font-bold text-purple-900 italic leading-none">10K Rows</span>
+                <div class="w-full bg-purple-50 rounded-2xl border border-purple-100 shadow-inner overflow-hidden relative" style="height: 420px;">
+                    <iframe 
+                        src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true" 
+                        class="absolute border-none origin-top-left"
+                        style="width: 200%; height: 200%; transform: scale(0.50); border-radius: 1.5rem;"
+                        allowfullscreen>
+                    </iframe>
                 </div>
-                <div class="text-center">
-                    <span class="block text-[8px] font-black text-purple-300 uppercase tracking-widest mb-1">Stack</span>
-                    <span class="text-xl font-bold text-purple-900 italic leading-none">Py/Tableau</span>
+                <div class="mt-8 grid grid-cols-3 gap-4">
+                    <div class="text-center p-4 bg-purple-50/50 rounded-xl">
+                        <span class="block text-[8px] font-black text-purple-300 uppercase mb-1">Efficiency</span>
+                        <span class="text-lg font-bold text-purple-900">116%</span>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50/50 rounded-xl">
+                        <span class="block text-[8px] font-black text-purple-300 uppercase mb-1">Scale</span>
+                        <span class="text-lg font-bold text-purple-900">10K Rows</span>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50/50 rounded-xl">
+                        <span class="block text-[8px] font-black text-purple-300 uppercase mb-1">Tech</span>
+                        <span class="text-lg font-bold text-purple-900">Python/Tableau</span>
+                    </div>
                 </div>
             </div>
+
+            <div id="methodology" class="tab-content animate-in fade-in duration-500">
+                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase">Technical Methodology</h2>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-purple-200 pl-6">
+                        <h3 class="font-black text-purple-900 uppercase text-sm mb-2">01 // Data Engineering</h3>
+                        <p class="text-sm text-gray-500">Generated synthetic financial telemetry using Python to simulate orbital resource extraction ROI at scale.</p>
+                    </div>
+                    <div class="border-l-4 border-purple-200 pl-6">
+                        <h3 class="font-black text-purple-900 uppercase text-sm mb-2">02 // Architecture</h3>
+                        <p class="text-sm text-gray-500">Developed a high density "HUD" style dashboard in Tableau Public, optimized for C-suite decision making.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resources" class="tab-content animate-in fade-in duration-500">
+                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase">Learning & Credentials</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-6 bg-purple-50 rounded-2xl border border-purple-100">
+                        <span class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest">Certifications</span>
+                        <ul class="text-xs font-bold text-purple-900 space-y-2">
+                            <li>✓ Microsoft PL-900</li>
+                            <li class="text-purple-400">⚡ PL-300 Candidate (March 2026)</li>
+                            <li class="text-purple-400">⚡ Security+ Candidate (March 2026)</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-purple-50 rounded-2xl border border-purple-100">
+                        <span class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest">Essential Reading</span>
+                        <ul class="text-xs font-medium text-gray-500 space-y-2">
+                            <li>• Storytelling with Data (Cole Nussbaumer Knaflic)</li>
+                            <li>• The Visual Display of Quantitative Information (Tufte)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <footer class="text-center pb-24 px-6">
-        <button class="bg-purple-950 text-white px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] hover:scale-105 transition-all shadow-xl shadow-purple-200">
+        <button class="bg-purple-950 text-white px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] shadow-xl shadow-purple-200 hover:scale-105 transition-all">
             Contact for History →
         </button>
     </footer>
 
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
