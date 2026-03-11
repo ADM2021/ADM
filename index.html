@@ -22,6 +22,7 @@
         .animate-banner { animation: pulse-banner 3s infinite ease-in-out; }
 
         /* VERTICAL CAROUSEL LOGIC */
+        /* Total items: 6 (5 unique + 1 loop) */
         @keyframes vertical-carousel {
             0%, 15% { transform: translateY(0); }
             20%, 35% { transform: translateY(-16.66%); }
@@ -57,10 +58,11 @@
         </div>
     </div>
 
-    <header class="max-w-5xl mx-auto pt-8 pb-8 px-6 text-center">
-        <div class="inline-flex flex-col md:flex-row items-center justify-center text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent">
-            <div class="h-[1.2em] overflow-hidden relative mb-2 md:mb-0">
-                <div class="animate-carousel text-center md:text-right md:pr-4">
+    <header class="max-w-6xl mx-auto pt-8 pb-8 px-6 text-center">
+        <div class="flex flex-col md:flex-row items-center justify-center text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent">
+            
+            <div class="h-[1.2em] overflow-hidden relative flex-1 md:text-right md:pr-4">
+                <div class="animate-carousel">
                     <span class="h-[1.2em] flex items-center justify-center md:justify-end">Strategic Data</span>
                     <span class="h-[1.2em] flex items-center justify-center md:justify-end">Sr. Operation And Research</span>
                     <span class="h-[1.2em] flex items-center justify-center md:justify-end">Lead Operation And Research</span>
@@ -69,7 +71,8 @@
                     <span class="h-[1.2em] flex items-center justify-center md:justify-end">Strategic Data</span>
                 </div>
             </div>
-            <span class="text-purple-950">Analyst</span>
+
+            <span class="text-purple-950 flex-none">Analyst</span>
         </div>
         <p class="text-lg text-gray-500 font-medium italic mt-8 mb-8">"Understanding the numbers inside the dashboard."</p>
     </header>
@@ -115,26 +118,10 @@
             <div id="methodology" class="tab-content animate-in fade-in duration-500">
                 <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">Project Case Study</h2>
                 <div class="space-y-6 text-sm text-gray-600">
-                    <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">The Challenge</h3>
-                        <p>Celestial Extraction Corp (CEC) required a high level financial oversight tool to evaluate mission efficiency. I transformed raw mission telemetry into a strategic command center for C-Suite executives to identify **"Alpha"** in a high risk frontier economy.</p>
-                    </div>
+                    <p>Celestial Extraction Corp (CEC) required a high level financial oversight tool. I engineered a Python-driven ledger to identify **"Alpha"**—the outliers that justify billion-dollar investments.</p>
                     <div class="bg-purple-950 p-6 rounded-2xl border border-white/10 shadow-inner overflow-x-auto">
-                        <pre class="text-purple-100 text-[10px] leading-relaxed"><code>import pandas as pd
-import numpy as np
-
-# Highlight Alphas via Python
-data = {
-    'Sector': np.random.choice(['Inner Belt', 'Trojan Clouds', 'Lunar South Pole'], 10000),
-    'Op_Cost_B': np.random.uniform(0.5, 4.5, 10000),
-    'Yield_Tons': np.random.uniform(10, 500, 10000)
-}
-df = pd.DataFrame(data)
+                        <pre class="text-purple-100 text-[10px] leading-relaxed"><code># Highlighting Alphas via Python
 df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
-                    </div>
-                    <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 2: Visual Architecture</h3>
-                        <p>Designed as a holographic "HUD" Command Center featuring a Resource Treemap and an Executive ROI scatter plot to distinguish high profit stars from problem sectors.</p>
                     </div>
                 </div>
             </div>
@@ -153,15 +140,6 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                                 <li class="text-sm font-bold text-purple-400 flex items-center gap-2">⚡ PL-300 Candidate (March 2026)</li>
                                 <li class="text-sm font-bold text-purple-400 flex items-center gap-2">⚡ Security+ Candidate (March 2026)</li>
                             </ul>
-                        </div>
-                        <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100">
-                            <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Technical Library</h3>
-                            <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-gray-500 leading-tight">
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Power Automate Cookbook</span> <span class="text-purple-300">Najjar</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Data Viz with Power BI</span> <span class="text-purple-300">Kolokolov</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Best Practices Experimentation</span> <span class="text-purple-300">Alberts (DoD)</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Grokking Algorithms</span> <span class="text-purple-300">Bhargava</span></p>
-                            </div>
                         </div>
                     </div>
                     <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100 max-h-[600px] overflow-y-auto">
