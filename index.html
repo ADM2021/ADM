@@ -4,7 +4,7 @@
     <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aisha |A Data Enthusiast</title>
+    <title>Aisha | Data Enthusiast</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
@@ -14,12 +14,12 @@
         .tab-btn.active { background-color: #581c87; color: white; border-color: #581c87; }
         code { font-family: 'Courier New', Courier, monospace; }
         
-        /* Subtle animation for the construction banner icon */
-        @keyframes pulse-icon {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+        /* Subtle pulse for the construction banner */
+        @keyframes pulse-banner {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.9; transform: scale(0.99); }
         }
-        .animate-pulse-icon { animation: pulse-icon 2s infinite; }
+        .animate-banner { animation: pulse-banner 3s infinite ease-in-out; }
     </style>
 </head>
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
@@ -34,17 +34,19 @@
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto mb-6 px-6 py-3 bg-purple-50 text-purple-700 text-xs font-bold uppercase tracking-widest rounded-full border border-purple-100 flex items-center justify-center gap-2 shadow-inner shadow-purple-100/30">
-        <span class="text-lg animate-pulse-icon">🚧</span>
-        Page Is Still Under Construction
-        <span class="text-lg animate-pulse-icon">🚧</span>
+    <div class="max-w-fit mx-auto mb-4 animate-banner">
+        <div class="bg-amber-50 border border-amber-200 px-8 py-2 rounded-full flex items-center gap-3 shadow-sm">
+            <span class="text-amber-600 font-bold">🚧</span>
+            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-amber-700">Page Is Still Under Construction</span>
+            <span class="text-amber-600 font-bold">🚧</span>
+        </div>
     </div>
 
     <header class="max-w-3xl mx-auto pt-8 pb-8 px-6 text-center">
         <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent leading-none">
             Strategic Data Analyst
         </h1>
-        <p class="text-lg text-gray-500 font-medium italic mb-8 leading-relaxed max-w-2xl mx-auto">
+        <p class="text-lg text-gray-500 font-medium italic mb-8">
             "Understanding the numbers inside the dashboard."
         </p>
     </header>
@@ -83,11 +85,11 @@
                     <span class="text-[9px] font-black bg-green-100 text-green-700 px-2 py-1 rounded uppercase tracking-widest">Live Viz</span>
                 </div>
                 
-                <div class="w-full bg-purple-50 rounded-2xl border border-purple-100 shadow-inner overflow-hidden relative" style="height: 850px;">
+                <div class="w-full bg-purple-50 rounded-2xl border border-purple-100 shadow-inner overflow-hidden relative" style="height: 580px;">
                     <iframe 
                         src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true" 
-                        class="absolute border-none origin-top" 
-                        style="width: 100%; height: 100%; border-radius: 1.5rem;" 
+                        class="absolute border-none origin-top-left" 
+                        style="width: 150%; height: 150%; transform: scale(0.67); border-radius: 1rem;" 
                         allowfullscreen 
                         scrolling="no">
                     </iframe>
@@ -95,77 +97,68 @@
             </div>
 
             <div id="methodology" class="tab-content animate-in fade-in duration-500">
-                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">Technical Case Study</h2>
+                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">Project Case Study</h2>
                 <div class="space-y-6 text-sm text-gray-600">
                     <div>
                         <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">The Challenge</h3>
-                        <p>Celestial Extraction Corp (CEC) required high level financial oversight to transform raw telemetry into a strategic command center for C-Suite executives to identify **"Alpha"** in a high risk frontier economy.</p>
+                        <p>Celestial Extraction Corp (CEC) required a high level financial oversight tool to evaluate mission efficiency across orbital sectors. I transformed raw mission telemetry into a strategic command center for C-Suite executives to identify **"Alpha"** in a high risk frontier economy.</p>
                     </div>
 
                     <div class="bg-purple-950 p-6 rounded-2xl border border-white/10 shadow-inner overflow-x-auto">
-                        <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest block mb-4">// CEC Synthetic Telemetry Generator</span>
-                        <pre class="text-purple-100 text-[10px] leading-relaxed"><code># Simulating 10k rows of mission events
-import pandas as pd
+                        <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest block mb-4">// Alpha Telemetry Generator</span>
+                        <pre class="text-purple-100 text-[10px] leading-relaxed"><code>import pandas as pd
 import numpy as np
 
+# Simulate 10k rows of mission telemetry
 data = {
-    'Resource': np.random.choice(['Helium-3', 'Platinum', 'Water Ice'], 10000),
+    'Sector': np.random.choice(['Inner Belt', 'Trojan Clouds', 'Lunar South Pole'], 10000),
     'Op_Cost_B': np.random.uniform(0.5, 4.5, 10000),
     'Yield_Tons': np.random.uniform(10, 500, 10000)
 }
 
 df = pd.DataFrame(data)
-df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B']) # The efficiency multiplier</code></pre>
-                    </div>
-
-                    <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Architecture & UI/UX</h3>
-                        <p>The dashboard was designed as a "holographic HUD," utilizing transparency and minimalist palettes to strip away software clutter. Key functions: **Risk Mitigation** via the Executive Quadrant plot and **Market Intelligence** tracking resource volatility wave trends.</p>
+df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B']) # Highlighting Alphas</code></pre>
                     </div>
                 </div>
             </div>
 
             <div id="resources" class="tab-content animate-in fade-in duration-500">
                 <h2 class="text-3xl font-black italic text-purple-900 mb-10 uppercase italic leading-none">Learning & Credentials</h2>
-                
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    
                     <div class="space-y-10">
                         <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100">
                             <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Certifications</h3>
                             <ul class="space-y-4">
                                 <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Microsoft PL-900</li>
-                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Project Management <span class="text-[10px] font-medium text-purple-400 leading-none tracking-tight">(Cornell University)</span></li>
+                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Project Management <span class="text-[10px] font-medium text-purple-400 leading-none">(Cornell University)</span></li>
                                 <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ AWS Fundamentals Specialization</li>
-                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Gen AI Learning Path <span class="text-[10px] font-medium text-purple-400 leading-none leading-none">(Google Cloud)</span></li>
+                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Gen AI Learning Path <span class="text-[10px] font-medium text-purple-400 leading-none">(Google Cloud)</span></li>
                                 <li class="text-sm font-bold text-purple-400 flex items-center gap-2">⚡ PL-300 Candidate (March 2026)</li>
                                 <li class="text-sm font-bold text-purple-400 flex items-center gap-2">⚡ Security+ Candidate (March 2026)</li>
                             </ul>
                         </div>
-
                         <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100">
                             <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Technical Library</h3>
-                            <ul class="space-y-3 text-[11px] font-bold text-gray-500 leading-tight">
-                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Power Automate Cookbook</span> <span class="text-purple-300">Najjar</span></li>
-                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Data Viz with Power BI</span> <span class="text-purple-300">Kolokolov</span></li>
-                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Learning Power Apps</span> <span class="text-purple-300">Shrivastava</span></li>
-                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Best Practices Experimentation</span> <span class="text-purple-300">Alberts (DoD)</span></li>
-                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Show Your Work</span> <span class="text-purple-300">Kleon</span></li>
-                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Grokking Algorithms</span> <span class="text-purple-300">Bhargava</span></li>
-                            </ul>
+                            <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-gray-500 leading-tight">
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Power Automate Cookbook</span> <span class="text-purple-300">Najjar</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Data Viz with Power BI</span> <span class="text-purple-300">Kolokolov</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Learning Power Apps</span> <span class="text-purple-300">Shrivastava</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Best Practices Experimentation</span> <span class="text-purple-300">Alberts (DoD)</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Show Your Work</span> <span class="text-purple-300">Kleon</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Grokking Algorithms</span> <span class="text-purple-300">Bhargava</span></p>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100">
+                    <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100 overflow-y-auto max-h-[600px]">
                         <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Completed Courses</h3>
-                        <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-purple-900 leading-snug">
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Introduction to Microsoft Power Platform</span> <span class="text-purple-300">Microsoft</span></p>
+                        <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-purple-900">
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Introduction to Power Platform</span> <span class="text-purple-300">Microsoft</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Google Data Analytics Capstone</span> <span class="text-purple-300">Google</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>The Ultimate Docker Course</span> <span class="text-purple-300">Mosh</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Generative AI with LLMs</span> <span class="text-purple-300">AWS</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>AWS Fundamentals Specialization</span> <span class="text-purple-300">AWS</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Foundational Concepts</span> <span class="text-purple-300">Google Cloud</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Play It Safe: Manage Security Risks</span> <span class="text-purple-300">Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Unlock Foundations</span> <span class="text-purple-300">Google Cloud</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Play It Safe: Security Risks</span> <span class="text-purple-300">Google</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Connect and Protect: Networks</span> <span class="text-purple-300">Google</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Generative AI for Everyone</span> <span class="text-purple-300">DeepLearning</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI Apps: Transform Work</span> <span class="text-purple-300">Google Cloud</span></p>
@@ -177,13 +170,11 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B']) # The efficiency multiplier</
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Prepare Data for Exploration</span> <span class="text-purple-300">Google</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Foundations: Data Everywhere</span> <span class="text-purple-300">Google</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Foundations of Cybersecurity</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Ask Questions for Data Decisions</span> <span class="text-purple-300">Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Ask Questions for Decisions</span> <span class="text-purple-300">Google</span></p>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </section>
 
