@@ -8,34 +8,93 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        .tab-btn.active { background-color: #581c87; color: white; border-color: #581c87; }
-        code { font-family: 'Courier New', Courier, monospace; }
-        
-        @keyframes pulse-banner {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.9; transform: scale(0.98); }
+        body {
+            font-family: 'Inter', sans-serif;
         }
-        .animate-banner { animation: pulse-banner 3s infinite ease-in-out; }
-
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-btn.active {
+            background-color: #581c87;
+            color: white;
+            border-color: #581c87;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        @keyframes pulse-banner {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.9;
+                transform: scale(0.98);
+            }
+        }
+        .animate-banner {
+            animation: pulse-banner 3s infinite ease-in-out;
+        }
         /* THE STABLE CROSS-BROWSER FLIPPER */
         @-webkit-keyframes vertical-carousel {
-            0%, 15% { -webkit-transform: translateY(0); transform: translateY(0); }
-            20%, 35% { -webkit-transform: translateY(-16.66%); transform: translateY(-16.66%); }
-            40%, 55% { -webkit-transform: translateY(-33.33%); transform: translateY(-33.33%); }
-            60%, 75% { -webkit-transform: translateY(-50%); transform: translateY(-50%); }
-            80%, 95% { -webkit-transform: translateY(-66.66%); transform: translateY(-66.66%); }
-            100% { -webkit-transform: translateY(-83.33%); transform: translateY(-83.33%); }
+            0%,
+            15% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+            20%,
+            35% {
+                -webkit-transform: translateY(-16.66%);
+                transform: translateY(-16.66%);
+            }
+            40%,
+            55% {
+                -webkit-transform: translateY(-33.33%);
+                transform: translateY(-33.33%);
+            }
+            60%,
+            75% {
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+            80%,
+            95% {
+                -webkit-transform: translateY(-66.66%);
+                transform: translateY(-66.66%);
+            }
+            100% {
+                -webkit-transform: translateY(-83.33%);
+                transform: translateY(-83.33%);
+            }
         }
         @keyframes vertical-carousel {
-            0%, 15% { transform: translateY(0); }
-            20%, 35% { transform: translateY(-16.66%); }
-            40%, 55% { transform: translateY(-33.33%); }
-            60%, 75% { transform: translateY(-50%); }
-            80%, 95% { transform: translateY(-66.66%); }
-            100% { transform: translateY(-83.33%); }
+            0%,
+            15% {
+                transform: translateY(0);
+            }
+            20%,
+            35% {
+                transform: translateY(-16.66%);
+            }
+            40%,
+            55% {
+                transform: translateY(-33.33%);
+            }
+            60%,
+            75% {
+                transform: translateY(-50%);
+            }
+            80%,
+            95% {
+                transform: translateY(-66.66%);
+            }
+            100% {
+                transform: translateY(-83.33%);
+            }
         }
         .animate-carousel {
             display: flex;
@@ -47,123 +106,173 @@
     </style>
 </head>
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
-
     <nav class="p-8 flex justify-between items-center max-w-5xl mx-auto">
         <div class="flex flex-col leading-tight">
             <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
             <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
         </div>
-        <div class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100">
-            Secure Terminal // 2026.03.10
+        <div id="dynamic-date"
+            class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100">
+            Secure Terminal // 2026.03.11
         </div>
     </nav>
-
     <div class="max-w-fit mx-auto mb-4 animate-banner">
         <div class="bg-amber-50 border border-amber-200 px-8 py-2 rounded-full flex items-center gap-3 shadow-sm">
             <span class="text-amber-600 font-bold">🚧</span>
-            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-amber-700 leading-none">Page Is Still Under Construction</span>
+            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-amber-700 leading-none">Page Is Still
+                Under Construction</span>
             <span class="text-amber-600 font-bold">🚧</span>
         </div>
     </div>
-
     <header class="max-w-6xl mx-auto pt-4 pb-12 px-6 text-center">
         <div class="flex flex-col items-center justify-center">
-            <div class="h-[1.2em] overflow-hidden relative text-2xl md:text-5xl lg:text-6xl font-black tracking-tighter bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent italic mb-2">
+            <div
+                class="h-[1.2em] overflow-hidden relative text-2xl md:text-5xl lg:text-6xl font-black tracking-tighter bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent italic mb-2">
                 <div class="animate-carousel w-full">
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Strategic Data</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Sr. Operation And Research</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Lead Operation And Research</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Data Systems Engineer</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Financial</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Strategic Data</span>
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Strategic
+                        Data</span>
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Sr. Operation
+                        And Research</span>
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Lead Operation
+                        And Research</span>
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Data Systems
+                        Engineer</span>
+                    <span
+                        class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Financial</span>
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Strategic
+                        Data</span>
                 </div>
             </div>
-            <span class="text-5xl md:text-8xl font-black tracking-tighter text-purple-950 uppercase leading-none">Analyst</span>
+            <span
+                class="text-5xl md:text-8xl font-black tracking-tighter text-purple-950 uppercase leading-none">Analyst</span>
         </div>
-        <p class="text-lg text-gray-500 font-medium italic mt-8 mb-4">"Understanding the numbers inside the dashboard."</p>
+        <p class="text-lg text-gray-500 font-medium italic mt-8 mb-4">"Understanding the numbers inside the dashboard."
+        </p>
     </header>
-
     <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6">
-        <button onclick="openTab(event, 'about')" class="tab-btn active px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">01 // About Me</button>
-        <button onclick="openTab(event, 'portfolio')" class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">02 // Portfolio</button>
-        <button onclick="openTab(event, 'methodology')" class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">03 // How It Was Done</button>
-        <button onclick="openTab(event, 'resources')" class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">04 // Certs & Resources</button>
+        <button onclick="openTab(event, 'about')"
+            class="tab-btn active px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">01
+            // About Me</button>
+        <button onclick="openTab(event, 'portfolio')"
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">02
+            // Portfolio</button>
+        <button onclick="openTab(event, 'methodology')"
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">03
+            // How It Was Done</button>
+        <button onclick="openTab(event, 'resources')"
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all">04
+            // Certs & Resources</button>
     </div>
-
     <section class="max-w-6xl mx-auto p-4 mb-20">
-        <div class="bg-white/95 backdrop-blur-xl border border-white rounded-[3rem] p-8 md:p-12 shadow-2xl shadow-purple-100/50">
-            
+        <div
+            class="bg-white/95 backdrop-blur-xl border border-white rounded-[3rem] p-8 md:p-12 shadow-2xl shadow-purple-100/50">
             <div id="about" class="tab-content active animate-in fade-in duration-500">
-                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">The Strategic Specialist</h2>
+                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">The Strategic
+                    Specialist</h2>
                 <div class="space-y-8 text-gray-600 leading-relaxed">
-                    <p class="text-xl font-medium text-purple-900/80 italic tracking-tight">"I am known by many names, but you may call me...Aisha."</p>
-                    <p>With **over 13 years of experience** supporting the Department of Defense, I specialize in bridging the gap between raw technical telemetry and high stakes executive strategy. My career has been defined by a simple truth: data only matters when it is actionable. I build the automated systems that turn massive datasets into clear decisive narratives.</p>
+                    <p class="text-xl font-medium text-purple-900/80 italic tracking-tight">"I am known by many names,
+                        but you may call me...Aisha."</p>
+                    <p>With **over 13 years of experience** supporting the Department of Defense, I specialize in
+                        bridging the gap between raw technical telemetry and high stakes executive strategy. My career
+                        has been defined by a simple truth: data only matters when it is actionable. I build the
+                        automated systems that turn massive datasets into clear decisive narratives.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100">
-                            <span class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">Automation & Power Platform</span>
+                            <span
+                                class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">Automation
+                                & Power Platform</span>
                             <p class="text-xs text-gray-500 italic leading-relaxed">
-                                <strong>I don’t just build dashboards; I engineer the intelligence that drives the mission.</strong> <br><br>
-                                Wrangling legacy systems into submission with Python and Power Automate is my specialty. I basically build the engine so the numbers can stop being messy and start being useful. Less clicking, more automating—because nobody has time for manual data entry.
+                                <strong>I don’t just build dashboards; I engineer the intelligence that drives the
+                                    mission.</strong> <br><br>
+                                Wrangling legacy systems into submission with Python and Power Automate is my specialty.
+                                I basically build the engine so the numbers can stop being messy and start being useful.
+                                Less clicking, more automating—because nobody has time for manual data entry.
                             </p>
                         </div>
                         <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100">
-                            <span class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">Enterprise Logic</span>
+                            <span
+                                class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">Enterprise
+                                Logic</span>
                             <p class="text-xs text-gray-500 italic leading-relaxed">
-                                I speak "C-Suite" and "Raw Data" fluently. I leverage deep organizational mechanics to ensure my insights actually impact the entire company, not just a single spreadsheet.
+                                I speak "C-Suite" and "Raw Data" fluently. I leverage deep organizational mechanics to
+                                ensure my insights actually impact the entire company, not just a single spreadsheet.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div id="portfolio" class="tab-content animate-in fade-in duration-500">
                 <div class="flex justify-between items-center mb-6 px-2">
-                    <h2 class="text-2xl font-black italic text-purple-900 uppercase leading-none">CEC 2026 Orbital Audit</h2>
-                    <span class="text-[9px] font-black bg-green-100 text-green-700 px-2 py-1 rounded uppercase tracking-widest">Live Viz</span>
+                    <h2 class="text-2xl font-black italic text-purple-900 uppercase leading-none">CEC 2026 Orbital Audit
+                    </h2>
+                    <span
+                        class="text-[9px] font-black bg-green-100 text-green-700 px-2 py-1 rounded uppercase tracking-widest">Live
+                        Viz</span>
                 </div>
-                <div class="w-full bg-purple-50 rounded-2xl border border-purple-100 shadow-inner overflow-hidden relative" style="height: 650px;">
+                <div class="w-full bg-purple-50 rounded-2xl border border-purple-100 shadow-inner overflow-hidden relative" style="height: 800px;">
                     <iframe 
                         src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true" 
                         class="absolute border-none origin-top-left" 
-                        style="width: 150%; height: 150%; transform: scale(0.67); border-radius: 1rem;" 
+                        style="width: 133%; height: 133%; transform: scale(0.75); border-radius: 1rem;" 
                         allowfullscreen 
                         scrolling="no">
                     </iframe>
                 </div>
             </div>
-
             <div id="methodology" class="tab-content animate-in fade-in duration-500">
-                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">Technical Case Study</h2>
+                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">Technical Case
+                    Study</h2>
                 <div class="space-y-6 text-sm text-gray-600">
                     <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Project: Celestial Extraction Corp (CEC) – 2026 Orbital Audit</h3>
-                        <p><strong>The Challenge:</strong> As the space-mining industry matures, "Celestial Extraction Corp" required a high-level financial oversight tool to evaluate mission efficiency across multiple orbital sectors. The goal was to transform raw mission telemetry into a strategic command center for C-Suite executives to identify **"Alpha"** in a high-risk, multi-billion dollar frontier economy.</p>
+                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Project: Celestial
+                            Extraction Corp (CEC) – 2026 Orbital Audit</h3>
+                        <p><strong>The Challenge:</strong> As the space-mining industry matures, "Celestial Extraction
+                            Corp" required a high-level financial oversight tool to evaluate mission efficiency across
+                            multiple orbital sectors. The goal was to transform raw mission telemetry into a strategic
+                            command center for C-Suite executives to identify **"Alpha"** in a high-risk, multi-billion
+                            dollar frontier economy.</p>
                     </div>
                     <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 1: Engineering the Synthetic Ledger (Python)</h3>
-                        <p>Because real-world orbital financial data is highly proprietary, I engineered a custom dataset using Python (Pandas & NumPy). I designed a schema representing 10,000 "Extraction Events," incorporating variables like resource rarity (Helium-3, Platinum), market spot prices, and sector-specific operational costs. I injected realistic dependencies—ensuring that Helium-3 missions yielded higher margins but carried greater logistical overhead.</p>
+                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 1:
+                            Engineering the Synthetic Ledger (Python)</h3>
+                        <p>Because real-world orbital financial data is highly proprietary, I engineered a custom
+                            dataset using Python (Pandas & NumPy). I designed a schema representing 10,000 "Extraction
+                            Events," incorporating variables like resource rarity (Helium-3, Platinum), market spot
+                            prices, and sector-specific operational costs. I injected realistic dependencies—ensuring
+                            that Helium-3 missions yielded higher margins but carried greater logistical overhead.</p>
                     </div>
                     <div class="bg-purple-950 p-6 rounded-2xl border border-white/10 shadow-inner overflow-x-auto">
                         <pre class="text-purple-100 text-[10px] leading-relaxed"><code># Alpha Metric Generator
 df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     </div>
                     <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 2: Visual Architecture & UI/UX (Tableau)</h3>
-                        <p>The dashboard was designed as a "Solar-Tech" Command Center, moving away from traditional corporate aesthetics to an immersive, holographic HUD experience. Key features include the <strong>Resource Treemap</strong> for instant regional revenue visibility and the <strong>Executive Quadrant (Scatter Plot)</strong> developed with an ROI Factor metric to distinguish "Stars" from "Problem Sectors."</p>
+                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 2: Visual
+                            Architecture & UI/UX (Tableau)</h3>
+                        <p>The dashboard was designed as a "Solar-Tech" Command Center, moving away from traditional
+                            corporate aesthetics to an immersive, holographic HUD experience. Key features include the
+                            <strong>Resource Treemap</strong> for instant regional revenue visibility and the
+                            <strong>Executive Quadrant (Scatter Plot)</strong> developed with an ROI Factor metric to
+                            distinguish "Stars" from "Problem Sectors."</p>
                     </div>
                     <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 3: C-Suite Strategic Utility</h3>
-                        <p>This tool serves three critical functions: <strong>Capital Allocation</strong> (justifying investments in high-cost but efficient sectors like Near-Earth Orbit), <strong>Risk Mitigation</strong> (flagging underperforming missions), and <strong>Market Intelligence</strong> (timing resource sales based on volatility trends).</p>
+                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 3: C-Suite
+                            Strategic Utility</h3>
+                        <p>This tool serves three critical functions: <strong>Capital Allocation</strong> (justifying
+                            investments in high-cost but efficient sectors like Near-Earth Orbit), <strong>Risk
+                                Mitigation</strong> (flagging underperforming missions), and <strong>Market
+                                Intelligence</strong> (timing resource sales based on volatility trends).</p>
                     </div>
                 </div>
             </div>
-
             <div id="resources" class="tab-content animate-in fade-in duration-500">
-                <h2 class="text-3xl font-black italic text-purple-900 mb-10 uppercase italic leading-none">Learning & Credentials</h2>
+                <h2 class="text-3xl font-black italic text-purple-900 mb-10 uppercase italic leading-none">Learning &
+                    Credentials</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div class="space-y-10">
                         <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100 h-fit">
-                            <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6 leading-none">Certifications</h3>
+                            <h3
+                                class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6 leading-none">
+                                Certifications</h3>
                             <ul class="space-y-4 text-purple-900 font-bold">
                                 <li>✓ Microsoft PL-900</li>
                                 <li>✓ Project Management (Cornell University)</li>
@@ -174,52 +283,83 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                             </ul>
                         </div>
                         <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100">
-                            <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6 leading-none">Technical Library</h3>
+                            <h3
+                                class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6 leading-none">
+                                Technical Library</h3>
                             <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-gray-500 leading-tight">
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Power Automate Cookbook</span> <span>Najjar</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Data Viz with Power BI</span> <span>Kolokolov</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Learning Power Apps</span> <span>Shrivastava</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Best Practices Experimentation</span> <span>Alberts & Hayes</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Show Your Work</span> <span>Austin Kleon</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Grokking Algorithms</span> <span>Aditya Y. Bhargava</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Storytelling with Data</span> <span>Knaflic</span></p>
-                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Quantitative Information</span> <span>Tufte</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Power Automate
+                                        Cookbook</span> <span>Najjar</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Data Viz with Power
+                                        BI</span> <span>Kolokolov</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Learning Power
+                                        Apps</span> <span>Shrivastava</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Best Practices
+                                        Experimentation</span> <span>Alberts & Hayes</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Show Your
+                                        Work</span> <span>Austin Kleon</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Grokking
+                                        Algorithms</span> <span>Aditya Y. Bhargava</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Storytelling with
+                                        Data</span> <span>Knaflic</span></p>
+                                <p class="flex justify-between border-b border-purple-50 pb-2"><span>Quantitative
+                                        Information</span> <span>Tufte</span></p>
                             </div>
                         </div>
                     </div>
-                    <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100 max-h-[750px] overflow-y-auto">
-                        <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6 leading-none">Completed Courses</h3>
+                    <div
+                        class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100 max-h-[750px] overflow-y-auto">
+                        <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6 leading-none">
+                            Completed Courses</h3>
                         <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-purple-900 leading-snug">
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Introduction to Microsoft Power Platform</span> <span>Microsoft</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Google Data Analytics Capstone</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>The Ultimate Docker Course</span> <span>Mosh</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Generative AI with Large Language Models</span> <span>AWS</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>AWS Fundamentals Specialization</span> <span>AWS</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Unlock Foundational Concepts</span> <span>Google Cloud</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Play It Safe: Manage Security Risks</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Connect and Protect: Networks</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Generative AI for Everyone</span> <span>DeepLearning</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI Apps: Transform Your Work</span> <span>Google Cloud</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Architecting Solutions on AWS</span> <span>AWS</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Responsible AI Principles</span> <span>Google Cloud</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Share Data Visualization</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Analyze Data to Answer Questions</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Process Data Dirty to Clean</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Prepare Data for Exploration</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Foundations: Data, Data, Everywhere</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Foundations of Cybersecurity</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Ask Questions for Data Decisions</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Introduction to
+                                    Microsoft Power Platform</span> <span>Microsoft</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Google Data Analytics
+                                    Capstone</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>The Ultimate Docker
+                                    Course</span> <span>Mosh</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Generative AI with
+                                    Large Language Models</span> <span>AWS</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>AWS Fundamentals
+                                    Specialization</span> <span>AWS</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Unlock
+                                    Foundational Concepts</span> <span>Google Cloud</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Play It Safe: Manage
+                                    Security Risks</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Connect and Protect:
+                                    Networks</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Generative AI for
+                                    Everyone</span> <span>DeepLearning</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI Apps: Transform
+                                    Your Work</span> <span>Google Cloud</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Architecting Solutions
+                                    on AWS</span> <span>AWS</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Responsible AI
+                                    Principles</span> <span>Google Cloud</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Share Data
+                                    Visualization</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Analyze Data to Answer
+                                    Questions</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Process Data Dirty to
+                                    Clean</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Prepare Data for
+                                    Exploration</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Foundations: Data,
+                                    Data, Everywhere</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Foundations of
+                                    Cybersecurity</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Ask Questions for Data
+                                    Decisions</span> <span>Google</span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <footer class="text-center pb-24 px-6">
-        <button class="bg-purple-950 text-white px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition-all">Contact for History →</button>
+        <button
+            class="bg-purple-950 text-white px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition-all">Contact
+            for History →</button>
     </footer>
-
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -230,6 +370,13 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
+        // Set dynamic date
+        const dateEl = document.getElementById('dynamic-date');
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        dateEl.textContent = `Secure Terminal // ${year}.${month}.${day}`;
     </script>
 </body>
 </html>
