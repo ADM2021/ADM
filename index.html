@@ -12,13 +12,14 @@
         .tab-content { display: none; }
         .tab-content.active { display: block; }
         .tab-btn.active { background-color: #581c87; color: white; border-color: #581c87; }
+        code { font-family: 'Courier New', Courier, monospace; }
     </style>
 </head>
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
 
     <nav class="p-8 flex justify-between items-center max-w-5xl mx-auto">
         <div class="flex flex-col leading-tight">
-            <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi, I'm Aisha</span>
+            <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
             <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
         </div>
         <div class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100">
@@ -46,10 +47,10 @@
         <div class="bg-white/95 backdrop-blur-xl border border-white rounded-[3rem] p-8 md:p-12 shadow-2xl shadow-purple-100/50">
             
             <div id="about" class="tab-content animate-in fade-in duration-500">
-                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none">The Strategic Specialist</h2>
+                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">The Strategic Specialist</h2>
                 <div class="space-y-8 text-gray-600 leading-relaxed">
                     <p class="text-lg font-medium text-purple-900/80 italic">"I don’t just build dashboards; I engineer the intelligence that drives the mission."</p>
-                    <p>With **over 13 years of experience** supporting the Department of Defense, I specialize in bridging the gap between raw technical telemetry and high stakes executive strategy. I build the automated systems that turn massive datasets into clear decisive narratives.</p>
+                    <p>With **over 13 years of experience** supporting the Department of Defense, I specialize in bridging the gap between raw technical telemetry and high stakes executive strategy. My career has been defined by a simple truth: data only matters when it is actionable. I build the automated systems that turn massive datasets into clear decisive narratives.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="p-5 bg-purple-50/50 rounded-2xl border border-purple-100">
                             <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Automation & Power Platform</span>
@@ -60,7 +61,6 @@
                             <p class="text-xs text-gray-500 italic">I leverage deep organizational mechanics to ensure insights impact every level of the company.</p>
                         </div>
                     </div>
-                    <p>I am a **Hybrid Gamer** fueled by a dual perspective: the frame perfect precision of competitive gaming and the intuitive human centered logic of cozy aesthetics.</p>
                 </div>
             </div>
 
@@ -75,16 +75,43 @@
             </div>
 
             <div id="methodology" class="tab-content animate-in fade-in duration-500">
-                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none">Project Case Study</h2>
+                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">Project: 2026 Orbital Audit</h2>
                 <div class="space-y-6 text-sm text-gray-600">
-                    <div><h3 class="font-black text-purple-900 uppercase text-xs tracking-widest">The Challenge</h3><p>Celestial Extraction Corp (CEC) required a high level financial oversight tool to transform raw telemetry into a strategic command center for C-Suite executives to identify "Alpha" in a high risk frontier economy.</p></div>
-                    <div><h3 class="font-black text-purple-900 uppercase text-xs tracking-widest">Phase 1: Engineering the Synthetic Ledger (Python)</h3><p>Engineered a custom dataset of 10,000 events using Pandas and NumPy, incorporating resource rarity (Helium-3, Platinum) and market price volatility.</p></div>
-                    <div><h3 class="font-black text-purple-900 uppercase text-xs tracking-widest">Phase 2: Visual Architecture (Tableau)</h3><p>Designed as a holographic "HUD" Command Center featuring a Resource Treemap and an Executive ROI scatter plot to distinguish high profit stars from problem sectors.</p></div>
+                    <div>
+                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">The Challenge</h3>
+                        <p>Celestial Extraction Corp (CEC) required high level financial oversight to evaluate mission efficiency. I transformed raw telemetry into a strategic command center for C-Suite executives to identify **"Alpha"**—the high-efficiency outliers that justify billion-dollar frontier investments.</p>
+                    </div>
+
+                    <div class="bg-purple-950 p-6 rounded-2xl border border-white/10 shadow-inner overflow-x-auto">
+                        <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest block mb-4">// Python Synthetic Telemetry Generator</span>
+                        <pre class="text-purple-100 text-[10px] leading-relaxed"><code>import pandas as pd
+import numpy as np
+
+# Simulate 10k rows of mission telemetry
+sectors = ['Inner Belt', 'Trojan Clouds', 'Lunar South Pole']
+resources = ['Helium-3', 'Platinum', 'Iridium']
+
+data = {
+    'Mission_ID': range(10000),
+    'Sector': np.random.choice(sectors, 10000),
+    'Resource': np.random.choice(resources, 10000),
+    'Op_Cost_B': np.random.uniform(0.5, 4.5, 10000),
+    'Yield_Tons': np.random.uniform(10, 500, 10000)
+}
+
+df = pd.DataFrame(data)
+df['Efficiency'] = (df['Yield_Tons'] / df['Op_Cost_B']) # Highlighting the Alphas</code></pre>
+                    </div>
+
+                    <div>
+                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 2: Visual Architecture & UI/UX</h3>
+                        <p>The dashboard moves away from corporate aesthetics toward an immersive **holographic HUD**. We utilized a **Resource Treemap** for instant regional revenue visibility and an **ROI Factor Scatter Plot** to distinguish "Stars" from liability sectors.</p>
+                    </div>
                 </div>
             </div>
 
             <div id="resources" class="tab-content active animate-in fade-in duration-500">
-                <h2 class="text-3xl font-black italic text-purple-900 mb-10 uppercase italic leading-none">Learning & Credentials</h2>
+                <h2 class="text-3xl font-black italic text-purple-900 mb-10 uppercase leading-none italic">Learning & Credentials</h2>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     
@@ -93,45 +120,42 @@
                             <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Certifications</h3>
                             <ul class="space-y-4">
                                 <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Microsoft PL-900</li>
-                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Project Management <span class="text-[10px] font-medium text-purple-400 leading-none tracking-tight">(Cornell University)</span></li>
+                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Project Management <span class="text-[10px] font-medium text-purple-400 leading-none">(Cornell University)</span></li>
+                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ AWS Fundamentals <span class="text-[10px] font-medium text-purple-400 leading-none">(3 Course Specialization)</span></li>
+                                <li class="text-sm font-bold text-purple-900 flex items-center gap-2">✓ Gen AI Learning Path <span class="text-[10px] font-medium text-purple-400 leading-none">(Google Cloud Specialization)</span></li>
                                 <li class="text-sm font-bold text-purple-400 flex items-center gap-2">⚡ PL-300 Candidate (March 2026)</li>
                                 <li class="text-sm font-bold text-purple-400 flex items-center gap-2">⚡ Security+ Candidate (March 2026)</li>
                             </ul>
                         </div>
 
-                        <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100">
-                            <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Essential Reading</h3>
-                            <ul class="space-y-4 text-xs font-bold text-gray-500 leading-tight">
-                                <li class="flex items-start gap-3">• Storytelling with Data <span class="block font-medium text-[10px] text-gray-400">(Cole Nussbaumer Knaflic)</span></li>
-                                <li class="flex items-start gap-3">• The Visual Display of Quantitative Information <span class="block font-medium text-[10px] text-gray-400">(Tufte)</span></li>
+                        <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100 h-fit">
+                            <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Technical Library</h3>
+                            <ul class="space-y-3 text-[11px] font-bold text-gray-500 leading-tight">
+                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Power Automate Cookbook</span> <span class="text-purple-300">Najjar</span></li>
+                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Data Viz with Power BI</span> <span class="text-purple-300">Kolokolov</span></li>
+                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Learning Power Apps</span> <span class="text-purple-300">Shrivastava</span></li>
+                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Best Practices Experimentation</span> <span class="text-purple-300">Alberts (DoD)</span></li>
+                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Show Your Work</span> <span class="text-purple-300">Kleon</span></li>
+                                <li class="border-b border-purple-50 pb-2 flex justify-between"><span>Grokking Algorithms</span> <span class="text-purple-300">Bhargava</span></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100">
-                        <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Completed Courses</h3>
-                        <div class="grid grid-cols-1 gap-y-3 text-[11px] font-bold text-purple-900 leading-snug">
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Introduction to Microsoft Power Platform</span> <span class="text-purple-300">Microsoft</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Google Data Analytics Capstone</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>The Ultimate Docker Course</span> <span class="text-purple-300">Code with Mosh</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Generative AI with Large Language Models</span> <span class="text-purple-300">DeepLearning.AI</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>AWS Fundamentals Specialization</span> <span class="text-purple-300">AWS</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Gen AI: Unlock Foundational Concepts</span> <span class="text-purple-300">Google Cloud</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Play It Safe: Manage Security Risks</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Connect and Protect: Networks</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Generative AI for Everyone</span> <span class="text-purple-300">DeepLearning.AI</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Gen AI Apps: Transform Your Work</span> <span class="text-purple-300">Google Cloud</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Architecting Solutions on AWS</span> <span class="text-purple-300">AWS</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Responsible AI Principles</span> <span class="text-purple-300">Google Cloud</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Share Data Through Visualization</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Analyze Data to Answer Questions</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Process Data from Dirty to Clean</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Prepare Data for Exploration</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Foundations: Data, Data, Everywhere</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Foundations of Cybersecurity</span> <span class="text-purple-300">Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-2"><span>Ask Questions for Data Decisions</span> <span class="text-purple-300">Google</span></p>
+                        <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6">Specialization Audit</h3>
+                        <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-purple-900 leading-snug">
+                            <p class="border-b border-purple-50 pb-2"><span>AWS Cloud Technical Essentials</span></p>
+                            <p class="border-b border-purple-50 pb-2"><span>Migrating to the AWS Cloud</span></p>
+                            <p class="border-b border-purple-50 pb-2"><span>Architecting Solutions on AWS</span></p>
+                            <p class="border-b border-purple-50 pb-2"><span>Introduction to Generative AI</span></p>
+                            <p class="border-b border-purple-50 pb-2"><span>Introduction to Large Language Models</span></p>
+                            <p class="border-b border-purple-50 pb-2"><span>Introduction to Responsible AI</span></p>
+                            <p class="border-b border-purple-50 pb-2"><span>Google Data Analytics Capstone (100%)</span></p>
+                            <p class="border-b border-purple-50 pb-2"><span>The Ultimate Docker Course (Mosh)</span></p>
+                            <p class="border-b border-purple-50 pb-2"><span>Play It Safe: Manage Security Risks</span></p>
                         </div>
                     </div>
+
                 </div>
             </div>
 
