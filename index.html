@@ -196,30 +196,28 @@
             style="-webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);">
 
             <div id="about" class="tab-content active animate-in fade-in duration-500">
-                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">The Strategic
-                    Specialist</h2>
                 <div class="space-y-8 text-gray-600 leading-relaxed">
                     <p class="text-xl font-medium text-purple-900/80 italic tracking-tight flex items-center gap-4 flex-wrap">
                         "I am known by many names… but you may call me Aisha.”
                         <img src="https://media.giphy.com/media/26tPgV8ceZTSxH9zG/giphy.gif" alt="Aisha GIF" class="h-12 w-12 rounded-lg object-cover border border-purple-100 shadow-sm">
                     </p>
-                    <p>For **13+ years supporting the Department of Defense**, I have worked at the intersection of data, automation, and mission level decision making. My specialty is turning complex systems data and sprawling datasets into clear, actionable insight for leadership. Because here is the truth: data by itself is not powerful. Turning data into knowledge and turning that knowledge into action is where the real value lives. When the data gets messy, I build the system that makes sense of it. I design automated processes that take enormous, complicated datasets and transform them into stories executives can understand and decisions they can confidently make.</p>
+                    <p>For 13+ years supporting the Department of Defense, I have worked at the intersection of data, automation, and mission level decision making. My specialty is turning complex systems data and sprawling datasets into clear, actionable insight for leadership. Because here is the truth: data by itself is not powerful. Turning data into knowledge and turning that knowledge into action is where the real value lives. When the data gets messy, I build the system that makes sense of it. I design automated processes that take enormous, complicated datasets and transform them into stories executives can understand and decisions they can confidently make.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100">
                             <span
                                 class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">⚙️ Automation & Power Platform</span>
                             <p class="text-xs text-gray-500 italic leading-relaxed">
-                                <strong>I do not just build dashboards. I build the machinery behind them.</strong> <br><br>
+                                I do not just build dashboards. I build the machinery behind them. <br><br>
                                 Legacy systems, stubborn workflows, and messy spreadsheets are simply puzzles waiting to be solved. Using Power Automate, the Power Platform, and the occasional Python script when a problem calls for it, I streamline reporting, automate workflows, and eliminate the ritual of manual data entry.
                                 <br><br>
-                                <strong>Less clicking. More automating. More mission impact.</strong>
+                                Less clicking. More automating. More mission impact.
                             </p>
                         </div>
                         <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100">
                             <span
                                 class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">🧠 Enterprise Logic</span>
                             <p class="text-xs text-gray-500 italic leading-relaxed">
-                                <strong>I am fluent in English and Spanish.</strong> <br><br>
+                                I am fluent in English and Spanish. <br><br>
                                 But in the workplace, I usually translate between two very different dialects: 
                                 <br><br>
                                 • Raw Data <br>
@@ -274,54 +272,71 @@
             </div>
 
             <div id="methodology" class="tab-content animate-in fade-in duration-500">
-                <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none italic">Technical Case
-                    Study</h2>
-                <div class="space-y-6 text-sm text-gray-600">
-                    <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Project: Celestial
-                            Extraction Corp (CEC) - 2026 Orbital Audit</h3>
-                        <p><strong>The Challenge:</strong> As the space-mining industry matures, "Celestial Extraction
-                            Corp" required a high-level financial oversight tool to evaluate mission efficiency across
-                            multiple orbital sectors. The goal was to transform raw mission telemetry into a strategic
-                            command center for C-Suite executives to identify **"Alpha"** in a high-risk, multi-billion
-                            dollar frontier economy.</p>
+                <div class="mb-8 p-6 bg-purple-50/50 rounded-2xl border border-purple-100 flex flex-col gap-3">
+                    <label for="case-study-select" class="text-sm font-black text-purple-900 uppercase tracking-widest">Select Visualization:</label>
+                    <div class="relative">
+                        <select id="case-study-select" onchange="toggleCaseStudy(this.value)" class="w-full appearance-none bg-white border border-purple-200 text-purple-900 font-bold py-3 px-4 pr-8 rounded-xl leading-tight focus:outline-none focus:bg-white focus:border-purple-500 cursor-pointer transition-colors shadow-sm">
+                            <option value="" disabled selected>-- Select an Option --</option>
+                            <option value="cec-2026">CELESTIAL EXTRACTION CORP (CEC) - 2026 ORBITAL AUDIT</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-purple-900">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 1:
-                            Engineering the Synthetic Ledger (Python)</h3>
-                        <p>Because real-world orbital financial data is highly proprietary, I engineered a custom
-                            dataset using Python (Pandas & NumPy). I designed a schema representing 10,000 "Extraction
-                            Events," incorporating variables like resource rarity (Helium-3, Platinum), market spot
-                            prices, and sector-specific operational costs. I injected realistic dependencies - ensuring
-                            that Helium-3 missions yielded higher margins but carried greater logistical overhead.</p>
-                    </div>
-                    <div class="bg-purple-950 p-6 rounded-2xl border border-white/10 shadow-inner overflow-x-auto">
-                        <pre class="text-purple-100 text-[10px] leading-relaxed"><code># Alpha Metric Generator
+                </div>
+
+                <div id="case-studies-container">
+                    <div id="cec-2026" class="case-study hidden space-y-6 animate-in fade-in duration-500">
+                        <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none mt-2">Technical Case
+                            Study</h2>
+                        <div class="space-y-6 text-sm text-gray-600">
+                            <div>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Project: Celestial
+                                    Extraction Corp (CEC) - 2026 Orbital Audit</h3>
+                                <p>The Challenge: As the space-mining industry matures, "Celestial Extraction
+                                    Corp" required a high-level financial oversight tool to evaluate mission efficiency across
+                                    multiple orbital sectors. The goal was to transform raw mission telemetry into a strategic
+                                    command center for C-Suite executives to identify "Alpha" in a high-risk, multi-billion
+                                    dollar frontier economy.</p>
+                            </div>
+                            <div>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 1:
+                                    Engineering the Synthetic Ledger (Python)</h3>
+                                <p>Because real-world orbital financial data is highly proprietary, I engineered a custom
+                                    dataset using Python (Pandas & NumPy). I designed a schema representing 10,000 "Extraction
+                                    Events," incorporating variables like resource rarity (Helium-3, Platinum), market spot
+                                    prices, and sector-specific operational costs. I injected realistic dependencies - ensuring
+                                    that Helium-3 missions yielded higher margins but carried greater logistical overhead.</p>
+                            </div>
+                            <div class="bg-purple-950 p-6 rounded-2xl border border-white/10 shadow-inner overflow-x-auto">
+                                <pre class="text-purple-100 text-[10px] leading-relaxed"><code># Alpha Metric Generator
 df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
-                    </div>
-                    <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 2: Visual
-                            Architecture & UI/UX (Tableau)</h3>
-                        <p>The dashboard was designed as a "Solar-Tech" Command Center, moving away from traditional
-                            corporate aesthetics to an immersive, holographic HUD experience. Key features include the
-                            <strong>Resource Treemap</strong> for instant regional revenue visibility and the
-                            <strong>Executive Quadrant (Scatter Plot)</strong> developed with an ROI Factor metric to
-                            distinguish "Stars" from "Problem Sectors."
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 3: C-Suite
-                            Strategic Utility</h3>
-                        <p>This tool serves three critical functions: <strong>Capital Allocation</strong> (justifying
-                            investments in high-cost but efficient sectors like Near-Earth Orbit), <strong>Risk
-                                Mitigation</strong> (flagging underperforming missions), and <strong>Market
-                                Intelligence</strong> (timing resource sales based on volatility trends).</p>
+                            </div>
+                            <div>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 2: Visual
+                                    Architecture & UI/UX (Tableau)</h3>
+                                <p>The dashboard was designed as a "Solar-Tech" Command Center, moving away from traditional
+                                    corporate aesthetics to an immersive, holographic HUD experience. Key features include the
+                                    Resource Treemap for instant regional revenue visibility and the
+                                    Executive Quadrant (Scatter Plot) developed with an ROI Factor metric to
+                                    distinguish "Stars" from "Problem Sectors."
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 3: C-Suite
+                                    Strategic Utility</h3>
+                                <p>This tool serves three critical functions: Capital Allocation (justifying
+                                    investments in high-cost but efficient sectors like Near-Earth Orbit), Risk
+                                        Mitigation (flagging underperforming missions), and Market
+                                        Intelligence (timing resource sales based on volatility trends).</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div id="resources" class="tab-content animate-in fade-in duration-500">
-                <h2 class="text-3xl font-black italic text-purple-900 mb-10 uppercase italic leading-none">Learning &
+                <h2 class="text-3xl font-black italic text-purple-900 mb-10 uppercase leading-none">Learning &
                     Credentials</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div class="space-y-10">
@@ -335,8 +350,8 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                                 <li>✓ AWS Fundamentals Specialization</li>
                                 <li>✓ Generative AI Specialization (Google Cloud)</li>
                                 <li>✓ Generative AI Leader (Google Cloud)</li>
-                                <li class="text-purple-400"># PL-300 Candidate (May 2026)</li>
-                                <li class="text-purple-400"># Security+ Candidate (May 2026)</li>
+                                <li class="text-purple-400"># PL-300 Candidate (March 2026)</li>
+                                <li class="text-purple-400"># Security+ Candidate (March 2026)</li>
                             </ul>
                         </div>
                         <div class="p-8 bg-purple-50/40 rounded-[2.5rem] border border-purple-100">
@@ -444,6 +459,17 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         const month = String(now.getMonth() + 1).padStart(2, '0');
         const day = String(now.getDate()).padStart(2, '0');
         dateEl.textContent = `Secure Terminal // ${year}.${month}.${day}`;
+
+        function toggleCaseStudy(studyId) {
+            const studies = document.querySelectorAll('.case-study');
+            studies.forEach(study => {
+                study.classList.add('hidden');
+            });
+            const selectedStudy = document.getElementById(studyId);
+            if (selectedStudy) {
+                selectedStudy.classList.remove('hidden');
+            }
+        }
     </script>
 </body>
 
