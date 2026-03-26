@@ -171,7 +171,7 @@
             <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
             <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
         </div>
-        <div id="dynamic-date" onclick="openSecureModal()"
+        <div id="dynamic-date" onclick="openSecureModal('level1')"
             class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 cursor-pointer hover:bg-purple-100 hover:border-purple-300 transition-colors">
             Secure Terminal // 2026.03.11
         </div>
@@ -233,7 +233,7 @@
             // Resume [SECURE]</button>
         <button onclick="openTab(event, 'extrapolio')" id="tab-extrapolio"
             class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
-            // Extra Portfolio [SECURE]</button>
+            // Extra Portfolio [L2 SECURE]</button>
     </div>
 
     <section class="max-w-6xl mx-auto p-4 mb-20">
@@ -565,12 +565,9 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent">
             </div>
 
-            <!-- Terminal Header -->
-            <div class="mb-8 text-center">
-                <p class="terminal-text text-purple-400 text-sm font-bold tracking-[0.3em] uppercase mb-2">SYSTEM SECURE
-                </p>
-                <h3
-                    class="terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2">
+            <div class="mb-8 text-center" id="modal-header-container">
+                <p id="modal-subtitle" class="terminal-text text-purple-400 text-sm font-bold tracking-[0.3em] uppercase mb-2">SYSTEM SECURE</p>
+                <h3 id="modal-title" class="terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2">
                     > Terminal Access <span class="cursor-blink w-2 h-5 bg-purple-500 inline-block"></span>
                 </h3>
             </div>
@@ -647,8 +644,10 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         let pendingTabEvent = null;
         let authAttempts = 0;
         let isLockedOut = false;
+        let currentAuthLevel = 'level1';
 
-        function isAuthenticated() {
+        function isAuthenticated(level = 'level1') {
+            if (level === 'level2') return sessionStorage.getItem('extraToken') === 'valid-extra-xyz';
             return sessionStorage.getItem('secureToken') === 'valid-session-abc';
         }
 
@@ -678,10 +677,17 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             // Protected tabs logic
             const protectedTabs = ['resume', 'extrapolio'];
 
-            if (protectedTabs.includes(tabName) && !isAuthenticated()) {
+            if (protectedTabs.includes(tabName) && !isAuthenticated('level1')) {
                 pendingTabTarget = tabName;
                 pendingTabEvent = evt;
-                openSecureModal();
+                openSecureModal('level1');
+                return;
+            }
+
+            if (tabName === 'extrapolio' && !isAuthenticated('level2')) {
+                pendingTabTarget = tabName;
+                pendingTabEvent = evt;
+                openSecureModal('level2');
                 return;
             }
 
@@ -704,9 +710,25 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             }
         }
 
-        function openSecureModal() {
+        function openSecureModal(level = 'level1') {
+            currentAuthLevel = level;
             document.getElementById('secure-modal').style.display = 'flex';
             resetModalView();
+            
+            const subtitleEl = document.getElementById('modal-subtitle');
+            const titleEl = document.getElementById('modal-title');
+            
+            if (level === 'level2') {
+                subtitleEl.innerText = "RESTRICTED AREA";
+                subtitleEl.className = "terminal-text text-red-500 text-sm font-bold tracking-[0.3em] uppercase mb-2";
+                titleEl.innerHTML = '> L2 CLEARANCE REQ <span class="cursor-blink w-2 h-5 bg-red-500 inline-block"></span>';
+                titleEl.className = "terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2";
+            } else {
+                subtitleEl.innerText = "SYSTEM SECURE";
+                subtitleEl.className = "terminal-text text-purple-400 text-sm font-bold tracking-[0.3em] uppercase mb-2";
+                titleEl.innerHTML = '> Terminal Access <span class="cursor-blink w-2 h-5 bg-purple-500 inline-block"></span>';
+                titleEl.className = "terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2";
+            }
         }
 
         function closeSecureModal() {
@@ -738,12 +760,14 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             document.getElementById('request-view').classList.remove('hidden');
         }
 
-        async function verifyPassword(input) {
+        async function verifyPassword(input, level) {
             // Simulated validation - backend replacement target
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    if (input === '12345') {
+                    if (level === 'level1' && input === '12345') {
                         resolve('valid-session-abc');
+                    } else if (level === 'level2' && input === 'topsecret') {
+                        resolve('valid-extra-xyz');
                     } else {
                         reject('Invalid');
                     }
@@ -767,20 +791,24 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             feedback.className = "terminal-text text-xs text-center h-4 text-purple-400 cursor-blink mt-2";
 
             try {
-                const token = await verifyPassword(input);
-                sessionStorage.setItem('secureToken', token);
+                const token = await verifyPassword(input, currentAuthLevel);
+                
+                if (currentAuthLevel === 'level1') {
+                    sessionStorage.setItem('secureToken', token);
+                    unlockSecureUI();
+                } else {
+                    sessionStorage.setItem('extraToken', token);
+                }
 
                 feedback.innerText = "> ACCESS GRANTED";
                 feedback.className = "terminal-text text-xs text-center h-4 text-green-400 mt-2";
-
-                unlockSecureUI();
 
                 setTimeout(() => {
                     closeSecureModal();
                     if (pendingTabTarget) {
                         openTab(pendingTabEvent, pendingTabTarget);
-                    } else {
-                        openTab(null, 'resume'); // Auto-route to Resume tab on fresh auth
+                    } else if (currentAuthLevel === 'level1') {
+                        openTab(null, 'resume'); // Auto-route to Resume tab on fresh L1 auth
                     }
                 }, 800);
 
@@ -839,7 +867,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     }
                 });
             }
-            if (isAuthenticated()) {
+            if (isAuthenticated('level1')) {
                 unlockSecureUI();
             }
         });
