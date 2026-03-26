@@ -699,6 +699,8 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     closeSecureModal();
                     if (pendingTabTarget) {
                         openTab(pendingTabEvent, pendingTabTarget);
+                    } else {
+                        openTab(null, 'resume'); // Auto-route to Resume tab on fresh auth
                     }
                 }, 800);
                 
