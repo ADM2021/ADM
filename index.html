@@ -760,13 +760,24 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             document.getElementById('request-view').classList.remove('hidden');
         }
 
+        async function hashString(input) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(input);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
         async function verifyPassword(input, level) {
+            const p1Hash = '01232636c9f70d6cb849605c50375fcbcbaf2ed0084334697481b9d68526f92f';
+            const p2Hash = '6374dccb667f724ff27c651a3865c797560ac19bdf5fae190d5b429502938e49';
+            const inputHash = await hashString(input);
+
             // Simulated validation - backend replacement target
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    if (level === 'level1' && input === '12345') {
+                    if (level === 'level1' && inputHash === p1Hash) {
                         resolve('valid-session-abc');
-                    } else if (level === 'level2' && input === 'topsecret') {
+                    } else if (level === 'level2' && inputHash === p2Hash) {
                         resolve('valid-extra-xyz');
                     } else {
                         reject('Invalid');
