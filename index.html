@@ -218,8 +218,8 @@
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">02
             // Portfolio</button>
         <button onclick="openTab(event, 'methodology')"
-            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100 flex items-center gap-1">03
-            // How It Was Done <span id="lock-icon-methodology" class="text-purple-400 text-xs leading-none">🔒</span></button>
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">03
+            // How It Was Done</button>
         <button onclick="openTab(event, 'resources')"
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">04
             // Certs & Resources</button>
@@ -590,16 +590,13 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             const extraTab = document.getElementById('tab-extrapolio');
             if (resumeTab) resumeTab.classList.remove('hidden');
             if (extraTab) extraTab.classList.remove('hidden');
-            // Remove lock icon from Methodology
-            const lockIcon = document.getElementById('lock-icon-methodology');
-            if (lockIcon) lockIcon.style.display = 'none';
             
             fetchSecureFiles();
         }
 
         function openTab(evt, tabName) {
             // Protected tabs logic
-            const protectedTabs = ['methodology', 'resume', 'extrapolio'];
+            const protectedTabs = ['resume', 'extrapolio'];
             
             if (protectedTabs.includes(tabName) && !isAuthenticated()) {
                 pendingTabTarget = tabName;
