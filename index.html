@@ -493,7 +493,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
     </footer>
 
     <!-- SECURE TERMINAL MODAL -->
-    <div id="secure-modal" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center p-4">
+    <div id="secure-modal" class="fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4" style="display: none;">
         <div class="scanline"></div>
         <div class="bg-gray-900 border border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.2)] rounded-lg w-full max-w-md p-8 relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
@@ -625,12 +625,12 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         }
 
         function openSecureModal() {
-            document.getElementById('secure-modal').classList.remove('hidden');
+            document.getElementById('secure-modal').style.display = 'flex';
             resetModalView();
         }
 
         function closeSecureModal() {
-            document.getElementById('secure-modal').classList.add('hidden');
+            document.getElementById('secure-modal').style.display = 'none';
             pendingTabTarget = null;
             pendingTabEvent = null;
         }
