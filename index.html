@@ -164,6 +164,20 @@
             0% { bottom: 100%; }
             100% { bottom: -100px; }
         }
+
+        /* CLEAN PDF DOWNLOAD STYLES */
+        @media print {
+            nav, header, footer, .animate-banner, .max-w-4xl {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+            }
+            .bg-white\/95 {
+                box-shadow: none !important;
+                border: none !important;
+            }
+        }
     </style>
 </head>
 
