@@ -129,6 +129,41 @@
             will-change: transform;
             transform: translateZ(0); /* Hardware acceleration */
         }
+
+        /* SECURE MODAL STYLES */
+        #secure-modal {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .terminal-text {
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+        }
+
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .scanline {
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(168,85,247,0.2) 50%, rgba(0,0,0,0) 100%);
+            opacity: 0.1;
+            position: absolute;
+            bottom: 100%;
+            animation: scanline 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scanline {
+            0% { bottom: 100%; }
+            100% { bottom: -100px; }
+        }
     </style>
 </head>
 
@@ -139,8 +174,8 @@
             <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
             <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
         </div>
-        <div id="dynamic-date"
-            class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100">
+        <div id="dynamic-date" onclick="openSecureModal()"
+            class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 cursor-pointer hover:bg-purple-100 hover:border-purple-300 transition-colors">
             Secure Terminal // 2026.03.11
         </div>
     </nav>
@@ -183,11 +218,19 @@
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">02
             // Portfolio</button>
         <button onclick="openTab(event, 'methodology')"
-            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">03
-            // How It Was Done</button>
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100 flex items-center gap-1">03
+            // How It Was Done <span id="lock-icon-methodology" class="text-purple-400 text-xs leading-none">🔒</span></button>
         <button onclick="openTab(event, 'resources')"
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">04
             // Certs & Resources</button>
+        
+        <!-- SECURE TABS (Hidden by default) -->
+        <button onclick="openTab(event, 'resume')" id="tab-resume"
+            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">05
+            // Resume [SECURE]</button>
+        <button onclick="openTab(event, 'extrapolio')" id="tab-extrapolio"
+            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">06
+            // Extra Portfolio [SECURE]</button>
     </div>
 
     <section class="max-w-6xl mx-auto p-4 mb-20">
@@ -426,6 +469,20 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     </div>
                 </div>
             </div>
+
+            <!-- SECURE SECTION PAGES -->
+            <div id="resume" class="tab-content animate-in fade-in duration-500">
+                <div class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
+                    > Decrypting secure content...
+                </div>
+            </div>
+
+            <div id="extrapolio" class="tab-content animate-in fade-in duration-500">
+                <div class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
+                    > Decrypting secure content...
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -435,8 +492,122 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             for History →</button>
     </footer>
 
+    <!-- SECURE TERMINAL MODAL -->
+    <div id="secure-modal" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center p-4">
+        <div class="scanline"></div>
+        <div class="bg-gray-900 border border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.2)] rounded-lg w-full max-w-md p-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+            
+            <!-- Terminal Header -->
+            <div class="mb-8 text-center">
+                <p class="terminal-text text-purple-400 text-sm font-bold tracking-[0.3em] uppercase mb-2">SYSTEM SECURE</p>
+                <h3 class="terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2">
+                    > Terminal Access <span class="cursor-blink w-2 h-5 bg-purple-500 inline-block"></span>
+                </h3>
+            </div>
+
+            <!-- Main Auth View -->
+            <div id="auth-view" class="space-y-6">
+                <div class="space-y-4">
+                    <button onclick="showPasswordForm()" class="w-full bg-purple-900/30 hover:bg-purple-900/50 text-purple-300 border border-purple-500/30 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-inner">
+                        [ Enter Password ]
+                    </button>
+                    <button onclick="showRequestForm()" class="w-full bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text">
+                        [ Request Access ]
+                    </button>
+                </div>
+                <!-- Auth Feedback -->
+                <p id="auth-feedback" class="terminal-text text-xs text-center h-4"></p>
+            </div>
+
+            <!-- Password Input View -->
+            <div id="password-view" class="hidden space-y-6 animate-in fade-in duration-300">
+                <div>
+                    <label class="terminal-text text-purple-400 text-xs block mb-2">> INPUT_CREDENTIALS</label>
+                    <input type="password" id="terminal-password" placeholder="********" class="w-full bg-black border border-purple-500/50 text-purple-300 terminal-text p-3 text-sm focus:outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
+                </div>
+                <div class="flex gap-3">
+                    <button onclick="submitPassword()" class="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-lg">
+                        [ Authenticate ]
+                    </button>
+                    <button onclick="resetModalView()" class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text">
+                        [ Cancel ]
+                    </button>
+                </div>
+                <p id="pwd-feedback" class="terminal-text text-xs text-center h-4"></p>
+            </div>
+
+            <!-- Request Access View -->
+            <div id="request-view" class="hidden space-y-4 animate-in fade-in duration-300">
+                <p class="terminal-text text-purple-400 text-xs mb-4">> INITIALIZE_ACCESS_REQUEST</p>
+                <input type="text" id="req-name" placeholder="IDENTIFIER (NAME)" class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400">
+                <input type="email" id="req-email" placeholder="CONTACT (EMAIL)" class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400">
+                <textarea id="req-msg" placeholder="REASON FOR ACCESS (OPTIONAL)" rows="3" class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400 resize-none"></textarea>
+                <div class="flex gap-3 pt-2">
+                    <button onclick="submitRequest()" class="flex-1 bg-purple-900/50 hover:bg-purple-800/80 text-purple-300 border border-purple-500/50 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text">
+                        [ Transmit ]
+                    </button>
+                    <button onclick="resetModalView()" class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text">
+                        [ Cancel ]
+                    </button>
+                </div>
+                <p id="req-feedback" class="terminal-text text-xs text-center h-4"></p>
+            </div>
+
+            <!-- Close button -->
+            <button onclick="closeSecureModal()" class="absolute top-4 right-4 text-gray-500 hover:text-white terminal-text text-lg leading-none">
+                ×
+            </button>
+        </div>
+    </div>
+
     <script>
+        // SECURE TERMINAL LOGIC
+        let pendingTabTarget = null;
+        let pendingTabEvent = null;
+        let authAttempts = 0;
+        let isLockedOut = false;
+
+        function isAuthenticated() {
+            return sessionStorage.getItem('secureToken') === 'valid-session-abc';
+        }
+
+        async function fetchSecureFiles() {
+            try {
+                const res1 = await fetch('resume-8f7x9A2q.html');
+                if (res1.ok) document.getElementById('resume').innerHTML = await res1.text();
+                
+                const res2 = await fetch('extrapolio-2b9y4Z1m.html');
+                if (res2.ok) document.getElementById('extrapolio').innerHTML = await res2.text();
+            } catch (err) {
+                console.warn("Secure fetch failed (normal if viewed as local file without a server):", err);
+            }
+        }
+
+        function unlockSecureUI() {
+            // Unhide secure tabs if they exist
+            const resumeTab = document.getElementById('tab-resume');
+            const extraTab = document.getElementById('tab-extrapolio');
+            if (resumeTab) resumeTab.classList.remove('hidden');
+            if (extraTab) extraTab.classList.remove('hidden');
+            // Remove lock icon from Methodology
+            const lockIcon = document.getElementById('lock-icon-methodology');
+            if (lockIcon) lockIcon.style.display = 'none';
+            
+            fetchSecureFiles();
+        }
+
         function openTab(evt, tabName) {
+            // Protected tabs logic
+            const protectedTabs = ['methodology', 'resume', 'extrapolio'];
+            
+            if (protectedTabs.includes(tabName) && !isAuthenticated()) {
+                pendingTabTarget = tabName;
+                pendingTabEvent = evt;
+                openSecureModal();
+                return;
+            }
+
             console.log('Tab switch triggered:', tabName);
             const tabcontent = document.getElementsByClassName("tab-content");
             for (let i = 0; i < tabcontent.length; i++) {
@@ -447,10 +618,152 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 tablinks[i].classList.remove("active");
             }
             document.getElementById(tabName).classList.add("active");
+            
             if (evt && evt.currentTarget) {
                 evt.currentTarget.classList.add("active");
+            } else {
+                const btns = Array.from(tablinks).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabName));
+                if (btns) btns.classList.add("active");
             }
         }
+
+        function openSecureModal() {
+            document.getElementById('secure-modal').classList.remove('hidden');
+            resetModalView();
+        }
+
+        function closeSecureModal() {
+            document.getElementById('secure-modal').classList.add('hidden');
+            pendingTabTarget = null;
+            pendingTabEvent = null;
+        }
+
+        function resetModalView() {
+            document.getElementById('auth-view').classList.remove('hidden');
+            document.getElementById('password-view').classList.add('hidden');
+            document.getElementById('request-view').classList.add('hidden');
+            
+            document.getElementById('auth-feedback').innerText = '';
+            document.getElementById('pwd-feedback').innerText = '';
+            document.getElementById('req-feedback').innerText = '';
+            
+            document.getElementById('terminal-password').value = '';
+        }
+
+        function showPasswordForm() {
+            document.getElementById('auth-view').classList.add('hidden');
+            document.getElementById('password-view').classList.remove('hidden');
+            setTimeout(() => document.getElementById('terminal-password').focus(), 100);
+        }
+
+        function showRequestForm() {
+            document.getElementById('auth-view').classList.add('hidden');
+            document.getElementById('request-view').classList.remove('hidden');
+        }
+
+        async function verifyPassword(input) {
+            // Simulated validation - backend replacement target
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (input === '12345') {
+                        resolve('valid-session-abc');
+                    } else {
+                        reject('Invalid');
+                    }
+                }, 500); // simulate latency
+            });
+        }
+
+        async function submitPassword() {
+            if (isLockedOut) return;
+
+            const input = document.getElementById('terminal-password').value;
+            const feedback = document.getElementById('pwd-feedback');
+            
+            if (!input) {
+                feedback.innerText = "> ERROR: EMPTY INPUT";
+                feedback.className = "terminal-text text-xs text-center h-4 text-red-500 mt-2";
+                return;
+            }
+
+            feedback.innerText = "> AUTHENTICATING...";
+            feedback.className = "terminal-text text-xs text-center h-4 text-purple-400 cursor-blink mt-2";
+
+            try {
+                const token = await verifyPassword(input);
+                sessionStorage.setItem('secureToken', token);
+                
+                feedback.innerText = "> ACCESS GRANTED";
+                feedback.className = "terminal-text text-xs text-center h-4 text-green-400 mt-2";
+                
+                unlockSecureUI();
+
+                setTimeout(() => {
+                    closeSecureModal();
+                    if (pendingTabTarget) {
+                        openTab(pendingTabEvent, pendingTabTarget);
+                    }
+                }, 800);
+                
+            } catch (err) {
+                authAttempts++;
+                feedback.innerText = `> ERROR: INVALID CREDENTIALS (${authAttempts}/3)`;
+                feedback.className = "terminal-text text-xs text-center h-4 text-red-500 mt-2";
+                
+                if (authAttempts >= 3) {
+                    isLockedOut = true;
+                    feedback.innerText = "> SYSTEM LOCKED. TRY AGAIN IN 5S.";
+                    setTimeout(() => {
+                        isLockedOut = false;
+                        authAttempts = 0;
+                        feedback.innerText = "> LOCK LIFTED.";
+                        feedback.className = "terminal-text text-xs text-center h-4 text-purple-400 mt-2";
+                    }, 5000);
+                }
+            }
+        }
+
+        function submitRequest() {
+            const name = document.getElementById('req-name').value;
+            const email = document.getElementById('req-email').value;
+            const feedback = document.getElementById('req-feedback');
+            
+            if (!name || !email) {
+                feedback.innerText = "> ERROR: NAME AND EMAIL REQUIRED";
+                feedback.className = "terminal-text text-xs text-center h-4 text-red-500 mt-2";
+                return;
+            }
+
+            feedback.innerText = "> TRANSMITTING LOGS...";
+            feedback.className = "terminal-text text-xs text-center h-4 text-purple-400 cursor-blink mt-2";
+            
+            // Console logging mock request
+            setTimeout(() => {
+                console.log(`[SECURE LOG/MOCK] Access explicitly requested by identifier: ${name} (${email}) timestamp: ${new Date().toISOString()}`);
+                
+                feedback.innerText = "> TRANSMISSION SECURE. LOG RECORDED.";
+                feedback.className = "terminal-text text-xs text-center h-4 text-green-400 mt-2";
+                
+                setTimeout(() => {
+                    closeSecureModal();
+                }, 1500);
+            }, 800);
+        }
+
+        // Initialize state logic after DOM Content Load
+        document.addEventListener('DOMContentLoaded', () => {
+            const pwdInput = document.getElementById('terminal-password');
+            if (pwdInput) {
+                pwdInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        submitPassword();
+                    }
+                });
+            }
+            if (isAuthenticated()) {
+                unlockSecureUI();
+            }
+        });
 
         // Set dynamic date
         const dateEl = document.getElementById('dynamic-date');
