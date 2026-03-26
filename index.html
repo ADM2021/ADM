@@ -127,7 +127,8 @@
             -webkit-animation: vertical-carousel 15s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
             animation: vertical-carousel 15s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
             will-change: transform;
-            transform: translateZ(0); /* Hardware acceleration */
+            transform: translateZ(0);
+            /* Hardware acceleration */
         }
 
         /* SECURE MODAL STYLES */
@@ -135,7 +136,7 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
-        
+
         .terminal-text {
             font-family: 'Courier New', Courier, monospace;
             text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
@@ -146,13 +147,15 @@
         }
 
         @keyframes blink {
-            50% { opacity: 0; }
+            50% {
+                opacity: 0;
+            }
         }
 
         .scanline {
             width: 100%;
             height: 10px;
-            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(168,85,247,0.2) 50%, rgba(0,0,0,0) 100%);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(168, 85, 247, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
             opacity: 0.1;
             position: absolute;
             bottom: 100%;
@@ -161,21 +164,12 @@
         }
 
         @keyframes scanline {
-            0% { bottom: 100%; }
-            100% { bottom: -100px; }
-        }
+            0% {
+                bottom: 100%;
+            }
 
-        /* CLEAN PDF DOWNLOAD STYLES */
-        @media print {
-            nav, header, footer, .animate-banner, .max-w-4xl {
-                display: none !important;
-            }
-            body {
-                background: white !important;
-            }
-            .bg-white\/95 {
-                box-shadow: none !important;
-                border: none !important;
+            100% {
+                bottom: -100px;
             }
         }
     </style>
@@ -183,7 +177,7 @@
 
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
 
-    <nav class="p-8 flex justify-between items-center max-w-5xl mx-auto">
+    <nav class="print:hidden p-8 flex justify-between items-center max-w-5xl mx-auto">
         <div class="flex flex-col leading-tight">
             <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
             <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
@@ -194,7 +188,7 @@
         </div>
     </nav>
 
-    <div class="max-w-fit mx-auto mb-4 animate-banner">
+    <div class="print:hidden max-w-fit mx-auto mb-4 animate-banner">
         <div class="bg-amber-50 border border-amber-200 px-8 py-2 rounded-full flex items-center gap-3 shadow-sm">
             <span class="text-amber-600 font-bold">🚧</span>
             <span class="text-[10px] font-black uppercase tracking-[0.3em] text-amber-700 leading-none">Page Is Still
@@ -203,18 +197,24 @@
         </div>
     </div>
 
-    <header class="max-w-6xl mx-auto pt-4 pb-12 px-6 text-center">
+    <header class="print:hidden max-w-6xl mx-auto pt-4 pb-12 px-6 text-center">
         <div class="flex flex-col items-center justify-center">
             <div
                 class="h-[1.2em] overflow-hidden relative text-2xl md:text-5xl lg:text-6xl font-black tracking-tighter italic mb-2">
-                <div class="animate-carousel w-full bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent" 
-                     style="background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone;">
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Strategic Data</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Sr. Operation And Research</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Lead Operation And Research</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Data Systems Engineer</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Financial</span>
-                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Strategic Data</span>
+                <div class="animate-carousel w-full bg-gradient-to-r from-purple-950 to-purple-600 bg-clip-text text-transparent"
+                    style="background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone;">
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Strategic
+                        Data</span>
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Sr. Operation
+                        And Research</span>
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Lead Operation
+                        And Research</span>
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Data Systems
+                        Engineer</span>
+                    <span
+                        class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Financial</span>
+                    <span class="h-[1.2em] flex items-center justify-center whitespace-nowrap uppercase">Strategic
+                        Data</span>
                 </div>
             </div>
             <span
@@ -224,7 +224,7 @@
         </p>
     </header>
 
-    <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6 relative z-50">
+    <div class="print:hidden max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6 relative z-50">
         <button onclick="openTab(event, 'about')"
             class="tab-btn active px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">01
             // About Me</button>
@@ -234,48 +234,63 @@
         <button onclick="openTab(event, 'methodology')"
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">03
             // How It Was Done</button>
-        <button onclick="openTab(event, 'resources')"
+        <button onclick="openTab(event, 'tutorials')"
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">04
+            // Audio & Video</button>
+        <button onclick="openTab(event, 'resources')"
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">05
             // Certs & Resources</button>
-        
+
         <!-- SECURE TABS (Hidden by default) -->
         <button onclick="openTab(event, 'resume')" id="tab-resume"
-            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">05
+            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">06
             // Resume [SECURE]</button>
         <button onclick="openTab(event, 'extrapolio')" id="tab-extrapolio"
-            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">06
+            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
             // Extra Portfolio [SECURE]</button>
     </div>
 
     <section class="max-w-6xl mx-auto p-4 mb-20">
-        <div
-            class="bg-white/95 backdrop-blur-xl border border-white rounded-[3rem] p-8 md:p-12 shadow-2xl shadow-purple-100/50"
+        <div class="bg-white/95 backdrop-blur-xl border border-white rounded-[3rem] p-8 md:p-12 shadow-2xl shadow-purple-100/50"
             style="-webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);">
 
             <div id="about" class="tab-content active animate-in fade-in duration-500">
                 <div class="space-y-8 text-gray-600 leading-relaxed">
-                    <p class="text-xl font-medium text-purple-900/80 italic tracking-tight flex items-center gap-4 flex-wrap">
+                    <p
+                        class="text-xl font-medium text-purple-900/80 italic tracking-tight flex items-center gap-4 flex-wrap">
                         "I am known by many names… but you may call me Aisha.”
-                        <img src="https://media.giphy.com/media/26tPgV8ceZTSxH9zG/giphy.gif" alt="Aisha GIF" class="h-12 w-12 rounded-lg object-cover border border-purple-100 shadow-sm">
+                        <img src="https://media.giphy.com/media/26tPgV8ceZTSxH9zG/giphy.gif" alt="Aisha GIF"
+                            class="h-12 w-12 rounded-lg object-cover border border-purple-100 shadow-sm">
                     </p>
-                    <p>For 13+ years supporting the Department of Defense, I have worked at the intersection of data, automation, and mission level decision making. My specialty is turning complex systems data and sprawling datasets into clear, actionable insight for leadership. Because here is the truth: data by itself is not powerful. Turning data into knowledge and turning that knowledge into action is where the real value lives. When the data gets messy, I build the system that makes sense of it. I design automated processes that take enormous, complicated datasets and transform them into stories executives can understand and decisions they can confidently make.</p>
+                    <p>For 13+ years supporting the Department of Defense, I have worked at the intersection of data,
+                        automation, and mission level decision making. My specialty is turning complex systems data and
+                        sprawling datasets into clear, actionable insight for leadership. Because here is the truth:
+                        data by itself is not powerful. Turning data into knowledge and turning that knowledge into
+                        action is where the real value lives. When the data gets messy, I build the system that makes
+                        sense of it. I design automated processes that take enormous, complicated datasets and transform
+                        them into stories executives can understand and decisions they can confidently make.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100">
                             <span
-                                class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">⚙️ Automation & Power Platform</span>
+                                class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">⚙️
+                                Automation & Power Platform</span>
                             <p class="text-xs text-gray-500 italic leading-relaxed">
                                 I do not just build dashboards. I build the machinery behind them. <br><br>
-                                Legacy systems, stubborn workflows, and messy spreadsheets are simply puzzles waiting to be solved. Using Power Automate, the Power Platform, and the occasional Python script when a problem calls for it, I streamline reporting, automate workflows, and eliminate the ritual of manual data entry.
+                                Legacy systems, stubborn workflows, and messy spreadsheets are simply puzzles waiting to
+                                be solved. Using Power Automate, the Power Platform, and the occasional Python script
+                                when a problem calls for it, I streamline reporting, automate workflows, and eliminate
+                                the ritual of manual data entry.
                                 <br><br>
                                 Less clicking. More automating. More mission impact.
                             </p>
                         </div>
                         <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100">
                             <span
-                                class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">🧠 Enterprise Logic</span>
+                                class="text-[9px] font-black text-purple-400 block mb-2 uppercase tracking-widest leading-none">🧠
+                                Enterprise Logic</span>
                             <p class="text-xs text-gray-500 italic leading-relaxed">
                                 I am fluent in English and Spanish. <br><br>
-                                But in the workplace, I usually translate between two very different dialects: 
+                                But in the workplace, I usually translate between two very different dialects:
                                 <br><br>
                                 • Raw Data <br>
                                 • Executive Strategy
@@ -288,6 +303,15 @@
             </div>
 
             <div id="portfolio" class="tab-content animate-in fade-in duration-500">
+                <!-- Mobile Warning Banner -->
+                <div class="md:hidden bg-amber-50 border border-amber-200 p-4 rounded-xl mb-8 flex items-start gap-4 shadow-sm mx-2">
+                    <span class="text-amber-600 text-xl font-bold mt-1">📱</span>
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-[0.2em] text-amber-800 mb-1">Mobile Viewing Notice</p>
+                        <p class="text-xs text-amber-700 leading-relaxed font-medium">To experience these highly detailed interactive visualizations exactly as intended, viewing natively on a desktop or tablet is strongly recommended.</p>
+                    </div>
+                </div>
+
                 <div class="flex justify-between items-start mb-6 px-2">
                     <div>
                         <h2 class="text-2xl font-black italic text-purple-900 uppercase leading-none">CEC 2026 Orbital
@@ -330,65 +354,98 @@
 
             <div id="methodology" class="tab-content animate-in fade-in duration-500">
                 <div class="mb-8 p-6 bg-purple-50/50 rounded-2xl border border-purple-100 flex flex-col gap-3">
-                    <label for="case-study-select" class="text-sm font-black text-purple-900 uppercase tracking-widest">Select Visualization:</label>
+                    <label for="case-study-select"
+                        class="text-sm font-black text-purple-900 uppercase tracking-widest">Select
+                        Visualization:</label>
                     <div class="relative">
-                        <select id="case-study-select" onchange="toggleCaseStudy(this.value)" class="w-full appearance-none bg-white border border-purple-200 text-purple-900 font-bold py-3 px-4 pr-8 rounded-xl leading-tight focus:outline-none focus:bg-white focus:border-purple-500 cursor-pointer transition-colors shadow-sm">
+                        <select id="case-study-select" onchange="toggleCaseStudy(this.value)"
+                            class="w-full appearance-none bg-white border border-purple-200 text-purple-900 font-bold py-3 px-4 pr-8 rounded-xl leading-tight focus:outline-none focus:bg-white focus:border-purple-500 cursor-pointer transition-colors shadow-sm">
                             <option value="" disabled selected>-- Select an Option --</option>
                             <option value="cec-2026">CELESTIAL EXTRACTION CORP (CEC) - 2026 ORBITAL AUDIT</option>
                         </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-purple-900">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-purple-900">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
                         </div>
                     </div>
                 </div>
 
                 <div id="case-studies-container">
                     <div id="cec-2026" class="case-study hidden space-y-6 animate-in fade-in duration-500">
-                        <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none mt-2">Technical Case
+                        <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none mt-2">
+                            Technical Case
                             Study</h2>
                         <div class="space-y-6 text-sm text-gray-600">
                             <div>
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Project: Celestial
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Project:
+                                    Celestial
                                     Extraction Corp (CEC) - 2026 Orbital Audit</h3>
                                 <p>The Challenge: As the space-mining industry matures, "Celestial Extraction
-                                    Corp" required a high-level financial oversight tool to evaluate mission efficiency across
-                                    multiple orbital sectors. The goal was to transform raw mission telemetry into a strategic
-                                    command center for C-Suite executives to identify "Alpha" in a high-risk, multi-billion
+                                    Corp" required a high-level financial oversight tool to evaluate mission efficiency
+                                    across
+                                    multiple orbital sectors. The goal was to transform raw mission telemetry into a
+                                    strategic
+                                    command center for C-Suite executives to identify "Alpha" in a high-risk,
+                                    multi-billion
                                     dollar frontier economy.</p>
                             </div>
                             <div>
                                 <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 1:
                                     Engineering the Synthetic Ledger (Python)</h3>
-                                <p>Because real-world orbital financial data is highly proprietary, I engineered a custom
-                                    dataset using Python (Pandas & NumPy). I designed a schema representing 10,000 "Extraction
-                                    Events," incorporating variables like resource rarity (Helium-3, Platinum), market spot
-                                    prices, and sector-specific operational costs. I injected realistic dependencies - ensuring
-                                    that Helium-3 missions yielded higher margins but carried greater logistical overhead.</p>
+                                <p>Because real-world orbital financial data is highly proprietary, I engineered a
+                                    custom
+                                    dataset using Python (Pandas & NumPy). I designed a schema representing 10,000
+                                    "Extraction
+                                    Events," incorporating variables like resource rarity (Helium-3, Platinum), market
+                                    spot
+                                    prices, and sector-specific operational costs. I injected realistic dependencies -
+                                    ensuring
+                                    that Helium-3 missions yielded higher margins but carried greater logistical
+                                    overhead.</p>
                             </div>
-                            <div class="bg-purple-950 p-6 rounded-2xl border border-white/10 shadow-inner overflow-x-auto">
+                            <div
+                                class="bg-purple-950 p-6 rounded-2xl border border-white/10 shadow-inner overflow-x-auto">
                                 <pre class="text-purple-100 text-[10px] leading-relaxed"><code># Alpha Metric Generator
 df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                             </div>
                             <div>
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 2: Visual
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 2:
+                                    Visual
                                     Architecture & UI/UX (Tableau)</h3>
-                                <p>The dashboard was designed as a "Solar-Tech" Command Center, moving away from traditional
-                                    corporate aesthetics to an immersive, holographic HUD experience. Key features include the
+                                <p>The dashboard was designed as a "Solar-Tech" Command Center, moving away from
+                                    traditional
+                                    corporate aesthetics to an immersive, holographic HUD experience. Key features
+                                    include the
                                     Resource Treemap for instant regional revenue visibility and the
                                     Executive Quadrant (Scatter Plot) developed with an ROI Factor metric to
                                     distinguish "Stars" from "Problem Sectors."
                                 </p>
                             </div>
                             <div>
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 3: C-Suite
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 3:
+                                    C-Suite
                                     Strategic Utility</h3>
                                 <p>This tool serves three critical functions: Capital Allocation (justifying
                                     investments in high-cost but efficient sectors like Near-Earth Orbit), Risk
-                                        Mitigation (flagging underperforming missions), and Market
-                                        Intelligence (timing resource sales based on volatility trends).</p>
+                                    Mitigation (flagging underperforming missions), and Market
+                                    Intelligence (timing resource sales based on volatility trends).</p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="tutorials" class="tab-content animate-in fade-in duration-500">
+                <h2 class="text-3xl font-black italic text-purple-900 mb-8 uppercase leading-none">Audio & Video Tutorials</h2>
+                <div class="bg-purple-50/50 border border-purple-100 p-8 rounded-[2rem] text-center flex flex-col items-center justify-center min-h-[400px]">
+                    <span class="text-4xl mb-4">🎙️</span>
+                    <h3 class="text-xl font-black text-purple-900 uppercase tracking-widest mb-4">Under Construction: Substack Integration</h3>
+                    <p class="text-sm text-gray-500 max-w-lg leading-relaxed mb-6">I am currently migrating my detailed audio breakdowns, video lectures, and masterclasses to Substack. Stay tuned for the official launch.</p>
+                    <a href="https://substack.com" target="_blank" class="px-8 py-3 bg-purple-900 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-purple-800 transition-colors shadow-lg">
+                        Go To Substack
+                    </a>
                 </div>
             </div>
 
@@ -440,11 +497,16 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                         <h3 class="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em] mb-6 leading-none">
                             Completed Courses</h3>
                         <div class="grid grid-cols-1 gap-y-3 text-[10px] font-bold text-purple-900 leading-snug">
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Beyond the Chatbot</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Unlock Foundational Concepts</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Navigate the Landscape</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI Apps: Transform Your Work</span> <span>Google</span></p>
-                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI Agents: Transform Your Organizations</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Beyond the
+                                    Chatbot</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Unlock
+                                    Foundational Concepts</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI: Navigate the
+                                    Landscape</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI Apps: Transform
+                                    Your Work</span> <span>Google</span></p>
+                            <p class="flex justify-between border-b border-purple-50 pb-1"><span>Gen AI Agents:
+                                    Transform Your Organizations</span> <span>Google</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Introduction to
                                     Microsoft Power Platform</span> <span>Microsoft</span></p>
                             <p class="flex justify-between border-b border-purple-50 pb-1"><span>Google Data Analytics
@@ -486,13 +548,15 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
 
             <!-- SECURE SECTION PAGES -->
             <div id="resume" class="tab-content animate-in fade-in duration-500">
-                <div class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
+                <div
+                    class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
                     > Decrypting secure content...
                 </div>
             </div>
 
             <div id="extrapolio" class="tab-content animate-in fade-in duration-500">
-                <div class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
+                <div
+                    class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
                     > Decrypting secure content...
                 </div>
             </div>
@@ -500,22 +564,28 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         </div>
     </section>
 
-    <footer class="text-center pb-24 px-6">
+    <footer class="print:hidden text-center pb-24 px-6">
         <button
             class="bg-purple-950 text-white px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition-all">Contact
             for History →</button>
     </footer>
 
     <!-- SECURE TERMINAL MODAL -->
-    <div id="secure-modal" class="fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4" style="display: none;">
+    <div id="secure-modal" class="fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4"
+        style="display: none;">
         <div class="scanline"></div>
-        <div class="bg-gray-900 border border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.2)] rounded-lg w-full max-w-md p-8 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-            
+        <div
+            class="bg-gray-900 border border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.2)] rounded-lg w-full max-w-md p-8 relative overflow-hidden">
+            <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent">
+            </div>
+
             <!-- Terminal Header -->
             <div class="mb-8 text-center">
-                <p class="terminal-text text-purple-400 text-sm font-bold tracking-[0.3em] uppercase mb-2">SYSTEM SECURE</p>
-                <h3 class="terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2">
+                <p class="terminal-text text-purple-400 text-sm font-bold tracking-[0.3em] uppercase mb-2">SYSTEM SECURE
+                </p>
+                <h3
+                    class="terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2">
                     > Terminal Access <span class="cursor-blink w-2 h-5 bg-purple-500 inline-block"></span>
                 </h3>
             </div>
@@ -523,10 +593,12 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             <!-- Main Auth View -->
             <div id="auth-view" class="space-y-6">
                 <div class="space-y-4">
-                    <button onclick="showPasswordForm()" class="w-full bg-purple-900/30 hover:bg-purple-900/50 text-purple-300 border border-purple-500/30 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-inner">
+                    <button onclick="showPasswordForm()"
+                        class="w-full bg-purple-900/30 hover:bg-purple-900/50 text-purple-300 border border-purple-500/30 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-inner">
                         [ Enter Password ]
                     </button>
-                    <button onclick="showRequestForm()" class="w-full bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text">
+                    <button onclick="showRequestForm()"
+                        class="w-full bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text">
                         [ Request Access ]
                     </button>
                 </div>
@@ -538,13 +610,16 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             <div id="password-view" class="hidden space-y-6 animate-in fade-in duration-300">
                 <div>
                     <label class="terminal-text text-purple-400 text-xs block mb-2">> INPUT_CREDENTIALS</label>
-                    <input type="password" id="terminal-password" placeholder="********" class="w-full bg-black border border-purple-500/50 text-purple-300 terminal-text p-3 text-sm focus:outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
+                    <input type="password" id="terminal-password" placeholder="********"
+                        class="w-full bg-black border border-purple-500/50 text-purple-300 terminal-text p-3 text-sm focus:outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
                 </div>
                 <div class="flex gap-3">
-                    <button onclick="submitPassword()" class="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-lg">
+                    <button onclick="submitPassword()"
+                        class="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-lg">
                         [ Authenticate ]
                     </button>
-                    <button onclick="resetModalView()" class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text">
+                    <button onclick="resetModalView()"
+                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text">
                         [ Cancel ]
                     </button>
                 </div>
@@ -554,14 +629,19 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             <!-- Request Access View -->
             <div id="request-view" class="hidden space-y-4 animate-in fade-in duration-300">
                 <p class="terminal-text text-purple-400 text-xs mb-4">> INITIALIZE_ACCESS_REQUEST</p>
-                <input type="text" id="req-name" placeholder="IDENTIFIER (NAME)" class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400">
-                <input type="email" id="req-email" placeholder="CONTACT (EMAIL)" class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400">
-                <textarea id="req-msg" placeholder="REASON FOR ACCESS (OPTIONAL)" rows="3" class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400 resize-none"></textarea>
+                <input type="text" id="req-name" placeholder="IDENTIFIER (NAME)"
+                    class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400">
+                <input type="email" id="req-email" placeholder="CONTACT (EMAIL)"
+                    class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400">
+                <textarea id="req-msg" placeholder="REASON FOR ACCESS (OPTIONAL)" rows="3"
+                    class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400 resize-none"></textarea>
                 <div class="flex gap-3 pt-2">
-                    <button onclick="submitRequest()" class="flex-1 bg-purple-900/50 hover:bg-purple-800/80 text-purple-300 border border-purple-500/50 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text">
+                    <button onclick="submitRequest()"
+                        class="flex-1 bg-purple-900/50 hover:bg-purple-800/80 text-purple-300 border border-purple-500/50 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text">
                         [ Transmit ]
                     </button>
-                    <button onclick="resetModalView()" class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text">
+                    <button onclick="resetModalView()"
+                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text">
                         [ Cancel ]
                     </button>
                 </div>
@@ -569,7 +649,8 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             </div>
 
             <!-- Close button -->
-            <button onclick="closeSecureModal()" class="absolute top-4 right-4 text-gray-500 hover:text-white terminal-text text-lg leading-none">
+            <button onclick="closeSecureModal()"
+                class="absolute top-4 right-4 text-gray-500 hover:text-white terminal-text text-lg leading-none">
                 ×
             </button>
         </div>
@@ -590,7 +671,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             try {
                 const res1 = await fetch('resume-8f7x9A2q.html');
                 if (res1.ok) document.getElementById('resume').innerHTML = await res1.text();
-                
+
                 const res2 = await fetch('extrapolio-2b9y4Z1m.html');
                 if (res2.ok) document.getElementById('extrapolio').innerHTML = await res2.text();
             } catch (err) {
@@ -604,14 +685,14 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             const extraTab = document.getElementById('tab-extrapolio');
             if (resumeTab) resumeTab.classList.remove('hidden');
             if (extraTab) extraTab.classList.remove('hidden');
-            
+
             fetchSecureFiles();
         }
 
         function openTab(evt, tabName) {
             // Protected tabs logic
             const protectedTabs = ['resume', 'extrapolio'];
-            
+
             if (protectedTabs.includes(tabName) && !isAuthenticated()) {
                 pendingTabTarget = tabName;
                 pendingTabEvent = evt;
@@ -629,7 +710,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 tablinks[i].classList.remove("active");
             }
             document.getElementById(tabName).classList.add("active");
-            
+
             if (evt && evt.currentTarget) {
                 evt.currentTarget.classList.add("active");
             } else {
@@ -653,11 +734,11 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             document.getElementById('auth-view').classList.remove('hidden');
             document.getElementById('password-view').classList.add('hidden');
             document.getElementById('request-view').classList.add('hidden');
-            
+
             document.getElementById('auth-feedback').innerText = '';
             document.getElementById('pwd-feedback').innerText = '';
             document.getElementById('req-feedback').innerText = '';
-            
+
             document.getElementById('terminal-password').value = '';
         }
 
@@ -690,7 +771,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
 
             const input = document.getElementById('terminal-password').value;
             const feedback = document.getElementById('pwd-feedback');
-            
+
             if (!input) {
                 feedback.innerText = "> ERROR: EMPTY INPUT";
                 feedback.className = "terminal-text text-xs text-center h-4 text-red-500 mt-2";
@@ -703,10 +784,10 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             try {
                 const token = await verifyPassword(input);
                 sessionStorage.setItem('secureToken', token);
-                
+
                 feedback.innerText = "> ACCESS GRANTED";
                 feedback.className = "terminal-text text-xs text-center h-4 text-green-400 mt-2";
-                
+
                 unlockSecureUI();
 
                 setTimeout(() => {
@@ -717,12 +798,12 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                         openTab(null, 'resume'); // Auto-route to Resume tab on fresh auth
                     }
                 }, 800);
-                
+
             } catch (err) {
                 authAttempts++;
                 feedback.innerText = `> ERROR: INVALID CREDENTIALS (${authAttempts}/3)`;
                 feedback.className = "terminal-text text-xs text-center h-4 text-red-500 mt-2";
-                
+
                 if (authAttempts >= 3) {
                     isLockedOut = true;
                     feedback.innerText = "> SYSTEM LOCKED. TRY AGAIN IN 5S.";
@@ -740,7 +821,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             const name = document.getElementById('req-name').value;
             const email = document.getElementById('req-email').value;
             const feedback = document.getElementById('req-feedback');
-            
+
             if (!name || !email) {
                 feedback.innerText = "> ERROR: NAME AND EMAIL REQUIRED";
                 feedback.className = "terminal-text text-xs text-center h-4 text-red-500 mt-2";
@@ -749,14 +830,14 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
 
             feedback.innerText = "> TRANSMITTING LOGS...";
             feedback.className = "terminal-text text-xs text-center h-4 text-purple-400 cursor-blink mt-2";
-            
+
             // Console logging mock request
             setTimeout(() => {
                 console.log(`[SECURE LOG/MOCK] Access explicitly requested by identifier: ${name} (${email}) timestamp: ${new Date().toISOString()}`);
-                
+
                 feedback.innerText = "> TRANSMISSION SECURE. LOG RECORDED.";
                 feedback.className = "terminal-text text-xs text-center h-4 text-green-400 mt-2";
-                
+
                 setTimeout(() => {
                     closeSecureModal();
                 }, 1500);
