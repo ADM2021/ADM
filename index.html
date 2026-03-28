@@ -1051,7 +1051,10 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             }
 
             let utterance = new SpeechSynthesisUtterance(chunkQueue[currentChunkIndex]);
-            if (preferredVoice) utterance.voice = preferredVoice;
+            if (preferredVoice) {
+                utterance.voice = preferredVoice;
+                utterance.lang = preferredVoice.lang; // CRITICAL: macOS Safari/Chrome ignores the voice if lang mismatches
+            }
             utterance.rate = ttsRate;
             utterance.pitch = 1;
             utterance.volume = 1;
@@ -1060,6 +1063,15 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 if (ttsState === 'playing') {
                     currentChunkIndex++;
                     // A slight pause between chunks mimics natural reading rhythm
+                    setTimeout(playNextChunk, 200);
+                }
+            };
+            
+            utterance.onerror = (e) => {
+                console.warn('TTS Error with voice:', preferredVoice ? preferredVoice.name : 'Unknown', e);
+                // Recover from a stuck queue if the voice engine crashes
+                if (ttsState === 'playing') {
+                    currentChunkIndex++;
                     setTimeout(playNextChunk, 200);
                 }
             };
