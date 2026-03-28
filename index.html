@@ -195,19 +195,39 @@
         .audio-bars-container.playing .audio-bar:nth-child(3) { animation-duration: 0.8s; animation-delay: 0.4s; }
         .audio-bars-container.playing .audio-bar:nth-child(4) { animation-duration: 1.0s; animation-delay: 0.1s; }
         .audio-bars-container.playing .audio-bar:nth-child(5) { animation-duration: 0.9s; animation-delay: 0.3s; }
+
+        /* GOOGLE TRANSLATE OVERRIDES */
+        body { top: 0 !important; }
+        .goog-te-banner-frame { display: none !important; }
+        #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+        .goog-text-highlight { background: none !important; box-shadow: none !important; }
+        #google_translate_element { display: none !important; }
     </style>
 </head>
 
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
 
-    <nav class="print:hidden p-8 flex justify-between items-center max-w-5xl mx-auto">
+    <nav class="print:hidden p-8 flex justify-between items-center max-w-5xl mx-auto flex-wrap gap-4">
         <div class="flex flex-col leading-tight">
             <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
             <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
         </div>
-        <div id="dynamic-date" onclick="openSecureModal('level1')"
-            class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 cursor-pointer hover:bg-purple-100 hover:border-purple-300 transition-colors">
-            Secure Terminal // 2026.03.11
+        
+        <div class="flex items-center gap-4 flex-wrap">
+            <!-- LANGUAGE SWITCHER -->
+            <div class="flex bg-white border border-purple-100 rounded-full shadow-sm overflow-hidden p-0.5">
+                <button onclick="translatePage('en')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-purple-900 hover:bg-purple-50 rounded-full transition-colors focus:bg-purple-100">EN</button>
+                <div class="w-px bg-purple-100 my-1"></div>
+                <button onclick="translatePage('es')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:bg-purple-100">ES</button>
+                <div class="w-px bg-purple-100 my-1"></div>
+                <button onclick="translatePage('fr')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:bg-purple-100">FR</button>
+            </div>
+
+            <!-- SECURE TERMINAL -->
+            <div id="dynamic-date" onclick="openSecureModal('level1')"
+                class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 cursor-pointer hover:bg-purple-100 hover:border-purple-300 transition-colors">
+                Secure Terminal // 2026.03.11
+            </div>
         </div>
     </nav>
 
@@ -843,7 +863,6 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         async function verifyPassword(input, level) {
             const p1Hash = '01232636c9f70d6cb849605c50375fcbcbaf2ed0084334697481b9d68526f92f';
             const p2Hash = '6374dccb667f724ff27c651a3865c797560ac19bdf5fae190d5b429502938e49';
-
             const inputHash = await hashString(input);
 
             // Simulated validation - backend replacement target
@@ -1106,8 +1125,8 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             utterance.onend = () => {
                 if (ttsState === 'playing') {
                     currentChunkIndex++;
-                    // A slight pause between chunks mimics natural reading rhythm
-                    setTimeout(playNextChunk, 200);
+                    // Direct synchronous call to preserve iOS auto-play context
+                    playNextChunk();
                 }
             };
             
@@ -1116,7 +1135,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 // Recover from a stuck queue if the voice engine crashes
                 if (ttsState === 'playing') {
                     currentChunkIndex++;
-                    setTimeout(playNextChunk, 200);
+                    playNextChunk();
                 }
             };
 
@@ -1140,14 +1159,11 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 ttsState = 'changing-speed';
                 speechSynth.cancel();
                 
-                // Restart current chunk using new speed
-                setTimeout(() => {
-                    ttsState = wasPlaying ? 'playing' : 'paused';
-                    if (ttsState === 'playing') {
-                        playNextChunk();
-                    }
-                    updateTTSUI();
-                }, 100);
+                ttsState = wasPlaying ? 'playing' : 'paused';
+                if (ttsState === 'playing') {
+                    playNextChunk();
+                }
+                updateTTSUI();
             }
         }
 
@@ -1161,13 +1177,11 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 ttsState = 'changing-speed'; // Reuse state flag to suppress chunk advancement
                 speechSynth.cancel();
                 
-                setTimeout(() => {
-                    ttsState = wasPlaying ? 'playing' : 'paused';
-                    if (ttsState === 'playing') {
-                        playNextChunk(); // Re-fires Utterance which will read the new preferredVoice
-                    }
-                    updateTTSUI();
-                }, 100);
+                ttsState = wasPlaying ? 'playing' : 'paused';
+                if (ttsState === 'playing') {
+                    playNextChunk(); // Re-fires Utterance which will read the new preferredVoice
+                }
+                updateTTSUI();
             }
         }
 
@@ -1191,7 +1205,29 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 if (visualizer) visualizer.classList.remove('playing');
             }
         }
+        function translatePage(langCode) {
+            const selectField = document.querySelector('.goog-te-combo');
+            if (selectField) {
+                selectField.value = langCode;
+                selectField.dispatchEvent(new Event('change'));
+            } else {
+                console.warn("Google Translate has not loaded yet.");
+            }
+        }
     </script>
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es,fr',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
