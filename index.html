@@ -357,6 +357,14 @@
                     </div>
                 </div>
 
+                <!-- Text-to-Speech Controls (Hidden until project selected) -->
+                <div id="tts-container" class="hidden mb-6 flex justify-end">
+                    <button id="tts-button" onclick="toggleTTS()" aria-label="Listen to this section" tabindex="0" class="flex items-center gap-2 bg-purple-100 hover:bg-purple-200 text-purple-900 px-4 py-2 rounded-full shadow-sm transition-all border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <span id="tts-icon" class="text-sm">🔊</span> 
+                        <span id="tts-text" class="text-[10px] font-black uppercase tracking-widest">Listen to this section</span>
+                    </button>
+                </div>
+
                 <div id="case-studies-container">
                     <div id="cec-2026" class="case-study hidden space-y-6 animate-in fade-in duration-500">
                         <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none mt-2">
@@ -367,8 +375,8 @@
                                 <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Project:
                                     Celestial
                                     Extraction Corp (CEC) - 2026 Orbital Audit</h3>
-                                <p>The Challenge: As the space mining industry matures, "Celestial Extraction
-                                    Corp" required a high level financial oversight tool to evaluate mission efficiency
+                                <p>The Challenge: As the space-mining industry matures, "Celestial Extraction
+                                    Corp" required a high-level financial oversight tool to evaluate mission efficiency
                                     across
                                     multiple orbital sectors. The goal was to transform raw mission telemetry into a
                                     strategic
@@ -379,7 +387,7 @@
                             <div>
                                 <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Phase 1:
                                     Engineering the Synthetic Ledger (Python)</h3>
-                                <p>Because real world orbital financial data is highly proprietary, I engineered a
+                                <p>Because real-world orbital financial data is highly proprietary, I engineered a
                                     custom
                                     dataset using Python (Pandas & NumPy). I designed a schema representing 10,000
                                     "Extraction
@@ -427,7 +435,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 <div class="bg-purple-50/50 border border-purple-100 p-8 rounded-[2rem] text-center flex flex-col items-center justify-center min-h-[400px]">
                     <span class="text-4xl mb-4">🎙️</span>
                     <h3 class="text-xl font-black text-purple-900 uppercase tracking-widest mb-4">Under Construction: Substack Integration</h3>
-                    <p class="text-sm text-gray-500 max-w-lg leading-relaxed mb-6">I am currently migrating my detailed audio breakdowns, and videos to Substack. Stay tuned for the official launch.</p>
+                    <p class="text-sm text-gray-500 max-w-lg leading-relaxed mb-6">I am currently migrating my detailed audio breakdowns, video lectures, and masterclasses to Substack. Stay tuned for the official launch.</p>
                     <a href="https://substack.com" target="_blank" class="px-8 py-3 bg-purple-900 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-purple-800 transition-colors shadow-lg">
                         Go To Substack
                     </a>
@@ -674,6 +682,8 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         }
 
         function openTab(evt, tabName) {
+            if (typeof stopTTS === 'function') stopTTS();
+            
             // Protected tabs logic
             const protectedTabs = ['resume', 'extrapolio'];
 
@@ -819,7 +829,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     if (pendingTabTarget) {
                         openTab(pendingTabEvent, pendingTabTarget);
                     } else if (currentAuthLevel === 'level1') {
-                        openTab(null, 'resume'); // Auto-route to Resume tab on fresh L1 auth
+                        openTab(null, 'resume'); // Auto-route to Resume tab on fresh auth
                     }
                 }, 800);
 
@@ -892,13 +902,87 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         dateEl.textContent = `Secure Terminal // ${year}.${month}.${day}`;
 
         function toggleCaseStudy(studyId) {
+            if (typeof stopTTS === 'function') stopTTS();
+
             const studies = document.querySelectorAll('.case-study');
             studies.forEach(study => {
                 study.classList.add('hidden');
             });
             const selectedStudy = document.getElementById(studyId);
+            
+            const ttsContainer = document.getElementById('tts-container');
             if (selectedStudy) {
                 selectedStudy.classList.remove('hidden');
+                if (ttsContainer) ttsContainer.classList.remove('hidden');
+            } else {
+                if (ttsContainer) ttsContainer.classList.add('hidden');
+            }
+        }
+        // TEXT-TO-SPEECH (TTS) LOGIC
+        let currentUtterance = null;
+        let isSpeaking = false;
+
+        function toggleTTS() {
+            if (!window.speechSynthesis) {
+                alert("Audio not supported in this browser.");
+                return;
+            }
+
+            const ttsIcon = document.getElementById('tts-icon');
+            const ttsText = document.getElementById('tts-text');
+
+            if (isSpeaking) {
+                window.speechSynthesis.cancel();
+                isSpeaking = false;
+                ttsIcon.innerText = "🔊";
+                ttsText.innerText = "Listen to this section";
+                return;
+            }
+
+            // Find the visible case study container
+            const activeStudy = document.querySelector('.case-study:not(.hidden)');
+            if (!activeStudy) return;
+
+            // Extract meaningful text content, excluding hidden elements and code blocks
+            let textToRead = "";
+            const elements = activeStudy.querySelectorAll('h2, h3, p');
+            elements.forEach(el => {
+                if (el.closest('pre') || el.closest('.hidden')) return;
+                textToRead += el.innerText + ". ";
+            });
+
+            if (!textToRead.trim()) return;
+
+            currentUtterance = new SpeechSynthesisUtterance(textToRead);
+            currentUtterance.rate = 1.0;
+            
+            currentUtterance.onend = () => {
+                isSpeaking = false;
+                ttsIcon.innerText = "🔊";
+                ttsText.innerText = "Listen to this section";
+            };
+
+            currentUtterance.onerror = (e) => {
+                console.error("Speech extraction error:", e);
+                isSpeaking = false;
+                ttsIcon.innerText = "🔊";
+                ttsText.innerText = "Listen to this section";
+            };
+
+            window.speechSynthesis.speak(currentUtterance);
+            isSpeaking = true;
+            ttsIcon.innerText = "⏹";
+            ttsText.innerText = "Stop reading";
+        }
+
+        function stopTTS() {
+            if (window.speechSynthesis && isSpeaking) {
+                window.speechSynthesis.cancel();
+                isSpeaking = false;
+                const ttsIcon = document.getElementById('tts-icon');
+                const ttsText = document.getElementById('tts-text');
+                if (ttsIcon) ttsIcon.innerText = "🔊";
+                if (ttsText) ttsText.innerText = "Listen to this section";
             }
         }
     </script>
