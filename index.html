@@ -955,12 +955,18 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             allVoices = speechSynth.getVoices();
             if (!allVoices.length) return;
 
-            // Priority: Google -> Local -> English -> Anyone
-            let best = allVoices.find(v => v.name.includes('Google') && v.lang.startsWith('en'));
-            if (!best) best = allVoices.find(v => v.localService === true && v.lang.startsWith('en'));
-            if (!best) best = allVoices.find(v => v.lang === 'en-US' || v.lang === 'en-GB');
-            if (!best) best = allVoices.find(v => v.lang.startsWith('en'));
-            if (!best) best = allVoices[0];
+            const allowedNames = ['Moira', 'Tara', 'Tessa', 'Whisper', 'Aman', 'Daniel', 'Good News', 'Karen', 'Ralph', 'Ralpha', 'Rishi', 'Rocko', 'Samantha'];
+            
+            // Filter allVoices down to only the ones explicitly allowed
+            let validVoices = allVoices.filter(v => allowedNames.some(allowed => v.name.includes(allowed)));
+
+            // Fallback gracefully if the OS has none of the explicit voices
+            if (validVoices.length === 0) validVoices = allVoices.filter(v => v.lang.startsWith('en'));
+            if (validVoices.length === 0) validVoices = allVoices;
+
+            // Priority: Tara -> First Valid
+            let best = validVoices.find(v => v.name.includes('Tara'));
+            if (!best) best = validVoices[0];
 
             if(!preferredVoice) preferredVoice = best;
 
@@ -969,11 +975,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             if (voiceSelect) {
                 voiceSelect.innerHTML = '';
                 
-                // Keep the UI clean by only showing English voices if any exist
-                let englishVoices = allVoices.filter(v => v.lang.startsWith('en'));
-                let voicesToShow = englishVoices.length > 0 ? englishVoices : allVoices;
-
-                voicesToShow.forEach((v) => {
+                validVoices.forEach((v) => {
                     const opt = document.createElement('option');
                     // Store the raw index from allVoices
                     opt.value = allVoices.indexOf(v);
