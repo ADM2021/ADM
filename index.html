@@ -1051,13 +1051,16 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             }
 
             let utterance = new SpeechSynthesisUtterance(chunkQueue[currentChunkIndex]);
-            if (preferredVoice) {
-                utterance.voice = preferredVoice;
-                utterance.lang = preferredVoice.lang; // CRITICAL: macOS Safari/Chrome ignores the voice if lang mismatches
-            }
+            
+            // Set properties BEFORE voice (critical for WebKit/macOS Safari)
             utterance.rate = ttsRate;
             utterance.pitch = 1;
             utterance.volume = 1;
+
+            if (preferredVoice) {
+                utterance.lang = preferredVoice.lang; 
+                utterance.voice = preferredVoice; // Voice must be the absolute LAST property set
+            }
 
             utterance.onend = () => {
                 if (ttsState === 'playing') {
