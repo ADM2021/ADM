@@ -374,6 +374,10 @@
                         <div class="flex items-center gap-2 px-2">
                             <span id="tts-status" class="text-[9px] font-black uppercase tracking-widest text-purple-600 min-w-[60px] text-center">Ready</span>
                             
+                            <select id="tts-voice" onchange="changeTTSVoice(this.value)" aria-label="Voice selection" class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1 max-w-[100px] truncate">
+                                <option value="">Loading Voices...</option>
+                            </select>
+
                             <select id="tts-speed" onchange="changeTTSSpeed(this.value)" aria-label="Playback speed" class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1">
                                 <option value="0.9">0.9x</option>
                                 <option value="1.0" selected>1.0x</option>
@@ -939,6 +943,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         }
         // TEXT-TO-SPEECH (TTS) LOGIC (ADVANCED CHUNKED SYSTEM)
         let preferredVoice = null;
+        let allVoices = [];
         let ttsRate = 1.0;
         let chunkQueue = [];
         let currentChunkIndex = 0;
@@ -947,17 +952,40 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
 
         // Initialize voices for highest quality
         function loadVoices() {
-            const voices = speechSynth.getVoices();
-            if (!voices.length) return;
+            allVoices = speechSynth.getVoices();
+            if (!allVoices.length) return;
 
             // Priority: Google -> Local -> English -> Anyone
-            let best = voices.find(v => v.name.includes('Google') && v.lang.startsWith('en'));
-            if (!best) best = voices.find(v => v.localService === true && v.lang.startsWith('en'));
-            if (!best) best = voices.find(v => v.lang === 'en-US' || v.lang === 'en-GB');
-            if (!best) best = voices.find(v => v.lang.startsWith('en'));
-            if (!best) best = voices[0];
+            let best = allVoices.find(v => v.name.includes('Google') && v.lang.startsWith('en'));
+            if (!best) best = allVoices.find(v => v.localService === true && v.lang.startsWith('en'));
+            if (!best) best = allVoices.find(v => v.lang === 'en-US' || v.lang === 'en-GB');
+            if (!best) best = allVoices.find(v => v.lang.startsWith('en'));
+            if (!best) best = allVoices[0];
 
-            preferredVoice = best;
+            if(!preferredVoice) preferredVoice = best;
+
+            // Populate Voice Dropdown UI
+            const voiceSelect = document.getElementById('tts-voice');
+            if (voiceSelect) {
+                voiceSelect.innerHTML = '';
+                
+                // Keep the UI clean by only showing English voices if any exist
+                let englishVoices = allVoices.filter(v => v.lang.startsWith('en'));
+                let voicesToShow = englishVoices.length > 0 ? englishVoices : allVoices;
+
+                voicesToShow.forEach((v) => {
+                    const opt = document.createElement('option');
+                    // Store the raw index from allVoices
+                    opt.value = allVoices.indexOf(v);
+                    
+                    // Clean up voice names to fit nicely in the mini player
+                    let cleanName = v.name.replace('Microsoft ', '').replace('Google ', '').replace(' Desktop', '');
+                    opt.textContent = `${cleanName} (${v.lang})`;
+                    
+                    if (v === preferredVoice) opt.selected = true;
+                    voiceSelect.appendChild(opt);
+                });
+            }
         }
 
         if (speechSynth && speechSynth.onvoiceschanged !== undefined) {
@@ -1059,6 +1087,26 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     ttsState = wasPlaying ? 'playing' : 'paused';
                     if (ttsState === 'playing') {
                         playNextChunk();
+                    }
+                    updateTTSUI();
+                }, 100);
+            }
+        }
+
+        function changeTTSVoice(voiceIndex) {
+            if (voiceIndex === "" || !allVoices.length) return;
+            preferredVoice = allVoices[parseInt(voiceIndex)];
+            
+            // Hot-swap the voice during active playback
+            if (ttsState === 'playing' || ttsState === 'paused') {
+                let wasPlaying = (ttsState === 'playing');
+                ttsState = 'changing-speed'; // Reuse state flag to suppress chunk advancement
+                speechSynth.cancel();
+                
+                setTimeout(() => {
+                    ttsState = wasPlaying ? 'playing' : 'paused';
+                    if (ttsState === 'playing') {
+                        playNextChunk(); // Re-fires Utterance which will read the new preferredVoice
                     }
                     updateTTSUI();
                 }, 100);
