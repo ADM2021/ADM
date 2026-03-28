@@ -197,11 +197,13 @@
         .audio-bars-container.playing .audio-bar:nth-child(5) { animation-duration: 0.9s; animation-delay: 0.3s; }
 
         /* GOOGLE TRANSLATE OVERRIDES */
-        body { top: 0 !important; }
+        body { top: 0 !important; position: static !important; }
         .goog-te-banner-frame { display: none !important; }
+        .skiptranslate > iframe.goog-te-banner-frame { display: none !important; }
         #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
         .goog-text-highlight { background: none !important; box-shadow: none !important; }
         #google_translate_element { display: none !important; }
+        body.skiptranslate { top: 0 !important; }
     </style>
 </head>
 
