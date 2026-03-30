@@ -209,7 +209,7 @@
 
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
 
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[1000] focus:px-4 focus:py-2 focus:bg-purple-900 focus:text-white focus:rounded-md focus:font-bold focus:outline-none focus:ring-2 focus:ring-purple-500">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[1000] focus:px-4 focus:py-2 focus:bg-purple-900 focus:text-white focus:rounded-md focus:font-bold focus:outline-none focus:ring-2 focus:ring-purple-600">
         Skip to main content
     </a>
 
@@ -220,18 +220,9 @@
         </div>
         
         <div class="flex items-center gap-4 flex-wrap">
-            <!-- LANGUAGE SWITCHER -->
-            <div class="flex bg-white border border-purple-100 rounded-full shadow-sm overflow-hidden p-0.5">
-                <button type="button" aria-label="Switch to English" onclick="translatePage('en')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-purple-900 hover:bg-purple-50 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:bg-purple-100">EN</button>
-                <div class="w-px bg-purple-100 my-1"></div>
-                <button type="button" aria-label="Switch to Spanish" onclick="translatePage('es')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:bg-purple-100">ES</button>
-                <div class="w-px bg-purple-100 my-1"></div>
-                <button type="button" aria-label="Switch to French" onclick="translatePage('fr')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:bg-purple-100">FR</button>
-            </div>
-
             <!-- SECURE TERMINAL -->
             <button type="button" id="dynamic-date" onclick="openSecureModal('level1')"
-                class="text-[10px] font-bold uppercase tracking-widest text-purple-700 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 cursor-pointer hover:bg-purple-100 hover:border-purple-300 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500">
+                class="text-[10px] font-bold uppercase tracking-widest text-purple-700 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 cursor-pointer hover:bg-purple-100 hover:border-purple-300 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-600">
                 Secure Terminal // 2026.03.11
             </button>
         </div>
@@ -272,27 +263,27 @@
 
     <nav aria-label="Portfolio Sections" class="print:hidden max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6 relative z-50" role="tablist">
         <button type="button" role="tab" aria-selected="true" aria-controls="about" id="btn-about" onclick="openTab(event, 'about')"
-            class="tab-btn active focus:outline-none focus:ring-2 focus:ring-purple-500 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">01
+            class="tab-btn active focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">01
             // About Me</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="portfolio" id="btn-portfolio" onclick="openTab(event, 'portfolio')"
-            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-500 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">02
+            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">02
             // Portfolio</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="methodology" id="btn-methodology" onclick="openTab(event, 'methodology')"
-            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-500 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">03
+            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">03
             // How It Was Done</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="tutorials" id="btn-tutorials" onclick="openTab(event, 'tutorials')"
-            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-500 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">04
+            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">04
             // Audio & Video</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="resources" id="btn-resources" onclick="openTab(event, 'resources')"
-            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-500 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">05
+            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">05
             // Certs & Resources</button>
 
         <!-- SECURE TABS (Hidden by default) -->
         <button type="button" role="tab" aria-selected="false" aria-controls="resume" id="tab-resume" onclick="openTab(event, 'resume')"
-            class="tab-btn hidden focus:outline-none focus:ring-2 focus:ring-purple-500 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">06
+            class="tab-btn hidden focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">06
             // Resume [SECURE]</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="extrapolio" id="tab-extrapolio" onclick="openTab(event, 'extrapolio')"
-            class="tab-btn hidden focus:outline-none focus:ring-2 focus:ring-purple-500 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
+            class="tab-btn hidden focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
             // Extra Portfolio [L2 SECURE]</button>
     </nav>
 
@@ -404,7 +395,7 @@
                         Visualization:</label>
                     <div class="relative">
                         <select id="case-study-select" onchange="toggleCaseStudy(this.value)"
-                            class="w-full appearance-none bg-white border border-purple-200 text-purple-900 font-bold py-3 px-4 pr-8 rounded-xl leading-tight focus:outline-none focus:bg-white focus:border-purple-500 cursor-pointer transition-colors shadow-sm">
+                            class="w-full appearance-none bg-white border border-purple-200 text-purple-900 font-bold py-3 px-4 pr-8 rounded-xl leading-tight focus:outline-none focus:bg-white focus:border-purple-600 cursor-pointer transition-colors shadow-sm">
                             <option value="" disabled selected>-- Select an Option --</option>
                             <option value="cec-2026">CELESTIAL EXTRACTION CORP (CEC) - 2026 ORBITAL AUDIT</option>
                         </select>
@@ -419,7 +410,7 @@
 
                 <!-- Text-to-Speech Controls (Hidden until project selected) -->
                 <div id="tts-container" class="hidden mb-6 flex justify-end">
-                    <div class="flex items-center gap-3 bg-[#FAF5FF] border border-purple-200 rounded-full shadow-sm p-1.5 focus-within:ring-2 focus-within:ring-purple-500 transition-all">
+                    <div class="flex items-center gap-3 bg-[#FAF5FF] border border-purple-200 rounded-full shadow-sm p-1.5 focus-within:ring-2 focus-within:ring-purple-600 transition-all">
                         
                         <button id="tts-play-btn" onclick="toggleTTSPlay()" aria-label="Play or pause audio" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-900 transition-colors focus:outline-none">
                             <span id="tts-play-icon" class="text-xs">▶</span>
@@ -441,11 +432,11 @@
                             </div>
                             <span id="tts-status" aria-live="polite" class="text-[9px] font-black uppercase tracking-widest text-purple-600 min-w-[60px] text-center">Ready</span>
                             
-                            <select id="tts-voice" onchange="changeTTSVoice(this.value)" aria-label="Voice selection" class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1 max-w-[100px] truncate">
+                            <select id="tts-voice" onchange="changeTTSVoice(this.value)" aria-label="Voice selection" class="min-h-[24px] text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1 max-w-[100px] truncate">
                                 <option value="">Loading Voices...</option>
                             </select>
 
-                            <select id="tts-speed" onchange="changeTTSSpeed(this.value)" aria-label="Playback speed" class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1">
+                            <select id="tts-speed" onchange="changeTTSSpeed(this.value)" aria-label="Playback speed" class="min-h-[24px] text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1">
                                 <option value="0.9">0.9x</option>
                                 <option value="1.0" selected>1.0x</option>
                                 <option value="1.25">1.25x</option>
@@ -646,10 +637,15 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         </div>
     </main>
 
-    <footer class="print:hidden text-center pb-24 px-6">
-        <button
-            class="bg-purple-950 text-white px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition-all">Contact
-            for History →</button>
+    <footer class="print:hidden flex justify-center pb-24 px-6">
+        <!-- LANGUAGE SWITCHER -->
+        <div class="flex bg-white border border-purple-100 rounded-full shadow-sm overflow-hidden p-0.5">
+            <button type="button" aria-label="Switch to English" onclick="translatePage('en')" class="px-3 h-[32px] min-w-[32px] flex items-center justify-center text-[9px] font-black uppercase tracking-widest text-purple-900 hover:bg-purple-50 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-600 focus:bg-purple-100">EN</button>
+            <div class="w-px bg-purple-100 my-1"></div>
+            <button type="button" aria-label="Switch to Spanish" onclick="translatePage('es')" class="px-3 h-[32px] min-w-[32px] flex items-center justify-center text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-600 focus:bg-purple-100">ES</button>
+            <div class="w-px bg-purple-100 my-1"></div>
+            <button type="button" aria-label="Switch to French" onclick="translatePage('fr')" class="px-3 h-[32px] min-w-[32px] flex items-center justify-center text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-600 focus:bg-purple-100">FR</button>
+        </div>
     </footer>
 
     <!-- SECURE TERMINAL MODAL -->
@@ -673,11 +669,11 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             <div id="auth-view" class="space-y-6">
                 <div class="space-y-4">
                     <button onclick="showPasswordForm()"
-                        class="w-full bg-purple-900/30 hover:bg-purple-900/50 text-purple-300 border border-purple-500/30 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        class="w-full bg-purple-900/30 hover:bg-purple-900/50 text-purple-300 border border-purple-500/30 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-400">
                         [ Enter Password ]
                     </button>
                     <button onclick="showRequestForm()"
-                        class="w-full bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        class="w-full bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-400">
                         [ Request Access ]
                     </button>
                 </div>
@@ -690,15 +686,15 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 <div>
                     <label for="terminal-password" class="terminal-text text-purple-400 text-xs block mb-2">> INPUT_CREDENTIALS</label>
                     <input type="password" id="terminal-password" placeholder="********"
-                        class="w-full bg-black border border-purple-500/50 text-purple-300 terminal-text p-3 text-sm focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
+                        class="w-full bg-black border border-purple-500/50 text-purple-300 terminal-text p-3 text-sm focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
                 </div>
                 <div class="flex gap-3">
                     <button onclick="submitPassword()"
-                        class="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        class="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-400">
                         [ Authenticate ]
                     </button>
                     <button onclick="resetModalView()"
-                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-400">
                         [ Cancel ]
                     </button>
                 </div>
@@ -719,11 +715,11 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500 resize-none"></textarea>
                 <div class="flex gap-3 pt-2">
                     <button onclick="submitRequest()"
-                        class="flex-1 bg-purple-900/50 hover:bg-purple-800/80 text-purple-300 border border-purple-500/50 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        class="flex-1 bg-purple-900/50 hover:bg-purple-800/80 text-purple-300 border border-purple-500/50 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-400">
                         [ Transmit ]
                     </button>
                     <button onclick="resetModalView()"
-                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-400">
                         [ Cancel ]
                     </button>
                 </div>
@@ -732,7 +728,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
 
             <!-- Close button -->
             <button aria-label="Close modal" onclick="closeSecureModal()"
-                class="absolute top-4 right-4 text-gray-500 hover:text-white terminal-text text-lg leading-none focus:outline-none focus:ring-2 focus:ring-purple-500">
+                class="absolute top-4 right-4 text-gray-500 hover:text-white terminal-text text-lg leading-none focus:outline-none focus:ring-2 focus:ring-purple-400 w-10 h-10 flex items-center justify-center rounded-full">
                 ×
             </button>
         </div>
@@ -745,6 +741,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         let authAttempts = 0;
         let isLockedOut = false;
         let currentAuthLevel = 'level1';
+        let previousFocus = null;
 
         function isAuthenticated(level = 'level1') {
             if (level === 'level2') return sessionStorage.getItem('extraToken') === 'valid-extra-xyz';
@@ -818,6 +815,11 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         }
 
         function openSecureModal(level = 'level1') {
+            previousFocus = document.activeElement;
+            document.querySelectorAll('body > *:not(#secure-modal):not(script):not(style):not(#google_translate_element)').forEach(el => {
+                if(el.setAttribute) el.setAttribute('inert', '');
+            });
+
             currentAuthLevel = level;
             document.getElementById('secure-modal').style.display = 'flex';
             resetModalView();
@@ -836,10 +838,23 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 titleEl.innerHTML = '> Terminal Access <span class="cursor-blink w-2 h-5 bg-purple-500 inline-block"></span>';
                 titleEl.className = "terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2";
             }
+            
+            // Set initial focus to the first button inside the modal for keyboard users
+            setTimeout(() => {
+                const firstBtn = document.querySelector('#auth-view button');
+                if (firstBtn) firstBtn.focus();
+            }, 100);
         }
 
         function closeSecureModal() {
             document.getElementById('secure-modal').style.display = 'none';
+            document.querySelectorAll('body > *:not(#secure-modal):not(script):not(style):not(#google_translate_element)').forEach(el => {
+                if(el.removeAttribute) el.removeAttribute('inert');
+            });
+            if (previousFocus) {
+                previousFocus.focus();
+                previousFocus = null;
+            }
             pendingTabTarget = null;
             pendingTabEvent = null;
         }
