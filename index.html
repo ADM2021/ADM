@@ -414,19 +414,86 @@
 
                         <!-- Step 3 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-3">
+                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
+                            </span>
+                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 3: Categorization</h3>
+                                <div class="my-3 text-sm text-gray-600 space-y-2">
+                                    <p><span class="font-bold text-gray-800">Q:</span> "What type of categories do you have for incidents or keywords for emails that need to be responded to?"</p>
+                                    <p class="bg-gray-50 border border-gray-100 p-3 rounded-lg"><span class="font-bold text-purple-900">Client:</span> "Critical vendor invoices, compliance notices, and VIP escalations."</p>
+                                </div>
+                                <div class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-4 text-xs font-bold text-purple-600">
+                                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> Keywords & Logic Defined</span>
+                                </div>
+                                <button onclick="nextWorkflowStep(4)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-4 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Configure Parser <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-4">
+                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
+                            </span>
+                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 4: Automated Parsing & Sorting</h3>
+                                <div class="my-3 text-sm text-gray-600 space-y-2">
+                                    <p>Configure a Microsoft Exchange/Outlook feature that actively scans incoming emails for the identified key phrases.</p>
+                                    <div class="bg-gray-50 border border-gray-100 p-3 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                        <span class="font-bold text-gray-800">Action:</span> 
+                                        <span class="text-[10px] font-mono text-purple-600 bg-purple-50 px-2 py-1 rounded">Route matched emails to designated Subfolders</span>
+                                    </div>
+                                </div>
+                                <button onclick="nextWorkflowStep(5)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Trigger Data Capture <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-5">
+                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
+                            </span>
+                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 5: Data Capture Pipeline</h3>
+                                <div class="my-3 text-sm text-gray-600">
+                                    <p class="mb-2">The routing of emails to specific folders triggers a Power Automate flow to extract data.</p>
+                                    <div class="bg-purple-950 p-4 rounded-xl border border-white/10 shadow-inner overflow-x-auto relative">
+                                        <div class="absolute right-4 top-4 w-2 h-2 rounded-full bg-green-400 animate-ping"></div>
+                                        <pre class="text-purple-100 text-[10px] leading-relaxed"><code>[POWER AUTOMATE] Flow Triggered...
+[ACTION] Extracting Sender, Timestamp, Priority Keywords
+[SYNC] Writing to Central Repository ✅</code></pre>
+                                    </div>
+                                </div>
+                                <button onclick="nextWorkflowStep(6)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Notify Analysts <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 6 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-6">
                             <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-green-100 ring-8 ring-[#FAF5FF]">
                                 <span class="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse"></span>
                             </span>
                             <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-sm relative overflow-hidden">
                                 <div class="absolute top-0 right-0 w-32 h-32 bg-green-100/50 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-                                <h3 class="font-black text-green-700 uppercase text-xs tracking-widest mb-1 relative z-10">Step 3: Categorization</h3>
+                                <h3 class="font-black text-green-700 uppercase text-xs tracking-widest mb-1 relative z-10">Step 6: Analyst Notification & Review</h3>
                                 <div class="my-3 text-sm text-gray-600 space-y-2 relative z-10">
-                                    <p><span class="font-bold text-gray-800">Q:</span> "What type of categories do you have for incidents or keywords for emails that need to be responded to?"</p>
-                                    <p class="bg-green-50 border border-green-100 p-3 rounded-lg text-green-900"><span class="font-bold text-green-800">Client:</span> "Critical vendor invoices, compliance notices, and VIP escalations."</p>
+                                    <p>Once data is pulled into the repository, real-time alerts are dispatched to the two frontline analysts.</p>
+                                    <div class="bg-green-50 border border-green-100 p-4 rounded-lg flex items-start gap-3">
+                                        <span class="text-green-600 text-xl leading-none">📧</span>
+                                        <div>
+                                            <p class="font-bold text-green-900 text-[10px] uppercase tracking-wider mb-1">New System Alert</p>
+                                            <p class="text-green-800 text-xs italic">"High Priority record added to repository. Please review for potential escalation."</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-4 text-xs font-bold text-green-600 relative z-10">
-                                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Automation Logic Defined</span>
-                                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Ready for Deployment</span>
+                                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> End-to-End Automation Cycle Complete</span>
                                 </div>
                                 <button onclick="resetWorkflow()" class="mt-4 border border-purple-200 text-purple-900 hover:bg-purple-50 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors relative z-10">
                                     Restart Workflow ↺
@@ -1341,8 +1408,8 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 nextStep.classList.add('opacity-100', 'translate-y-0');
                 
                 // Add pulse to new step dot
-                const newPulse = nextStep.querySelector('.rounded-full.bg-purple-600');
-                if (newPulse && stepId < 3) newPulse.classList.add('animate-pulse');
+                const newPulse = nextStep.querySelector('.rounded-full.bg-purple-600, .rounded-full.bg-green-500');
+                if (newPulse && stepId < 6) newPulse.classList.add('animate-pulse');
             }
         }
 
@@ -1366,7 +1433,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     
                     // Reset Buttons
                     const btn = step.querySelector('button');
-                    if (btn && index < 3) {
+                    if (btn && index < 6) {
                         btn.className = "bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]";
                         if (index === 1) {
                             btn.innerHTML = `Request Historical Data <span class="text-xs">→</span>`;
@@ -1374,6 +1441,15 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                         } else if (index === 2) {
                             btn.innerHTML = `Define Categories <span class="text-xs">→</span>`;
                             btn.setAttribute('onclick', 'nextWorkflowStep(3)');
+                        } else if (index === 3) {
+                            btn.innerHTML = `Configure Parser <span class="text-xs">→</span>`;
+                            btn.setAttribute('onclick', 'nextWorkflowStep(4)');
+                        } else if (index === 4) {
+                            btn.innerHTML = `Trigger Data Capture <span class="text-xs">→</span>`;
+                            btn.setAttribute('onclick', 'nextWorkflowStep(5)');
+                        } else if (index === 5) {
+                            btn.innerHTML = `Notify Analysts <span class="text-xs">→</span>`;
+                            btn.setAttribute('onclick', 'nextWorkflowStep(6)');
                         }
                     }
                 }
