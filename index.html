@@ -685,6 +685,36 @@
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-9">
                             <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
+                            </span>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 9: SLA / Escalation Timers</h3>
+                                <div class="my-3 text-sm text-gray-600 space-y-3">
+                                    <p>Power Automate begins an automatic countdown to ensure service level agreements (SLAs) are met.</p>
+                                    <div class="space-y-2 relative z-10">
+                                        <div class="flex items-center gap-3 bg-gray-50 p-2 rounded border border-gray-100">
+                                            <span class="text-orange-500 font-bold text-xs uppercase w-12 text-right">12 HR</span>
+                                            <span class="text-gray-600 text-xs text-left">Initial follow-up update if unaddressed.</span>
+                                        </div>
+                                        <div class="flex items-center gap-3 bg-red-50 p-2 rounded border border-red-100">
+                                            <span class="text-red-500 font-bold text-xs uppercase w-12 text-right">42 HR</span>
+                                            <span class="text-red-800 text-xs text-left">Critical update / Secondary escalation if unaddressed.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button onclick="nextWorkflowStep(10)"
+                                    class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Log Resolution <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 10 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-10">
+                            <span
                                 class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-green-100 ring-8 ring-[#FAF5FF]">
                                 <span class="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse"></span>
                             </span>
@@ -695,32 +725,24 @@
                                 </div>
                                 <h3
                                     class="font-black text-green-700 uppercase text-xs tracking-widest mb-1 relative z-10">
-                                    Step 9: SLA / Escalation Timers</h3>
+                                    Step 10: Resolution & Audit Logging</h3>
                                 <div class="my-3 text-sm text-gray-600 space-y-3 relative z-10">
-                                    <p>Power Automate begins an automatic countdown to ensure service level agreements
-                                        (SLAs) are met.</p>
-                                    <div class="space-y-2">
-                                        <div
-                                            class="flex items-center gap-3 bg-gray-50 p-2 rounded border border-gray-100">
-                                            <span class="text-orange-500 font-bold text-xs uppercase w-12 text-right">12
-                                                HR</span>
-                                            <span class="text-gray-600 text-xs text-left">Initial follow-up update if
-                                                unaddressed.</span>
+                                    <p>Upon escalation, a dynamic log is generated in the repository. Second-line analysts monitor this log and orchestrate status updates in tandem with the Director.</p>
+                                    <div class="bg-green-50 border border-green-100 p-3 rounded-lg flex flex-col gap-2">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-green-600 font-bold text-[10px] uppercase min-w-[120px]">Human-in-the-Loop:</span>
+                                            <span class="text-xs text-green-800">Monitor, Review, and Execute Responses</span>
                                         </div>
-                                        <div
-                                            class="flex items-center gap-3 bg-red-50 p-2 rounded border border-red-100">
-                                            <span class="text-red-500 font-bold text-xs uppercase w-12 text-right">42
-                                                HR</span>
-                                            <span class="text-red-800 text-xs text-left">Critical update / Secondary
-                                                escalation if unaddressed.</span>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-green-600 font-bold text-[10px] uppercase min-w-[120px]">System Action:</span>
+                                            <span class="text-xs text-green-800">Log task as <b>Completion</b>, finalizing the closing of the packet.</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div
                                     class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-4 text-xs font-bold text-green-600 relative z-10">
                                     <span class="flex items-center gap-1"><span
-                                            class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Phase 3 Workflow
-                                        Complete</span>
+                                            class="w-1.5 h-1.5 rounded-full bg-green-500"></span> End-to-End Workflow Complete</span>
                                 </div>
                                 <button onclick="resetWorkflow()"
                                     class="mt-4 border border-purple-200 text-purple-900 hover:bg-purple-50 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors relative z-10">
@@ -1661,7 +1683,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
 
                 // Add pulse to new step dot
                 const newPulse = nextStep.querySelector('.rounded-full.bg-purple-600, .rounded-full.bg-green-500');
-                if (newPulse && stepId < 9) newPulse.classList.add('animate-pulse');
+                if (newPulse && stepId < 10) newPulse.classList.add('animate-pulse');
             }
         }
 
@@ -1685,7 +1707,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
 
                     // Reset Buttons
                     const btn = step.querySelector('button');
-                    if (btn && index < 9) {
+                    if (btn && index < 10) {
                         btn.className = "bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]";
                         if (index === 1) {
                             btn.innerHTML = `Request Historical Data <span class="text-xs">→</span>`;
@@ -1711,6 +1733,9 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                         } else if (index === 8) {
                             btn.innerHTML = `Start SLA Timers <span class="text-xs">→</span>`;
                             btn.setAttribute('onclick', 'nextWorkflowStep(9)');
+                        } else if (index === 9) {
+                            btn.innerHTML = `Log Resolution <span class="text-xs">→</span>`;
+                            btn.setAttribute('onclick', 'nextWorkflowStep(10)');
                         }
                     }
                 }
