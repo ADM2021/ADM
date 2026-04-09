@@ -943,6 +943,43 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                                     hierarchy—into actionable nodes. The cascading visibility (opacity shifts and Y-axis
                                     translations) simulates synchronous discovery.</p>
                             </div>
+                            
+                            <!-- Mermaid Flowchart Component -->
+                            <div class="mt-8">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-4 border-b border-purple-100 pb-2">Workflow Logic Architecture</h3>
+                                <p class="mb-4 text-xs font-semibold text-gray-500 italic">This dynamic flowchart maps the exact automated pathways embedded within the interactive simulator.</p>
+                                <div class="bg-[#FAF5FF] p-6 rounded-2xl border border-purple-200 shadow-inner overflow-x-auto text-center flex justify-center w-full">
+                                    <pre class="mermaid text-xs w-full" style="min-width: 600px; background: transparent;">
+%%{init: {'theme': 'base', 'themeVariables': { 'fontFamily': 'monospace', 'primaryColor': '#ffffff', 'primaryBorderColor': '#e9d5ff', 'primaryTextColor': '#4c1d95', 'lineColor': '#c084fc'}}}%%
+flowchart TD
+    %% Define Custom CSS Classes for Nodes
+    classDef startNode fill:#fdf4ff,stroke:#d8b4fe,stroke-width:2px,color:#581c87,font-weight:bold
+    classDef processNode fill:#ffffff,stroke:#e9d5ff,stroke-width:2px,color:#4c1d95
+    classDef decisionNode fill:#f3e8ff,stroke:#c084fc,stroke-width:2px,color:#6b21a8
+    classDef autoNode fill:#f0fdf4,stroke:#86efac,stroke-width:2px,color:#166534
+    classDef humanNode fill:#fffbeb,stroke:#fcd34d,stroke-width:2px,color:#92400e
+    classDef finalNode fill:#22c55e,stroke:#166534,stroke-width:2px,color:#ffffff,font-weight:bold
+
+    RFI([Stakeholder RFI]) ::: startNode --> Q1{Identify Platform} ::: decisionNode
+    Q1 -- Outlook --> Data[Data Sampling 3 Clusters] ::: processNode
+    Data --> Cat(Categorize Keywords & Logic) ::: processNode
+    Cat --> Parse[Automated Parsing & Sorting] ::: autoNode
+    Parse --> Capture[Power Automate Data Capture] ::: autoNode
+    Capture --> Notify[Notify Frontline Analysts] ::: autoNode
+    Notify --> Eval{Analyst Evaluation} ::: humanNode
+    Eval -- No Escalation --> Close1([Close Packet]) ::: finalNode
+    Eval -- Escalation Needed --> Alert[Alert Director via Teams/Email] ::: autoNode
+    Alert --> SLAs{SLA Timers} ::: autoNode
+    SLAs -- 12HR --> FollowUp[Initial Follow-up] ::: autoNode
+    SLAs -- 42HR --> Critical[Critical Escalation] ::: autoNode
+    FollowUp --> Log[Resolution & Audit Logging] ::: humanNode
+    Critical --> Log
+    Alert --> Log
+    Log --> Task[System Actions: Task Completion] ::: autoNode
+    Task --> Close2([End-to-End Complete]) ::: finalNode
+                                    </pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1757,6 +1794,12 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
     </script>
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- MERMAID SCRIPT FOR DYNAMIC FLOWCHARTS -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
 </body>
 
 </html>
