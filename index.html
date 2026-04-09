@@ -960,23 +960,23 @@ flowchart TD
     classDef humanNode fill:#fffbeb,stroke:#fcd34d,stroke-width:2px,color:#92400e
     classDef finalNode fill:#22c55e,stroke:#166534,stroke-width:2px,color:#ffffff,font-weight:bold
 
-    RFI([Stakeholder RFI]) ::: startNode --> Q1{Identify Platform} ::: decisionNode
-    Q1 -- Outlook --> Data[Data Sampling 3 Clusters] ::: processNode
-    Data --> Cat(Categorize Keywords & Logic) ::: processNode
-    Cat --> Parse[Automated Parsing & Sorting] ::: autoNode
-    Parse --> Capture[Power Automate Data Capture] ::: autoNode
-    Capture --> Notify[Notify Frontline Analysts] ::: autoNode
-    Notify --> Eval{Analyst Evaluation} ::: humanNode
-    Eval -- No Escalation --> Close1([Close Packet]) ::: finalNode
-    Eval -- Escalation Needed --> Alert[Alert Director via Teams/Email] ::: autoNode
-    Alert --> SLAs{SLA Timers} ::: autoNode
-    SLAs -- 12HR --> FollowUp[Initial Follow-up] ::: autoNode
-    SLAs -- 42HR --> Critical[Critical Escalation] ::: autoNode
-    FollowUp --> Log[Resolution & Audit Logging] ::: humanNode
+    RFI(["Stakeholder RFI"]) ::: startNode --> Q1{"Identify Platform"} ::: decisionNode
+    Q1 -- "Outlook" --> Data["Data Sampling 3 Clusters"] ::: processNode
+    Data --> Cat("Categorize Keywords & Logic") ::: processNode
+    Cat --> Parse["Automated Parsing & Sorting"] ::: autoNode
+    Parse --> Capture["Power Automate Data Capture"] ::: autoNode
+    Capture --> Notify["Notify Frontline Analysts"] ::: autoNode
+    Notify --> Eval{"Analyst Evaluation"} ::: humanNode
+    Eval -- "No Escalation" --> Close1(["Close Packet"]) ::: finalNode
+    Eval -- "Escalation Needed" --> Alert["Alert Director via Teams/Email"] ::: autoNode
+    Alert --> SLAs{"SLA Timers"} ::: autoNode
+    SLAs -- "12HR" --> FollowUp["Initial Follow-up"] ::: autoNode
+    SLAs -- "42HR" --> Critical["Critical Escalation"] ::: autoNode
+    FollowUp --> Log["Resolution & Audit Logging"] ::: humanNode
     Critical --> Log
     Alert --> Log
-    Log --> Task[System Actions: Task Completion] ::: autoNode
-    Task --> Close2([End-to-End Complete]) ::: finalNode
+    Log --> Task["System Actions: Task Completion"] ::: autoNode
+    Task --> Close2(["End-to-End Complete"]) ::: finalNode
                                     </pre>
                                 </div>
                             </div>
