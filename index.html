@@ -209,22 +209,27 @@
 
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
 
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[1000] focus:px-4 focus:py-2 focus:bg-purple-900 focus:text-white focus:rounded-md focus:font-bold focus:outline-none focus:ring-2 focus:ring-purple-600">
-        Skip to main content
-    </a>
-
     <nav class="print:hidden p-8 flex justify-between items-center max-w-5xl mx-auto flex-wrap gap-4">
         <div class="flex flex-col leading-tight">
-            <h1 class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</h1>
-            <span class="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase mt-1">A Data Enthusiast</span>
+            <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
+            <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
         </div>
         
         <div class="flex items-center gap-4 flex-wrap">
+            <!-- LANGUAGE SWITCHER -->
+            <div class="flex bg-white border border-purple-100 rounded-full shadow-sm overflow-hidden p-0.5">
+                <button onclick="translatePage('en')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-purple-900 hover:bg-purple-50 rounded-full transition-colors focus:bg-purple-100">EN</button>
+                <div class="w-px bg-purple-100 my-1"></div>
+                <button onclick="translatePage('es')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:bg-purple-100">ES</button>
+                <div class="w-px bg-purple-100 my-1"></div>
+                <button onclick="translatePage('fr')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:bg-purple-100">FR</button>
+            </div>
+
             <!-- SECURE TERMINAL -->
-            <button type="button" id="dynamic-date" onclick="openSecureModal('level1')"
-                class="text-[10px] font-bold uppercase tracking-widest text-purple-700 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 cursor-pointer hover:bg-purple-100 hover:border-purple-300 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-600">
+            <div id="dynamic-date" onclick="openSecureModal('level1')"
+                class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 cursor-pointer hover:bg-purple-100 hover:border-purple-300 transition-colors">
                 Secure Terminal // 2026.03.11
-            </button>
+            </div>
         </div>
     </nav>
 
@@ -261,46 +266,46 @@
         <p class="text-lg text-gray-500 font-medium italic mt-8 mb-4 max-w-2xl mx-auto">"I’ve held a few titles, but honestly, at the end of the day, I’m just a woman making sense of the numbers and the data that tells the story."</p>
     </header>
 
-    <nav aria-label="Portfolio Sections" class="print:hidden max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6 relative z-50" role="tablist">
-        <button type="button" role="tab" aria-selected="true" aria-controls="about" id="btn-about" onclick="openTab(event, 'about')"
-            class="tab-btn active focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">01
+    <div class="print:hidden max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6 relative z-50">
+        <button onclick="openTab(event, 'about')"
+            class="tab-btn active px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">01
             // About Me</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="portfolio" id="btn-portfolio" onclick="openTab(event, 'portfolio')"
-            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">02
+        <button onclick="openTab(event, 'portfolio')"
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">02
             // Portfolio</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="methodology" id="btn-methodology" onclick="openTab(event, 'methodology')"
-            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">03
+        <button onclick="openTab(event, 'methodology')"
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">03
             // How It Was Done</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="tutorials" id="btn-tutorials" onclick="openTab(event, 'tutorials')"
-            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">04
+        <button onclick="openTab(event, 'tutorials')"
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">04
             // Audio & Video</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="resources" id="btn-resources" onclick="openTab(event, 'resources')"
-            class="tab-btn focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">05
+        <button onclick="openTab(event, 'resources')"
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">05
             // Certs & Resources</button>
 
         <!-- SECURE TABS (Hidden by default) -->
-        <button type="button" role="tab" aria-selected="false" aria-controls="resume" id="tab-resume" onclick="openTab(event, 'resume')"
-            class="tab-btn hidden focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">06
+        <button onclick="openTab(event, 'resume')" id="tab-resume"
+            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">06
             // Resume [SECURE]</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="extrapolio" id="tab-extrapolio" onclick="openTab(event, 'extrapolio')"
-            class="tab-btn hidden focus:outline-none focus:ring-2 focus:ring-purple-600 px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
+        <button onclick="openTab(event, 'extrapolio')" id="tab-extrapolio"
+            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
             // Extra Portfolio [L2 SECURE]</button>
-    </nav>
+    </div>
 
-    <main id="main-content" class="max-w-6xl mx-auto p-4 mb-20">
+    <section class="max-w-6xl mx-auto p-4 mb-20">
         <div class="bg-white/95 backdrop-blur-xl border border-white rounded-[3rem] p-8 md:p-12 shadow-2xl shadow-purple-100/50"
             style="-webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);">
 
-            <div id="about" role="tabpanel" aria-labelledby="btn-about" tabindex="0" class="tab-content active animate-in fade-in duration-500">
+            <div id="about" class="tab-content active animate-in fade-in duration-500">
                 <div class="space-y-8 text-gray-600 leading-relaxed">
                     <p
                         class="text-xl font-medium text-purple-900/80 italic tracking-tight flex items-center gap-4 flex-wrap">
                         "I am known by many names… but you may call me Aisha.”
-                        <img src="https://media.giphy.com/media/26tPgV8ceZTSxH9zG/giphy.gif" alt="Animated GIF of Aisha"
+                        <img src="https://media.giphy.com/media/26tPgV8ceZTSxH9zG/giphy.gif" alt="Aisha GIF"
                             class="h-12 w-12 rounded-lg object-cover border border-purple-100 shadow-sm">
                     </p>
-                    <p>I have worked at the intersection of data, automation, and mission level decision making. My specialty is turning complex systems data and
-                        sprawling datasets into clear, actionable insight for leadership. Because the truth is:
+                    <p>I have worked at the intersection of data, automation, mission level decision making. My specialty is turning complex systems data and
+                        sprawling datasets into clear, actionable insight for leadership. Because here is the truth:
                         data by itself is not powerful. Turning data into knowledge and turning that knowledge into
                         action is where the real value lives. When the data gets messy, I build the system that makes
                         sense of it. I design automated processes that take enormous, complicated datasets and transform
@@ -338,13 +343,97 @@
                 </div>
             </div>
 
-            <div id="portfolio" role="tabpanel" aria-labelledby="btn-portfolio" tabindex="0" class="tab-content animate-in fade-in duration-500">
+            <div id="portfolio" class="tab-content animate-in fade-in duration-500">
                 <!-- Mobile Warning Banner -->
                 <div class="md:hidden bg-amber-50 border border-amber-200 p-4 rounded-xl mb-8 flex items-start gap-4 shadow-sm mx-2">
                     <span class="text-amber-600 text-xl font-bold mt-1">📱</span>
                     <div>
                         <p class="text-[10px] font-black uppercase tracking-[0.2em] text-amber-800 mb-1">Mobile Viewing Notice</p>
                         <p class="text-xs text-amber-700 leading-relaxed font-medium">To experience these highly detailed interactive visualizations exactly as intended, viewing natively on a desktop or tablet is strongly recommended.</p>
+                    </div>
+                </div>
+
+                <!-- ADDED WORKFLOW PLANNER ABOVE CEC DASHBOARD -->
+                <div class="mb-16">
+                    <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none px-2">Interactive Workflow Planner</h2>
+                    <div class="relative pl-6 border-l-2 border-purple-200 space-y-8 mx-2" id="workflow-timeline">
+                        
+                        <!-- RFI Node -->
+                        <div class="workflow-step relative" id="wf-step-0">
+                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600 animate-pulse"></span>
+                            </span>
+                            <div class="bg-purple-50/50 p-6 rounded-2xl border border-purple-100 shadow-sm relative overflow-hidden">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-purple-200/50 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-3">Stakeholder RFI</h3>
+                                <blockquote class="border-l-4 border-purple-400 pl-4 text-sm text-gray-600 italic leading-relaxed mb-4 relative z-10">
+                                    "Hey, we have a shared mailbox that we get an influx of emails daily, something around 100 to 500 emails per day and we need to be able to filter out important emails that actions need to be taken upon within 24 to 48 hours. This mailbox is only managed by two people so we do need automations in place."
+                                </blockquote>
+                                <button onclick="nextWorkflowStep(1)" class="relative z-10 bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Initiate Analysis <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 1 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-1">
+                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
+                            </span>
+                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 1: Identify Platform</h3>
+                                <div class="my-3 text-sm text-gray-600 space-y-2">
+                                    <p><span class="font-bold text-gray-800">Q:</span> "What type of email provider do you use? (Outlook, Google, etc.)"</p>
+                                    <p class="bg-gray-50 border border-gray-100 p-3 rounded-lg"><span class="font-bold text-purple-900">Client:</span> "Microsoft Outlook."</p>
+                                </div>
+                                <button onclick="nextWorkflowStep(2)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Request Historical Data <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-2">
+                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
+                            </span>
+                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 2: Data Sampling</h3>
+                                <div class="my-3 text-sm text-gray-600">
+                                    <p class="mb-2">Review a small sample portion of historical Outlook data to understand the types of incoming emails.</p>
+                                    <div class="bg-purple-950 p-4 rounded-xl border border-white/10 shadow-inner overflow-x-auto">
+                                        <pre class="text-purple-100 text-[10px] leading-relaxed"><code>[SYSTEM] Analyzing Outlook .PST Historical Extract...
+[RESULT] Identified 3 Primary Influx Clusters.</code></pre>
+                                    </div>
+                                </div>
+                                <button onclick="nextWorkflowStep(3)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Define Categories <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-3">
+                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-green-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse"></span>
+                            </span>
+                            <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-sm relative overflow-hidden">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-green-100/50 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                                <h3 class="font-black text-green-700 uppercase text-xs tracking-widest mb-1 relative z-10">Step 3: Categorization</h3>
+                                <div class="my-3 text-sm text-gray-600 space-y-2 relative z-10">
+                                    <p><span class="font-bold text-gray-800">Q:</span> "What type of categories do you have for incidents or keywords for emails that need to be responded to?"</p>
+                                    <p class="bg-green-50 border border-green-100 p-3 rounded-lg text-green-900"><span class="font-bold text-green-800">Client:</span> "Critical vendor invoices, compliance notices, and VIP escalations."</p>
+                                </div>
+                                <div class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-4 text-xs font-bold text-green-600 relative z-10">
+                                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Automation Logic Defined</span>
+                                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Ready for Deployment</span>
+                                </div>
+                                <button onclick="resetWorkflow()" class="mt-4 border border-purple-200 text-purple-900 hover:bg-purple-50 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors relative z-10">
+                                    Restart Workflow ↺
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -364,7 +453,7 @@
 
                 <div class="w-full bg-purple-50 rounded-[2rem] border border-purple-100 shadow-inner overflow-hidden relative mx-auto"
                     style="height: 600px;">
-                    <iframe title="CEC 2026 Orbital Resource Financial Audit Dashboard"
+                    <iframe
                         src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true&:device=desktop"
                         class="absolute border-none"
                         style="width: 1400px; height: 1000px; left: 50%; transform: translateX(-50%) scale(0.7); transform-origin: top center; top: 20px; border-radius: 1.5rem;"
@@ -374,30 +463,31 @@
 
                 <div class="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-purple-50 text-center">
                     <div>
-                        <p class="text-[10px] font-black text-purple-600 uppercase tracking-widest mb-1">Efficiency</p>
+                        <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Efficiency</p>
                         <p class="text-4xl font-black italic text-purple-900 leading-none">116%</p>
                     </div>
                     <div>
-                        <p class="text-[10px] font-black text-purple-600 uppercase tracking-widest mb-1">Data Scale</p>
+                        <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Data Scale</p>
                         <p class="text-4xl font-black italic text-purple-900 leading-none">10K Rows</p>
                     </div>
                     <div>
-                        <p class="text-[10px] font-black text-purple-600 uppercase tracking-widest mb-1">Stack</p>
+                        <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Stack</p>
                         <p class="text-2xl font-black italic text-purple-900 leading-none uppercase mt-2">Py/Tableau</p>
                     </div>
                 </div>
             </div>
 
-            <div id="methodology" role="tabpanel" aria-labelledby="btn-methodology" tabindex="0" class="tab-content animate-in fade-in duration-500">
+            <div id="methodology" class="tab-content animate-in fade-in duration-500">
                 <div class="mb-8 p-6 bg-purple-50/50 rounded-2xl border border-purple-100 flex flex-col gap-3">
                     <label for="case-study-select"
                         class="text-sm font-black text-purple-900 uppercase tracking-widest">Select
                         Visualization:</label>
                     <div class="relative">
                         <select id="case-study-select" onchange="toggleCaseStudy(this.value)"
-                            class="w-full appearance-none bg-white border border-purple-200 text-purple-900 font-bold py-3 px-4 pr-8 rounded-xl leading-tight focus:outline-none focus:bg-white focus:border-purple-600 cursor-pointer transition-colors shadow-sm">
+                            class="w-full appearance-none bg-white border border-purple-200 text-purple-900 font-bold py-3 px-4 pr-8 rounded-xl leading-tight focus:outline-none focus:bg-white focus:border-purple-500 cursor-pointer transition-colors shadow-sm">
                             <option value="" disabled selected>-- Select an Option --</option>
                             <option value="cec-2026">CELESTIAL EXTRACTION CORP (CEC) - 2026 ORBITAL AUDIT</option>
+                            <option value="email-workflow">EMAIL WORKFLOW AUTOMATION - METHODOLOGY</option>
                         </select>
                         <div
                             class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-purple-900">
@@ -410,7 +500,7 @@
 
                 <!-- Text-to-Speech Controls (Hidden until project selected) -->
                 <div id="tts-container" class="hidden mb-6 flex justify-end">
-                    <div class="flex items-center gap-3 bg-[#FAF5FF] border border-purple-200 rounded-full shadow-sm p-1.5 focus-within:ring-2 focus-within:ring-purple-600 transition-all">
+                    <div class="flex items-center gap-3 bg-[#FAF5FF] border border-purple-200 rounded-full shadow-sm p-1.5 focus-within:ring-2 focus-within:ring-purple-500 transition-all">
                         
                         <button id="tts-play-btn" onclick="toggleTTSPlay()" aria-label="Play or pause audio" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-900 transition-colors focus:outline-none">
                             <span id="tts-play-icon" class="text-xs">▶</span>
@@ -430,13 +520,13 @@
                                 <div class="audio-bar"></div>
                                 <div class="audio-bar"></div>
                             </div>
-                            <span id="tts-status" aria-live="polite" class="text-[9px] font-black uppercase tracking-widest text-purple-600 min-w-[60px] text-center">Ready</span>
+                            <span id="tts-status" class="text-[9px] font-black uppercase tracking-widest text-purple-600 min-w-[60px] text-center">Ready</span>
                             
-                            <select id="tts-voice" onchange="changeTTSVoice(this.value)" aria-label="Voice selection" class="min-h-[24px] text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1 max-w-[100px] truncate">
+                            <select id="tts-voice" onchange="changeTTSVoice(this.value)" aria-label="Voice selection" class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1 max-w-[100px] truncate">
                                 <option value="">Loading Voices...</option>
                             </select>
 
-                            <select id="tts-speed" onchange="changeTTSSpeed(this.value)" aria-label="Playback speed" class="min-h-[24px] text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1">
+                            <select id="tts-speed" onchange="changeTTSSpeed(this.value)" aria-label="Playback speed" class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1">
                                 <option value="0.9">0.9x</option>
                                 <option value="1.0" selected>1.0x</option>
                                 <option value="1.25">1.25x</option>
@@ -507,10 +597,26 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                             </div>
                         </div>
                     </div>
+
+                    <div id="email-workflow" class="case-study hidden space-y-6 animate-in fade-in duration-500">
+                        <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none mt-2">
+                            Interactive Workflow Construction Methodology
+                        </h2>
+                        <div class="space-y-6 text-sm text-gray-600">
+                            <div>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Concept: Shared Mailbox Interactive Discovery</h3>
+                                <p>To present the shared mailbox automation logic in an engaging manner, I built a custom interactive timeline component embedded directly into the portfolio. Rather than presenting a static flowchart, the interface acts as a "simulator" of the actual stakeholder Request for Information (RFI).</p>
+                            </div>
+                            <div>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Architecture & Design</h3>
+                                <p>The workflow utilizes vanilla JavaScript state management and modern CSS micro-animations. Leveraging Tailwind CSS, I translated the "Solar-Tech" aesthetic—characterized by deep purples, glowing gradients, and distinct typographic hierarchy—into actionable nodes. The cascading visibility (opacity shifts and Y-axis translations) simulates synchronous discovery.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div id="tutorials" role="tabpanel" aria-labelledby="btn-tutorials" tabindex="0" class="tab-content animate-in fade-in duration-500">
+            <div id="tutorials" class="tab-content animate-in fade-in duration-500">
                 <h2 class="text-3xl font-black italic text-purple-900 mb-8 uppercase leading-none">Audio & Video Tutorials</h2>
                 <div class="bg-purple-50/50 border border-purple-100 p-8 rounded-[2rem] text-center flex flex-col items-center justify-center min-h-[400px]">
                     <span class="text-4xl mb-4">🎙️</span>
@@ -522,7 +628,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 </div>
             </div>
 
-            <div id="resources" role="tabpanel" aria-labelledby="btn-resources" tabindex="0" class="tab-content animate-in fade-in duration-500">
+            <div id="resources" class="tab-content animate-in fade-in duration-500">
                 <h2 class="text-3xl font-black italic text-purple-900 mb-10 uppercase leading-none">Learning &
                     Credentials</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -620,14 +726,14 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             </div>
 
             <!-- SECURE SECTION PAGES -->
-            <div id="resume" role="tabpanel" aria-labelledby="tab-resume" tabindex="0" class="tab-content animate-in fade-in duration-500">
+            <div id="resume" class="tab-content animate-in fade-in duration-500">
                 <div
                     class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
                     > Decrypting secure content...
                 </div>
             </div>
 
-            <div id="extrapolio" role="tabpanel" aria-labelledby="tab-extrapolio" tabindex="0" class="tab-content animate-in fade-in duration-500">
+            <div id="extrapolio" class="tab-content animate-in fade-in duration-500">
                 <div
                     class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
                     > Decrypting secure content...
@@ -635,24 +741,19 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             </div>
 
         </div>
-    </main>
+    </section>
 
-    <footer class="print:hidden flex justify-center pb-24 px-6">
-        <!-- LANGUAGE SWITCHER -->
-        <div class="flex bg-white border border-purple-100 rounded-full shadow-sm overflow-hidden p-0.5">
-            <button type="button" aria-label="Switch to English" onclick="translatePage('en')" class="px-3 h-[32px] min-w-[32px] flex items-center justify-center text-[9px] font-black uppercase tracking-widest text-purple-900 hover:bg-purple-50 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-600 focus:bg-purple-100">EN</button>
-            <div class="w-px bg-purple-100 my-1"></div>
-            <button type="button" aria-label="Switch to Spanish" onclick="translatePage('es')" class="px-3 h-[32px] min-w-[32px] flex items-center justify-center text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-600 focus:bg-purple-100">ES</button>
-            <div class="w-px bg-purple-100 my-1"></div>
-            <button type="button" aria-label="Switch to French" onclick="translatePage('fr')" class="px-3 h-[32px] min-w-[32px] flex items-center justify-center text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-600 focus:bg-purple-100">FR</button>
-        </div>
+    <footer class="print:hidden text-center pb-24 px-6">
+        <button
+            class="bg-purple-950 text-white px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition-all">Contact
+            for History →</button>
     </footer>
 
     <!-- SECURE TERMINAL MODAL -->
     <div id="secure-modal" class="fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4"
         style="display: none;">
         <div class="scanline"></div>
-        <div role="dialog" aria-modal="true" aria-labelledby="modal-title"
+        <div
             class="bg-gray-900 border border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.2)] rounded-lg w-full max-w-md p-8 relative overflow-hidden">
             <div
                 class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent">
@@ -669,66 +770,63 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             <div id="auth-view" class="space-y-6">
                 <div class="space-y-4">
                     <button onclick="showPasswordForm()"
-                        class="w-full bg-purple-900/30 hover:bg-purple-900/50 text-purple-300 border border-purple-500/30 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-400">
+                        class="w-full bg-purple-900/30 hover:bg-purple-900/50 text-purple-300 border border-purple-500/30 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-inner">
                         [ Enter Password ]
                     </button>
                     <button onclick="showRequestForm()"
-                        class="w-full bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-400">
+                        class="w-full bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text">
                         [ Request Access ]
                     </button>
                 </div>
                 <!-- Auth Feedback -->
-                <p id="auth-feedback" aria-live="polite" class="terminal-text text-xs text-center h-4"></p>
+                <p id="auth-feedback" class="terminal-text text-xs text-center h-4"></p>
             </div>
 
             <!-- Password Input View -->
             <div id="password-view" class="hidden space-y-6 animate-in fade-in duration-300">
                 <div>
-                    <label for="terminal-password" class="terminal-text text-purple-400 text-xs block mb-2">> INPUT_CREDENTIALS</label>
+                    <label class="terminal-text text-purple-400 text-xs block mb-2">> INPUT_CREDENTIALS</label>
                     <input type="password" id="terminal-password" placeholder="********"
-                        class="w-full bg-black border border-purple-500/50 text-purple-300 terminal-text p-3 text-sm focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
+                        class="w-full bg-black border border-purple-500/50 text-purple-300 terminal-text p-3 text-sm focus:outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
                 </div>
                 <div class="flex gap-3">
                     <button onclick="submitPassword()"
-                        class="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-400">
+                        class="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text shadow-lg">
                         [ Authenticate ]
                     </button>
                     <button onclick="resetModalView()"
-                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-400">
+                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text">
                         [ Cancel ]
                     </button>
                 </div>
-                <p id="pwd-feedback" aria-live="polite" class="terminal-text text-xs text-center h-4"></p>
+                <p id="pwd-feedback" class="terminal-text text-xs text-center h-4"></p>
             </div>
 
             <!-- Request Access View -->
             <div id="request-view" class="hidden space-y-4 animate-in fade-in duration-300">
                 <p class="terminal-text text-purple-400 text-xs mb-4">> INITIALIZE_ACCESS_REQUEST</p>
-                <label for="req-name" class="sr-only">Identifier (Name)</label>
                 <input type="text" id="req-name" placeholder="IDENTIFIER (NAME)"
-                    class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500">
-                <label for="req-email" class="sr-only">Contact (Email)</label>
+                    class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400">
                 <input type="email" id="req-email" placeholder="CONTACT (EMAIL)"
-                    class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500">
-                <label for="req-msg" class="sr-only">Reason for access (Optional)</label>
+                    class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400">
                 <textarea id="req-msg" placeholder="REASON FOR ACCESS (OPTIONAL)" rows="3"
-                    class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500 resize-none"></textarea>
+                    class="w-full bg-black border border-gray-600 text-gray-300 terminal-text p-3 text-xs focus:outline-none focus:border-purple-400 resize-none"></textarea>
                 <div class="flex gap-3 pt-2">
                     <button onclick="submitRequest()"
-                        class="flex-1 bg-purple-900/50 hover:bg-purple-800/80 text-purple-300 border border-purple-500/50 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-400">
+                        class="flex-1 bg-purple-900/50 hover:bg-purple-800/80 text-purple-300 border border-purple-500/50 font-bold py-3 uppercase tracking-widest text-xs transition-colors terminal-text">
                         [ Transmit ]
                     </button>
                     <button onclick="resetModalView()"
-                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text focus:outline-none focus:ring-2 focus:ring-purple-400">
+                        class="px-4 bg-gray-800 hover:bg-gray-700 text-gray-400 border border-gray-600 font-bold uppercase tracking-widest text-xs transition-colors terminal-text">
                         [ Cancel ]
                     </button>
                 </div>
-                <p id="req-feedback" aria-live="polite" class="terminal-text text-xs text-center h-4"></p>
+                <p id="req-feedback" class="terminal-text text-xs text-center h-4"></p>
             </div>
 
             <!-- Close button -->
-            <button aria-label="Close modal" onclick="closeSecureModal()"
-                class="absolute top-4 right-4 text-gray-500 hover:text-white terminal-text text-lg leading-none focus:outline-none focus:ring-2 focus:ring-purple-400 w-10 h-10 flex items-center justify-center rounded-full">
+            <button onclick="closeSecureModal()"
+                class="absolute top-4 right-4 text-gray-500 hover:text-white terminal-text text-lg leading-none">
                 ×
             </button>
         </div>
@@ -741,7 +839,6 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         let authAttempts = 0;
         let isLockedOut = false;
         let currentAuthLevel = 'level1';
-        let previousFocus = null;
 
         function isAuthenticated(level = 'level1') {
             if (level === 'level2') return sessionStorage.getItem('extraToken') === 'valid-extra-xyz';
@@ -798,28 +895,18 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             const tablinks = document.getElementsByClassName("tab-btn");
             for (let i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
-                tablinks[i].setAttribute("aria-selected", "false");
             }
             document.getElementById(tabName).classList.add("active");
 
             if (evt && evt.currentTarget) {
                 evt.currentTarget.classList.add("active");
-                evt.currentTarget.setAttribute("aria-selected", "true");
             } else {
                 const btns = Array.from(tablinks).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabName));
-                if (btns) {
-                    btns.classList.add("active");
-                    btns.setAttribute("aria-selected", "true");
-                }
+                if (btns) btns.classList.add("active");
             }
         }
 
         function openSecureModal(level = 'level1') {
-            previousFocus = document.activeElement;
-            document.querySelectorAll('body > *:not(#secure-modal):not(script):not(style):not(#google_translate_element)').forEach(el => {
-                if(el.setAttribute) el.setAttribute('inert', '');
-            });
-
             currentAuthLevel = level;
             document.getElementById('secure-modal').style.display = 'flex';
             resetModalView();
@@ -838,23 +925,10 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 titleEl.innerHTML = '> Terminal Access <span class="cursor-blink w-2 h-5 bg-purple-500 inline-block"></span>';
                 titleEl.className = "terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2";
             }
-            
-            // Set initial focus to the first button inside the modal for keyboard users
-            setTimeout(() => {
-                const firstBtn = document.querySelector('#auth-view button');
-                if (firstBtn) firstBtn.focus();
-            }, 100);
         }
 
         function closeSecureModal() {
             document.getElementById('secure-modal').style.display = 'none';
-            document.querySelectorAll('body > *:not(#secure-modal):not(script):not(style):not(#google_translate_element)').forEach(el => {
-                if(el.removeAttribute) el.removeAttribute('inert');
-            });
-            if (previousFocus) {
-                previousFocus.focus();
-                previousFocus = null;
-            }
             pendingTabTarget = null;
             pendingTabEvent = null;
         }
@@ -1243,6 +1317,69 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 console.warn("Google Translate has not loaded yet.");
             }
         }
+
+        // WORKFLOW INTERACTIVITY LOGIC
+        function nextWorkflowStep(stepId) {
+            const currentButton = document.querySelector(`#wf-step-${stepId - 1} button`);
+            if (currentButton) {
+                // Change button style to indicate completion
+                currentButton.className = "bg-purple-50 text-purple-300 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors cursor-default mt-2 flex items-center justify-center gap-2 border border-purple-100";
+                currentButton.innerHTML = `Step Completed ✓`;
+                currentButton.removeAttribute('onclick');
+                
+                // Stop the previous pulse
+                const prevPulse = document.querySelector(`#wf-step-${stepId - 1} .animate-pulse`);
+                if (prevPulse) prevPulse.classList.remove('animate-pulse');
+            }
+
+            const nextStep = document.getElementById(`wf-step-${stepId}`);
+            if (nextStep) {
+                nextStep.classList.remove('hidden');
+                // Trigger reflow to ensure slide up transition works
+                void nextStep.offsetWidth;
+                nextStep.classList.remove('opacity-0', 'translate-y-4');
+                nextStep.classList.add('opacity-100', 'translate-y-0');
+                
+                // Add pulse to new step dot
+                const newPulse = nextStep.querySelector('.rounded-full.bg-purple-600');
+                if (newPulse && stepId < 3) newPulse.classList.add('animate-pulse');
+            }
+        }
+
+        function resetWorkflow() {
+            // Hide all steps except the first
+            const steps = document.querySelectorAll('.workflow-step');
+            steps.forEach((step, index) => {
+                if (index === 0) {
+                    // Reset Button
+                    const btn = step.querySelector('button');
+                    btn.className = "relative z-10 bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md flex items-center justify-center gap-2 hover:scale-[1.02]";
+                    btn.innerHTML = `Initiate Analysis <span class="text-xs">→</span>`;
+                    btn.setAttribute('onclick', 'nextWorkflowStep(1)');
+                    
+                    // Reset Pulse
+                    const pulse = step.querySelector('.rounded-full.bg-purple-600');
+                    if (pulse) pulse.classList.add('animate-pulse');
+                } else {
+                    step.classList.add('hidden', 'opacity-0', 'translate-y-4');
+                    step.classList.remove('opacity-100', 'translate-y-0');
+                    
+                    // Reset Buttons
+                    const btn = step.querySelector('button');
+                    if (btn && index < 3) {
+                        btn.className = "bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]";
+                        if (index === 1) {
+                            btn.innerHTML = `Request Historical Data <span class="text-xs">→</span>`;
+                            btn.setAttribute('onclick', 'nextWorkflowStep(2)');
+                        } else if (index === 2) {
+                            btn.innerHTML = `Define Categories <span class="text-xs">→</span>`;
+                            btn.setAttribute('onclick', 'nextWorkflowStep(3)');
+                        }
+                    }
+                }
+            });
+        }
+
     </script>
 
     <!-- GOOGLE TRANSLATE SCRIPT -->
