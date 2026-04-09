@@ -182,28 +182,77 @@
         }
 
         @keyframes play-bar {
-            0%, 100% { transform: scaleY(0.2); }
-            50% { transform: scaleY(1); }
+
+            0%,
+            100% {
+                transform: scaleY(0.2);
+            }
+
+            50% {
+                transform: scaleY(1);
+            }
         }
 
         .audio-bars-container.playing .audio-bar {
             animation: play-bar 1s ease-in-out infinite;
         }
 
-        .audio-bars-container.playing .audio-bar:nth-child(1) { animation-duration: 0.7s; animation-delay: 0.0s; }
-        .audio-bars-container.playing .audio-bar:nth-child(2) { animation-duration: 1.1s; animation-delay: 0.2s; }
-        .audio-bars-container.playing .audio-bar:nth-child(3) { animation-duration: 0.8s; animation-delay: 0.4s; }
-        .audio-bars-container.playing .audio-bar:nth-child(4) { animation-duration: 1.0s; animation-delay: 0.1s; }
-        .audio-bars-container.playing .audio-bar:nth-child(5) { animation-duration: 0.9s; animation-delay: 0.3s; }
+        .audio-bars-container.playing .audio-bar:nth-child(1) {
+            animation-duration: 0.7s;
+            animation-delay: 0.0s;
+        }
+
+        .audio-bars-container.playing .audio-bar:nth-child(2) {
+            animation-duration: 1.1s;
+            animation-delay: 0.2s;
+        }
+
+        .audio-bars-container.playing .audio-bar:nth-child(3) {
+            animation-duration: 0.8s;
+            animation-delay: 0.4s;
+        }
+
+        .audio-bars-container.playing .audio-bar:nth-child(4) {
+            animation-duration: 1.0s;
+            animation-delay: 0.1s;
+        }
+
+        .audio-bars-container.playing .audio-bar:nth-child(5) {
+            animation-duration: 0.9s;
+            animation-delay: 0.3s;
+        }
 
         /* GOOGLE TRANSLATE OVERRIDES */
-        body { top: 0 !important; position: static !important; }
-        .goog-te-banner-frame { display: none !important; }
-        .skiptranslate > iframe.goog-te-banner-frame { display: none !important; }
-        #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
-        .goog-text-highlight { background: none !important; box-shadow: none !important; }
-        #google_translate_element { display: none !important; }
-        body.skiptranslate { top: 0 !important; }
+        body {
+            top: 0 !important;
+            position: static !important;
+        }
+
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        .skiptranslate>iframe.goog-te-banner-frame {
+            display: none !important;
+        }
+
+        #goog-gt-tt,
+        .goog-te-balloon-frame {
+            display: none !important;
+        }
+
+        .goog-text-highlight {
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        #google_translate_element {
+            display: none !important;
+        }
+
+        body.skiptranslate {
+            top: 0 !important;
+        }
     </style>
 </head>
 
@@ -214,15 +263,18 @@
             <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
             <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
         </div>
-        
+
         <div class="flex items-center gap-4 flex-wrap">
             <!-- LANGUAGE SWITCHER -->
             <div class="flex bg-white border border-purple-100 rounded-full shadow-sm overflow-hidden p-0.5">
-                <button onclick="translatePage('en')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-purple-900 hover:bg-purple-50 rounded-full transition-colors focus:bg-purple-100">EN</button>
+                <button onclick="translatePage('en')"
+                    class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-purple-900 hover:bg-purple-50 rounded-full transition-colors focus:bg-purple-100">EN</button>
                 <div class="w-px bg-purple-100 my-1"></div>
-                <button onclick="translatePage('es')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:bg-purple-100">ES</button>
+                <button onclick="translatePage('es')"
+                    class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:bg-purple-100">ES</button>
                 <div class="w-px bg-purple-100 my-1"></div>
-                <button onclick="translatePage('fr')" class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:bg-purple-100">FR</button>
+                <button onclick="translatePage('fr')"
+                    class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:bg-purple-100">FR</button>
             </div>
 
             <!-- SECURE TERMINAL -->
@@ -263,7 +315,9 @@
             <span
                 class="text-5xl md:text-8xl font-black tracking-tighter text-purple-950 uppercase leading-none">Analyst</span>
         </div>
-        <p class="text-lg text-gray-500 font-medium italic mt-8 mb-4 max-w-2xl mx-auto">"I’ve held a few titles, but honestly, at the end of the day, I’m just a woman making sense of the numbers and the data that tells the story."</p>
+        <p class="text-lg text-gray-500 font-medium italic mt-8 mb-4 max-w-2xl mx-auto">"I’ve held a few titles, but
+            honestly, at the end of the day, I’m just a woman making sense of the numbers and the data that tells the
+            story."</p>
     </header>
 
     <div class="print:hidden max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6 relative z-50">
@@ -304,7 +358,8 @@
                         <img src="https://media.giphy.com/media/26tPgV8ceZTSxH9zG/giphy.gif" alt="Aisha GIF"
                             class="h-12 w-12 rounded-lg object-cover border border-purple-100 shadow-sm">
                     </p>
-                    <p>I have worked at the intersection of data, automation, mission level decision making. My specialty is turning complex systems data and
+                    <p>I have worked at the intersection of data, automation, mission level decision making. My
+                        specialty is turning complex systems data and
                         sprawling datasets into clear, actionable insight for leadership. Because here is the truth:
                         data by itself is not powerful. Turning data into knowledge and turning that knowledge into
                         action is where the real value lives. When the data gets messy, I build the system that makes
@@ -345,157 +400,330 @@
 
             <div id="portfolio" class="tab-content animate-in fade-in duration-500">
                 <!-- Mobile Warning Banner -->
-                <div class="md:hidden bg-amber-50 border border-amber-200 p-4 rounded-xl mb-8 flex items-start gap-4 shadow-sm mx-2">
+                <div
+                    class="md:hidden bg-amber-50 border border-amber-200 p-4 rounded-xl mb-8 flex items-start gap-4 shadow-sm mx-2">
                     <span class="text-amber-600 text-xl font-bold mt-1">📱</span>
                     <div>
-                        <p class="text-[10px] font-black uppercase tracking-[0.2em] text-amber-800 mb-1">Mobile Viewing Notice</p>
-                        <p class="text-xs text-amber-700 leading-relaxed font-medium">To experience these highly detailed interactive visualizations exactly as intended, viewing natively on a desktop or tablet is strongly recommended.</p>
+                        <p class="text-[10px] font-black uppercase tracking-[0.2em] text-amber-800 mb-1">Mobile Viewing
+                            Notice</p>
+                        <p class="text-xs text-amber-700 leading-relaxed font-medium">To experience these highly
+                            detailed interactive visualizations exactly as intended, viewing natively on a desktop or
+                            tablet is strongly recommended.</p>
                     </div>
                 </div>
 
                 <!-- ADDED WORKFLOW PLANNER ABOVE CEC DASHBOARD -->
                 <div class="mb-16">
-                    <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none px-2">Interactive Workflow Planner</h2>
+                    <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none px-2">Interactive
+                        Workflow Planner</h2>
                     <div class="relative pl-6 border-l-2 border-purple-200 space-y-8 mx-2" id="workflow-timeline">
-                        
+
                         <!-- RFI Node -->
                         <div class="workflow-step relative" id="wf-step-0">
-                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
                                 <span class="h-2.5 w-2.5 rounded-full bg-purple-600 animate-pulse"></span>
                             </span>
-                            <div class="bg-purple-50/50 p-6 rounded-2xl border border-purple-100 shadow-sm relative overflow-hidden">
-                                <div class="absolute top-0 right-0 w-32 h-32 bg-purple-200/50 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-3">Stakeholder RFI</h3>
-                                <blockquote class="border-l-4 border-purple-400 pl-4 text-sm text-gray-600 italic leading-relaxed mb-4 relative z-10">
-                                    "Hey, we have a shared mailbox that we get an influx of emails daily, something around 100 to 500 emails per day and we need to be able to filter out important emails that actions need to be taken upon within 24 to 48 hours. This mailbox is only managed by two people so we do need automations in place."
+                            <div
+                                class="bg-purple-50/50 p-6 rounded-2xl border border-purple-100 shadow-sm relative overflow-hidden">
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-purple-200/50 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+                                </div>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-3">
+                                    Stakeholder RFI</h3>
+                                <blockquote
+                                    class="border-l-4 border-purple-400 pl-4 text-sm text-gray-600 italic leading-relaxed mb-4 relative z-10">
+                                    "Hey, we have a shared mailbox that we get an influx of emails daily, something
+                                    around 100 to 500 emails per day and we need to be able to filter out important
+                                    emails that actions need to be taken upon within 24 to 48 hours. This mailbox is
+                                    only managed by two people so we do need automations in place."
                                 </blockquote>
-                                <button onclick="nextWorkflowStep(1)" class="relative z-10 bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                <button onclick="nextWorkflowStep(1)"
+                                    class="relative z-10 bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md flex items-center justify-center gap-2 hover:scale-[1.02]">
                                     Initiate Analysis <span class="text-xs">→</span>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Step 1 -->
-                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-1">
-                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-1">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
                                 <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
                             </span>
-                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 1: Identify Platform</h3>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 1:
+                                    Identify Platform</h3>
                                 <div class="my-3 text-sm text-gray-600 space-y-2">
-                                    <p><span class="font-bold text-gray-800">Q:</span> "What type of email provider do you use? (Outlook, Google, etc.)"</p>
-                                    <p class="bg-gray-50 border border-gray-100 p-3 rounded-lg"><span class="font-bold text-purple-900">Client:</span> "Microsoft Outlook."</p>
+                                    <p><span class="font-bold text-gray-800">Q:</span> "What type of email provider do
+                                        you use? (Outlook, Google, etc.)"</p>
+                                    <p class="bg-gray-50 border border-gray-100 p-3 rounded-lg"><span
+                                            class="font-bold text-purple-900">Client:</span> "Microsoft Outlook."</p>
                                 </div>
-                                <button onclick="nextWorkflowStep(2)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                <button onclick="nextWorkflowStep(2)"
+                                    class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
                                     Request Historical Data <span class="text-xs">→</span>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Step 2 -->
-                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-2">
-                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-2">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
                                 <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
                             </span>
-                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 2: Data Sampling</h3>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 2:
+                                    Data Sampling</h3>
                                 <div class="my-3 text-sm text-gray-600">
-                                    <p class="mb-2">Review a small sample portion of historical Outlook data to understand the types of incoming emails.</p>
-                                    <div class="bg-purple-950 p-4 rounded-xl border border-white/10 shadow-inner overflow-x-auto">
+                                    <p class="mb-2">Review a small sample portion of historical Outlook data to
+                                        understand the types of incoming emails.</p>
+                                    <div
+                                        class="bg-purple-950 p-4 rounded-xl border border-white/10 shadow-inner overflow-x-auto">
                                         <pre class="text-purple-100 text-[10px] leading-relaxed"><code>[SYSTEM] Analyzing Outlook .PST Historical Extract...
 [RESULT] Identified 3 Primary Influx Clusters.</code></pre>
                                     </div>
                                 </div>
-                                <button onclick="nextWorkflowStep(3)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                <button onclick="nextWorkflowStep(3)"
+                                    class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
                                     Define Categories <span class="text-xs">→</span>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Step 3 -->
-                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-3">
-                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-3">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
                                 <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
                             </span>
-                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 3: Categorization</h3>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 3:
+                                    Categorization</h3>
                                 <div class="my-3 text-sm text-gray-600 space-y-2">
-                                    <p><span class="font-bold text-gray-800">Q:</span> "What type of categories do you have for incidents or keywords for emails that need to be responded to?"</p>
-                                    <p class="bg-gray-50 border border-gray-100 p-3 rounded-lg"><span class="font-bold text-purple-900">Client:</span> "Critical vendor invoices, compliance notices, and VIP escalations."</p>
+                                    <p><span class="font-bold text-gray-800">Q:</span> "What type of categories do you
+                                        have for incidents or keywords for emails that need to be responded to?"</p>
+                                    <p class="bg-gray-50 border border-gray-100 p-3 rounded-lg"><span
+                                            class="font-bold text-purple-900">Client:</span> "Critical vendor invoices,
+                                        compliance notices, and VIP escalations."</p>
                                 </div>
-                                <div class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-4 text-xs font-bold text-purple-600">
-                                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> Keywords & Logic Defined</span>
+                                <div
+                                    class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-4 text-xs font-bold text-purple-600">
+                                    <span class="flex items-center gap-1"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> Keywords & Logic
+                                        Defined</span>
                                 </div>
-                                <button onclick="nextWorkflowStep(4)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-4 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                <button onclick="nextWorkflowStep(4)"
+                                    class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-4 flex items-center justify-center gap-2 hover:scale-[1.02]">
                                     Configure Parser <span class="text-xs">→</span>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Step 4 -->
-                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-4">
-                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-4">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
                                 <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
                             </span>
-                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 4: Automated Parsing & Sorting</h3>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 4:
+                                    Automated Parsing & Sorting</h3>
                                 <div class="my-3 text-sm text-gray-600 space-y-2">
-                                    <p>Configure a Microsoft Exchange/Outlook feature that actively scans incoming emails for the identified key phrases.</p>
-                                    <div class="bg-gray-50 border border-gray-100 p-3 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                                        <span class="font-bold text-gray-800">Action:</span> 
-                                        <span class="text-[10px] font-mono text-purple-600 bg-purple-50 px-2 py-1 rounded">Route matched emails to designated Subfolders</span>
+                                    <p>Configure a Microsoft Exchange/Outlook feature that actively scans incoming
+                                        emails for the identified key phrases.</p>
+                                    <div
+                                        class="bg-gray-50 border border-gray-100 p-3 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                        <span class="font-bold text-gray-800">Action:</span>
+                                        <span
+                                            class="text-[10px] font-mono text-purple-600 bg-purple-50 px-2 py-1 rounded">Route
+                                            matched emails to designated Subfolders</span>
                                     </div>
                                 </div>
-                                <button onclick="nextWorkflowStep(5)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                <button onclick="nextWorkflowStep(5)"
+                                    class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
                                     Trigger Data Capture <span class="text-xs">→</span>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Step 5 -->
-                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-5">
-                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-5">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
                                 <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
                             </span>
-                            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 5: Data Capture Pipeline</h3>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 5:
+                                    Data Capture Pipeline</h3>
                                 <div class="my-3 text-sm text-gray-600">
-                                    <p class="mb-2">The routing of emails to specific folders triggers a Power Automate flow to extract data.</p>
-                                    <div class="bg-purple-950 p-4 rounded-xl border border-white/10 shadow-inner overflow-x-auto relative">
-                                        <div class="absolute right-4 top-4 w-2 h-2 rounded-full bg-green-400 animate-ping"></div>
+                                    <p class="mb-2">The routing of emails to specific folders triggers a Power Automate
+                                        flow to extract data.</p>
+                                    <div
+                                        class="bg-purple-950 p-4 rounded-xl border border-white/10 shadow-inner overflow-x-auto relative">
+                                        <div
+                                            class="absolute right-4 top-4 w-2 h-2 rounded-full bg-green-400 animate-ping">
+                                        </div>
                                         <pre class="text-purple-100 text-[10px] leading-relaxed"><code>[POWER AUTOMATE] Flow Triggered...
 [ACTION] Extracting Sender, Timestamp, Priority Keywords
 [SYNC] Writing to Central Repository ✅</code></pre>
                                     </div>
                                 </div>
-                                <button onclick="nextWorkflowStep(6)" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                <button onclick="nextWorkflowStep(6)"
+                                    class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
                                     Notify Analysts <span class="text-xs">→</span>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Step 6 -->
-                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4" id="wf-step-6">
-                            <span class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-green-100 ring-8 ring-[#FAF5FF]">
-                                <span class="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse"></span>
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-6">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
                             </span>
-                            <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-sm relative overflow-hidden">
-                                <div class="absolute top-0 right-0 w-32 h-32 bg-green-100/50 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-                                <h3 class="font-black text-green-700 uppercase text-xs tracking-widest mb-1 relative z-10">Step 6: Analyst Notification & Review</h3>
-                                <div class="my-3 text-sm text-gray-600 space-y-2 relative z-10">
-                                    <p>Once data is pulled into the repository, real-time alerts are dispatched to the two frontline analysts.</p>
-                                    <div class="bg-green-50 border border-green-100 p-4 rounded-lg flex items-start gap-3">
-                                        <span class="text-green-600 text-xl leading-none">📧</span>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 6:
+                                    Analyst Notification & Review</h3>
+                                <div class="my-3 text-sm text-gray-600 space-y-2">
+                                    <p>Once data is pulled into the repository, real-time alerts are dispatched to the
+                                        two frontline analysts.</p>
+                                    <div
+                                        class="bg-purple-50 border border-purple-100 p-4 rounded-lg flex items-start gap-3">
+                                        <span class="text-purple-600 text-xl leading-none">📧</span>
                                         <div>
-                                            <p class="font-bold text-green-900 text-[10px] uppercase tracking-wider mb-1">New System Alert</p>
-                                            <p class="text-green-800 text-xs italic">"High Priority record added to repository. Please review for potential escalation."</p>
+                                            <p
+                                                class="font-bold text-purple-900 text-[10px] uppercase tracking-wider mb-1">
+                                                New System Alert</p>
+                                            <p class="text-purple-800 text-xs italic">"High Priority record added to
+                                                repository. Please review for potential escalation."</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-4 text-xs font-bold text-green-600 relative z-10">
-                                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> End-to-End Automation Cycle Complete</span>
+                                <button onclick="nextWorkflowStep(7)"
+                                    class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Evaluate Escalation <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 7 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-7">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
+                            </span>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 7:
+                                    Human in the Loop</h3>
+                                <div class="my-3 text-sm text-gray-600 space-y-2">
+                                    <p>If the frontline analyst deems the email requires escalation, it is manually
+                                        routed to the Director.</p>
+                                    <div
+                                        class="bg-amber-50 border border-amber-100 p-3 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                        <span class="font-bold text-amber-800">Analyst Action:</span>
+                                        <span
+                                            class="text-[10px] font-mono text-amber-600 bg-amber-100/50 px-2 py-1 rounded">Route
+                                            to Director for further Review</span>
+                                    </div>
                                 </div>
-                                <button onclick="resetWorkflow()" class="mt-4 border border-purple-200 text-purple-900 hover:bg-purple-50 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors relative z-10">
+                                <button onclick="nextWorkflowStep(8)"
+                                    class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Alert Director <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 8 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-8">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-purple-600"></span>
+                            </span>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Step 8:
+                                    Multi-Channel Notification</h3>
+                                <div class="my-3 text-sm text-gray-600 space-y-2">
+                                    <p>The Director is notified via Email, and a Power Automate flow sends a
+                                        simultaneous Microsoft Teams message.</p>
+                                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-lg flex gap-3">
+                                        <span class="text-blue-600 text-xl">💬</span>
+                                        <div>
+                                            <p
+                                                class="font-bold text-blue-900 text-[10px] uppercase tracking-wider mb-1">
+                                                Microsoft Teams</p>
+                                            <p class="text-blue-800 text-xs italic">"URGENT: Escalation from frontline
+                                                analyst awaits your review."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button onclick="nextWorkflowStep(9)"
+                                    class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                    Start SLA Timers <span class="text-xs">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 9 -->
+                        <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
+                            id="wf-step-9">
+                            <span
+                                class="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-green-100 ring-8 ring-[#FAF5FF]">
+                                <span class="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse"></span>
+                            </span>
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-green-100 shadow-sm relative overflow-hidden">
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-green-100/50 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+                                </div>
+                                <h3
+                                    class="font-black text-green-700 uppercase text-xs tracking-widest mb-1 relative z-10">
+                                    Step 9: SLA / Escalation Timers</h3>
+                                <div class="my-3 text-sm text-gray-600 space-y-3 relative z-10">
+                                    <p>Power Automate begins an automatic countdown to ensure service level agreements
+                                        (SLAs) are met.</p>
+                                    <div class="space-y-2">
+                                        <div
+                                            class="flex items-center gap-3 bg-gray-50 p-2 rounded border border-gray-100">
+                                            <span class="text-orange-500 font-bold text-xs uppercase w-12 text-right">12
+                                                HR</span>
+                                            <span class="text-gray-600 text-xs text-left">Initial follow-up update if
+                                                unaddressed.</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-3 bg-red-50 p-2 rounded border border-red-100">
+                                            <span class="text-red-500 font-bold text-xs uppercase w-12 text-right">42
+                                                HR</span>
+                                            <span class="text-red-800 text-xs text-left">Critical update / Secondary
+                                                escalation if unaddressed.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-4 text-xs font-bold text-green-600 relative z-10">
+                                    <span class="flex items-center gap-1"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Phase 3 Workflow
+                                        Complete</span>
+                                </div>
+                                <button onclick="resetWorkflow()"
+                                    class="mt-4 border border-purple-200 text-purple-900 hover:bg-purple-50 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors relative z-10">
                                     Restart Workflow ↺
                                 </button>
                             </div>
@@ -567,18 +795,21 @@
 
                 <!-- Text-to-Speech Controls (Hidden until project selected) -->
                 <div id="tts-container" class="hidden mb-6 flex justify-end">
-                    <div class="flex items-center gap-3 bg-[#FAF5FF] border border-purple-200 rounded-full shadow-sm p-1.5 focus-within:ring-2 focus-within:ring-purple-500 transition-all">
-                        
-                        <button id="tts-play-btn" onclick="toggleTTSPlay()" aria-label="Play or pause audio" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-900 transition-colors focus:outline-none">
+                    <div
+                        class="flex items-center gap-3 bg-[#FAF5FF] border border-purple-200 rounded-full shadow-sm p-1.5 focus-within:ring-2 focus-within:ring-purple-500 transition-all">
+
+                        <button id="tts-play-btn" onclick="toggleTTSPlay()" aria-label="Play or pause audio"
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-900 transition-colors focus:outline-none">
                             <span id="tts-play-icon" class="text-xs">▶</span>
                         </button>
-                        
-                        <button id="tts-stop-btn" onclick="stopTTS()" aria-label="Stop audio" class="flex items-center justify-center w-8 h-8 rounded-full hover:bg-red-50 text-red-600 transition-colors focus:outline-none">
+
+                        <button id="tts-stop-btn" onclick="stopTTS()" aria-label="Stop audio"
+                            class="flex items-center justify-center w-8 h-8 rounded-full hover:bg-red-50 text-red-600 transition-colors focus:outline-none">
                             <span class="text-xs">⏹</span>
                         </button>
-                        
+
                         <div class="h-4 w-px bg-purple-200 mx-1"></div>
-                        
+
                         <div class="flex items-center gap-2 px-2">
                             <div id="tts-visualizer" class="audio-bars-container">
                                 <div class="audio-bar"></div>
@@ -587,13 +818,16 @@
                                 <div class="audio-bar"></div>
                                 <div class="audio-bar"></div>
                             </div>
-                            <span id="tts-status" class="text-[9px] font-black uppercase tracking-widest text-purple-600 min-w-[60px] text-center">Ready</span>
-                            
-                            <select id="tts-voice" onchange="changeTTSVoice(this.value)" aria-label="Voice selection" class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1 max-w-[100px] truncate">
+                            <span id="tts-status"
+                                class="text-[9px] font-black uppercase tracking-widest text-purple-600 min-w-[60px] text-center">Ready</span>
+
+                            <select id="tts-voice" onchange="changeTTSVoice(this.value)" aria-label="Voice selection"
+                                class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1 max-w-[100px] truncate">
                                 <option value="">Loading Voices...</option>
                             </select>
 
-                            <select id="tts-speed" onchange="changeTTSSpeed(this.value)" aria-label="Playback speed" class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1">
+                            <select id="tts-speed" onchange="changeTTSSpeed(this.value)" aria-label="Playback speed"
+                                class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1">
                                 <option value="0.9">0.9x</option>
                                 <option value="1.0" selected>1.0x</option>
                                 <option value="1.25">1.25x</option>
@@ -671,12 +905,21 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                         </h2>
                         <div class="space-y-6 text-sm text-gray-600">
                             <div>
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Concept: Shared Mailbox Interactive Discovery</h3>
-                                <p>To present the shared mailbox automation logic in an engaging manner, I built a custom interactive timeline component embedded directly into the portfolio. Rather than presenting a static flowchart, the interface acts as a "simulator" of the actual stakeholder Request for Information (RFI).</p>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Concept:
+                                    Shared Mailbox Interactive Discovery</h3>
+                                <p>To present the shared mailbox automation logic in an engaging manner, I built a
+                                    custom interactive timeline component embedded directly into the portfolio. Rather
+                                    than presenting a static flowchart, the interface acts as a "simulator" of the
+                                    actual stakeholder Request for Information (RFI).</p>
                             </div>
                             <div>
-                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">Architecture & Design</h3>
-                                <p>The workflow utilizes vanilla JavaScript state management and modern CSS micro-animations. Leveraging Tailwind CSS, I translated the "Solar-Tech" aesthetic—characterized by deep purples, glowing gradients, and distinct typographic hierarchy—into actionable nodes. The cascading visibility (opacity shifts and Y-axis translations) simulates synchronous discovery.</p>
+                                <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-1">
+                                    Architecture & Design</h3>
+                                <p>The workflow utilizes vanilla JavaScript state management and modern CSS
+                                    micro-animations. Leveraging Tailwind CSS, I translated the "Solar-Tech"
+                                    aesthetic—characterized by deep purples, glowing gradients, and distinct typographic
+                                    hierarchy—into actionable nodes. The cascading visibility (opacity shifts and Y-axis
+                                    translations) simulates synchronous discovery.</p>
                             </div>
                         </div>
                     </div>
@@ -684,12 +927,18 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             </div>
 
             <div id="tutorials" class="tab-content animate-in fade-in duration-500">
-                <h2 class="text-3xl font-black italic text-purple-900 mb-8 uppercase leading-none">Audio & Video Tutorials</h2>
-                <div class="bg-purple-50/50 border border-purple-100 p-8 rounded-[2rem] text-center flex flex-col items-center justify-center min-h-[400px]">
+                <h2 class="text-3xl font-black italic text-purple-900 mb-8 uppercase leading-none">Audio & Video
+                    Tutorials</h2>
+                <div
+                    class="bg-purple-50/50 border border-purple-100 p-8 rounded-[2rem] text-center flex flex-col items-center justify-center min-h-[400px]">
                     <span class="text-4xl mb-4">🎙️</span>
-                    <h3 class="text-xl font-black text-purple-900 uppercase tracking-widest mb-4">Under Construction: Substack Integration</h3>
-                    <p class="text-sm text-gray-500 max-w-lg leading-relaxed mb-6">I am currently migrating my detailed audio breakdowns, video lectures, and masterclasses to Substack. Stay tuned for the official launch.</p>
-                    <a href="https://substack.com" target="_blank" class="px-8 py-3 bg-purple-900 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-purple-800 transition-colors shadow-lg">
+                    <h3 class="text-xl font-black text-purple-900 uppercase tracking-widest mb-4">Under Construction:
+                        Substack Integration</h3>
+                    <p class="text-sm text-gray-500 max-w-lg leading-relaxed mb-6">I am currently migrating my detailed
+                        audio breakdowns, video lectures, and masterclasses to Substack. Stay tuned for the official
+                        launch.</p>
+                    <a href="https://substack.com" target="_blank"
+                        class="px-8 py-3 bg-purple-900 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-purple-800 transition-colors shadow-lg">
                         Go To Substack
                     </a>
                 </div>
@@ -827,8 +1076,11 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             </div>
 
             <div class="mb-8 text-center" id="modal-header-container">
-                <p id="modal-subtitle" class="terminal-text text-purple-400 text-sm font-bold tracking-[0.3em] uppercase mb-2">SYSTEM SECURE</p>
-                <h3 id="modal-title" class="terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2">
+                <p id="modal-subtitle"
+                    class="terminal-text text-purple-400 text-sm font-bold tracking-[0.3em] uppercase mb-2">SYSTEM
+                    SECURE</p>
+                <h3 id="modal-title"
+                    class="terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2">
                     > Terminal Access <span class="cursor-blink w-2 h-5 bg-purple-500 inline-block"></span>
                 </h3>
             </div>
@@ -936,7 +1188,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
 
         function openTab(evt, tabName) {
             if (typeof stopTTS === 'function') stopTTS();
-            
+
             // Protected tabs logic
             const protectedTabs = ['resume', 'extrapolio'];
 
@@ -977,10 +1229,10 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             currentAuthLevel = level;
             document.getElementById('secure-modal').style.display = 'flex';
             resetModalView();
-            
+
             const subtitleEl = document.getElementById('modal-subtitle');
             const titleEl = document.getElementById('modal-title');
-            
+
             if (level === 'level2') {
                 subtitleEl.innerText = "RESTRICTED AREA";
                 subtitleEl.className = "terminal-text text-red-500 text-sm font-bold tracking-[0.3em] uppercase mb-2";
@@ -1066,7 +1318,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
 
             try {
                 const token = await verifyPassword(input, currentAuthLevel);
-                
+
                 if (currentAuthLevel === 'level1') {
                     sessionStorage.setItem('secureToken', token);
                     unlockSecureUI();
@@ -1162,7 +1414,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 study.classList.add('hidden');
             });
             const selectedStudy = document.getElementById(studyId);
-            
+
             const ttsContainer = document.getElementById('tts-container');
             if (selectedStudy) {
                 selectedStudy.classList.remove('hidden');
@@ -1186,7 +1438,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             if (!allVoices.length) return;
 
             const allowedNames = ['Moira', 'Tara', 'Tessa', 'Whisper', 'Aman', 'Daniel', 'Good News', 'Karen', 'Ralph', 'Ralpha', 'Rishi', 'Rocko', 'Samantha'];
-            
+
             // Filter allVoices down to only the ones explicitly allowed
             let validVoices = allVoices.filter(v => allowedNames.some(allowed => v.name.includes(allowed)));
 
@@ -1198,22 +1450,22 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             let best = validVoices.find(v => v.name.includes('Tara'));
             if (!best) best = validVoices[0];
 
-            if(!preferredVoice) preferredVoice = best;
+            if (!preferredVoice) preferredVoice = best;
 
             // Populate Voice Dropdown UI
             const voiceSelect = document.getElementById('tts-voice');
             if (voiceSelect) {
                 voiceSelect.innerHTML = '';
-                
+
                 validVoices.forEach((v) => {
                     const opt = document.createElement('option');
                     // Store the raw index from allVoices
                     opt.value = allVoices.indexOf(v);
-                    
+
                     // Clean up voice names to fit nicely in the mini player
                     let cleanName = v.name.replace('Microsoft ', '').replace('Google ', '').replace(' Desktop', '');
                     opt.textContent = `${cleanName} (${v.lang})`;
-                    
+
                     if (v === preferredVoice) opt.selected = true;
                     voiceSelect.appendChild(opt);
                 });
@@ -1236,9 +1488,9 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 if (el.closest('pre') || el.closest('.hidden')) return;
                 rawText += el.innerText.trim() + " ";
             });
-            
+
             rawText = rawText.replace(/\s{2,}/g, ' ').trim();
-            if(!rawText) return [];
+            if (!rawText) return [];
 
             // Split into chunks by sentence-ending punctuation safely
             let chunks = rawText.match(/[^.!?]+[.!?]+/g);
@@ -1265,7 +1517,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 loadVoices(); // Ensure voices are loaded
                 chunkQueue = prepareChunks();
                 if (chunkQueue.length === 0) return;
-                
+
                 currentChunkIndex = 0;
                 ttsState = 'playing';
                 updateTTSUI();
@@ -1281,14 +1533,14 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             }
 
             let utterance = new SpeechSynthesisUtterance(chunkQueue[currentChunkIndex]);
-            
+
             // Set properties BEFORE voice (critical for WebKit/macOS Safari)
             utterance.rate = ttsRate;
             utterance.pitch = 1;
             utterance.volume = 1;
 
             if (preferredVoice) {
-                utterance.lang = preferredVoice.lang; 
+                utterance.lang = preferredVoice.lang;
                 utterance.voice = preferredVoice; // Voice must be the absolute LAST property set
             }
 
@@ -1299,7 +1551,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     playNextChunk();
                 }
             };
-            
+
             utterance.onerror = (e) => {
                 console.warn('TTS Error with voice:', preferredVoice ? preferredVoice.name : 'Unknown', e);
                 // Recover from a stuck queue if the voice engine crashes
@@ -1328,7 +1580,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 // Temporarily mask state so onend doesn't advance index
                 ttsState = 'changing-speed';
                 speechSynth.cancel();
-                
+
                 ttsState = wasPlaying ? 'playing' : 'paused';
                 if (ttsState === 'playing') {
                     playNextChunk();
@@ -1340,13 +1592,13 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
         function changeTTSVoice(voiceIndex) {
             if (voiceIndex === "" || !allVoices.length) return;
             preferredVoice = allVoices[parseInt(voiceIndex)];
-            
+
             // Hot-swap the voice during active playback
             if (ttsState === 'playing' || ttsState === 'paused') {
                 let wasPlaying = (ttsState === 'playing');
                 ttsState = 'changing-speed'; // Reuse state flag to suppress chunk advancement
                 speechSynth.cancel();
-                
+
                 ttsState = wasPlaying ? 'playing' : 'paused';
                 if (ttsState === 'playing') {
                     playNextChunk(); // Re-fires Utterance which will read the new preferredVoice
@@ -1359,7 +1611,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             const playIcon = document.getElementById('tts-play-icon');
             const statusText = document.getElementById('tts-status');
             const visualizer = document.getElementById('tts-visualizer');
-            if(!playIcon || !statusText) return;
+            if (!playIcon || !statusText) return;
 
             if (ttsState === 'playing') {
                 playIcon.innerText = "⏸";
@@ -1393,7 +1645,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 currentButton.className = "bg-purple-50 text-purple-300 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors cursor-default mt-2 flex items-center justify-center gap-2 border border-purple-100";
                 currentButton.innerHTML = `Step Completed ✓`;
                 currentButton.removeAttribute('onclick');
-                
+
                 // Stop the previous pulse
                 const prevPulse = document.querySelector(`#wf-step-${stepId - 1} .animate-pulse`);
                 if (prevPulse) prevPulse.classList.remove('animate-pulse');
@@ -1406,10 +1658,10 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                 void nextStep.offsetWidth;
                 nextStep.classList.remove('opacity-0', 'translate-y-4');
                 nextStep.classList.add('opacity-100', 'translate-y-0');
-                
+
                 // Add pulse to new step dot
                 const newPulse = nextStep.querySelector('.rounded-full.bg-purple-600, .rounded-full.bg-green-500');
-                if (newPulse && stepId < 6) newPulse.classList.add('animate-pulse');
+                if (newPulse && stepId < 9) newPulse.classList.add('animate-pulse');
             }
         }
 
@@ -1423,17 +1675,17 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                     btn.className = "relative z-10 bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md flex items-center justify-center gap-2 hover:scale-[1.02]";
                     btn.innerHTML = `Initiate Analysis <span class="text-xs">→</span>`;
                     btn.setAttribute('onclick', 'nextWorkflowStep(1)');
-                    
+
                     // Reset Pulse
                     const pulse = step.querySelector('.rounded-full.bg-purple-600');
                     if (pulse) pulse.classList.add('animate-pulse');
                 } else {
                     step.classList.add('hidden', 'opacity-0', 'translate-y-4');
                     step.classList.remove('opacity-100', 'translate-y-0');
-                    
+
                     // Reset Buttons
                     const btn = step.querySelector('button');
-                    if (btn && index < 6) {
+                    if (btn && index < 9) {
                         btn.className = "bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md mt-2 flex items-center justify-center gap-2 hover:scale-[1.02]";
                         if (index === 1) {
                             btn.innerHTML = `Request Historical Data <span class="text-xs">→</span>`;
@@ -1450,6 +1702,15 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                         } else if (index === 5) {
                             btn.innerHTML = `Notify Analysts <span class="text-xs">→</span>`;
                             btn.setAttribute('onclick', 'nextWorkflowStep(6)');
+                        } else if (index === 6) {
+                            btn.innerHTML = `Evaluate Escalation <span class="text-xs">→</span>`;
+                            btn.setAttribute('onclick', 'nextWorkflowStep(7)');
+                        } else if (index === 7) {
+                            btn.innerHTML = `Alert Director <span class="text-xs">→</span>`;
+                            btn.setAttribute('onclick', 'nextWorkflowStep(8)');
+                        } else if (index === 8) {
+                            btn.innerHTML = `Start SLA Timers <span class="text-xs">→</span>`;
+                            btn.setAttribute('onclick', 'nextWorkflowStep(9)');
                         }
                     }
                 }
@@ -1469,7 +1730,8 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
             }, 'google_translate_element');
         }
     </script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
