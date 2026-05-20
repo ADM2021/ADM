@@ -327,22 +327,25 @@
         <button onclick="openTab(event, 'portfolio')"
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">02
             // Portfolio</button>
-        <button onclick="openTab(event, 'methodology')"
+        <button onclick="openTab(event, 'rfis')"
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">03
+            // RFI Examples Workflows</button>
+        <button onclick="openTab(event, 'methodology')"
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">04
             // How It Was Done</button>
         <button onclick="openTab(event, 'tutorials')"
-            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">04
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">05
             // Audio & Video</button>
         <button onclick="openTab(event, 'resources')"
-            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">05
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">06
             // Certs & Resources</button>
 
         <!-- SECURE TABS (Hidden by default) -->
         <button onclick="openTab(event, 'resume')" id="tab-resume"
-            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">06
+            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
             // Resume [SECURE]</button>
         <button onclick="openTab(event, 'extrapolio')" id="tab-extrapolio"
-            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
+            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">08
             // Extra Portfolio [L2 SECURE]</button>
     </div>
 
@@ -412,9 +415,63 @@
                     </div>
                 </div>
 
+                <div class="flex justify-between items-start mb-6 px-2">
+                    <div>
+                        <h2 class="text-2xl font-black italic text-purple-900 uppercase leading-none">CEC 2026 Orbital
+                            Audit</h2>
+                        <p class="text-[9px] font-black text-purple-400 uppercase tracking-[0.2em] mt-2">
+                            Python-Generated ROI Modeling</p>
+                    </div>
+                    <span
+                        class="text-[10px] font-black bg-green-100 text-green-700 px-3 py-1 rounded-md uppercase tracking-widest flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                        Live
+                    </span>
+                </div>
+
+                <div class="w-full bg-purple-50 rounded-[2rem] border border-purple-100 shadow-inner overflow-hidden relative mx-auto"
+                    style="height: 600px;">
+                    <iframe
+                        src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true&:device=desktop"
+                        class="absolute border-none"
+                        style="width: 1400px; height: 1000px; left: 50%; transform: translateX(-50%) scale(0.7); transform-origin: top center; top: 20px; border-radius: 1.5rem;"
+                        allowfullscreen scrolling="no">
+                    </iframe>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-purple-50 text-center">
+                    <div>
+                        <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Efficiency</p>
+                        <p class="text-4xl font-black italic text-purple-900 leading-none">116%</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Data Scale</p>
+                        <p class="text-4xl font-black italic text-purple-900 leading-none">10K Rows</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Stack</p>
+                        <p class="text-2xl font-black italic text-purple-900 leading-none uppercase mt-2">Py/Tableau</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rfis" class="tab-content animate-in fade-in duration-500">
+                <!-- Mobile Warning Banner -->
+                <div
+                    class="md:hidden bg-amber-50 border border-amber-200 p-4 rounded-xl mb-8 flex items-start gap-4 shadow-sm mx-2">
+                    <span class="text-amber-600 text-xl font-bold mt-1">📱</span>
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-[0.2em] text-amber-800 mb-1">Mobile Viewing
+                            Notice</p>
+                        <p class="text-xs text-amber-700 leading-relaxed font-medium">To experience these highly
+                            detailed interactive visualizations exactly as intended, viewing natively on a desktop or
+                            tablet is strongly recommended.</p>
+                    </div>
+                </div>
+
                 <!-- ADDED WORKFLOW PLANNER ABOVE CEC DASHBOARD -->
                 <div class="mb-16">
-                    <h2 class="text-2xl font-black italic text-purple-900 mb-4 uppercase leading-none px-2">Dynamic Automation Pipeline Escalation Workflow</h2>
+                    <h2 class="text-2xl font-black italic text-purple-900 mb-4 uppercase leading-none px-2">RFI Examples Workflows</h2>
                     <div class="flex flex-wrap items-center gap-2 mb-8 px-2">
                         <span class="text-[10px] font-black uppercase tracking-widest text-purple-600 border border-purple-200 bg-purple-50 px-3 py-1 rounded-full shadow-sm">MS Outlook</span>
                         <span class="text-[10px] font-black uppercase tracking-widest text-purple-600 border border-purple-200 bg-purple-50 px-3 py-1 rounded-full shadow-sm">Power Automate</span>
@@ -758,45 +815,6 @@
 
                     </div>
                 </div>
-
-                <div class="flex justify-between items-start mb-6 px-2">
-                    <div>
-                        <h2 class="text-2xl font-black italic text-purple-900 uppercase leading-none">CEC 2026 Orbital
-                            Audit</h2>
-                        <p class="text-[9px] font-black text-purple-400 uppercase tracking-[0.2em] mt-2">
-                            Python-Generated ROI Modeling</p>
-                    </div>
-                    <span
-                        class="text-[10px] font-black bg-green-100 text-green-700 px-3 py-1 rounded-md uppercase tracking-widest flex items-center gap-1">
-                        <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                        Live
-                    </span>
-                </div>
-
-                <div class="w-full bg-purple-50 rounded-[2rem] border border-purple-100 shadow-inner overflow-hidden relative mx-auto"
-                    style="height: 600px;">
-                    <iframe
-                        src="https://public.tableau.com/views/CEC2026OrbitalResourceFinancialAudit/Dashboard2?:showVizHome=no&:embed=true&:device=desktop"
-                        class="absolute border-none"
-                        style="width: 1400px; height: 1000px; left: 50%; transform: translateX(-50%) scale(0.7); transform-origin: top center; top: 20px; border-radius: 1.5rem;"
-                        allowfullscreen scrolling="no">
-                    </iframe>
-                </div>
-
-                <div class="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-purple-50 text-center">
-                    <div>
-                        <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Efficiency</p>
-                        <p class="text-4xl font-black italic text-purple-900 leading-none">116%</p>
-                    </div>
-                    <div>
-                        <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Data Scale</p>
-                        <p class="text-4xl font-black italic text-purple-900 leading-none">10K Rows</p>
-                    </div>
-                    <div>
-                        <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Stack</p>
-                        <p class="text-2xl font-black italic text-purple-900 leading-none uppercase mt-2">Py/Tableau</p>
-                    </div>
-                </div>
             </div>
 
             <div id="methodology" class="tab-content animate-in fade-in duration-500">
@@ -806,7 +824,7 @@
                         Visualization:</label>
                     <div class="relative">
                         <select id="case-study-select" onchange="toggleCaseStudy(this.value)"
-                            class="w-full appearance-none bg-white border border-purple-200 text-purple-900 font-bold py-3 px-4 pr-8 rounded-xl leading-tight focus:outline-none focus:bg-white focus:border-purple-500 cursor-pointer transition-colors shadow-sm">
+                            class="w-full appearance-none bg-white border border-purple-200 text-purple-905 text-purple-900 font-bold py-3 px-4 pr-8 rounded-xl leading-tight focus:outline-none focus:bg-white focus:border-purple-500 cursor-pointer transition-colors shadow-sm">
                             <option value="" disabled selected>-- Select an Option --</option>
                             <option value="cec-2026">CELESTIAL EXTRACTION CORP (CEC) - 2026 ORBITAL AUDIT</option>
                             <option value="email-workflow">EMAIL WORKFLOW AUTOMATION - METHODOLOGY</option>
@@ -1731,11 +1749,11 @@ flowchart TD
             }
         }
 
+        // Hot-swap the voice during active playback
         function changeTTSVoice(voiceIndex) {
             if (voiceIndex === "" || !allVoices.length) return;
             preferredVoice = allVoices[parseInt(voiceIndex)];
 
-            // Hot-swap the voice during active playback
             if (ttsState === 'playing' || ttsState === 'paused') {
                 let wasPlaying = (ttsState === 'playing');
                 ttsState = 'changing-speed'; // Reuse state flag to suppress chunk advancement
@@ -1769,6 +1787,7 @@ flowchart TD
                 if (visualizer) visualizer.classList.remove('playing');
             }
         }
+
         function translatePage(langCode) {
             const selectField = document.querySelector('.goog-te-combo');
             if (selectField) {
