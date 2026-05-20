@@ -1251,20 +1251,64 @@ flowchart TD
             </div>
 
             <div id="tutorials" class="tab-content animate-in fade-in duration-500">
-                <h2 class="text-3xl font-black italic text-purple-900 mb-8 uppercase leading-none">Audio & Video
-                    Tutorials</h2>
-                <div
-                    class="bg-purple-50/50 border border-purple-100 p-8 rounded-[2rem] text-center flex flex-col items-center justify-center min-h-[400px]">
-                    <span class="text-4xl mb-4">🎙️</span>
-                    <h3 class="text-xl font-black text-purple-900 uppercase tracking-widest mb-4">Under Construction:
-                        Substack Integration</h3>
-                    <p class="text-sm text-gray-500 max-w-lg leading-relaxed mb-6">I am currently migrating my detailed
-                        audio breakdowns, video lectures, and masterclasses to Substack. Stay tuned for the official
-                        launch.</p>
-                    <a href="https://substack.com" target="_blank"
-                        class="px-8 py-3 bg-purple-900 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-purple-800 transition-colors shadow-lg">
-                        Go To Substack
-                    </a>
+                <h2 class="text-3xl font-black italic text-purple-900 mb-8 uppercase leading-none">Audio & Video Tutorials</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-left">
+                    <!-- Podcast Player Column -->
+                    <div class="lg:col-span-2 bg-purple-950 p-8 rounded-[2rem] border border-white/10 shadow-2xl relative overflow-hidden flex flex-col justify-between min-h-[350px]">
+                        <div class="absolute top-0 right-0 w-48 h-48 bg-purple-700/20 rounded-full blur-3xl -mr-24 -mt-24 pointer-events-none"></div>
+                        
+                        <div class="space-y-4 relative z-10">
+                            <span class="px-3 py-1 bg-purple-800 text-purple-200 text-[8px] font-black uppercase tracking-widest rounded-md border border-white/10">
+                                NOW PLAYING // PODCAST EPISODE #1
+                            </span>
+                            <h3 class="text-2xl font-black text-white uppercase leading-tight italic">
+                                What's Up and Triggers
+                            </h3>
+                            <p class="text-xs text-purple-200/70 max-w-md">
+                                Studio recording discussing analytics methodology, automation triggers, and machine learning pipeline workflows.
+                            </p>
+                        </div>
+
+                        <!-- Styled HTML5 Audio Player -->
+                        <div class="mt-8 space-y-3 relative z-10">
+                            <audio id="podcast-audio" class="hidden" src="riverside_podcast_1.wav"></audio>
+                            
+                            <!-- Custom Audio HUD Controls -->
+                            <div class="bg-purple-900/50 p-4 rounded-2xl border border-white/5 flex items-center justify-between gap-4">
+                                <button onclick="togglePodcastPlay()" class="w-12 h-12 rounded-full bg-white hover:bg-purple-100 text-purple-950 flex items-center justify-center transition-transform hover:scale-105 active:scale-95 shadow-md focus:outline-none">
+                                    <span id="podcast-play-icon" class="text-sm ml-0.5 text-purple-950">▶</span>
+                                </button>
+                                <div class="flex-1 space-y-1.5">
+                                    <div class="flex justify-between text-[8px] font-bold uppercase tracking-widest text-purple-300">
+                                        <span>Aisha's Studio breakdown</span>
+                                        <span id="podcast-time">0:00 / 0:00</span>
+                                    </div>
+                                    <!-- Progress Bar Container -->
+                                    <div onclick="seekPodcast(event)" class="h-2 w-full bg-purple-950 rounded-full overflow-hidden cursor-pointer relative border border-white/5">
+                                        <div id="podcast-progress" class="h-full bg-purple-400 w-0 transition-all duration-100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Setup Instructions Column -->
+                    <div class="p-8 bg-[#FAF5FF] border border-purple-100 rounded-[2rem] flex flex-col justify-between text-left">
+                        <div class="space-y-4">
+                            <h4 class="font-black text-purple-900 text-xs uppercase tracking-widest border-b border-purple-100 pb-2">📦 Setup Instructions</h4>
+                            <p class="text-[11px] text-gray-600 leading-relaxed">
+                                To enable local playback and gitpages compatibility, copy the audio file from your Desktop into your repository folder:
+                            </p>
+                            <div class="bg-purple-950 p-3.5 rounded-xl border border-white/10 font-mono text-[9px] text-purple-200 overflow-x-auto select-all leading-normal">
+# Copy and rename file:
+cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha's_studio (1).wav" ./riverside_podcast_1.wav</div>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-purple-100">
+                            <span class="text-[9px] font-black uppercase tracking-widest text-purple-600 flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 bg-purple-500 rounded-full animate-ping"></span> Live Audio Connection Ready
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -2088,6 +2132,65 @@ flowchart TD
                     }
                 }
             });
+        }
+
+        // PODCAST AUDIO CONTROLLER LOGIC
+        let podcastAudio = document.getElementById('podcast-audio');
+        let podcastPlayIcon = document.getElementById('podcast-play-icon');
+        let podcastProgress = document.getElementById('podcast-progress');
+        let podcastTime = document.getElementById('podcast-time');
+
+        function togglePodcastPlay() {
+            if (!podcastAudio) return;
+            if (podcastAudio.paused) {
+                podcastAudio.play();
+                podcastPlayIcon.textContent = '⏸';
+            } else {
+                podcastAudio.pause();
+                podcastPlayIcon.textContent = '▶';
+            }
+        }
+
+        if (podcastAudio) {
+            podcastAudio.addEventListener('timeupdate', () => {
+                let current = podcastAudio.currentTime;
+                let duration = podcastAudio.duration || 0;
+                let percent = duration > 0 ? (current / duration) * 100 : 0;
+                if (podcastProgress) {
+                    podcastProgress.style.width = percent + '%';
+                }
+                if (podcastTime) {
+                    podcastTime.textContent = formatTime(current) + ' / ' + formatTime(duration);
+                }
+            });
+
+            podcastAudio.addEventListener('ended', () => {
+                if (podcastPlayIcon) podcastPlayIcon.textContent = '▶';
+                if (podcastProgress) podcastProgress.style.width = '0%';
+            });
+            
+            podcastAudio.addEventListener('loadedmetadata', () => {
+                if (podcastTime) {
+                    podcastTime.textContent = '0:00 / ' + formatTime(podcastAudio.duration || 0);
+                }
+            });
+        }
+
+        function formatTime(secs) {
+            let m = Math.floor(secs / 60);
+            let s = Math.floor(secs % 60);
+            return m + ':' + (s < 10 ? '0' : '') + s;
+        }
+
+        function seekPodcast(e) {
+            if (!podcastAudio) return;
+            let rect = e.currentTarget.getBoundingClientRect();
+            let clickX = e.clientX - rect.left;
+            let width = rect.width;
+            let duration = podcastAudio.duration || 0;
+            if (width > 0) {
+                podcastAudio.currentTime = (clickX / width) * duration;
+            }
         }
 
     </script>
