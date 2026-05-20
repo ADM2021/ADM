@@ -13,6 +13,14 @@ The interface of this site is designed from the ground up to offer a seamless, i
 * **Responsive Fluidity:** Leverages modern layout architectures (Flexbox/Grid) to ensure pixel fidelity across mobile devices, tablets, and ultrawide monitors(still working throught some bugs such as viewing the data visualization my be off on mobile and tablets).
 * **Component-Driven Architecture:** Clean, modular UI components built for fast rendering cycles and micro interactions that elevate the overall user feel.
 
+
+### **🌐 Digital Accessibility (a11y) & Inclusion**
+Websites should be usable by everyone. To bridge the gap for users with visual impairments or reading disabilities, this site features:
+* **Integrated Audio Player:** Provides auditory alternatives and assistive audio experiences directly within the UI, ensuring better navigation and content consumption for users with diverse accessibility needs.
+* **Global Translation Feature:** Breaks down language barriers with a dynamic translation integration, allowing users from different linguistic backgrounds to seamlessly interact with my portfolio and projects.
+* **Perceivable:** Still in progress but working on provide alternatives for non text content (e.g., alt text for images, transcripts for audio).
+Ensure content is adaptable (e.g., resizable text, captions for videos).
+
 ---
 
 ## 🥊 Featured Project: Boxing Computer Vision Model
