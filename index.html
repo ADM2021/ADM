@@ -321,8 +321,11 @@
     </header>
 
     <div class="print:hidden max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6 relative z-50">
+        <button onclick="openTab(event, 'readme')"
+            class="tab-btn active px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">00
+            // ReadMe</button>
         <button onclick="openTab(event, 'about')"
-            class="tab-btn active px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">01
+            class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">01
             // About Me</button>
         <button onclick="openTab(event, 'portfolio')"
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">02
@@ -339,21 +342,159 @@
         <button onclick="openTab(event, 'resources')"
             class="tab-btn px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">06
             // Certs & Resources</button>
-
-        <!-- SECURE TABS (Hidden by default) -->
-        <button onclick="openTab(event, 'resume')" id="tab-resume"
-            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
-            // Resume [SECURE]</button>
-        <button onclick="openTab(event, 'extrapolio')" id="tab-extrapolio"
-            class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">08
-            // Extra Portfolio [L2 SECURE]</button>
-    </div>
-
-    <section class="max-w-6xl mx-auto p-4 mb-20">
-        <div class="bg-white/95 backdrop-blur-xl border border-white rounded-[3rem] p-8 md:p-12 shadow-2xl shadow-purple-100/50"
-            style="-webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);">
-
-            <div id="about" class="tab-content active animate-in fade-in duration-500">
+ 
+         <!-- SECURE TABS (Hidden by default) -->
+         <button onclick="openTab(event, 'resume')" id="tab-resume"
+             class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">07
+             // Resume [SECURE]</button>
+         <button onclick="openTab(event, 'extrapolio')" id="tab-extrapolio"
+             class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">08
+             // Extra Portfolio [L2 SECURE]</button>
+     </div>
+ 
+     <section class="max-w-6xl mx-auto p-4 mb-20">
+         <div class="bg-white/95 backdrop-blur-xl border border-white rounded-[3rem] p-8 md:p-12 shadow-2xl shadow-purple-100/50"
+             style="-webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);">
+ 
+             <div id="readme" class="tab-content active animate-in fade-in duration-500">
+                 <div class="space-y-10 text-gray-600 leading-relaxed">
+                     <!-- Title Section -->
+                     <div class="border-b border-purple-100 pb-6">
+                         <h2 class="text-3xl font-black italic text-purple-900 uppercase leading-none mb-3"># ADM Central Hub</h2>
+                         <p class="text-sm font-medium text-purple-600/80 italic">Gateway to active engineering projects and machine learning integration.</p>
+                     </div>
+ 
+                     <!-- Intro Card -->
+                     <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100 relative overflow-hidden">
+                         <div class="absolute top-0 right-0 w-32 h-32 bg-purple-200/50 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                         <p class="text-sm text-gray-700 leading-relaxed font-medium relative z-10">
+                             Hi, Welcome to the central repository. This project serves as a modern personal hub, portfolio showcase, and a testing ground for integrating advanced machine learning models with secure, high-performance web development.
+                         </p>
+                         <p class="text-sm text-gray-700 leading-relaxed font-medium relative z-10 mt-3">
+                             Built with a heavy emphasis on sleek, intuitive UX/UI, this hub acts as the gateway to my active engineering projects—most notably an ongoing proprietary <strong class="text-purple-900">Boxing Computer Vision Model</strong>.
+                         </p>
+                     </div>
+ 
+                     <!-- UX/UI Design Philosophy -->
+                     <div>
+                         <h3 class="text-lg font-black text-purple-900 uppercase tracking-widest mb-4 flex items-center gap-2">
+                             <span>🎨</span> UX/UI Design Philosophy
+                         </h3>
+                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                             <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                 <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">Minimalist Aesthetics</h4>
+                                 <p class="text-xs text-gray-500">Deep contrast dark modes combined with striking accents to keep user focus on critical data points.</p>
+                             </div>
+                             <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                 <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">Responsive Fluidity</h4>
+                                 <p class="text-xs text-gray-500">Leverages modern layout architectures (Flexbox/Grid) to ensure pixel fidelity across mobile devices, tablets, and ultrawide monitors (still working through some bugs such as viewing the data visualization on mobile and tablets).</p>
+                             </div>
+                             <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                 <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">Component-Driven Architecture</h4>
+                                 <p class="text-xs text-gray-500">Clean, modular UI components built for fast rendering cycles and micro interactions that elevate the overall user feel.</p>
+                             </div>
+                         </div>
+                     </div>
+ 
+                     <!-- Digital Accessibility -->
+                     <div class="p-6 bg-purple-50/30 rounded-2.5xl border border-purple-100/70">
+                         <h3 class="text-sm font-black text-purple-950 uppercase tracking-widest mb-3 flex items-center gap-2">
+                             <span>🌐</span> Digital Accessibility (a11y) & Inclusion
+                         </h3>
+                         <p class="text-xs text-gray-500 mb-4">Websites should be usable by everyone. To bridge the gap for users with visual impairments or reading disabilities, this site features:</p>
+                         <div class="space-y-3">
+                             <div class="flex items-start gap-3">
+                                 <span class="text-purple-600 text-xs mt-0.5">✓</span>
+                                 <p class="text-xs text-gray-600"><strong class="text-purple-900">Integrated Audio Player:</strong> Provides auditory alternatives and assistive audio experiences directly within the UI, ensuring better navigation and content consumption for users with diverse accessibility needs.</p>
+                             </div>
+                             <div class="flex items-start gap-3">
+                                 <span class="text-purple-600 text-xs mt-0.5">✓</span>
+                                 <p class="text-xs text-gray-600"><strong class="text-purple-900">Global Translation Feature:</strong> Breaks down language barriers with a dynamic translation integration, allowing users from different linguistic backgrounds to seamlessly interact with my portfolio and projects.</p>
+                             </div>
+                             <div class="flex items-start gap-3">
+                                 <span class="text-purple-600 text-xs mt-0.5">✓</span>
+                                 <p class="text-xs text-gray-600"><strong class="text-purple-900">Perceivable Content:</strong> Still in progress but working on providing alternatives for non-text content (e.g., alt text for images, transcripts for audio). Ensuring content is adaptable (e.g., resizable text, captions for videos).</p>
+                             </div>
+                         </div>
+                     </div>
+ 
+                     <!-- Featured Project -->
+                     <div class="border-t border-purple-100 pt-8">
+                         <div class="flex flex-col md:flex-row md:items-start gap-6">
+                             <div class="flex-1 space-y-4">
+                                 <h3 class="text-lg font-black text-purple-900 uppercase tracking-widest flex items-center gap-2">
+                                     <span>🥊</span> Featured Project: Boxing Computer Vision Model
+                                 </h3>
+                                 <p class="text-sm text-gray-600">
+                                     One of the flagship integrations showcased through this hub is my custom, end-to-end <strong class="text-purple-900">Boxing Vision Model</strong> (not shown yet, will integrate soon).
+                                 </p>
+                                 <div class="bg-purple-950 p-5 rounded-2xl border border-white/10 shadow-inner">
+                                     <h4 class="font-black text-purple-200 text-xs uppercase tracking-wider mb-2">> THE_VISION</h4>
+                                     <p class="text-xs text-purple-100/90 leading-relaxed font-medium italic">
+                                         "Traditional sports analytics relies heavily on manual tagging. This project aims to automate open source time boxing metrics using deep learning object detection, pose estimation, and temporal sequence processing."
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="w-full md:w-80 p-6 bg-[#FAF5FF] border border-purple-100 rounded-2.5xl h-full">
+                                 <h4 class="font-black text-purple-900 text-xs uppercase tracking-wider mb-4 border-b border-purple-100 pb-2">Key Features Under Development:</h4>
+                                 <ul class="space-y-3 text-xs text-gray-600 font-medium">
+                                     <li class="flex items-start gap-2">
+                                         <span class="text-purple-600">•</span>
+                                         <span><strong>Punch Classification:</strong> Real-time differentiation between jabs, crosses, hooks, and uppercuts.</span>
+                                     </li>
+                                     <li class="flex items-start gap-2">
+                                         <span class="text-purple-600">•</span>
+                                         <span><strong>Fighter Tracking & Pose Estimation:</strong> Mapping structural biomechanics to track footwork, guard positioning, and head movement.</span>
+                                     </li>
+                                     <li class="flex items-start gap-2">
+                                         <span class="text-purple-600">•</span>
+                                         <span><strong>Analytics Dashboard:</strong> A planned interface extension for this site to visualize punch volume, accuracy landing rates, and defensive slip-efficiencies.</span>
+                                     </li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </div>
+ 
+                     <!-- Security Architecture -->
+                     <div class="border-t border-purple-100 pt-8">
+                         <h3 class="text-lg font-black text-purple-900 uppercase tracking-widest mb-4 flex items-center gap-2">
+                             <span>🔒</span> Security Architecture & Integration
+                         </h3>
+                         <p class="text-sm text-gray-600 mb-4">
+                             A beautiful (in my humble opinion lol) design integrated with core security concepts. Attempted to display advanced security capabilities within the limitations of a static GitHub Pages environment:
+                         </p>
+                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                             <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm">
+                                 <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">Content Security Policy (CSP)</h4>
+                                 <p class="text-xs text-gray-500">Mitigates Cross-Site Scripting (XSS) and data injection attacks by strictly defining which dynamic resources are allowed to load.</p>
+                             </div>
+                             <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm">
+                                 <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">Secure Header Management</h4>
+                                 <p class="text-xs text-gray-500">Enforces HTTPS transmission using HTTP Strict Transport Security (HSTS), prevents clickjacking via `X-Frame-Options`, and secures user privacy with restrictive `Referrer-Policy` headers.</p>
+                             </div>
+                             <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm">
+                                 <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">Secure Environment Agnosticism</h4>
+                                 <p class="text-xs text-gray-500">Keeps API endpoints and webhook handshakes safe from client-side exposure via environment variable isolation (still working on this).</p>
+                             </div>
+                         </div>
+                     </div>
+ 
+                     <!-- Built With & Hosting -->
+                     <div class="border-t border-purple-100 pt-8 flex flex-col md:flex-row justify-between gap-6">
+                         <div>
+                             <h4 class="font-black text-purple-900 text-xs uppercase tracking-wider mb-2">🛠️ Built With</h4>
+                             <p class="text-xs text-gray-500"><strong>Front-End Framework:</strong> HTML5, CSS3 (Custom Properties/Variables), JavaScript (ES6+)</p>
+                             <p class="text-xs text-gray-500 mt-1"><strong>Styling Paradigm:</strong> Responsive Frameworks / Tailwind CSS</p>
+                         </div>
+                         <div>
+                             <h4 class="font-black text-purple-900 text-xs uppercase tracking-wider mb-2">☁️ Hosting & Security Engine</h4>
+                             <p class="text-xs text-gray-500">GitHub Pages / Cloudflare edge routing with SSL/TLS encryption</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+ 
+             <div id="about" class="tab-content animate-in fade-in duration-500">
                 <div class="space-y-8 text-gray-600 leading-relaxed">
                     <p
                         class="text-xl font-medium text-purple-900/80 italic tracking-tight flex items-center gap-4 flex-wrap">
