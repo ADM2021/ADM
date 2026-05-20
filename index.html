@@ -1800,12 +1800,50 @@ flowchart TD
 
         // WORKFLOW INTERACTIVITY LOGIC
         function nextWorkflowStep(stepId) {
+            if (stepId === 1) {
+                const currentButton = document.querySelector(`#wf-step-${stepId - 1} button`);
+                if (currentButton && !currentButton.dataset.loading) {
+                    currentButton.dataset.loading = "true";
+                    currentButton.disabled = true;
+                    currentButton.innerHTML = `Analyzing Mailbox <span class="animate-pulse">...</span>`;
+
+                    // Create and append the GIF loader container
+                    const loader = document.createElement('div');
+                    loader.id = "analysis-loader";
+                    loader.className = "mt-4 flex flex-col items-center justify-center gap-2 p-4 bg-purple-50 border border-purple-100 rounded-xl animate-in fade-in duration-300 relative z-10 max-w-xs mx-auto";
+                    loader.innerHTML = `
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnh5eHdmYWV0Nzg3eXA2eTh0bndjODc5M280OWozOTl3emhzNGJpcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yNMu1n4ci9uLOn1D6E/giphy.gif" 
+                             alt="Analyzing" 
+                             class="w-24 h-24 rounded-lg shadow-inner object-cover border border-purple-200">
+                        <span class="text-[9px] font-black uppercase tracking-[0.2em] text-purple-600 animate-pulse mt-1">Executing Volatility Scan...</span>
+                    `;
+                    currentButton.parentNode.insertBefore(loader, currentButton);
+                    currentButton.classList.add('hidden'); // Hide the button during the animation
+
+                    setTimeout(() => {
+                        // Remove loader
+                        if (loader) loader.remove();
+                        currentButton.classList.remove('hidden');
+
+                        // Proceed to step complete and show next step
+                        completeStepAndProceed(stepId, currentButton);
+                    }, 3000); // 3 seconds delay
+                    return;
+                }
+            }
+
+            // For other steps, just proceed immediately
             const currentButton = document.querySelector(`#wf-step-${stepId - 1} button`);
+            completeStepAndProceed(stepId, currentButton);
+        }
+
+        function completeStepAndProceed(stepId, currentButton) {
             if (currentButton) {
                 // Change button style to indicate completion
-                currentButton.className = "bg-purple-50 text-purple-300 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors cursor-default mt-2 flex items-center justify-center gap-2 border border-purple-100";
+                currentButton.className = "bg-purple-50 text-purple-300 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors cursor-default mt-2 flex items-center justify-center gap-2 border border-purple-100 relative z-10";
                 currentButton.innerHTML = `Step Completed ✓`;
                 currentButton.removeAttribute('onclick');
+                currentButton.removeAttribute('disabled');
 
                 // Stop the previous pulse
                 const prevPulse = document.querySelector(`#wf-step-${stepId - 1} .animate-pulse`);
@@ -1827,6 +1865,10 @@ flowchart TD
         }
 
         function resetWorkflow() {
+            // Remove any active loader
+            const loader = document.getElementById('analysis-loader');
+            if (loader) loader.remove();
+
             // Hide all steps except the first
             const steps = document.querySelectorAll('.workflow-step');
             steps.forEach((step, index) => {
@@ -1836,6 +1878,9 @@ flowchart TD
                     btn.className = "relative z-10 bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full transition-colors shadow-md flex items-center justify-center gap-2 hover:scale-[1.02]";
                     btn.innerHTML = `Initiate Analysis <span class="text-xs">→</span>`;
                     btn.setAttribute('onclick', 'nextWorkflowStep(1)');
+                    btn.removeAttribute('disabled');
+                    btn.removeAttribute('data-loading');
+                    btn.classList.remove('hidden');
 
                     // Reset Pulse
                     const pulse = step.querySelector('.rounded-full.bg-purple-600');
