@@ -1152,7 +1152,7 @@ flowchart TD
     classDef autoNode fill:#f0fdf4,stroke:#86efac,stroke-width:2px,color:#166534
     classDef humanNode fill:#fffbeb,stroke:#fcd34d,stroke-width:2px,color:#92400e
     classDef finalNode fill:#22c55e,stroke:#166534,stroke-width:2px,color:#ffffff,font-weight:bold
- 
+
     RFI(["Stakeholder RFI"]) ::: startNode --> Q1{"Identify Platform"} ::: decisionNode
     Q1 -- "Outlook" --> Data["Data Sampling 3 Clusters"] ::: processNode
     Data --> Cat("Categorize Keywords & Logic") ::: processNode
@@ -1192,7 +1192,7 @@ flowchart TD
     classDef rejectNode fill:#fef2f2,stroke:#fca5a5,stroke-width:2px,color:#991b1b
     
     Pre["Pre-Workflow Context: Define logic, formatting, and required packet contents"] ::: processNode
- 
+
     subgraph UserLayer ["User Layer"]
         Upload(["Upload Document Packet (Metadata Included)"]) ::: startNode
     end
