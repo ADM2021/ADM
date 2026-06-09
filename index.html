@@ -1679,7 +1679,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                     </div>
 
                                     <div class="flex flex-col items-center justify-center p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm">
-                                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-2">Question 1 of 1</p>
+                                        <p id="flashcard-progress-indicator" class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-2">Card 1 of 1</p>
                                         <div id="demo-flashcard" class="w-full aspect-[1.6] bg-purple-950 text-white rounded-xl flex flex-col items-center justify-center p-6 text-center cursor-pointer select-none transition-all duration-300 transform hover:scale-[1.02] shadow-inner" onclick="toggleFlashcard()">
                                             <div id="flashcard-front" class="flex flex-col justify-center items-center h-full">
                                                 <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Security+</p>
@@ -1693,6 +1693,16 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             </div>
                                         </div>
                                         <p class="text-[10px] text-gray-400 mt-4 italic">Tip: Click the card to flip it!</p>
+                                        
+                                        <!-- Navigation controls for multi-card decks -->
+                                        <div class="flex gap-4 items-center mt-6 w-full justify-between border-t border-purple-50 pt-4">
+                                            <button id="flashcard-prev-btn" onclick="prevFlashcard()" class="flex-1 text-[9px] font-black uppercase tracking-widest text-purple-700 disabled:text-gray-300 hover:text-purple-950 disabled:hover:text-gray-300 bg-white border border-purple-200 disabled:border-gray-100 px-4 py-2.5 rounded-full shadow-sm disabled:shadow-none transition-colors">
+                                                ← Previous
+                                            </button>
+                                            <button id="flashcard-next-btn" onclick="nextFlashcard()" class="flex-1 text-[9px] font-black uppercase tracking-widest text-purple-700 disabled:text-gray-300 hover:text-purple-950 disabled:hover:text-gray-300 bg-white border border-purple-200 disabled:border-gray-100 px-4 py-2.5 rounded-full shadow-sm disabled:shadow-none transition-colors">
+                                                Next →
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -3975,8 +3985,78 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
         const flashcardDecks = {
             1: {
                 title: "Professor Messer's SY0-701 Security+ Training Video 1 to 10 // General Security",
-                q: "What are the three core principles of the CIA Triad?",
-                a: "Confidentiality (preventing unauthorized access), Integrity (preventing unauthorized modification), and Availability (ensuring uptime for authorized users)."
+                cards: [
+                    { q: "What is the primary function of a distributed ledger in blockchain technology?", a: "It keeps track of individual transactions across a network where every participant has a copy." },
+                    { q: "In a blockchain, what mechanism provides the integrity for all transactions contained within a specific block?", a: "The addition of a cryptographic hash to the block." },
+                    { q: "How does a blockchain network respond if a participant modifies an existing transaction, causing an invalid hash?", a: "Other devices identify the invalid hash and throw out the modified block." },
+                    { q: "A digital certificate is a file that contains both a digital signature and a ______.", a: "public key" },
+                    { q: "Which standard defines the format for digital certificates used by web browsers?", a: "X.509" },
+                    { q: "What is the purpose of a Certificate Signing Request (CSR)?", a: "It is a request sent to a Certificate Authority to have a public key and identifying information digitally signed." },
+                    { q: "What decentralized trust model involves multiple individuals signing each other's certificates instead of using a central authority?", a: "Web of trust" },
+                    { q: "Term: Root of Trust", a: "Definition: An inherently trusted hardware, software, or firmware component used to provide trust for a system." },
+                    { q: "How does an organization ensure its employees' computers trust internally generated certificates?", a: "The internal Certificate Authority's public certificate must be installed on every local machine." },
+                    { q: "What type of certificate allows a single domain name with an asterisk to be valid for multiple subdomains?", a: "Wildcard certificate (or Subject Alternative Name)" },
+                    { q: "Where is the Certificate Revocation List (CRL) typically maintained?", a: "On the Certificate Authority (CA) server." },
+                    { q: "What protocol allows a browser to check the revocation status of a single certificate in real-time without downloading a full list?", a: "OCSP (Online Certificate Status Protocol)" },
+                    { q: "The process of embedding a certificate's validity status directly into the SSL/TLS handshake is known as _____.", a: "OCSP stapling" },
+                    { q: "What was the significance of the Heartbleed vulnerability regarding certificate management?", a: "It forced the mass revocation of certificates because private keys were potentially exposed to third parties." },
+                    { q: "What technology provides full-disk encryption for the Windows operating system?", a: "BitLocker" },
+                    { q: "In the context of data at rest, what is the role of the Encrypting File System (EFS)?", a: "It provides file-level encryption built into the NTFS file system." },
+                    { q: "Which database encryption method uses a symmetric key to encrypt every bit of data within the database file?", a: "Transparent encryption" },
+                    { q: "What is the primary advantage of using column-level encryption in a database over full-database encryption?", a: "It reduces overhead by allowing non-sensitive data to be searched in plaintext without decryption." },
+                    { q: "Which encryption protocol is most commonly used to provide secure connectivity for site-to-site VPNs?", a: "IPsec" },
+                    { q: "In modern cryptography, how can developers prevent successful brute force attacks against encryption keys?", a: "By utilizing very long key lengths, such as 128$ bits for symmetric or 3072$ bits for asymmetric keys." },
+                    { q: "What is the objective of key stretching (or key strengthening)?", a: "To increase the time required for a brute force attack by performing the hashing or encryption process multiple times." },
+                    { q: "Why is the Data Encryption Standard (DES) incompatible for decrypting data encrypted with the Advanced Encryption Standard (AES)?", a: "They use fundamentally different mathematical algorithms and block processing steps." },
+                    { q: "A Hardware Security Module (HSM) is primarily used in large-scale environments for the secure storage and management of ______.", a: "encryption keys" },
+                    { q: "What motherboard-based hardware component provides cryptographic functions and secure key storage for a single local device?", a: "TPM (Trusted Platform Module)" },
+                    { q: "What centralized system is used to manage key rotation, logging, and associations between keys and users?", a: "Key Management System (KMS)" },
+                    { q: "Which specialized security processor is dedicated to data privacy, real-time memory encryption, and secure boot processes on mobile devices?", a: "Secure Enclave" },
+                    { q: "What security characteristic is provided by a cryptographic hash when comparing a downloaded file to its original version?", a: "Integrity" },
+                    { q: "What hashing algorithm produces a 256-bit digest and is commonly used for modern integrity checks?", a: "SHA256" },
+                    { q: "In hashing, what has occurred if two different inputs produce the exact same output digest?", a: "A collision" },
+                    { q: "Why is the MD5 hashing algorithm no longer recommended for secure applications?", a: "Vulnerabilities allowing for collisions were discovered as early as 1996." },
+                    { q: "What is 'salt' in the context of password hashing?", a: "Random data added to a password before hashing to ensure that identical passwords result in different hashes." },
+                    { q: "What pre-compiled set of hashes is used by attackers to quickly reverse engineer non-salted hashes?", a: "Rainbow table" },
+                    { q: "Which security service ensures that a sender cannot later deny having sent a specific digital message?", a: "Non-repudiation" },
+                    { q: "To create a digital signature, the sender encrypts the hash of the message using their _____.", a: "private key" },
+                    { q: "To verify a digital signature, the recipient decrypts the signature using the sender's _____.", a: "public key" },
+                    { q: "What is 'out-of-band' key exchange?", a: "Exchanging encryption keys using a method other than the primary network, such as a physical courier or telephone." },
+                    { q: "How can a symmetric session key be securely transferred over an insecure network using 'in-band' exchange?", a: "The client encrypts the symmetric key with the server's public key." },
+                    { q: "How do key exchange algorithms allow two parties to create the same symmetric key without ever sending the key across the network?", a: "By mathematically combining one's own private key with the other party's public key." },
+                    { q: "What is the general term for the process of making information much more difficult to understand while keeping it in plain sight?", a: "Obfuscation" },
+                    { q: "Term: Steganography", a: "Definition: Hiding data within a non-secret file, such as an image, audio track, or video file." },
+                    { q: "In steganography, what is the 'covertext'?", a: "The original document or image used to contain the hidden data." },
+                    { q: "How does tokenization differ from encryption when protecting sensitive data like credit card numbers?", a: "Tokenization replaces sensitive data with a non-mathematical substitute that has no inherent value if captured." },
+                    { q: "What obfuscation technique is used when a receipt shows only the last four digits of a credit card number?", a: "Data masking" },
+                    { q: "Symmetric encryption is generally preferred over asymmetric encryption for bulk data transfer because it is _____.", a: "faster (or has less overhead)" },
+                    { q: "What is a major scalability challenge of symmetric encryption?", a: "It becomes difficult to manage and share unique secret keys as the number of users increases." },
+                    { q: "Why is it impossible to derive a private key from its mathematically related public key?", a: "The complex mathematics and large prime numbers used during generation cannot be practically reverse engineered." },
+                    { q: "What is the purpose of key escrow?", a: "To store private keys with a trusted third party to ensure data can be decrypted if a user leaves or a key is lost." },
+                    { q: "In technical change management, what is the difference between an allow list and a deny list?", a: "An allow list blocks everything except specific items, while a deny list allows everything except specific items." },
+                    { q: "Why should a technician be limited to the specifically documented scope of a change control request?", a: "To prevent unauthorized changes and ensure that all modifications are properly scheduled and vetted." },
+                    { q: "What is a common strategy for preventing downtime in 24/7 environments during a change window?", a: "Switching systems to a secondary system while the primary system is updated." },
+                    { q: "Why might a technician reboot a system after implementing a change, even if it is not strictly required by the software?", a: "To verify that the system will recover and apply configurations properly after a power cycle." },
+                    { q: "What is a major challenge when applying change control to legacy applications?", a: "The applications are often unsupported by the original developer and poorly understood by current staff." },
+                    { q: "In change management, what are 'dependencies'?", a: "Situations where one service or application must be updated before another can function or be installed." },
+                    { q: "What process allows IT departments to track modifications between different points in time and revert to previous configurations if needed?", a: "Version control" },
+                    { q: "Which threat actor attribute refers to the level of financial backing or tools available to the actor?", a: "Resources" },
+                    { q: "What is the typical motivation for a nation-state threat actor?", a: "National security, espionage, or political disruption." },
+                    { q: "Term: APT (Advanced Persistent Threat)", a: "Definition: A highly sophisticated, resource-rich threat actor (typically a nation state) that maintains a long-term presence on a network." },
+                    { q: "What name is given to unskilled threat actors who use pre-made scripts without understanding their underlying mechanics?", a: "Script kiddies (or unskilled actors)" },
+                    { q: "What distinguishes a hacktivist from other types of threat actors?", a: "Their primary motivation is political or philosophical activism." },
+                    { q: "Why are insider threats considered particularly dangerous?", a: "They already have access to internal resources and knowledge of how to circumvent existing security controls." },
+                    { q: "What is the primary motivation for organized crime threat actors in cybersecurity?", a: "Financial gain (or profit)." },
+                    { q: "What is 'Shadow IT'?", a: "The use of information technology systems, devices, or software within an organization without explicit IT department approval." },
+                    { q: "Which threat actor types are most likely to have the highest level of sophistication?", a: "Nation states and organized crime." },
+                    { q: "How does the hashing of a blockchain block ensure the integrity of the 'previous' blocks in the chain?", a: "Each block includes the hash of the block that came before it, creating a linked chain." },
+                    { q: "What is the standard name for the protocol used to request a certificate from a CA?", a: "Certificate Signing Request (CSR)" },
+                    { q: "A web browser trusts a website's certificate because the browser already trusts the _____ that signed it.", a: "Certificate Authority (CA)" },
+                    { q: "What is the main benefit of using a centralized Key Management System for internal certificates?", a: "It allows for automated key rotation and centralized logging of key usage." },
+                    { q: "What technology allows a mobile phone to securely process payments using one-time tokens?", a: "Near-field communication (NFC) combined with a token service server." },
+                    { q: "Why must an organization document legacy applications even if they are not currently being changed?", a: "To ensure they can be supported and integrated into the normal maintenance cycle of the organization." },
+                    { q: "Which threat actor type would be most likely to use 'Stuxnet' as a model for their attacks?", a: "Nation state" }
+                ]
             },
             2: {
                 title: "Professor Messer's SY0-701 Security+ Training Video 11 to 20 // Threats & Vulnerabilities",
@@ -4356,34 +4436,85 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             }
         };
 
+        let activeFlashcardDeckId = null;
+        let activeFlashcardIndex = 0;
+
         function startFlashcardDeck(deckId) {
             const selectView = document.getElementById('flashcard-select-view');
             const deckView = document.getElementById('flashcard-deck-view');
             const titleEl = document.getElementById('active-deck-title');
-            const frontText = document.getElementById('flashcard-front-text');
-            const backText = document.getElementById('flashcard-back-text');
             const frontDiv = document.getElementById('flashcard-front');
             const backDiv = document.getElementById('flashcard-back');
 
-            if (!selectView || !deckView || !titleEl || !frontText || !backText || !frontDiv || !backDiv) return;
+            if (!selectView || !deckView || !titleEl || !frontDiv || !backDiv) return;
 
             const deck = flashcardDecks[deckId];
             if (!deck) return;
 
+            activeFlashcardDeckId = deckId;
+            activeFlashcardIndex = 0;
             titleEl.textContent = deck.title;
-            if (deckId >= 3) {
-                frontText.textContent = "Flashcard deck content coming soon!";
-                backText.textContent = "Under Construction // Please check back later.";
-            } else {
-                frontText.textContent = deck.q;
-                backText.textContent = deck.a;
-            }
 
-            frontDiv.classList.remove('hidden');
-            backDiv.classList.add('hidden');
+            loadActiveFlashcard();
 
             selectView.classList.add('hidden');
             deckView.classList.remove('hidden');
+        }
+
+        function loadActiveFlashcard() {
+            const deck = flashcardDecks[activeFlashcardDeckId];
+            const frontText = document.getElementById('flashcard-front-text');
+            const backText = document.getElementById('flashcard-back-text');
+            const progressIndicator = document.getElementById('flashcard-progress-indicator');
+            const prevBtn = document.getElementById('flashcard-prev-btn');
+            const nextBtn = document.getElementById('flashcard-next-btn');
+            const frontDiv = document.getElementById('flashcard-front');
+            const backDiv = document.getElementById('flashcard-back');
+
+            if (!deck || !frontText || !backText || !progressIndicator || !prevBtn || !nextBtn || !frontDiv || !backDiv) return;
+
+            // Reset card rotation to front side
+            frontDiv.classList.remove('hidden');
+            backDiv.classList.add('hidden');
+
+            if (activeFlashcardDeckId >= 3) {
+                frontText.textContent = "Flashcard deck content coming soon!";
+                backText.textContent = "Under Construction // Please check back later.";
+                progressIndicator.textContent = "Card 1 of 1";
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+            } else if (deck.cards && deck.cards.length > 0) {
+                const card = deck.cards[activeFlashcardIndex];
+                frontText.textContent = card.q;
+                backText.textContent = card.a;
+                progressIndicator.textContent = "Card " + (activeFlashcardIndex + 1) + " of " + deck.cards.length;
+                prevBtn.disabled = activeFlashcardIndex === 0;
+                nextBtn.disabled = activeFlashcardIndex === deck.cards.length - 1;
+            } else {
+                frontText.textContent = deck.q;
+                backText.textContent = deck.a;
+                progressIndicator.textContent = "Card 1 of 1";
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+            }
+        }
+
+        function nextFlashcard() {
+            const deck = flashcardDecks[activeFlashcardDeckId];
+            if (!deck || !deck.cards) return;
+            if (activeFlashcardIndex < deck.cards.length - 1) {
+                activeFlashcardIndex++;
+                loadActiveFlashcard();
+            }
+        }
+
+        function prevFlashcard() {
+            const deck = flashcardDecks[activeFlashcardDeckId];
+            if (!deck || !deck.cards) return;
+            if (activeFlashcardIndex > 0) {
+                activeFlashcardIndex--;
+                loadActiveFlashcard();
+            }
         }
 
         function backToFlashcardDecks() {
