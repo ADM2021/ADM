@@ -1686,92 +1686,704 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
 
                             <!-- Quiz Module -->
                             <div id="content-quiz" class="study-module-tab hidden">
-                                <div id="quiz-start-view" class="text-center py-6 max-w-md mx-auto bg-white border border-purple-100 rounded-2xl p-6 shadow-sm">
-                                    <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-2">Ready to test your skills?</p>
-                                    <h4 class="text-lg font-black text-purple-950 mb-4">PL-900 & AWS Fundamentals Practice Quiz</h4>
-                                    <button onclick="startDemoQuiz()" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-3 rounded-full transition-colors shadow-md">
-                                        Start Quiz
-                                    </button>
+                                <!-- Quiz Selector Screen -->
+                                <div id="quiz-select-view" class="space-y-6 animate-in fade-in duration-300">
+                                    <div class="text-center max-w-md mx-auto mb-6">
+                                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-1">Select a quiz to start</p>
+                                        <h4 class="text-lg font-black text-purple-950">Security+ SY0-701 Practice Quizzes</h4>
+                                        <p class="text-[10px] text-gray-500 italic">Based on Professor Messer's SY0-701 Training Videos</p>
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        <!-- Deck Cards -->
+                                        <div onclick="startQuizDeck(1)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 01</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 1 to 10</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">General security concepts, core CIA triad, control types, and security posture frameworks.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(2)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 02</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 11 to 20</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Threat actors, vectors, vulnerabilities, threat feeds, and indicators of compromise.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(3)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 03</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 21 to 30</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Social engineering principles, phishing techniques, impersonation, and tailgating attacks.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(4)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 04</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 31 to 40</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Malware varieties, viruses, ransomware, spyware, Trojans, and hardware rootkits.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(5)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 05</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(6)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 06</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 51 to 60</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authorization and access controls, RBAC, ABAC, ACLs, and privilege management.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(7)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 07</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 61 to 70</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Network security, firewalls, stateful filters, packet routing, and network segments.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(8)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 08</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 71 to 80</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Web security architectures, HTTPS enforcement, HSTS, SSL strips, and web firewalls.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(9)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 09</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 81 to 90</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cryptography paradigms, symmetric vs asymmetric encryption, keys, and algorithms.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(10)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 10</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 101 to 110</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Public Key Infrastructure (PKI), digital certificates, certificate authorities, and trusts.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startQuizDeck(11)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 11</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 111 to 121</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Business continuity, disaster recovery plans, backup methodologies, and system redundancy.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Take Quiz</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div id="quiz-question-view" class="hidden p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm">
-                                    <div class="flex justify-between items-center mb-4">
-                                        <span class="text-[9px] font-black uppercase tracking-widest text-purple-400">AWS Fundamentals Quiz</span>
-                                        <span class="text-[9px] font-black uppercase tracking-widest text-purple-600">Question 1/1</span>
+                                
+                                <!-- Quiz Deck Active Screen -->
+                                <div id="quiz-deck-view" class="hidden space-y-6 animate-in fade-in duration-300">
+                                    <div class="flex items-center gap-3">
+                                        <button onclick="backToQuizDecks()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                            ← Back to Quizzes
+                                        </button>
+                                        <span id="active-quiz-title" class="text-xs font-black text-purple-900 uppercase tracking-wider"></span>
                                     </div>
-                                    <h4 class="text-sm font-bold text-purple-950 mb-4">Which AWS service is best suited for storing backup files and hosting static web content?</h4>
-                                    <div class="space-y-2">
-                                        <button onclick="answerDemoQuiz(false, this)" class="quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">A) Amazon EC2</button>
-                                        <button onclick="answerDemoQuiz(false, this)" class="quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">B) Amazon RDS</button>
-                                        <button onclick="answerDemoQuiz(true, this)" class="quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">C) Amazon S3</button>
-                                        <button onclick="answerDemoQuiz(false, this)" class="quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">D) AWS Lambda</button>
+
+                                    <div class="p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm">
+                                        <div class="flex justify-between items-center mb-4">
+                                            <span class="text-[9px] font-black uppercase tracking-widest text-purple-400">Security+ Practice Quiz</span>
+                                            <span class="text-[9px] font-black uppercase tracking-widest text-purple-600">Question 1 of 1</span>
+                                        </div>
+                                        <h4 id="quiz-question-text" class="text-sm font-bold text-purple-950 mb-4"></h4>
+                                        <div id="quiz-options-container" class="space-y-2">
+                                            <!-- Options Injected Here -->
+                                        </div>
+                                        <p id="quiz-feedback-text" class="text-xs text-center font-bold mt-4 h-4"></p>
+                                        <button id="quiz-reset-btn" onclick="retryActiveQuiz()" class="hidden mt-4 w-full bg-purple-900 hover:bg-purple-800 text-white text-[9px] font-black uppercase tracking-widest py-2 rounded-full transition-colors shadow-sm">
+                                            Retry Quiz
+                                        </button>
                                     </div>
-                                    <p id="quiz-feedback" class="text-xs text-center font-bold mt-4 h-4"></p>
-                                    <button id="quiz-retry-btn" onclick="startDemoQuiz()" class="hidden mt-4 w-full bg-purple-900 hover:bg-purple-800 text-white text-[9px] font-black uppercase tracking-widest py-2 rounded-full transition-colors shadow-sm">
-                                        Retry Quiz
-                                    </button>
                                 </div>
                             </div>
 
                             <!-- Study Guide Module -->
                             <div id="content-study-guide" class="study-module-tab hidden">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                        <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">📚 PL-900 Power Platform Cheat Sheet</h4>
-                                        <p class="text-xs text-gray-500">Summary of Power Apps, Power Automate, Power BI, Power Virtual Agents, and Dataverse connectors.</p>
-                                        <a href="#" class="inline-block text-[10px] font-black uppercase tracking-widest text-purple-600 mt-3 hover:text-purple-900">Download Guide →</a>
+                                <!-- Study Guide Selector Screen -->
+                                <div id="study-guide-select-view" class="space-y-6 animate-in fade-in duration-300">
+                                    <div class="text-center max-w-md mx-auto mb-6">
+                                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-1">Select a reference guide</p>
+                                        <h4 class="text-lg font-black text-purple-950">Security+ SY0-701 Reference Guides</h4>
+                                        <p class="text-[10px] text-gray-500 italic">Based on Professor Messer's SY0-701 Training Videos</p>
                                     </div>
-                                    <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                        <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">☁️ AWS Fundamentals Quick-Reference</h4>
-                                        <p class="text-xs text-gray-500">Essential IAM policies, EC2 pricing models, S3 bucket storage classes, and VPC guidelines.</p>
-                                        <a href="#" class="inline-block text-[10px] font-black uppercase tracking-widest text-purple-600 mt-3 hover:text-purple-900">Download Guide →</a>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        <!-- Deck Cards -->
+                                        <div onclick="startStudyGuideDeck(1)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 01</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 1 to 10</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">General security concepts, core CIA triad, control types, and security posture frameworks.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(2)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 02</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 11 to 20</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Threat actors, vectors, vulnerabilities, threat feeds, and indicators of compromise.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(3)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 03</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 21 to 30</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Social engineering principles, phishing techniques, impersonation, and tailgating attacks.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(4)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 04</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 31 to 40</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Malware varieties, viruses, ransomware, spyware, Trojans, and hardware rootkits.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(5)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 05</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(6)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 06</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 51 to 60</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authorization and access controls, RBAC, ABAC, ACLs, and privilege management.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(7)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 07</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 61 to 70</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Network security, firewalls, stateful filters, packet routing, and network segments.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(8)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 08</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 71 to 80</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Web security architectures, HTTPS enforcement, HSTS, SSL strips, and web firewalls.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(9)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 09</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 81 to 90</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cryptography paradigms, symmetric vs asymmetric encryption, keys, and algorithms.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(10)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 10</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 101 to 110</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Public Key Infrastructure (PKI), digital certificates, certificate authorities, and trusts.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startStudyGuideDeck(11)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 11</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 111 to 121</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Business continuity, disaster recovery plans, backup methodologies, and system redundancy.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Read Guide</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Active Study Guide Deck View -->
+                                <div id="study-guide-deck-view" class="hidden space-y-6 animate-in fade-in duration-300">
+                                    <div class="flex items-center gap-3">
+                                        <button onclick="backToStudyGuideDecks()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                            ← Back to Guides
+                                        </button>
+                                        <span id="active-study-guide-title" class="text-xs font-black text-purple-900 uppercase tracking-wider"></span>
+                                    </div>
+
+                                    <div class="p-6 bg-white border border-purple-100 rounded-2xl max-w-2xl mx-auto shadow-sm space-y-4">
+                                        <h4 id="guide-section-subtitle" class="font-black text-purple-950 text-sm uppercase tracking-wider border-b border-purple-100 pb-2"></h4>
+                                        <p id="guide-section-summary" class="text-xs text-gray-600 leading-relaxed font-medium"></p>
+                                        
+                                        <div class="bg-purple-50 p-4 rounded-xl border border-purple-100 space-y-2">
+                                            <h5 class="text-[10px] font-black uppercase tracking-widest text-purple-900">Key Terms & Concepts</h5>
+                                            <ul id="guide-key-terms" class="list-disc pl-4 text-[11px] text-gray-500 space-y-1">
+                                                <!-- Key terms dynamically injected -->
+                                            </ul>
+                                        </div>
+
+                                        <div class="flex justify-end pt-2">
+                                            <button onclick="window.print()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                                🖨️ Print / Save PDF
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Visual Guide Module -->
                             <div id="content-visual-guide" class="study-module-tab hidden">
-                                <div class="p-6 bg-purple-950 rounded-2xl border border-white/10 shadow-inner text-center">
-                                    <h4 class="font-black text-purple-200 text-xs uppercase tracking-wider mb-4">> PIPELINE_VISUALIZER // LOADING</h4>
-                                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-white text-xs">
-                                        <div class="px-4 py-2 bg-purple-900 border border-purple-700 rounded-lg">Raw Telemetry</div>
-                                        <span class="text-purple-400">→</span>
-                                        <div class="px-4 py-2 bg-purple-900 border border-purple-700 rounded-lg">Python Cleanse</div>
-                                        <span class="text-purple-400">→</span>
-                                        <div class="px-4 py-2 bg-purple-900 border border-purple-700 rounded-lg">Power BI/Tableau</div>
+                                <!-- Visual Guide Selector Screen -->
+                                <div id="visual-guide-select-view" class="space-y-6 animate-in fade-in duration-300">
+                                    <div class="text-center max-w-md mx-auto mb-6">
+                                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-1">Select a visual diagram</p>
+                                        <h4 class="text-lg font-black text-purple-950">Security+ SY0-701 Visual Flowcharts</h4>
+                                        <p class="text-[10px] text-gray-500 italic">Based on Professor Messer's SY0-701 Training Videos</p>
                                     </div>
-                                    <p class="text-[10px] text-purple-200/70 mt-6 italic">Interactive workflow mapping under construction. Check back soon!</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        <!-- Deck Cards -->
+                                        <div onclick="startVisualGuideDeck(1)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 01</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 1 to 10</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">General security concepts, core CIA triad, control types, and security posture frameworks.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(2)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 02</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 11 to 20</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Threat actors, vectors, vulnerabilities, threat feeds, and indicators of compromise.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(3)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 03</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 21 to 30</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Social engineering principles, phishing techniques, impersonation, and tailgating attacks.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(4)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 04</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 31 to 40</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Malware varieties, viruses, ransomware, spyware, Trojans, and hardware rootkits.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(5)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 05</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(6)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 06</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 51 to 60</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authorization and access controls, RBAC, ABAC, ACLs, and privilege management.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(7)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 07</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 61 to 70</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Network security, firewalls, stateful filters, packet routing, and network segments.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(8)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 08</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 71 to 80</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Web security architectures, HTTPS enforcement, HSTS, SSL strips, and web firewalls.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(9)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 09</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 81 to 90</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cryptography paradigms, symmetric vs asymmetric encryption, keys, and algorithms.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(10)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 10</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 101 to 110</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Public Key Infrastructure (PKI), digital certificates, certificate authorities, and trusts.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startVisualGuideDeck(11)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 11</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 111 to 121</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Business continuity, disaster recovery plans, backup methodologies, and system redundancy.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>View Diagram</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Active Visual Guide Deck View -->
+                                <div id="visual-guide-deck-view" class="hidden space-y-6 animate-in fade-in duration-300">
+                                    <div class="flex items-center gap-3">
+                                        <button onclick="backToVisualGuideDecks()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                            ← Back to Diagrams
+                                        </button>
+                                        <span id="active-visual-guide-title" class="text-xs font-black text-purple-900 uppercase tracking-wider"></span>
+                                    </div>
+
+                                    <div class="p-6 bg-white border border-purple-100 rounded-2xl max-w-2xl mx-auto shadow-sm space-y-6">
+                                        <p id="visual-guide-description" class="text-xs text-gray-500 leading-relaxed font-medium text-center"></p>
+                                        
+                                        <!-- Dynamic Mermaid Container -->
+                                        <div class="flex justify-center p-4 bg-purple-950 rounded-xl border border-white/10 shadow-inner overflow-x-auto">
+                                            <div id="mermaid-container" class="text-center w-full">
+                                                <!-- Mermaid diagram injected and compiled here -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- GameFII Module -->
                             <div id="content-gamefii" class="study-module-tab hidden">
-                                <div class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm max-w-md mx-auto">
-                                    <div class="flex justify-between items-center mb-4">
-                                        <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider">Aisha's Learning Journey</h4>
-                                        <span class="text-[9px] font-black bg-purple-100 text-purple-700 px-2.5 py-1 rounded-full uppercase tracking-widest">Level 4</span>
+                                <!-- GameFII Selector Screen -->
+                                <div id="gamefii-select-view" class="space-y-6 animate-in fade-in duration-300">
+                                    <div class="text-center max-w-md mx-auto mb-6">
+                                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-1">Select a learning quest</p>
+                                        <h4 class="text-lg font-black text-purple-950">Security+ SY0-701 Gamified Quests</h4>
+                                        <p class="text-[10px] text-gray-500 italic">Complete interactive challenges for each training video range</p>
                                     </div>
-                                    <div class="space-y-3">
-                                        <div>
-                                            <div class="flex justify-between text-xs font-semibold mb-1">
-                                                <span>Data Engineering Quest</span>
-                                                <span>75%</span>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        <!-- Deck Cards -->
+                                        <div onclick="startGamefiiDeck(1)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 01</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 1 to 10</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">General security concepts, core CIA triad, control types, and security posture frameworks.</p>
                                             </div>
-                                            <div class="h-2 w-full bg-purple-100 rounded-full overflow-hidden">
-                                                <div class="h-full bg-purple-600 w-3/4 rounded-full"></div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
                                             </div>
                                         </div>
-                                        <div>
-                                            <div class="flex justify-between text-xs font-semibold mb-1">
-                                                <span>Security & HSTS Mastery</span>
-                                                <span>40%</span>
+
+                                        <div onclick="startGamefiiDeck(2)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 02</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 11 to 20</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Threat actors, vectors, vulnerabilities, threat feeds, and indicators of compromise.</p>
                                             </div>
-                                            <div class="h-2 w-full bg-purple-100 rounded-full overflow-hidden">
-                                                <div class="h-full bg-purple-600 w-2/5 rounded-full"></div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startGamefiiDeck(3)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 03</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 21 to 30</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Social engineering principles, phishing techniques, impersonation, and tailgating attacks.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startGamefiiDeck(4)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 04</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 31 to 40</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Malware varieties, viruses, ransomware, spyware, Trojans, and hardware rootkits.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startGamefiiDeck(5)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 05</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startGamefiiDeck(6)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 06</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 51 to 60</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authorization and access controls, RBAC, ABAC, ACLs, and privilege management.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startGamefiiDeck(7)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 07</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 61 to 70</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Network security, firewalls, stateful filters, packet routing, and network segments.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startGamefiiDeck(8)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 08</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 71 to 80</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Web security architectures, HTTPS enforcement, HSTS, SSL strips, and web firewalls.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startGamefiiDeck(9)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 09</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 81 to 90</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cryptography paradigms, symmetric vs asymmetric encryption, keys, and algorithms.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startGamefiiDeck(10)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 10</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 101 to 110</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Public Key Infrastructure (PKI), digital certificates, certificate authorities, and trusts.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <div onclick="startGamefiiDeck(11)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 11</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 111 to 121</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Business continuity, disaster recovery plans, backup methodologies, and system redundancy.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Begin Quest</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                
+                                <!-- Active GameFII Quest View -->
+                                <div id="gamefii-deck-view" class="hidden space-y-6 animate-in fade-in duration-300">
+                                    <div class="flex items-center gap-3">
+                                        <button onclick="backToGamefiiDecks()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                            ← Back to Quests
+                                        </button>
+                                        <span id="active-gamefii-title" class="text-xs font-black text-purple-900 uppercase tracking-wider"></span>
+                                    </div>
+
+                                    <div class="p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm space-y-4">
+                                        <div class="flex justify-between items-center mb-2">
+                                            <h4 id="gamefii-quest-name" class="font-black text-purple-950 text-xs uppercase tracking-wider"></h4>
+                                            <span id="gamefii-quest-pct" class="text-[10px] font-black bg-purple-100 text-purple-700 px-2.5 py-1 rounded-full uppercase tracking-widest">0% Complete</span>
+                                        </div>
+                                        
+                                        <!-- Progress Bar -->
+                                        <div class="h-2 w-full bg-purple-100 rounded-full overflow-hidden mb-4">
+                                            <div id="gamefii-quest-bar" class="h-full bg-purple-600 w-0 rounded-full transition-all duration-300"></div>
+                                        </div>
+
+                                        <div class="space-y-3">
+                                            <h5 class="text-[9px] font-black uppercase tracking-widest text-purple-400">Quest Objectives</h5>
+                                            <div class="space-y-2 text-xs font-medium text-gray-600">
+                                                <label class="flex items-center gap-3 p-3 bg-purple-50/50 border border-purple-100 rounded-xl cursor-pointer hover:bg-purple-100/30 transition-colors">
+                                                    <input type="checkbox" onchange="updateQuestProgress()" class="quest-checkbox rounded border-purple-300 text-purple-600 focus:ring-purple-500">
+                                                    <span id="obj-1"></span>
+                                                </label>
+                                                <label class="flex items-center gap-3 p-3 bg-purple-50/50 border border-purple-100 rounded-xl cursor-pointer hover:bg-purple-100/30 transition-colors">
+                                                    <input type="checkbox" onchange="updateQuestProgress()" class="quest-checkbox rounded border-purple-300 text-purple-600 focus:ring-purple-500">
+                                                    <span id="obj-2"></span>
+                                                </label>
+                                                <label class="flex items-center gap-3 p-3 bg-purple-50/50 border border-purple-100 rounded-xl cursor-pointer hover:bg-purple-100/30 transition-colors">
+                                                    <input type="checkbox" onchange="updateQuestProgress()" class="quest-checkbox rounded border-purple-300 text-purple-600 focus:ring-purple-500">
+                                                    <span id="obj-3"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -2580,6 +3192,14 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
 
             if (moduleName === 'flashcards') {
                 backToFlashcardDecks();
+            } else if (moduleName === 'quiz') {
+                backToQuizDecks();
+            } else if (moduleName === 'study-guide') {
+                backToStudyGuideDecks();
+            } else if (moduleName === 'visual-guide') {
+                backToVisualGuideDecks();
+            } else if (moduleName === 'gamefii') {
+                backToGamefiiDecks();
             }
 
             // Update the title
@@ -2659,6 +3279,332 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             }
         };
 
+        const quizDecks = {
+            1: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 1 to 10 // General Security",
+                q: "Which type of security control is a security guard standing at a building entrance?",
+                opts: ["A) Administrative Control", "B) Technical Control", "C) Physical Control", "D) Compensating Control"],
+                ans: 2,
+                explain: "Physical controls are tangible barriers or safety measures designed to prevent unauthorized physical access to assets."
+            },
+            2: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 11 to 20 // Threats & Vulnerabilities",
+                q: "Which of the following describes an organization-developed catalog of threat actors, vectors, and behaviors used to model potential intrusions?",
+                opts: ["A) Zero-Day Exploit", "B) Threat Intelligence Feed", "C) Port Scanner", "D) Asset Inventory"],
+                ans: 1,
+                explain: "Threat intelligence feeds provide structured data about threat actors, behaviors, and indicators of compromise (IoCs)."
+            },
+            3: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 21 to 30 // Social Engineering",
+                q: "A user receives an urgent phone call claiming to be from the IT helpdesk, demanding their password to fix a login error. What type of attack is this?",
+                opts: ["A) Spear Phishing", "B) Vishing", "C) Tailgating", "D) Watering Hole"],
+                ans: 1,
+                explain: "Vishing (voice phishing) uses telephone calls to manipulate targets into revealing sensitive details."
+            },
+            4: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 31 to 40 // Malware Varieties",
+                q: "What type of malware infects a system and encrypts the user's data, demanding payment in exchange for the decryption key?",
+                opts: ["A) Trojan Horse", "B) Spyware", "C) Rootkit", "D) Ransomware"],
+                ans: 3,
+                explain: "Ransomware holds files hostagely using strong encryption and demands payment."
+            },
+            5: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 41 to 50 // Authentication Concepts",
+                q: "Which of the following is considered a 'something you are' authentication factor?",
+                opts: ["A) Hardware Security Token", "B) Retinal Scan", "C) Secret PIN Code", "D) Smart Card"],
+                ans: 1,
+                explain: "Biometric factors like retinal scans or fingerprints represent 'something you are'."
+            },
+            6: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 51 to 60 // Authorization Controls",
+                q: "Which access control model uses attributes like location, time of day, and department to make real-time access decisions?",
+                opts: ["A) Role-Based Access Control (RBAC)", "B) Discretionary Access Control (DAC)", "C) Attribute-Based Access Control (ABAC)", "D) Mandatory Access Control (MAC)"],
+                ans: 2,
+                explain: "ABAC evaluates multiple user, resource, and environmental attributes to govern access."
+            },
+            7: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 61 to 70 // Network Security",
+                q: "Which network device is designed to detect and block malicious traffic before it enters the network?",
+                opts: ["A) Intrusion Detection System (IDS)", "B) Intrusion Prevention System (IPS)", "C) Network Hub", "D) Network Bridge"],
+                ans: 1,
+                explain: "An IPS sits inline to actively block and prevent malicious network traffic."
+            },
+            8: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 71 to 80 // Web Security",
+                q: "Which header should a web server send to instruct browsers to connect solely via secure HTTPS connections?",
+                opts: ["A) X-Frame-Options", "B) Strict-Transport-Security (HSTS)", "C) Content-Security-Policy", "D) Referrer-Policy"],
+                ans: 1,
+                explain: "HSTS prevents downgrade/SSL strip attacks by enforcing HTTPS connections at the browser level."
+            },
+            9: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 81 to 90 // Cryptography",
+                q: "Which cryptographic algorithm is a symmetric block cipher widely used for secure communications?",
+                opts: ["A) RSA", "B) Diffie-Hellman", "C) Advanced Encryption Standard (AES)", "D) SHA-256"],
+                ans: 2,
+                explain: "AES is a robust symmetric cipher standard. RSA and Diffie-Hellman are asymmetric."
+            },
+            10: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 101 to 110 // PKI",
+                q: "Which protocol is commonly used to check the real-time revocation status of a digital certificate?",
+                opts: ["A) Online Certificate Status Protocol (OCSP)", "B) Certificate Revocation List (CRL)", "C) Simple Network Management Protocol (SNMP)", "D) Hypertext Transfer Protocol (HTTP)"],
+                ans: 0,
+                explain: "OCSP provides real-time revocation checking, whereas CRLs are periodic static lists."
+            },
+            11: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 111 to 121 // Business Continuity",
+                q: "An organization determines the maximum tolerable time a business function can be down before causing critical harm. What is this metric?",
+                opts: ["A) Recovery Point Objective (RPO)", "B) Recovery Time Objective (RTO)", "C) Mean Time to Repair (MTTR)", "D) Annualized Loss Expectancy (ALE)"],
+                ans: 1,
+                explain: "RTO defines the target duration to restore a business function after an outage."
+            }
+        };
+
+        const studyGuideDecks = {
+            1: {
+                title: "General Security Concepts",
+                subtitle: "Core CIA Triad & Control Types",
+                summary: "This section introduces foundational security models that establish protection parameters. The core CIA triad elements (Confidentiality, Integrity, Availability) represent security targets, while control types define active implementations to secure those targets.",
+                terms: [
+                    "Confidentiality: Protecting access through cryptography, access controls, and data classification.",
+                    "Integrity: Verifying data completeness and correctness using Hashing, Digital Signatures, and Certificates.",
+                    "Availability: Ensuring uptime and access via redundancy, backups, load balancing, and clustering.",
+                    "Preventive Controls: Designed to stop incidents (e.g., Firewalls, Guard Dogs, Security Training).",
+                    "Detective Controls: Designed to identify and record incidents (e.g., CCTV, Log Audits, IDS).",
+                    "Corrective Controls: Active recovery actions taken post-incident (e.g., Backups, Software Patches)."
+                ]
+            },
+            2: {
+                title: "Threats & Vulnerabilities",
+                subtitle: "Threat Actor Typologies & Intel feeds",
+                summary: "Understanding threat profiles and vector origins helps organizations assess potential impacts. Threat intelligence feeds provide actionable insight on active campaigns and zero-day exposures.",
+                terms: [
+                    "Advanced Persistent Threat (APT): Multi-year, state-sponsored cyber warfare organizations.",
+                    "Script Kiddies: Unskilled threat actors using pre-made tools for visibility or minor gains.",
+                    "Zero-Day Exploit: Attacks target undisclosed system weaknesses before a patch exists.",
+                    "Vulnerability Cataloging: Databases like CVE provide global standard identifiers for bugs.",
+                    "Threat Feed Protocols: STIX/TAXII are standard schemas for threat intelligence sharing."
+                ]
+            },
+            3: {
+                title: "Social Engineering Attacks",
+                subtitle: "Psychological Attack Vectors",
+                summary: "Social engineering targets human vulnerabilities rather than network entry points. Attacks leverage authority, urgency, scarcity, and trust to bypass security protocols.",
+                terms: [
+                    "Phishing: Generic mass-email baiting attempts.",
+                    "Spear Phishing: Targeted, target-specific email attacks using personal context.",
+                    "Vishing: Telephone-based social engineering designed to harvest credentials.",
+                    "Tailgating: Physical infiltration following authorized workers through secure portals.",
+                    "Watering Hole: Attacking a local website commonly visited by target personnel."
+                ]
+            },
+            4: {
+                title: "Malware & Code Vulnerabilities",
+                subtitle: "Malicious Software Implementations",
+                summary: "Malware represents software designed to harvest data, control hosts, or disrupt services. Differentiating malware classes enables accurate containment planning.",
+                terms: [
+                    "Ransomware: Crypto-locks storage devices and demands cryptocurrency tokens for access keys.",
+                    "Trojan: Software disguised as useful utilities that install backdoors upon execution.",
+                    "Worm: Self-propagating malware that moves laterally across network segments without user interaction.",
+                    "Rootkit: Low-level system driver modifications designed to mask malicious processes."
+                ]
+            },
+            5: {
+                title: "Authentication Principles",
+                subtitle: "MFA Verification Parameters",
+                summary: "Authentication verifies the identity of request sources. Multi-Factor Authentication requires combinations from distinct factor pools to establish trust.",
+                terms: [
+                    "Something You Know: Passwords, PINs, security question challenge answers.",
+                    "Something You Have: Hardware keys, smartcards, software OTP tokens.",
+                    "Something You Are: Biometrics (fingerprint, retina/iris patterns, facial geometries).",
+                    "Somewhere You Are: Geolocation verification (IP address boundaries, GPS flags).",
+                    "Federated Authentication: SSO protocols (SAML 2.0, OAuth, OpenID Connect)."
+                ]
+            },
+            6: {
+                title: "Authorization & Access Controls",
+                subtitle: "Privilege Allocation Systems",
+                summary: "Authorization defines what actions authenticated identities are allowed to perform. Modern security implements principle of least privilege.",
+                terms: [
+                    "Role-Based Access Control (RBAC): Privileges assigned to roles, which users are mapped to.",
+                    "Attribute-Based Access Control (ABAC): Evaluates dynamic attributes (subject, object, environment).",
+                    "Mandatory Access Control (MAC): OS-enforced access based on clearance labels (Top Secret, Secret).",
+                    "Discretionary Access Control (DAC): Resource owners manage resource access permissions (standard read/write)."
+                ]
+            },
+            7: {
+                title: "Network Architecture Security",
+                subtitle: "Boundary Filtration & Monitoring",
+                summary: "Network defense isolates segments, screens traffic packets, and alerts administrative systems of anomalies.",
+                terms: [
+                    "Stateful Firewall: Filters based on established TCP session state tables.",
+                    "Intrusion Detection System (IDS): Passive monitor auditing network segments and flagging incidents.",
+                    "Intrusion Prevention System (IPS): Inline system actively modifying packet streams to block incidents.",
+                    "DMZ (Demilitarized Zone): External-facing segment hosting public servers (Web, DNS, Email)."
+                ]
+            },
+            8: {
+                title: "Web & Host Security",
+                subtitle: "Web Server & Client Protections",
+                summary: "Securing web transactions requires enforcing encryption boundaries and preventing parameter manipulations.",
+                terms: [
+                    "HSTS Header: Instructs client browsers to communicate exclusively over HTTPS.",
+                    "CSP Header: Instructs browsers on which script and stylesheet source domains are allowed to load.",
+                    "X-Frame-Options: Prevents UI redressing/clickjacking by restricting iframe embeds.",
+                    "Input Validation: Filtering character inputs to block XSS and SQL injection payloads."
+                ]
+            },
+            9: {
+                title: "Cryptography & Encryption",
+                subtitle: "Asymmetric & Symmetric Cryptosystems",
+                summary: "Encryption provides confidentiality. Cryptosystems use symmetric ciphers for fast bulk data encoding and asymmetric ciphers for key distribution.",
+                terms: [
+                    "Symmetric Cipher: Single key encrypts and decrypts (AES, DES). Fast operation.",
+                    "Asymmetric Cipher: Public key encrypts, private key decrypts (RSA, ECC). Secure exchange.",
+                    "Hashing: One-way mathematics providing integrity validation (SHA-256, MD5).",
+                    "Salting: Appending random bytes to inputs before hashing to prevent rainbow table attacks."
+                ]
+            },
+            10: {
+                title: "Public Key Infrastructure (PKI)",
+                subtitle: "Digital Trust Hierarchies",
+                summary: "PKI manages digital certificate lifecycles, binding public keys to verified user/domain identities.",
+                terms: [
+                    "Certificate Authority (CA): Cryptographically signs digital certificates.",
+                    "X.509 Certificate: Standard metadata container for digital identities.",
+                    "CRL (Certificate Revocation List): CA-published list of revoked certificate serial numbers.",
+                    "OCSP (Online Certificate Status Protocol): Query protocol for real-time certificate check."
+                ]
+            },
+            11: {
+                title: "Resilience & Continuity Planning",
+                subtitle: "System Availability & Restoration",
+                summary: "Continuity planning prepares organizations for disasters, aiming to minimize operational downtime and data loss.",
+                terms: [
+                    "RTO (Recovery Time Objective): Maximum acceptable downtime before service restoration.",
+                    "RPO (Recovery Point Objective): Maximum acceptable data loss window measured in time.",
+                    "Incremental Backup: Copies only files that changed since the last incremental or full backup.",
+                    "Differential Backup: Copies all files that changed since the last full backup.",
+                    "Hot Site: Fully operational redundant datacenter with real-time data replication."
+                ]
+            }
+        };
+
+        const visualGuideDecks = {
+            1: {
+                desc: "The CIA Triad model outlines the core goals of security engineering, matched with control strategies.",
+                code: "graph TD\n    CIA[CIA Triad Goal] --> C[Confidentiality]\n    CIA --> I[Integrity]\n    CIA --> A[Availability]\n    C -->|Secured By| C1[Symmetric/Asymmetric Encryption]\n    I -->|Verified By| I1[Hashing Algorithms SHA-256]\n    A -->|Ensured By| A1[Redundancy & Backups]"
+            },
+            2: {
+                desc: "The threat execution vector model demonstrates how actors identify and leverage vulnerabilities.",
+                code: "graph LR\n    Actor[Threat Actor] -->|Finds| Vuln[Vulnerability/Weakness]\n    Vuln -->|Launches| Exploit[Exploit Code]\n    Exploit -->|Compromises| Asset[Target Systems]"
+            },
+            3: {
+                desc: "Social engineering vishing attack path demonstrating credential harvesting steps.",
+                code: "graph TD\n    Attacker -->|Calls Target| Phone[Spoofed Phone Call]\n    Phone -->|Urgency/Panic| Target[Target Employee]\n    Target -->|Discloses| Creds[SSO Credentials]\n    Creds -->|Access Gained| Attacker"
+            },
+            4: {
+                desc: "Ransomware execution timeline showing encryption of host system files.",
+                code: "graph TD\n    Entry[Malicious Attachment] -->|User Opens| Run[Malware Executed]\n    Run -->|Disable Backups| Prep[System Hooked]\n    Prep -->|Encrypt Drive| Crypto[Locked Files]\n    Crypto -->|Demand Notification| Ransom[Ransom Request]"
+            },
+            5: {
+                desc: "MFA authentication check sequence verifying login request parameters.",
+                code: "graph TD\n    Login[User Login] -->|MFA Triggered| Fact1[PIN: Something You Know]\n    Fact1 -->|Passed| Fact2[Token: Something You Have]\n    Fact2 -->|Passed| Approved[Session Authorized]"
+            },
+            6: {
+                desc: "Attribute-Based Access Control evaluation flow resolving access decisions.",
+                code: "graph LR\n    User[User Subject] --> Engine[ABAC Engine]\n    Res[Target Resource] --> Engine\n    Env[Time/IP Location] --> Engine\n    Engine -->|Evaluates Policy| Decision{Access Granted?}"
+            },
+            7: {
+                desc: "Intrusion prevention routing sequence filtering incoming internet traffic.",
+                code: "graph TD\n    Packet[Incoming Packet] -->|Enters| FW[Stateful Firewall]\n    FW -->|Passed| IPS[Intrusion Prevention System]\n    IPS -->|Clean Traffic| Server[Internal Server]\n    IPS -->|Malicious Match| Blocked[Packet Dropped & Logged]"
+            },
+            8: {
+                desc: "HSTS web server security interaction enforcing HTTPS connection.",
+                code: "graph LR\n    Client[Browser Client] -->|Plain HTTP| Server[Web Server]\n    Server -->|HSTS Header Response| Client\n    Client -->|Forces Rewrite| Secure[Encrypted HTTPS Connection]"
+            },
+            9: {
+                desc: "Asymmetric public/private key encryption sequence providing confidentiality.",
+                code: "graph TD\n    Msg[Plaintext Message] -->|Encrypt with Public Key| Enc[Ciphertext]\n    Enc -->|Transmitted| Recv[Receiver System]\n    Recv -->|Decrypt with Private Key| Msg"
+            },
+            10: {
+                desc: "Certificate revocation check sequence using OCSP querying.",
+                code: "graph TD\n    Browser[Browser Client] -->|Verifies Cert| CA[CA OCSP Responder]\n    CA -->|Real-Time Query| DB[Status Database]\n    DB -->|Valid Signature| CA\n    CA -->|Signed Response: Good| Browser"
+            },
+            11: {
+                desc: "Continuity restoration windows measuring Recovery Time and Recovery Point Objectives.",
+                code: "graph LR\n    Backup[Last Good Backup] -->|RPO: Max Data Loss| Disaster[Disaster Event]\n    Disaster -->|RTO: System Restoration| Restoration[Services Online]"
+            }
+        };
+
+        const gamefiiDecks = {
+            1: {
+                name: "Quest 01: The Foundations of Defense",
+                obj1: "Complete Flashcards: General Security Concepts",
+                obj2: "Pass Quiz: CIA Triad & Controls",
+                obj3: "Review Diagram: Security Controls Hierarchy"
+            },
+            2: {
+                name: "Quest 02: Mapping the Threat Landscape",
+                obj1: "Complete Flashcards: Threat Vectors",
+                obj2: "Pass Quiz: Threat Intel Feeds",
+                obj3: "Review Diagram: Intrusion Vectors"
+            },
+            3: {
+                name: "Quest 03: Human Firewall Deployment",
+                obj1: "Complete Flashcards: Phishing Prevention",
+                obj2: "Pass Quiz: Vishing & Tailgating",
+                obj3: "Review Diagram: Attack Path Simulation"
+            },
+            4: {
+                name: "Quest 04: Malware Sandbox Investigation",
+                obj1: "Complete Flashcards: Ransomware Analysis",
+                obj2: "Pass Quiz: Rootkit Mitigation",
+                obj3: "Review Diagram: Malware Vectors Flow"
+            },
+            5: {
+                name: "Quest 05: Gatekeeper Authentication",
+                obj1: "Complete Flashcards: Biometric Settings",
+                obj2: "Pass Quiz: MFA Factor Selection",
+                obj3: "Review Diagram: Identity Validation Flow"
+            },
+            6: {
+                name: "Quest 06: Zero Trust Policy Settings",
+                obj1: "Complete Flashcards: RBAC Setup",
+                obj2: "Pass Quiz: ABAC Policies",
+                obj3: "Review Diagram: Access Policy Evaluation"
+            },
+            7: {
+                name: "Quest 07: Active Network Defense",
+                obj1: "Complete Flashcards: Firewall Settings",
+                obj2: "Pass Quiz: IPS Implementation",
+                obj3: "Review Diagram: Packet Flow Filtering"
+            },
+            8: {
+                name: "Quest 08: Web App Hardening",
+                obj1: "Complete Flashcards: HSTS Configuration",
+                obj2: "Pass Quiz: Content Security Policy",
+                obj3: "Review Diagram: HTTPS Downgrade Prevention"
+            },
+            9: {
+                name: "Quest 09: Cryptographic Operations",
+                obj1: "Complete Flashcards: AES Key Sizes",
+                obj2: "Pass Quiz: Public/Private Key Encryption",
+                obj3: "Review Diagram: Key Exchange Security"
+            },
+            10: {
+                name: "Quest 10: Root Authority Trust",
+                obj1: "Complete Flashcards: Certificate Requests",
+                obj2: "Pass Quiz: OCSP Revocation Checks",
+                obj3: "Review Diagram: PKI Chain Verification"
+            },
+            11: {
+                name: "Quest 11: System Recovery Operations",
+                obj1: "Complete Flashcards: Backup Schedules",
+                obj2: "Pass Quiz: BCP & RTO/RPO Metrics",
+                obj3: "Review Diagram: Backup Redundancy Model"
+            }
+        };
+
         function startFlashcardDeck(deckId) {
             const selectView = document.getElementById('flashcard-select-view');
             const deckView = document.getElementById('flashcard-deck-view');
@@ -2709,44 +3655,224 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             }
         }
 
-        function startDemoQuiz() {
-            const startView = document.getElementById('quiz-start-view');
-            const qView = document.getElementById('quiz-question-view');
-            const feedback = document.getElementById('quiz-feedback');
-            const retryBtn = document.getElementById('quiz-retry-btn');
+        let activeQuizId = null;
+        function startQuizDeck(deckId) {
+            activeQuizId = deckId;
+            const selectView = document.getElementById('quiz-select-view');
+            const deckView = document.getElementById('quiz-deck-view');
+            const titleEl = document.getElementById('active-quiz-title');
+            const questionText = document.getElementById('quiz-question-text');
+            const optionsContainer = document.getElementById('quiz-options-container');
+            const feedbackText = document.getElementById('quiz-feedback-text');
+            const resetBtn = document.getElementById('quiz-reset-btn');
 
-            if (startView) startView.classList.add('hidden');
-            if (qView) qView.classList.remove('hidden');
-            if (feedback) feedback.innerText = '';
-            if (retryBtn) retryBtn.classList.add('hidden');
+            if (!selectView || !deckView || !titleEl || !questionText || !optionsContainer || !feedbackText || !resetBtn) return;
 
-            const buttons = document.querySelectorAll('.quiz-opt-btn');
-            buttons.forEach(btn => {
-                btn.disabled = false;
+            const deck = quizDecks[deckId];
+            if (!deck) return;
+
+            titleEl.textContent = deck.title;
+            questionText.textContent = deck.q;
+            feedbackText.textContent = '';
+            resetBtn.classList.add('hidden');
+
+            optionsContainer.innerHTML = '';
+            deck.opts.forEach((opt, idx) => {
+                const btn = document.createElement('button');
                 btn.className = "quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors";
+                btn.textContent = opt;
+                btn.onclick = function() {
+                    answerQuizDeck(idx === deck.ans, btn);
+                };
+                optionsContainer.appendChild(btn);
             });
+
+            selectView.classList.add('hidden');
+            deckView.classList.remove('hidden');
         }
 
-        function answerDemoQuiz(isCorrect, element) {
-            const feedback = document.getElementById('quiz-feedback');
+        function answerQuizDeck(isCorrect, buttonEl) {
+            const feedbackText = document.getElementById('quiz-feedback-text');
+            const resetBtn = document.getElementById('quiz-reset-btn');
+            if (!feedbackText || !resetBtn) return;
+
             const buttons = document.querySelectorAll('.quiz-opt-btn');
             buttons.forEach(btn => btn.disabled = true);
 
+            const deck = quizDecks[activeQuizId];
+            if (!deck) return;
+
             if (isCorrect) {
-                element.className = "quiz-opt-btn w-full text-left p-3 border border-green-200 bg-green-50 text-green-700 text-xs font-bold rounded-xl transition-all";
-                feedback.className = "text-xs text-center font-bold mt-4 text-green-600";
-                feedback.innerText = "Correct! Amazon S3 is designed for object storage.";
+                buttonEl.className = "quiz-opt-btn w-full text-left p-3 border border-green-200 bg-green-50 text-green-700 text-xs font-bold rounded-xl transition-all";
+                feedbackText.className = "text-xs text-center font-bold mt-4 text-green-600 animate-in fade-in duration-300";
+                feedbackText.textContent = "Correct! " + deck.explain;
             } else {
-                element.className = "quiz-opt-btn w-full text-left p-3 border border-red-200 bg-red-50 text-red-700 text-xs font-bold rounded-xl transition-all";
-                feedback.className = "text-xs text-center font-bold mt-4 text-red-600";
-                feedback.innerText = "Incorrect. Try starting the quiz again!";
+                buttonEl.className = "quiz-opt-btn w-full text-left p-3 border border-red-200 bg-red-50 text-red-700 text-xs font-bold rounded-xl transition-all";
+                feedbackText.className = "text-xs text-center font-bold mt-4 text-red-600 animate-in fade-in duration-300";
+                feedbackText.textContent = "Incorrect. " + deck.explain;
             }
 
-            const retryBtn = document.getElementById('quiz-retry-btn');
-            if (retryBtn) {
-                setTimeout(() => {
-                    retryBtn.classList.remove('hidden');
-                }, 1000);
+            resetBtn.classList.remove('hidden');
+        }
+
+        function retryActiveQuiz() {
+            if (activeQuizId) {
+                startQuizDeck(activeQuizId);
+            }
+        }
+
+        function backToQuizDecks() {
+            const selectView = document.getElementById('quiz-select-view');
+            const deckView = document.getElementById('quiz-deck-view');
+            if (selectView && deckView) {
+                selectView.classList.remove('hidden');
+                deckView.classList.add('hidden');
+            }
+        }
+
+        function startStudyGuideDeck(deckId) {
+            const selectView = document.getElementById('study-guide-select-view');
+            const deckView = document.getElementById('study-guide-deck-view');
+            const titleEl = document.getElementById('active-study-guide-title');
+            const subtitleEl = document.getElementById('guide-section-subtitle');
+            const summaryEl = document.getElementById('guide-section-summary');
+            const keyTermsEl = document.getElementById('guide-key-terms');
+
+            if (!selectView || !deckView || !titleEl || !subtitleEl || !summaryEl || !keyTermsEl) return;
+
+            const deck = studyGuideDecks[deckId];
+            if (!deck) return;
+
+            titleEl.textContent = "Professor Messer's SY0-701 Training Video " + (deckId === 10 ? "101 to 110" : deckId === 11 ? "111 to 121" : ((deckId - 1) * 10 + 1) + " to " + (deckId * 10));
+            subtitleEl.textContent = "📚 " + deck.title + " // " + deck.subtitle;
+            summaryEl.textContent = deck.summary;
+
+            keyTermsEl.innerHTML = '';
+            deck.terms.forEach(term => {
+                const li = document.createElement('li');
+                li.className = "leading-relaxed";
+                
+                const parts = term.split(':');
+                if (parts.length > 1) {
+                    const boldSpan = document.createElement('strong');
+                    boldSpan.className = "text-purple-900";
+                    boldSpan.textContent = parts[0] + ":";
+                    li.appendChild(boldSpan);
+                    li.appendChild(document.createTextNode(parts.slice(1).join(':')));
+                } else {
+                    li.textContent = term;
+                }
+                keyTermsEl.appendChild(li);
+            });
+
+            selectView.classList.add('hidden');
+            deckView.classList.remove('hidden');
+        }
+
+        function backToStudyGuideDecks() {
+            const selectView = document.getElementById('study-guide-select-view');
+            const deckView = document.getElementById('study-guide-deck-view');
+            if (selectView && deckView) {
+                selectView.classList.remove('hidden');
+                deckView.classList.add('hidden');
+            }
+        }
+
+        function startVisualGuideDeck(deckId) {
+            const selectView = document.getElementById('visual-guide-select-view');
+            const deckView = document.getElementById('visual-guide-deck-view');
+            const titleEl = document.getElementById('active-visual-guide-title');
+            const descEl = document.getElementById('visual-guide-description');
+            const containerEl = document.getElementById('mermaid-container');
+
+            if (!selectView || !deckView || !titleEl || !descEl || !containerEl) return;
+
+            const deck = visualGuideDecks[deckId];
+            if (!deck) return;
+
+            titleEl.textContent = "Professor Messer's SY0-701 Training Video " + (deckId === 10 ? "101 to 110" : deckId === 11 ? "111 to 121" : ((deckId - 1) * 10 + 1) + " to " + (deckId * 10));
+            descEl.textContent = deck.desc;
+
+            const elementId = "mermaid-chart-" + deckId;
+            containerEl.innerHTML = '<pre class="mermaid text-center w-full" id="' + elementId + '">' + deck.code + '</pre>';
+
+            selectView.classList.add('hidden');
+            deckView.classList.remove('hidden');
+
+            if (window.mermaid) {
+                try {
+                    window.mermaid.run({ querySelector: '.mermaid' });
+                } catch(e) {
+                    console.error("Mermaid run error:", e);
+                }
+            }
+        }
+
+        function backToVisualGuideDecks() {
+            const selectView = document.getElementById('visual-guide-select-view');
+            const deckView = document.getElementById('visual-guide-deck-view');
+            if (selectView && deckView) {
+                selectView.classList.remove('hidden');
+                deckView.classList.add('hidden');
+            }
+        }
+
+        let activeGamefiiId = null;
+        function startGamefiiDeck(deckId) {
+            activeGamefiiId = deckId;
+            const selectView = document.getElementById('gamefii-select-view');
+            const deckView = document.getElementById('gamefii-deck-view');
+            const titleEl = document.getElementById('active-gamefii-title');
+            const nameEl = document.getElementById('gamefii-quest-name');
+            
+            const obj1 = document.getElementById('obj-1');
+            const obj2 = document.getElementById('obj-2');
+            const obj3 = document.getElementById('obj-3');
+
+            if (!selectView || !deckView || !titleEl || !nameEl || !obj1 || !obj2 || !obj3) return;
+
+            const deck = gamefiiDecks[deckId];
+            if (!deck) return;
+
+            titleEl.textContent = "Professor Messer's SY0-701 Training Video " + (deckId === 10 ? "101 to 110" : deckId === 11 ? "111 to 121" : ((deckId - 1) * 10 + 1) + " to " + (deckId * 10));
+            nameEl.textContent = deck.name;
+            obj1.textContent = deck.obj1;
+            obj2.textContent = deck.obj2;
+            obj3.textContent = deck.obj3;
+
+            const checkboxes = document.querySelectorAll('.quest-checkbox');
+            checkboxes.forEach(cb => cb.checked = false);
+
+            updateQuestProgress();
+
+            selectView.classList.add('hidden');
+            deckView.classList.remove('hidden');
+        }
+
+        function updateQuestProgress() {
+            const checkboxes = document.querySelectorAll('.quest-checkbox');
+            if (!checkboxes.length) return;
+
+            let checkedCount = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) checkedCount++;
+            });
+
+            const pct = Math.round((checkedCount / checkboxes.length) * 100);
+            
+            const pctText = document.getElementById('gamefii-quest-pct');
+            const progressBar = document.getElementById('gamefii-quest-bar');
+
+            if (pctText) pctText.textContent = pct + "% Complete";
+            if (progressBar) progressBar.style.width = pct + "%";
+        }
+
+        function backToGamefiiDecks() {
+            const selectView = document.getElementById('gamefii-select-view');
+            const deckView = document.getElementById('gamefii-deck-view');
+            if (selectView && deckView) {
+                selectView.classList.remove('hidden');
+                deckView.classList.add('hidden');
             }
         }
     </script>
@@ -2769,6 +3895,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
         mermaid.initialize({ startOnLoad: true });
+        window.mermaid = mermaid;
     </script>
 </body>
 
