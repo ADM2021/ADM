@@ -2073,7 +2073,529 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             </button>
                                         </div>
                                     </div>
-                                    <div id="study-guide-detailed-card" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
+                                    <div id="study-guide-detailed-card-1" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
+                                         <!-- Header -->
+                                         <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                             <div>
+                                                 <span class="text-[9px] font-black text-purple-500 uppercase tracking-widest block mb-1">Detailed Study Reference</span>
+                                                 <h3 class="text-xl font-black text-purple-950 uppercase tracking-wide">Video 1 to 10 Study Guide</h3>
+                                                 <p class="text-xs text-gray-500 mt-1">Core pillars of the AAA framework, security control categories, change management procedures, deception technologies, and the foundational CIA Triad.</p>
+                                             </div>
+                                             <div class="flex gap-2 self-start md:self-center">
+                                                 <button onclick="window.print()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                                     🖨️ Print Guide
+                                                 </button>
+                                             </div>
+                                         </div>
+
+                                         <!-- Sticky Navigation Menu -->
+                                         <div class="sticky top-0 bg-white/95 backdrop-blur-md py-3 border-b border-purple-100 z-20 overflow-x-auto flex gap-2 no-scrollbar scroll-smooth">
+                                             <a href="#sg1-sec-1" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">I. AAA Framework</a>
+                                             <a href="#sg1-sec-2" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">II. Controls</a>
+                                             <a href="#sg1-sec-3" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">III. Change Mgmt</a>
+                                             <a href="#sg1-sec-4" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">IV. Deception</a>
+                                             <a href="#sg1-sec-5" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">V. CIA Triad</a>
+                                             <a href="#sg1-sec-6" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VI. Quiz</a>
+                                             <a href="#sg1-sec-7" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VII. Essays</a>
+                                             <a href="#sg1-sec-8" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VIII. Glossary</a>
+                                         </div>
+
+                                         <!-- CONTENT SECTIONS -->
+
+                                         <!-- I. AAA Framework -->
+                                         <div id="sg1-sec-1" class="space-y-4 scroll-mt-20">
+                                             <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                 <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">I</span>
+                                                 <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">The AAA Framework</h4>
+                                             </div>
+                                             <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                 Access control systems are built on three core pillars (AAA) along with the initial step of identification to securely manage network security:
+                                             </p>
+                                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Identification</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium">The process where a subject claims a specific identity on a system (e.g., entering a username, scanning an NFC badge).</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Authentication</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Verifying the claimed identity using credentials such as passwords, PINs, smart cards, tokens, or biometric attributes.</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Authorization</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Determining which specific resources, operations, or data folders the authenticated identity is permitted to access based on policies.</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Accounting</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Logging user events, connections, data usage, and session times to maintain a detailed audit trail for compliance and forensic investigations.</p>
+                                                 </div>
+                                             </div>
+                                             <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/20 space-y-2">
+                                                 <strong class="text-xs text-purple-950 uppercase tracking-wide">Centralized AAA Servers (e.g., RADIUS, TACACS+)</strong>
+                                                 <p class="text-[11px] text-gray-600 leading-relaxed font-medium">Instead of maintaining user databases on every network device (like VPN concentrators or switches), a centralized AAA server acts as a single source of truth. When a user authenticates via a VPN, the VPN concentrator acts as a middleman, forwarding credentials to the central AAA server which evaluates the request and returns an accept or reject response.</p>
+                                             </div>
+                                         </div>
+
+                                         <!-- II. Control Types -->
+                                         <div id="sg1-sec-2" class="space-y-4 scroll-mt-20">
+                                             <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                 <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">II</span>
+                                                 <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Security Controls & Matrix</h4>
+                                             </div>
+                                             <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                 Security controls are categorized by their implementation method (Technical, Managerial, Operational, Physical) and function (Preventive, Detective, Corrective, Compensating, Deterrent, Directive).
+                                             </p>
+                                             
+                                             <div class="border border-purple-100 rounded-2xl overflow-hidden shadow-sm">
+                                                 <table class="w-full text-left border-collapse text-[10px]">
+                                                     <thead>
+                                                         <tr class="bg-purple-950 text-white font-bold uppercase tracking-wider">
+                                                             <th class="p-3 border border-purple-900">Control Category</th>
+                                                             <th class="p-3 border border-purple-900">Definition</th>
+                                                             <th class="p-3 border border-purple-900">Examples</th>
+                                                         </tr>
+                                                     </thead>
+                                                     <tbody class="divide-y divide-purple-100 bg-purple-50/5 font-medium">
+                                                         <tr>
+                                                             <td class="p-3 font-bold text-purple-950 bg-purple-50/20">Technical</td>
+                                                             <td class="p-3 text-gray-600">Controls implemented through hardware, software, or OS configurations.</td>
+                                                             <td class="p-3 text-gray-500">Firewalls, Antivirus, Encryption, IPS/IDS.</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td class="p-3 font-bold text-purple-950 bg-purple-50/20">Managerial</td>
+                                                             <td class="p-3 text-gray-600">Controls implemented through administrative policies, guidelines, and procedures.</td>
+                                                             <td class="p-3 text-gray-500">Security Policies, Risk Assessments, Onboarding checks.</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td class="p-3 font-bold text-purple-950 bg-purple-50/20">Operational</td>
+                                                             <td class="p-3 text-gray-600">Controls implemented through human execution and organizational processes.</td>
+                                                             <td class="p-3 text-gray-500">Security guards, User training, Lunch & Learn events.</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td class="p-3 font-bold text-purple-950 bg-purple-50/20">Physical</td>
+                                                             <td class="p-3 text-gray-600">Tangible, real-world controls that restrict physical access to hardware and properties.</td>
+                                                             <td class="p-3 text-gray-500">Fences, door locks, CCTV cameras, server cages.</td>
+                                                         </tr>
+                                                     </tbody>
+                                                 </table>
+                                             </div>
+
+                                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Preventive</strong>
+                                                     <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Actively blocks unauthorized activity (e.g., firewall rules, security guards checking IDs).</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Deterrent</strong>
+                                                     <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Discourages potential attackers from attempting breaches (e.g., warning banners, warning signs).</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Detective</strong>
+                                                     <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Identifies and records incidents after or during occurrence (e.g., audit logs, motion sensors, CCTV).</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Corrective</strong>
+                                                     <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Reverses impacts and restores operations post-incident (e.g., database backups restoration, system patches).</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Compensating</strong>
+                                                     <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Temporary, alternative measures put in place when primary controls are unavailable (e.g., custom firewall filters).</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Directive</strong>
+                                                     <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Rules or signs designed to guide behavior (e.g., "Authorized Personnel Only" signs, security policies).</p>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <!-- III. Change Management -->
+                                         <div id="sg1-sec-3" class="space-y-4 scroll-mt-20">
+                                             <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                 <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">III</span>
+                                                 <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Change Management Procedures</h4>
+                                             </div>
+                                             <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                 Technical change management is critical in corporate networks to prevent service downtime, ensure security, and maintain stability. Bypassing these procedures can result in catastrophic operational failures.
+                                             </p>
+                                             <div class="space-y-3">
+                                                 <div class="flex gap-3 items-start">
+                                                     <span class="w-6 h-6 rounded-full bg-purple-900 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">1</span>
+                                                     <div class="space-y-0.5">
+                                                         <span class="text-xs font-black uppercase text-purple-950">Proposal & Scope Document</span>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed font-medium mt-1">Technicians must document the precise scope and technical reasons for a proposed change before any actions are scheduled.</p>
+                                                     </div>
+                                                 </div>
+                                                 <div class="flex gap-3 items-start">
+                                                     <span class="w-6 h-6 rounded-full bg-purple-900 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">2</span>
+                                                     <div class="space-y-0.5">
+                                                         <span class="text-xs font-black uppercase text-purple-950">Risk Analysis & Timing Evaluation</span>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed font-medium mt-1">The Change Control Board (CCB) analyzes the risks of making the change vs. NOT making the change (e.g., remaining vulnerable). They also schedule updates during off-peak times or implement "change freezes" (e.g. holiday retail freeze).</p>
+                                                     </div>
+                                                 </div>
+                                                 <div class="flex gap-3 items-start">
+                                                     <span class="w-6 h-6 rounded-full bg-purple-900 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">3</span>
+                                                     <div class="space-y-0.5">
+                                                         <span class="text-xs font-black uppercase text-purple-950">Sandbox Testing & Rollback Preparation</span>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed font-medium mt-1">Changes are tested in a non-production "sandbox". Technicians formulate a backout plan (contingency steps to revert the system) and take a full backup immediately prior to implementation.</p>
+                                                     </div>
+                                                 </div>
+                                                 <div class="flex gap-3 items-start">
+                                                     <span class="w-6 h-6 rounded-full bg-purple-900 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">4</span>
+                                                     <div class="space-y-0.5">
+                                                         <span class="text-xs font-black uppercase text-purple-950">Validation & Recovery</span>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed font-medium mt-1">Following execution, the system owner validates that all services run as expected. If failures occur, the rollback plan is initiated to restore the stable baseline state.</p>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <!-- IV. Deception Technologies -->
+                                         <div id="sg1-sec-4" class="space-y-4 scroll-mt-20">
+                                             <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                 <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">IV</span>
+                                                 <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Deception Technologies</h4>
+                                             </div>
+                                             <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                 Security teams deploy simulated assets to distract, slow down, and analyze malicious actors, while triggering high-fidelity alerts on unauthorized access.
+                                             </p>
+                                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Honeypots</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Decoy systems designed to look like production servers, which attract and isolate attackers to study their techniques.</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Honeynets</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium">A complete mock network infrastructure consisting of virtualized firewalls, routers, and decoy servers to study network attacks.</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Honeyfiles</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Attractive, decoy files (such as "passwords.txt") that trigger immediate silent alerts the moment they are opened or accessed.</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide">Honeytokens</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Traceable, fake pieces of data (e.g., mock email addresses, database rows, API credentials) used to identify data leaks and track distribution.</p>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <!-- V. CIA Triad & Gap Analysis -->
+                                         <div id="sg1-sec-5" class="space-y-4 scroll-mt-20">
+                                             <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                 <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">V</span>
+                                                 <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">The CIA Triad & Gap Analysis</h4>
+                                             </div>
+                                             <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                 The foundational framework of information security consists of three core components, often evaluated against target standards using gap analysis models:
+                                             </p>
+                                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/20 text-center space-y-1">
+                                                     <span class="text-xl">🕵️</span>
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block text-purple-950">Confidentiality</strong>
+                                                     <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Ensuring that only authorized users can access sensitive data (achieved via encryption, masking, access control lists).</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/20 text-center space-y-1">
+                                                     <span class="text-xl">🛡️</span>
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block text-purple-950">Integrity</strong>
+                                                     <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Ensuring that data remains complete, accurate, and unaltered (achieved via hashing, digital signatures, version controls).</p>
+                                                 </div>
+                                                 <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/20 text-center space-y-1">
+                                                     <span class="text-xl">🔋</span>
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block text-purple-950">Availability</strong>
+                                                     <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Ensuring systems and data are accessible when needed (achieved via fault tolerance, redundancy, backups, and patching).</p>
+                                                 </div>
+                                             </div>
+                                             <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-2">
+                                                 <strong class="text-xs text-purple-950 uppercase tracking-wide">Gap Analysis Reports</strong>
+                                                 <p class="text-[11px] text-gray-600 leading-relaxed font-medium">A gap analysis compares an organization's current security posture against a desired standard or baseline (such as NIST SP 800-171 or ISO 27001). The resulting report details the current status, the target baseline, and outlines a specific roadmap of time, budget, and resources to close the gaps, often utilizing color-coded status tables (Red/Yellow/Green).</p>
+                                             </div>
+                                         </div>
+
+                                         <!-- VI. Quiz Section -->
+                                         <div id="sg1-sec-6" class="space-y-4 scroll-mt-20">
+                                             <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                 <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VI</span>
+                                                 <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Detailed Review Quiz</h4>
+                                             </div>
+                                             <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                 Test your understanding of the concepts in Video 1 to 10. Reveal the answers to check your knowledge.
+                                             </p>
+
+                                             <div class="space-y-4">
+                                                 <!-- Q1-1 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">1. What is the primary difference between identification and authentication in a security system?</div>
+                                                     <button onclick="toggleDetailedQuiz('1-1')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-1" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> Identification occurs when a user claims a specific identity on a system, typically by providing a username. Authentication is the subsequent process of proving that claim is true by providing secrets like passwords or additional authentication factors.
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Q1-2 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">2. How does a centralized AAA server facilitate the login process for remote access, such as a VPN?</div>
+                                                     <button onclick="toggleDetailedQuiz('1-2')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-2" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> The AAA server acts as a central database for credentials that individual devices like VPN concentrators do not store. When a user attempts to log in, the concentrator passes the request to the AAA server, which verifies the credentials against its database and sends an approval or denial back to the device.
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Q1-3 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">3. Why is using an "abstraction" or authorization model considered superior to manually assigning rights and permissions?</div>
+                                                     <button onclick="toggleDetailedQuiz('1-3')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-3" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> Manually assigning permissions to individual users does not scale well as organizations grow to hundreds or thousands of employees. By using an authorization model to group users (e.g., a "Shipping" group), administrators can assign rights to the group once, automatically granting those permissions to any user added to that group.
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Q1-4 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">4. What specific factors must a change control board consider when analyzing the risk of a proposed system update?</div>
+                                                     <button onclick="toggleDetailedQuiz('1-4')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-4" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> The board must weigh the risk of making the change, such as potential system instability or data corruption, against the risk of not making the change, such as leaving a security vulnerability unpatched. They also consider the timing of the change, ensuring it does not occur during critical business periods like a retail "freeze" between Thanksgiving and New Year’s.
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Q1-5 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">5. In the context of change management, what is a "backout plan" and why is it necessary?</div>
+                                                     <button onclick="toggleDetailedQuiz('1-5')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-5" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> A backout plan is a documented series of steps designed to revert a system to its original configuration if a change fails or causes unforeseen problems. It is necessary because some changes are difficult to uninstall, and having a plan—and a full backup—ensures the network can be restored to a known good state.
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Q1-6 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">6. How do honeyfiles and honeytokens assist security professionals in detecting unauthorized activity?</div>
+                                                     <button onclick="toggleDetailedQuiz('1-6')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-6" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> Honeyfiles are fake documents (like "passwords.txt") that trigger alerts when accessed, indicating an intruder is present. Honeytokens are traceable pieces of fake data, such as fake email addresses or API credentials, that allow security teams to see where stolen data is being distributed on the internet.
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Q1-7 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">7. What are the primary components of a gap analysis report, and how are they used to prioritize security improvements?</div>
+                                                     <button onclick="toggleDetailedQuiz('1-7')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-7" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> The report compares the current security state to a desired baseline (like NIST or ISO standards) and outlines a pathway forward involving time, money, and equipment. It often uses color-coded tables (Red, Yellow, Green) to show which locations or requirements need the most urgent attention to meet the baseline.
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Q1-8 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">8. Distinguish between technical controls and operational controls, providing an example of each.</div>
+                                                     <button onclick="toggleDetailedQuiz('1-8')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-8" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> Technical controls are implemented through systems and software, such as firewall rules or antivirus programs. Operational controls are implemented through human processes and people, such as hiring security guards or conducting monthly "lunch and learn" awareness programs.
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Q1-9 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">9. How does a digital signature provide both proof of integrity and proof of origin?</div>
+                                                     <button onclick="toggleDetailedQuiz('1-9')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-9" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> A digital signature involves encrypting a hash of the message with the sender's private key; the hash ensures the message content hasn't changed (integrity), while the private key confirms the sender (origin). This creates non-repudiation, as the sender cannot deny their involvement since only they possess the private key required to create that specific signature.
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Q1-10 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">10. Explain the role of fault tolerance and patching in maintaining the "Availability" leg of the CIA Triad.</div>
+                                                     <button onclick="toggleDetailedQuiz('1-10')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                         Reveal Answer Key
+                                                     </button>
+                                                     <div id="detailed-quiz-ans-1-10" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                         <strong>Answer:</strong> Availability ensures systems remain accessible to authorized users at all times. Fault tolerance achieves this by using redundant components that can take over if one fails, while regular patching ensures systems are stable and protected against exploits that could cause downtime.
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <!-- VII. Essays Section -->
+                                         <div id="sg1-sec-7" class="space-y-4 scroll-mt-20">
+                                             <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                 <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VII</span>
+                                                 <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Essay Questions</h4>
+                                             </div>
+                                             <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                 Use these essay prompts to guide your self-study, research, and written reflections on General Security and core pillars:
+                                             </p>
+                                             <div class="space-y-4">
+                                                 <!-- Essay 1 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                     <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 01</span>
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">The Strategic Importance of Change Management</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium mt-1">Discuss how a formal change control process serves as a safeguard for organizational uptime. Analyze the potential consequences of bypassing these procedures in a 24/7 corporate environment.</p>
+                                                 </div>
+                                                 <!-- Essay 2 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                     <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 02</span>
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Implementing the AAA Framework</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium mt-1">Compare and contrast the three components of the AAA framework. Explain how each component contributes to the overall security posture of a network when accessing sensitive file servers.</p>
+                                                 </div>
+                                                 <!-- Essay 3 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                     <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 03</span>
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">The Role of Certificates in Device Authentication</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium mt-1">Examine the process of using a Certificate Authority (CA) to manage device identities. How does a digitally signed device certificate allow a network to verify the "company-owned" status of a laptop located anywhere in the world?</p>
+                                                 </div>
+                                                 <!-- Essay 4 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                     <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 04</span>
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Deception Strategies in Modern Security</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium mt-1">Evaluate the use of honeynets as a defensive tool. Discuss the "race" between security professionals and attackers regarding the complexity of virtualized environments and how these systems disrupt automated attacks.</p>
+                                                 </div>
+                                                 <!-- Essay 5 -->
+                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                     <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 05</span>
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Navigating the CIA Triad</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed font-medium mt-1">Choose a real-world security scenario (e.g., protecting customer financial data) and explain how a security professional would apply the principles of Confidentiality, Integrity, and Availability to secure that data.</p>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <!-- VIII. Glossary Section -->
+                                         <div id="sg1-sec-8" class="space-y-4 scroll-mt-20">
+                                             <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                 <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VIII</span>
+                                                 <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Glossary of Key Terms</h4>
+                                             </div>
+                                             
+                                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">AAA Framework</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A security framework standing for Authentication, Authorization, and Accounting used to manage access and track activity.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Accounting</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The process within AAA that logs system events, including login/logout times and the amount of data sent or received.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Asymmetric Encryption</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A cryptographic method using a pair of keys: a private key known only to the owner and a public key available to anyone.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Authentication</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The process of proving a claimed identity using passwords or other factors.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Authorization</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The process of determining the specific resources or data a verified user is allowed to access.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Backout Plan</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A documented contingency procedure used to revert a system to its original state if a change or update fails.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Baseline</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A standard or goal used in gap analysis, often derived from organizations like NIST or ISO, to measure security progress.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Certificate Authority (CA)</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A device or software responsible for managing and digitally signing certificates within a security infrastructure.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">CIA Triad</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The foundational model of IT security consisting of Confidentiality, Integrity, and Availability.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Compensating Control</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A security control used temporarily to mitigate a risk when the primary control (like a software patch) is unavailable.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Corrective Control</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A security control applied after an event is detected to reverse the impact or restore systems, such as a data backup.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Deterrent Control</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A security control designed to discourage an attacker, such as warning signs or splash screens.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Digital Signature</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A cryptographic tool that provides non-repudiation by proving both the integrity of the data and the identity of the sender.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Gap Analysis</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A study comparing the current security state of an organization to a desired future state or baseline.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Hash</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A short string of text representing a "fingerprint" of data; used to verify that information has not been altered (integrity).</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Honeyfile</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A file containing fake but attractive information used to lure and detect unauthorized users on a network.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Honeynet</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A complex infrastructure of virtualized honeypots (servers, routers, firewalls) designed to look like a real production network.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Honeypot</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A system designed to attract and trap attackers or automated processes to observe their techniques.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Honeytoken</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Traceable, fake data (like API credentials or email addresses) used to identify the source of data leaks.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Managerial Control</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Security controls implemented through administrative policies and procedures.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Non-repudiation</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The assurance that the sender of a message cannot deny having sent it, provided by digital signatures.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Operational Control</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Security controls implemented through human action, such as security guards or training programs.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Performance-Based Questions</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">CompTIA exam questions that require the candidate to perform a task or complete a process rather than selecting a multiple-choice answer.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Physical Control</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Controls that limit physical access to buildings or devices, such as locks, fences, and badge readers.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Sandbox</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A technological "safe space" or duplicate environment used for testing changes without affecting production systems.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Stakeholders</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Individuals or departments impacted by a proposed change who provide input on its timing and implementation.</p>
+                                                 </div>
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block">Technical Control</strong>
+                                                     <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Security controls implemented through operating systems, software, or hardware, such as firewalls.</p>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                    </div>
+
+                                    <div id="study-guide-detailed-card-2" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
                                         <!-- Header -->
                                         <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
                                             <div>
@@ -2460,10 +2982,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q1 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">What is a "collision" in hashing, and why is it problematic?</div>
-                                                    <button onclick="toggleDetailedQuiz(1)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-1')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-1" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-1" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> A collision occurs when two different data inputs result in the exact same hash output. This is problematic because it undermines the integrity of the hash, allowing an attacker to substitute a malicious file for a legitimate one without detection.
                                                     </div>
                                                 </div>
@@ -2471,10 +2993,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q2 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">How does "salting" improve the security of password storage?</div>
-                                                    <button onclick="toggleDetailedQuiz(2)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-2')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-2" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-2" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> Salting adds unique, random data to a password before it is hashed. This ensures that even if two users have the same password, their stored hashes will be different, effectively neutralizing the effectiveness of pre-compiled rainbow tables.
                                                     </div>
                                                 </div>
@@ -2482,10 +3004,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q3 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">Explain the primary difference between a Certificate Revocation List (CRL) and the Online Certificate Status Protocol (OCSP).</div>
-                                                    <button onclick="toggleDetailedQuiz(3)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-3')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-3" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-3" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> A CRL is a large file listing all revoked certificates that a browser must download and search manually, which is inefficient. OCSP is a protocol that allows a browser to query a CA in real-time about the status of a specific certificate, making the process much faster.
                                                     </div>
                                                 </div>
@@ -2493,10 +3015,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q4 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">What is the purpose of a Certificate Signing Request (CSR) in the PKI process?</div>
-                                                    <button onclick="toggleDetailedQuiz(4)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-4')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-4" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-4" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> A CSR is a file created by an organization that includes its public key and identifying information. It is sent to a Certificate Authority, which validates the information and signs the certificate using its private key.
                                                     </div>
                                                 </div>
@@ -2504,10 +3026,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q5 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">How does a Hardware Security Module (HSM) differ from a Trusted Platform Module (TPM)?</div>
-                                                    <button onclick="toggleDetailedQuiz(5)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-5')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-5" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-5" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> A TPM is a chip built into a single device's motherboard to provide localized cryptographic services like BitLocker. An HSM is a centralized, high-performance hardware device designed to manage and protect encryption keys for thousands of devices in a data center.
                                                     </div>
                                                 </div>
@@ -2515,10 +3037,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q6 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">Describe the process of "steganography" and its relationship to security.</div>
-                                                    <button onclick="toggleDetailedQuiz(6)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-6')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-6" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-6" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> Steganography is the practice of hiding data inside another medium, such as an image, audio, or video file. It is considered "security through obscurity" because the data is visible to anyone who knows how to look for it, but otherwise remains hidden in plain sight.
                                                     </div>
                                                 </div>
@@ -2526,10 +3048,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q7 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">How does tokenization protect credit card information during a transaction at a retail store?</div>
-                                                    <button onclick="toggleDetailedQuiz(7)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-7')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-7" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-7" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> In retail, the actual credit card number is replaced by a one-time-use random token. Because the token has no mathematical relationship to the original card number and expires after one use, it is useless to an attacker if captured.
                                                     </div>
                                                 </div>
@@ -2537,10 +3059,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q8 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">What role does a "Secure Enclave" play in modern mobile devices?</div>
-                                                    <button onclick="toggleDetailedQuiz(8)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-8')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-8" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-8" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> The Secure Enclave is a dedicated security processor with its own boot ROM and random number generator. It handles real-time encryption of data in memory and manages cryptographic keys that cannot be accessed by the main CPU.
                                                     </div>
                                                 </div>
@@ -2548,10 +3070,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q9 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">Why is it important for a technician to adhere to the "documented scope" during a change control window?</div>
-                                                    <button onclick="toggleDetailedQuiz(9)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-9')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-9" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-9" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> Adhering to the documented scope ensures that only approved changes are made, preventing unintended consequences or system instability. If a technician makes unauthorized changes during a window, it complicates the troubleshooting process if a failure occurs.
                                                     </div>
                                                 </div>
@@ -2559,10 +3081,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <!-- Q10 -->
                                                 <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
                                                     <div class="text-xs font-black text-purple-950 leading-relaxed">Define an "Advanced Persistent Threat" (APT) and identify which threat actor is most likely to use one.</div>
-                                                    <button onclick="toggleDetailedQuiz(10)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                    <button onclick="toggleDetailedQuiz('2-10')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                         Reveal Answer Key
                                                     </button>
-                                                    <div id="detailed-quiz-ans-10" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                    <div id="detailed-quiz-ans-2-10" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
                                                         <strong>Answer:</strong> An Advanced Persistent Threat is a sophisticated, long-term attack aimed at high-value targets like utilities or military systems. These are typically utilized by nation-state threat actors who have the massive financial and technical resources required to sustain such operations.
                                                     </div>
                                                 </div>
@@ -4743,11 +5265,17 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             titleEl.textContent = "Professor Messer's SY0-701 Training Video " + (deckId === 10 ? "101 to 110" : deckId === 11 ? "111 to 121" : ((deckId - 1) * 10 + 1) + " to " + (deckId * 10));
             keyTermsEl.innerHTML = '';
 
-            if (deckId === 2) {
+            if (deckId === 1) {
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
-                document.getElementById('study-guide-detailed-card').classList.remove('hidden');
+                document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-1').classList.remove('hidden');
+            } else if (deckId === 2) {
+                document.getElementById('study-guide-standard-card').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-2').classList.remove('hidden');
             } else {
-                document.getElementById('study-guide-detailed-card').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
                 document.getElementById('study-guide-standard-card').classList.remove('hidden');
 
                 if (deckId >= 3) {
