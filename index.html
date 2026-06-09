@@ -1502,21 +1502,185 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                         <div id="study-module-content" class="relative z-10">
                             <!-- Flash Cards Module -->
                             <div id="content-flashcards" class="study-module-tab hidden">
-                                <div class="flex flex-col items-center justify-center p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm">
-                                    <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-2">Question 1 of 5</p>
-                                    <div id="demo-flashcard" class="w-full aspect-[1.6] bg-purple-950 text-white rounded-xl flex flex-col items-center justify-center p-6 text-center cursor-pointer select-none transition-all duration-300 transform hover:scale-[1.02] shadow-inner" onclick="toggleFlashcard()">
-                                        <div id="flashcard-front" class="flex flex-col justify-center items-center h-full">
-                                            <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Web Security</p>
-                                            <h4 class="text-lg font-black">What is HSTS?</h4>
-                                            <p class="text-[9px] text-purple-400 mt-4 uppercase">Click card to reveal answer</p>
+                                <!-- Flashcard Deck Selector Screen -->
+                                <div id="flashcard-select-view" class="space-y-6 animate-in fade-in duration-300">
+                                    <div class="text-center max-w-md mx-auto mb-6">
+                                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-1">Select a deck to study</p>
+                                        <h4 class="text-lg font-black text-purple-950">Security+ SY0-701 Study Decks</h4>
+                                        <p class="text-[10px] text-gray-500 italic">Based on Professor Messer's SY0-701 Training Videos</p>
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(1)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 01</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 1 to 10</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">General security concepts, core CIA triad, control types, and security posture frameworks.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
                                         </div>
-                                        <div id="flashcard-back" class="hidden flex flex-col justify-center items-center h-full">
-                                            <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Web Security</p>
-                                            <h4 class="text-xs font-semibold leading-relaxed px-4">HTTP Strict Transport Security (HSTS) is a web security policy mechanism that helps to protect websites against man-in-the-middle attacks such as protocol downgrade attacks and cookie hijacking.</h4>
-                                            <p class="text-[9px] text-purple-400 mt-4 uppercase">Click to view question</p>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(2)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 02</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 11 to 20</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Threat actors, vectors, vulnerabilities, threat feeds, and indicators of compromise.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(3)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 03</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 21 to 30</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Social engineering principles, phishing techniques, impersonation, and tailgating attacks.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(4)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 04</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 31 to 40</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Malware varieties, viruses, ransomware, spyware, Trojans, and hardware rootkits.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(5)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 05</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(6)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 06</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 51 to 60</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authorization and access controls, RBAC, ABAC, ACLs, and privilege management.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(7)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 07</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 61 to 70</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Network security, firewalls, stateful filters, packet routing, and network segments.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(8)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 08</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 71 to 80</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Web security architectures, HTTPS enforcement, HSTS, SSL strips, and web firewalls.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(9)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 09</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 81 to 90</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cryptography paradigms, symmetric vs asymmetric encryption, keys, and algorithms.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(10)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 10</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 101 to 110</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Public Key Infrastructure (PKI), digital certificates, certificate authorities, and trusts.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck Card -->
+                                        <div onclick="startFlashcardDeck(11)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 11</span>
+                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 111 to 121</h5>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Business continuity, disaster recovery plans, backup methodologies, and system redundancy.</p>
+                                            </div>
+                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
+                                                <span>Study Flash Cards</span>
+                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <p class="text-[10px] text-gray-400 mt-4 italic">Tip: Click the card to flip it!</p>
+                                </div>
+                                
+                                <!-- Flashcard Deck Active Screen -->
+                                <div id="flashcard-deck-view" class="hidden space-y-6 animate-in fade-in duration-300">
+                                    <div class="flex items-center gap-3">
+                                        <button onclick="backToFlashcardDecks()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                            ← Back to Decks
+                                        </button>
+                                        <span id="active-deck-title" class="text-xs font-black text-purple-900 uppercase tracking-wider"></span>
+                                    </div>
+
+                                    <div class="flex flex-col items-center justify-center p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm">
+                                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-2">Question 1 of 1</p>
+                                        <div id="demo-flashcard" class="w-full aspect-[1.6] bg-purple-950 text-white rounded-xl flex flex-col items-center justify-center p-6 text-center cursor-pointer select-none transition-all duration-300 transform hover:scale-[1.02] shadow-inner" onclick="toggleFlashcard()">
+                                            <div id="flashcard-front" class="flex flex-col justify-center items-center h-full">
+                                                <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Security+</p>
+                                                <h4 id="flashcard-front-text" class="text-sm font-black px-2"></h4>
+                                                <p class="text-[9px] text-purple-400 mt-4 uppercase">Click card to reveal answer</p>
+                                            </div>
+                                            <div id="flashcard-back" class="hidden flex flex-col justify-center items-center h-full">
+                                                <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Security+</p>
+                                                <h4 id="flashcard-back-text" class="text-xs font-semibold leading-relaxed px-4"></h4>
+                                                <p class="text-[9px] text-purple-400 mt-4 uppercase">Click to view question</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-[10px] text-gray-400 mt-4 italic">Tip: Click the card to flip it!</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -2414,6 +2578,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 target.classList.remove('hidden');
             }
 
+            if (moduleName === 'flashcards') {
+                backToFlashcardDecks();
+            }
+
             // Update the title
             const titleEl = document.getElementById('study-module-title');
             if (titleEl) {
@@ -2431,6 +2599,98 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             setTimeout(() => {
                 displayContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }, 100);
+        }
+
+        const flashcardDecks = {
+            1: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 1 to 10 // General Security",
+                q: "What are the three core principles of the CIA Triad?",
+                a: "Confidentiality (preventing unauthorized access), Integrity (preventing unauthorized modification), and Availability (ensuring uptime for authorized users)."
+            },
+            2: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 11 to 20 // Threats & Vulnerabilities",
+                q: "What is the difference between Threat, Vulnerability, and Risk?",
+                a: "A Vulnerability is a weakness, a Threat is an external danger that can exploit that weakness, and Risk is the probability of a threat exploiting a vulnerability."
+            },
+            3: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 21 to 30 // Social Engineering",
+                q: "What is Social Engineering?",
+                a: "The psychological manipulation of people into performing actions or divulging confidential information (e.g., Phishing, Vishing, Tailgating)."
+            },
+            4: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 31 to 40 // Malware Varieties",
+                q: "Define Malware and its common forms.",
+                a: "Malware (malicious software) includes viruses, worms, trojans, ransomware, spyware, and rootkits designed to cause harm or steal information."
+            },
+            5: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 41 to 50 // Authentication Concepts",
+                q: "What is Multi-Factor Authentication (MFA)?",
+                a: "Access control method requiring 2 or more factors: Something you know (password), Something you have (token), and Something you are (biometrics)."
+            },
+            6: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 51 to 60 // Authorization Controls",
+                q: "What is the difference between RBAC and ACLs?",
+                a: "Access Control Lists (ACLs) specify permissions directly on resources per user, while Role-Based Access Control (RBAC) assigns permissions to roles, and users are assigned to those roles."
+            },
+            7: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 61 to 70 // Network Security",
+                q: "What is a Firewall and how does a Stateful Firewall work?",
+                a: "A firewall filters traffic. Stateful firewalls monitor active connection states to decide whether incoming packets belong to established sessions."
+            },
+            8: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 71 to 80 // Web Security",
+                q: "What is HSTS (HTTP Strict Transport Security)?",
+                a: "A web security policy header that forces browsers to only connect using HTTPS, preventing SSL strip/downgrade attacks."
+            },
+            9: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 81 to 90 // Cryptography",
+                q: "What is the difference between Symmetric and Asymmetric Encryption?",
+                a: "Symmetric uses the same key for encryption/decryption (fast, private). Asymmetric uses a public-private key pair (slower, secure exchange)."
+            },
+            10: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 101 to 110 // PKI",
+                q: "What is a Certificate Authority (CA) in PKI?",
+                a: "A trusted third-party entity that issues digital certificates, binding a public key to an identity to establish trust on the web."
+            },
+            11: {
+                title: "Professor Messer's SY0-701 Security+ Training Video 111 to 121 // Business Continuity",
+                q: "What is Business Continuity Planning (BCP) vs. Disaster Recovery (DR)?",
+                a: "BCP focuses on maintaining business operations during a disruption, while DR focuses on the technical restoration of systems after a disaster."
+            }
+        };
+
+        function startFlashcardDeck(deckId) {
+            const selectView = document.getElementById('flashcard-select-view');
+            const deckView = document.getElementById('flashcard-deck-view');
+            const titleEl = document.getElementById('active-deck-title');
+            const frontText = document.getElementById('flashcard-front-text');
+            const backText = document.getElementById('flashcard-back-text');
+            const frontDiv = document.getElementById('flashcard-front');
+            const backDiv = document.getElementById('flashcard-back');
+
+            if (!selectView || !deckView || !titleEl || !frontText || !backText || !frontDiv || !backDiv) return;
+
+            const deck = flashcardDecks[deckId];
+            if (!deck) return;
+
+            titleEl.textContent = deck.title;
+            frontText.textContent = deck.q;
+            backText.textContent = deck.a;
+
+            frontDiv.classList.remove('hidden');
+            backDiv.classList.add('hidden');
+
+            selectView.classList.add('hidden');
+            deckView.classList.remove('hidden');
+        }
+
+        function backToFlashcardDecks() {
+            const selectView = document.getElementById('flashcard-select-view');
+            const deckView = document.getElementById('flashcard-deck-view');
+            if (selectView && deckView) {
+                selectView.classList.remove('hidden');
+                deckView.classList.add('hidden');
+            }
         }
 
         function closeStudyModule() {
