@@ -1484,6 +1484,18 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                             <div class="mt-6 flex items-center justify-between">
                                 <span class="text-[9px] font-black uppercase tracking-widest text-purple-600">Open Module</span>
                                 <span class="text-purple-600 transform group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+
+                        <!-- Glossary Card -->
+                        <div onclick="selectStudyModule('glossary')" class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="text-3xl mb-4 group-hover:scale-110 transition-transform w-fit">📚</div>
+                                <h3 class="font-black text-purple-950 text-sm uppercase tracking-wider mb-2">Glossary</h3>
+                                <p class="text-xs text-gray-500 leading-relaxed">Comprehensive reference of security terms, encryption standards, and PKI terminology.</p>
+                            </div>
+                            <div class="mt-6 flex items-center justify-between">
+                                <span class="text-[9px] font-black uppercase tracking-widest text-purple-600">Open Module</span>
+                                <span class="text-purple-600 transform group-hover:translate-x-1 transition-transform">→</span>
                             </div>
                         </div>
                     </div>
@@ -3022,8 +3034,101 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- Glossary Module -->
+                            <div id="content-glossary" class="study-module-tab hidden space-y-6 animate-in fade-in duration-300">
+                                <div class="text-center max-w-md mx-auto mb-6">
+                                    <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-1">Interactive Reference</p>
+                                    <h4 class="text-lg font-black text-purple-950">Security+ SY0-701 Glossary</h4>
+                                    <p class="text-[10px] text-gray-500 italic font-medium">Key cryptographic terms and definitions. More terms will be added at a later date.</p>
+                                </div>
+
+                                <!-- Glossary search bar -->
+                                <div class="max-w-md mx-auto mb-6">
+                                    <div class="relative">
+                                        <input type="text" id="glossary-search-input" oninput="filterGlossary()" class="w-full text-xs p-3 pl-10 border border-purple-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 font-medium" placeholder="Search key terms (e.g. AES, PKI)...">
+                                        <span class="absolute left-3 top-3.5 text-xs text-purple-300">🔍</span>
+                                    </div>
+                                </div>
+
+                                <div id="glossary-terms-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <!-- Glossary items -->
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="aes advanced encryption standard symmetric">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">AES (Advanced Encryption Standard)</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A modern, widely-used symmetric encryption algorithm.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="asymmetric encryption cryptographic public key private key decryption">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Asymmetric Encryption</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A cryptographic system using a public key for encryption and a private key for decryption.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="ca certificate authority signs digital certificates verify identity">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CA (Certificate Authority)</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An entity that issues and signs digital certificates to verify the identity of a person or device.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="crl certificate revocation list no longer valid">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CRL (Certificate Revocation List)</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A list maintained by a CA containing certificates that are no longer valid.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="csr certificate signing request applicant CA signed digital certificate">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CSR (Certificate Signing Request)</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A request sent from an applicant to a CA to obtain a signed digital certificate.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="data masking hide sensitive data asterisks">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Data Masking</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A technique used to hide sensitive data by replacing it with characters like asterisks.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="des data encryption standard symmetric five steps aes">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">DES (Data Encryption Standard)</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An older symmetric encryption algorithm with five steps, now largely replaced by AES.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="hsm hardware security module centralized processing key management">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">HSM (Hardware Security Module)</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A centralized hardware device used for high-speed cryptographic processing and key management.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="key stretching strengthen weak keys repeating hashing encryption">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Key Stretching</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A method used to strengthen weak keys by repeating the hashing or encryption process multiple times.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="non-repudiation digital signatures prevents sender denying message">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Non-repudiation</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A security property provided by digital signatures that prevents a sender from denying they sent a message.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="ocsp online certificate status protocol real-time revocation">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">OCSP (Online Certificate Status Protocol)</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A real-time protocol used to check the revocation status of a digital certificate.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="perfect forward secrecy ephemeral keys temporary session keys discarded">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Perfect Forward Secrecy / Ephemeral Keys</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Temporary session keys that are used for a short time and then discarded.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="pki public key infrastructure system hardware software policies certificates">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">PKI (Public Key Infrastructure)</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The entire system of hardware, software, and policies used to manage digital certificates.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="rainbow table pre-compiled list plaintext passwords hashes crack">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Rainbow Table</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A pre-compiled list of plaintext passwords and their corresponding hashes used to quickly crack passwords.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="salt random data plaintext password hashing unique hash">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Salt</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Random data added to a plaintext password before hashing to ensure unique hash outputs.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="symmetric encryption same key both encryption decryption">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Symmetric Encryption</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An encryption method that uses the same key for both encryption and decryption.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="tpm trusted platform module chip motherboard hardware-based security">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">TPM (Trusted Platform Module)</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A specialized chip on a computer's motherboard that provides hardware-based security functions.</p>
+                                    </div>
+                                    <div class="glossary-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-term="x.509 standard format digital certificate information">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">X.509</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The standard format defining the information contained within a digital certificate.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
 
@@ -3838,6 +3943,12 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 backToVisualGuideDecks();
             } else if (moduleName === 'gamefii') {
                 backToGamefiiDecks();
+            } else if (moduleName === 'glossary') {
+                const searchInput = document.getElementById('glossary-search-input');
+                if (searchInput) {
+                    searchInput.value = '';
+                    filterGlossary();
+                }
             }
 
             // Update the title
@@ -3848,7 +3959,8 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     'quiz': '<span>🧠</span> Quiz',
                     'study-guide': '<span>📖</span> Study Guide',
                     'visual-guide': '<span>📊</span> Visual Guide',
-                    'gamefii': '<span>🎮</span> GameFII'
+                    'gamefii': '<span>🎮</span> GameFII',
+                    'glossary': '<span>📚</span> Glossary'
                 };
                 titleEl.innerHTML = titles[moduleName] || 'Study Module';
             }
@@ -4567,6 +4679,21 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             if (el) {
                 el.classList.toggle('hidden');
             }
+        }
+
+        function filterGlossary() {
+            const input = document.getElementById('glossary-search-input');
+            if (!input) return;
+            const filter = input.value.toLowerCase();
+            const cards = document.querySelectorAll('.glossary-item-card');
+            cards.forEach(function(card) {
+                const termText = card.getAttribute('data-term') || '';
+                if (termText.indexOf(filter) > -1) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         }
     </script>
 
