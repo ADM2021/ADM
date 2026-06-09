@@ -2011,7 +2011,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                         <span id="active-study-guide-title" class="text-xs font-black text-purple-900 uppercase tracking-wider"></span>
                                     </div>
 
-                                    <div class="p-6 bg-white border border-purple-100 rounded-2xl max-w-2xl mx-auto shadow-sm space-y-4">
+                                    <div id="study-guide-standard-card" class="p-6 bg-white border border-purple-100 rounded-2xl max-w-2xl mx-auto shadow-sm space-y-4">
                                         <h4 id="guide-section-subtitle" class="font-black text-purple-950 text-sm uppercase tracking-wider border-b border-purple-100 pb-2"></h4>
                                         <p id="guide-section-summary" class="text-xs text-gray-600 leading-relaxed font-medium"></p>
                                         
@@ -2026,6 +2026,674 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             <button onclick="window.print()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">
                                                 🖨️ Print / Save PDF
                                             </button>
+                                        </div>
+                                    </div>
+                                    <div id="study-guide-detailed-card" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
+                                        <!-- Header -->
+                                        <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                            <div>
+                                                <span class="text-[9px] font-black text-purple-500 uppercase tracking-widest block mb-1">Detailed Study Reference</span>
+                                                <h3 class="text-xl font-black text-purple-950 uppercase tracking-wide">Video 1 to 10 Study Guide</h3>
+                                                <p class="text-xs text-gray-500 mt-1">Foundational cryptography, encryption states, PKI, hardware security modules, obfuscation, change controls, and threat profiles.</p>
+                                            </div>
+                                            <div class="flex gap-2 self-start md:self-center">
+                                                <button onclick="window.print()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                                    🖨️ Print Guide
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Sticky Navigation Menu -->
+                                        <div class="sticky top-0 bg-white/95 backdrop-blur-md py-3 border-b border-purple-100 z-20 overflow-x-auto flex gap-2 no-scrollbar scroll-smooth">
+                                            <a href="#det-sec-1" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">I. Foundations</a>
+                                            <a href="#det-sec-2" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">II. Encryption</a>
+                                            <a href="#det-sec-3" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">III. PKI</a>
+                                            <a href="#det-sec-4" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">IV. Hardware</a>
+                                            <a href="#det-sec-5" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">V. Obfuscation</a>
+                                            <a href="#det-sec-6" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VI. Change Mgmt</a>
+                                            <a href="#det-sec-7" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VII. Threat Actors</a>
+                                            <a href="#det-sec-8" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VIII. Quiz</a>
+                                            <a href="#det-sec-9" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">IX. Essays</a>
+                                            <a href="#det-sec-10" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">X. Glossary</a>
+                                        </div>
+
+                                        <!-- CONTENT SECTIONS -->
+
+                                        <!-- I. Cryptographic Foundations -->
+                                        <div id="det-sec-1" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">I</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Cryptographic Foundations: Hashing & Digital Signatures</h4>
+                                            </div>
+                                            
+                                            <!-- Hashing -->
+                                            <div class="p-6 bg-purple-50/20 border border-purple-100/50 rounded-2xl space-y-4">
+                                                <h5 class="text-xs font-black text-purple-900 uppercase tracking-wider">Hashing</h5>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    A cryptographic hash is a <strong>"digital fingerprint"</strong> or message digest that represents data as a short, fixed-length string of text. Hashing is a <strong>one-way process</strong>; the original data cannot be recreated from the hash.
+                                                </p>
+                                                
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                                                    <!-- Integrity -->
+                                                    <div class="p-4 bg-white border border-purple-100 rounded-xl space-y-1">
+                                                        <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest">Core Purpose</span>
+                                                        <h6 class="text-xs font-bold text-purple-900">Integrity</h6>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">
+                                                            Verifies that data has not been altered. Even a single character change (e.g., changing a period to an exclamation mark) results in a drastically different hash (the avalanche effect).
+                                                        </p>
+                                                    </div>
+                                                    <!-- Algorithms -->
+                                                    <div class="p-4 bg-white border border-purple-100 rounded-xl space-y-1">
+                                                        <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest">Popular Algorithms</span>
+                                                        <h6 class="text-xs font-bold text-purple-900 font-medium">SHA-256 vs MD5</h6>
+                                                        <ul class="list-disc pl-4 text-[11px] text-gray-500 space-y-1 font-medium">
+                                                            <li><strong>SHA256:</strong> Produces 256 bits of information, represented as 64 hexadecimal characters. Common standard.</li>
+                                                            <li><strong>MD5:</strong> Older algorithm, no longer recommended due to <em>collisions</em> (vulnerabilities where different inputs yield matching hashes).</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Practical Applications -->
+                                                <div class="p-4 bg-white border border-purple-100 rounded-xl space-y-2">
+                                                    <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Practical Applications</span>
+                                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                        <div class="space-y-1">
+                                                            <h6 class="text-[11px] font-bold text-purple-900">File Verification</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Comparing a downloaded file's hash to the one posted on the source website to confirm it was not tampered with.</p>
+                                                        </div>
+                                                        <div class="space-y-1">
+                                                            <h6 class="text-[11px] font-bold text-purple-900 font-medium">Password Storage</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Storing password hashes instead of plaintext in databases. A compromised database does not reveal original passwords directly.</p>
+                                                        </div>
+                                                        <div class="space-y-1">
+                                                            <h6 class="text-[11px] font-bold text-purple-900 font-medium">Salting</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed font-medium">Adding unique, random data to a password before hashing to neutralize rainbow table attacks (pre-compiled hash lists).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Digital Signatures -->
+                                            <div class="p-6 bg-purple-50/20 border border-purple-100/50 rounded-2xl space-y-3">
+                                                <h5 class="text-xs font-black text-purple-900 uppercase tracking-wider">Digital Signatures</h5>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    Digital signatures provide three key security benefits: <strong>Authentication</strong>, <strong>Non-repudiation</strong>, and <strong>Integrity</strong>.
+                                                </p>
+                                                <div class="p-4 bg-white border border-purple-100 rounded-xl space-y-2">
+                                                    <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">How It Works (Process Flow)</span>
+                                                    <ol class="list-decimal pl-4 text-[11px] text-gray-500 space-y-2 font-medium">
+                                                        <li>The <strong>sender</strong> hashes the plaintext document.</li>
+                                                        <li>The sender encrypts this hash using their own <strong>private key</strong>. This encrypted hash is the digital signature.</li>
+                                                        <li>The <strong>receiver</strong> decrypts the signature using the sender's <strong>public key</strong> to retrieve the hash.</li>
+                                                        <li>The receiver calculates a local hash of the received document and compares it to the decrypted hash.</li>
+                                                        <li>If the hashes match, the document's authenticity and integrity are verified, and the sender cannot deny sending it.</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- II. Encryption Technologies and Key Management -->
+                                        <div id="det-sec-2" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">II</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Encryption Technologies & Key Management</h4>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <!-- Encryption States -->
+                                                <div class="p-6 bg-purple-50/20 border border-purple-100/50 rounded-2xl space-y-4">
+                                                    <h5 class="text-xs font-black text-purple-900 uppercase tracking-wider">Encryption States</h5>
+                                                    
+                                                    <div class="space-y-3">
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Data at Rest</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed mt-1 font-medium">Protected using full disk encryption like <strong>BitLocker</strong> (Windows) or <strong>FileVault</strong> (macOS), or file-level encryption like EFS (Windows).</p>
+                                                        </div>
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Data in Transit</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed mt-1 font-medium">Secured using HTTPS (SSL/TLS) for web traffic or VPNs. Site-to-site VPNs often use <strong>IPsec</strong>, while client-based VPNs use <strong>SSL/TLS</strong>.</p>
+                                                        </div>
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Database Encryption</h6>
+                                                            <ul class="list-disc pl-4 text-[10px] text-gray-500 mt-1 space-y-1 font-medium">
+                                                                <li><strong>Transparent Encryption:</strong> Uses a symmetric key to encrypt the entire database file on disk.</li>
+                                                                <li><strong>Column-level Encryption:</strong> Encrypts specific sensitive fields (e.g., SSN, credit cards) to minimize processing overhead.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Algorithms and Keys -->
+                                                <div class="p-6 bg-purple-50/20 border border-purple-100/50 rounded-2xl space-y-4">
+                                                    <h5 class="text-xs font-black text-purple-900 uppercase tracking-wider">Algorithms & Keys</h5>
+                                                    <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                        Encryption relies on public, well-known algorithms (like AES or DES), while security is maintained strictly through the secrecy of the key.
+                                                    </p>
+                                                    
+                                                    <div class="space-y-3">
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Symmetric vs Asymmetric</h6>
+                                                            <ul class="list-disc pl-4 text-[10px] text-gray-500 mt-1 space-y-1 font-medium">
+                                                                <li><strong>Symmetric:</strong> Single shared key for both encryption and decryption. Fast, but hard to distribute securely at scale.</li>
+                                                                <li><strong>Asymmetric:</strong> Public/private key pair. Public key encrypts, private key decrypts. Scales easily, but slower.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Key Exchange Methods</h6>
+                                                            <ul class="list-disc pl-4 text-[10px] text-gray-500 mt-1 space-y-1 font-medium">
+                                                                <li><strong>Out-of-band:</strong> Exchanging keys via an external, non-network medium (e.g., phone, courier).</li>
+                                                                <li><strong>In-band:</strong> Exchanging keys over the network, using asymmetric encryption to protect a session key.</li>
+                                                                <li><strong>Key Exchange Algorithms:</strong> Dynamically building matching symmetric keys on both sides without sending the key itself.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Key Stretching</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed mt-1 font-medium">Hashing or encrypting a key multiple times (e.g., PBKDF2 or bcrypt) to slow down brute-force attacks.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- III. Public Key Infrastructure (PKI) and Certificates -->
+                                        <div id="det-sec-3" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">III</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Public Key Infrastructure (PKI) & Certificates</h4>
+                                            </div>
+
+                                            <div class="p-6 bg-purple-50/20 border border-purple-100/50 rounded-2xl space-y-4">
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    PKI encompasses the policies, hardware, software, and procedures used to manage, distribute, and revoke digital certificates.
+                                                </p>
+
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    <!-- Digital Certificates -->
+                                                    <div class="p-4 bg-white border border-purple-100 rounded-xl space-y-2">
+                                                        <h5 class="text-xs font-black text-purple-900 uppercase tracking-wider">Digital Certificates</h5>
+                                                        <ul class="list-disc pl-4 text-[11px] text-gray-500 space-y-1.5 font-medium">
+                                                            <li><strong>Standard Format:</strong> <strong>X.509</strong> is the global standard format for digital certificates.</li>
+                                                            <li><strong>Certificate Authority (CA):</strong> A trusted third party that validates identities and cryptographically signs certificates.</li>
+                                                            <li><strong>CSR (Certificate Signing Request):</strong> The initial file created by an applicant (containing their public key and identification details) sent to a CA to request a signed certificate.</li>
+                                                            <li><strong>Wildcard Certificates:</strong> Uses an asterisk (e.g., <code>*.domain.com</code>) to secure a main domain and all its subdomains.</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <!-- Trust Models & Revocation -->
+                                                    <div class="p-4 bg-white border border-purple-100 rounded-xl space-y-2">
+                                                        <h5 class="text-xs font-black text-purple-900 uppercase tracking-wider">Trust Models & Revocation</h5>
+                                                        <ul class="list-disc pl-4 text-[11px] text-gray-500 space-y-1.5 font-medium">
+                                                            <li><strong>Root of Trust:</strong> An inherently trusted anchor (software, hardware, or firmware) used to validate other elements in the trust chain.</li>
+                                                            <li><strong>Web of Trust:</strong> An alternative decentralized model where individuals sign each other's certificates.</li>
+                                                            <li><strong>CRL (Certificate Revocation List):</strong> A list of revoked certificates maintained by the CA. Browsers download this file periodically.</li>
+                                                            <li><strong>OCSP (Online Certificate Status Protocol):</strong> A real-time protocol allowing browsers to query the CA about a single certificate's status.</li>
+                                                            <li><strong>OCSP Stapling:</strong> The web server "staples" a time-stamped, CA-signed OCSP response directly into the SSL handshake, reducing traffic to the CA.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- IV. Cryptographic Hardware -->
+                                        <div id="det-sec-4" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">IV</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Cryptographic Hardware</h4>
+                                            </div>
+
+                                            <div class="overflow-x-auto border border-purple-100 rounded-2xl shadow-sm">
+                                                <table class="w-full text-left text-xs border-collapse">
+                                                    <thead>
+                                                        <tr class="bg-purple-900 text-white font-black uppercase tracking-wider text-[10px]">
+                                                            <th class="p-4">Hardware Type</th>
+                                                            <th class="p-4">Core Function</th>
+                                                            <th class="p-4">Key Use Case</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-purple-100 text-gray-600 font-medium">
+                                                        <tr class="hover:bg-purple-50/30 transition-colors">
+                                                            <td class="p-4 font-black text-purple-950">TPM (Trusted Platform Module)</td>
+                                                            <td class="p-4">A dedicated security chip embedded on a motherboard providing local cryptographic operations.</td>
+                                                            <td class="p-4">Full-disk encryption (e.g., Windows BitLocker), secure boot validations, and secure local key storage.</td>
+                                                        </tr>
+                                                        <tr class="hover:bg-purple-50/30 transition-colors bg-purple-50/10 font-medium">
+                                                            <td class="p-4 font-black text-purple-950">HSM (Hardware Security Module)</td>
+                                                            <td class="p-4">A high-performance physical device or plug-in card for large-scale enterprise cryptography.</td>
+                                                            <td class="p-4">Managing, storing, and generating keys for thousands of SSL web servers in an enterprise datacenter; offers high-availability.</td>
+                                                        </tr>
+                                                        <tr class="hover:bg-purple-50/30 transition-colors">
+                                                            <td class="p-4 font-black text-purple-950">Secure Enclave</td>
+                                                            <td class="p-4">A dedicated co-processor built directly into modern CPU architectures, isolated from the main processor.</td>
+                                                            <td class="p-4">Managing the device boot ROM, real-time memory encryption, and hardware-based AES on mobile devices (e.g. Apple FaceID/TouchID).</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <!-- V. Obfuscation and Data Privacy -->
+                                        <div id="det-sec-5" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">V</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Obfuscation & Data Privacy</h4>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                <!-- Steganography -->
+                                                <div class="p-5 bg-purple-50/20 border border-purple-100/50 rounded-2xl space-y-2">
+                                                    <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Concealed Writing</span>
+                                                    <h5 class="text-xs font-black text-purple-900 uppercase tracking-wider">Steganography</h5>
+                                                    <p class="text-[11px] text-gray-500 leading-relaxed font-medium">
+                                                        Hiding data within another medium, such as an image, audio, or video file. The data is hidden in plain sight, relying on "security through obscurity."
+                                                    </p>
+                                                </div>
+                                                <!-- Tokenization -->
+                                                <div class="p-5 bg-purple-50/20 border border-purple-100/50 rounded-2xl space-y-2">
+                                                    <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Data Replacement</span>
+                                                    <h5 class="text-xs font-black text-purple-900 uppercase tracking-wider">Tokenization</h5>
+                                                    <p class="text-[11px] text-gray-500 leading-relaxed font-medium">
+                                                        Replacing sensitive data (e.g., credit card numbers) with a non-mathematical random "token". Highly used in secure mobile payments (Apple Pay / Google Pay).
+                                                    </p>
+                                                </div>
+                                                <!-- Data Masking -->
+                                                <div class="p-5 bg-purple-50/20 border border-purple-100/50 rounded-2xl space-y-2">
+                                                    <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Visual Redacting</span>
+                                                    <h5 class="text-xs font-black text-purple-900 uppercase tracking-wider">Data Masking</h5>
+                                                    <p class="text-[11px] text-gray-500 leading-relaxed font-medium">
+                                                        Hiding parts of a data string visually (e.g., masking the first twelve digits of a credit card with asterisks: <code>**** **** **** 1234</code> on a customer receipt).
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- VI. Technical Change Management -->
+                                        <div id="det-sec-6" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VI</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Technical Change Management</h4>
+                                            </div>
+
+                                            <div class="p-6 bg-purple-50/20 border border-purple-100/50 rounded-2xl space-y-4 font-medium">
+                                                <p class="text-xs text-gray-600 leading-relaxed">
+                                                    Effective IT operations require structured, documented processes for technical modifications to preserve system stability and security posture.
+                                                </p>
+
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    <div class="space-y-3">
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Change Control Scope</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed mt-1">Technicians must strictly adhere to the documented scope approved by a change control board. Unapproved deviations can destabilize systems.</p>
+                                                        </div>
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Downtime Management</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed mt-1">Changes are scheduled for off-peak/non-production hours. High-availability systems use clustering or secondary environments to swap traffic seamlessly during updates.</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-y-3">
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Dependencies & Rollbacks</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed mt-1">Modifications must map secondary services (e.g. updating a firewall's rules before updating applications). Version control of configurations allows easy reversals if issues arise.</p>
+                                                        </div>
+                                                        <div class="p-3 bg-white border border-purple-100 rounded-xl">
+                                                            <h6 class="text-[11px] font-bold text-purple-950">Legacy Systems</h6>
+                                                            <p class="text-[10px] text-gray-500 leading-relaxed mt-1">Older, unsupported systems that are poorly understood but critical to operations require special isolation and protection controls during change windows.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- VII. Threat Actor Profiles -->
+                                        <div id="det-sec-7" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VII</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Threat Actor Profiles</h4>
+                                            </div>
+
+                                            <div class="overflow-x-auto border border-purple-100 rounded-2xl shadow-sm bg-white p-2">
+                                                <table class="w-full text-left text-xs border-collapse">
+                                                    <thead>
+                                                        <tr class="border-b border-purple-100 text-purple-950 font-bold text-[11px]">
+                                                            <th class="p-4">Actor</th>
+                                                            <th class="p-4">Location</th>
+                                                            <th class="p-4">Sophistication</th>
+                                                            <th class="p-4">Motivation</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-purple-50 text-gray-700 font-medium">
+                                                        <tr class="hover:bg-purple-50/30 transition-colors">
+                                                            <td class="p-4 font-bold text-purple-950">Nation State</td>
+                                                            <td class="p-4">External</td>
+                                                            <td class="p-4">Very High</td>
+                                                            <td class="p-4 leading-relaxed">National security, espionage, war, service disruption. Often use APTs.</td>
+                                                        </tr>
+                                                        <tr class="hover:bg-purple-50/30 transition-colors">
+                                                            <td class="p-4 font-bold text-purple-950">Unskilled</td>
+                                                            <td class="p-4">Both</td>
+                                                            <td class="p-4">Low</td>
+                                                            <td class="p-4 leading-relaxed">"Script kiddies" motivated by the challenge or disruption using public tools.</td>
+                                                        </tr>
+                                                        <tr class="hover:bg-purple-50/30 transition-colors">
+                                                            <td class="p-4 font-bold text-purple-950">Hacktivist</td>
+                                                            <td class="p-4">External</td>
+                                                            <td class="p-4">High</td>
+                                                            <td class="p-4 leading-relaxed">Political or philosophical goals; website defacement or document leaks.</td>
+                                                        </tr>
+                                                        <tr class="hover:bg-purple-50/30 transition-colors">
+                                                            <td class="p-4 font-bold text-purple-950">Insider Threat</td>
+                                                            <td class="p-4">Internal</td>
+                                                            <td class="p-4">Medium</td>
+                                                            <td class="p-4 leading-relaxed">Revenge or financial gain; circumvent internal security controls.</td>
+                                                        </tr>
+                                                        <tr class="hover:bg-purple-50/30 transition-colors">
+                                                            <td class="p-4 font-bold text-purple-950">Organized Crime</td>
+                                                            <td class="p-4">External</td>
+                                                            <td class="p-4">High</td>
+                                                            <td class="p-4 leading-relaxed">Financial profit; structured like a corporation (hacking, sales, support).</td>
+                                                        </tr>
+                                                        <tr class="hover:bg-purple-50/30 transition-colors">
+                                                            <td class="p-4 font-bold text-purple-950">Shadow IT</td>
+                                                            <td class="p-4">Internal</td>
+                                                            <td class="p-4">Varies</td>
+                                                            <td class="p-4 leading-relaxed">Bypassing IT policies to implement their own unmanaged solutions/cloud services.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <!-- VIII. Interactive Quiz -->
+                                        <div id="det-sec-8" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VIII</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Interactive Quiz: Understanding Cryptography & Security</h4>
+                                            </div>
+                                            <p class="text-xs text-gray-500">Test your understanding. Read each question and click the button to show the answer key and detailed explanation.</p>
+
+                                            <div class="space-y-3">
+                                                <!-- Q1 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">What is a "collision" in hashing, and why is it problematic?</div>
+                                                    <button onclick="toggleDetailedQuiz(1)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-1" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> A collision occurs when two different data inputs result in the exact same hash output. This is problematic because it undermines the integrity of the hash, allowing an attacker to substitute a malicious file for a legitimate one without detection.
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Q2 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">How does "salting" improve the security of password storage?</div>
+                                                    <button onclick="toggleDetailedQuiz(2)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-2" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> Salting adds unique, random data to a password before it is hashed. This ensures that even if two users have the same password, their stored hashes will be different, effectively neutralizing the effectiveness of pre-compiled rainbow tables.
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q3 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">Explain the primary difference between a Certificate Revocation List (CRL) and the Online Certificate Status Protocol (OCSP).</div>
+                                                    <button onclick="toggleDetailedQuiz(3)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-3" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> A CRL is a large file listing all revoked certificates that a browser must download and search manually, which is inefficient. OCSP is a protocol that allows a browser to query a CA in real-time about the status of a specific certificate, making the process much faster.
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q4 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">What is the purpose of a Certificate Signing Request (CSR) in the PKI process?</div>
+                                                    <button onclick="toggleDetailedQuiz(4)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-4" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> A CSR is a file created by an organization that includes its public key and identifying information. It is sent to a Certificate Authority, which validates the information and signs the certificate using its private key.
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q5 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">How does a Hardware Security Module (HSM) differ from a Trusted Platform Module (TPM)?</div>
+                                                    <button onclick="toggleDetailedQuiz(5)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-5" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> A TPM is a chip built into a single device's motherboard to provide localized cryptographic services like BitLocker. An HSM is a centralized, high-performance hardware device designed to manage and protect encryption keys for thousands of devices in a data center.
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q6 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">Describe the process of "steganography" and its relationship to security.</div>
+                                                    <button onclick="toggleDetailedQuiz(6)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-6" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> Steganography is the practice of hiding data inside another medium, such as an image, audio, or video file. It is considered "security through obscurity" because the data is visible to anyone who knows how to look for it, but otherwise remains hidden in plain sight.
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q7 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">How does tokenization protect credit card information during a transaction at a retail store?</div>
+                                                    <button onclick="toggleDetailedQuiz(7)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-7" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> In retail, the actual credit card number is replaced by a one-time-use random token. Because the token has no mathematical relationship to the original card number and expires after one use, it is useless to an attacker if captured.
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q8 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">What role does a "Secure Enclave" play in modern mobile devices?</div>
+                                                    <button onclick="toggleDetailedQuiz(8)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-8" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> The Secure Enclave is a dedicated security processor with its own boot ROM and random number generator. It handles real-time encryption of data in memory and manages cryptographic keys that cannot be accessed by the main CPU.
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q9 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">Why is it important for a technician to adhere to the "documented scope" during a change control window?</div>
+                                                    <button onclick="toggleDetailedQuiz(9)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-9" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> Adhering to the documented scope ensures that only approved changes are made, preventing unintended consequences or system instability. If a technician makes unauthorized changes during a window, it complicates the troubleshooting process if a failure occurs.
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q10 -->
+                                                <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                    <div class="text-xs font-black text-purple-950 leading-relaxed">Define an "Advanced Persistent Threat" (APT) and identify which threat actor is most likely to use one.</div>
+                                                    <button onclick="toggleDetailedQuiz(10)" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                        Reveal Answer Key
+                                                    </button>
+                                                    <div id="detailed-quiz-ans-10" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                        <strong>Answer:</strong> An Advanced Persistent Threat is a sophisticated, long-term attack aimed at high-value targets like utilities or military systems. These are typically utilized by nation-state threat actors who have the massive financial and technical resources required to sustain such operations.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- IX. Essay Questions -->
+                                        <div id="det-sec-9" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">IX</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Essay Prompts (Self-Guided Reflection)</h4>
+                                            </div>
+                                            <p class="text-xs text-gray-500">Write down your detailed responses. Your answers are stored locally to allow for continuous review.</p>
+
+                                            <div class="space-y-4">
+                                                <!-- Essay 1 -->
+                                                <div class="p-6 border border-purple-100 rounded-2xl bg-white space-y-3 shadow-sm">
+                                                    <p class="text-xs font-black text-purple-950 leading-relaxed">Essay 1: Analyze the role of Blockchain as a distributed ledger. Discuss how the distribution of the ledger and the use of hashing ensure the integrity and transparency of transactions.</p>
+                                                    <textarea id="essay-ans-1" rows="4" class="w-full text-xs p-3 border border-purple-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 font-medium" placeholder="Write your analysis here..."></textarea>
+                                                    <div class="flex justify-between items-center">
+                                                        <button onclick="saveEssayNotes(1)" class="text-[9px] font-black uppercase tracking-widest text-white bg-purple-900 hover:bg-purple-800 px-4 py-2 rounded-full shadow-sm transition-colors">
+                                                            Save Notes
+                                                        </button>
+                                                        <span id="essay-save-status-1" class="text-[9px] font-bold text-green-600 hidden">✓ Saved to storage</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Essay 2 -->
+                                                <div class="p-6 border border-purple-100 rounded-2xl bg-white space-y-3 shadow-sm">
+                                                    <p class="text-xs font-black text-purple-950 leading-relaxed">Essay 2: Compare and contrast Symmetric and Asymmetric encryption. Focus on their mathematical foundations, scalability in large organizations, and how they are often used together in modern protocols like HTTPS.</p>
+                                                    <textarea id="essay-ans-2" rows="4" class="w-full text-xs p-3 border border-purple-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 font-medium" placeholder="Write your analysis here..."></textarea>
+                                                    <div class="flex justify-between items-center">
+                                                        <button onclick="saveEssayNotes(2)" class="text-[9px] font-black uppercase tracking-widest text-white bg-purple-900 hover:bg-purple-800 px-4 py-2 rounded-full shadow-sm transition-colors">
+                                                            Save Notes
+                                                        </button>
+                                                        <span id="essay-save-status-2" class="text-[9px] font-bold text-green-600 hidden">✓ Saved to storage</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Essay 3 -->
+                                                <div class="p-6 border border-purple-100 rounded-2xl bg-white space-y-3 shadow-sm">
+                                                    <p class="text-xs font-black text-purple-950 leading-relaxed">Essay 3: Evaluate the risks associated with "Shadow IT" and "Legacy Systems." Discuss why these present unique challenges to IT departments and how technical change management can mitigate these risks.</p>
+                                                    <textarea id="essay-ans-3" rows="4" class="w-full text-xs p-3 border border-purple-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 font-medium" placeholder="Write your analysis here..."></textarea>
+                                                    <div class="flex justify-between items-center">
+                                                        <button onclick="saveEssayNotes(3)" class="text-[9px] font-black uppercase tracking-widest text-white bg-purple-900 hover:bg-purple-800 px-4 py-2 rounded-full shadow-sm transition-colors">
+                                                            Save Notes
+                                                        </button>
+                                                        <span id="essay-save-status-3" class="text-[9px] font-bold text-green-600 hidden">✓ Saved to storage</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Essay 4 -->
+                                                <div class="p-6 border border-purple-100 rounded-2xl bg-white space-y-3 shadow-sm">
+                                                    <p class="text-xs font-black text-purple-950 leading-relaxed">Essay 4: Discuss the importance of the "Root of Trust" in modern computing. How do components like firmware, Secure Enclaves, and CAs work together to establish a baseline of security for a device?</p>
+                                                    <textarea id="essay-ans-4" rows="4" class="w-full text-xs p-3 border border-purple-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 font-medium" placeholder="Write your analysis here..."></textarea>
+                                                    <div class="flex justify-between items-center">
+                                                        <button onclick="saveEssayNotes(4)" class="text-[9px] font-black uppercase tracking-widest text-white bg-purple-900 hover:bg-purple-800 px-4 py-2 rounded-full shadow-sm transition-colors">
+                                                            Save Notes
+                                                        </button>
+                                                        <span id="essay-save-status-4" class="text-[9px] font-bold text-green-600 hidden">✓ Saved to storage</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Essay 5 -->
+                                                <div class="p-6 border border-purple-100 rounded-2xl bg-white space-y-3 shadow-sm">
+                                                    <p class="text-xs font-black text-purple-950 leading-relaxed">Essay 5: Examine the motivations and resource levels of different Threat Actors. How does understanding whether an attacker is a Hacktivist, Organized Crime group, or Nation State influence an organization’s security strategy?</p>
+                                                    <textarea id="essay-ans-5" rows="4" class="w-full text-xs p-3 border border-purple-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 font-medium" placeholder="Write your analysis here..."></textarea>
+                                                    <div class="flex justify-between items-center">
+                                                        <button onclick="saveEssayNotes(5)" class="text-[9px] font-black uppercase tracking-widest text-white bg-purple-900 hover:bg-purple-800 px-4 py-2 rounded-full shadow-sm transition-colors">
+                                                            Save Notes
+                                                        </button>
+                                                        <span id="essay-save-status-5" class="text-[9px] font-bold text-green-600 hidden">✓ Saved to storage</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- X. Glossary of Key Terms -->
+                                        <div id="det-sec-10" class="space-y-4 scroll-mt-20">
+                                            <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">X</span>
+                                                <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Glossary of Key Terms</h4>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <!-- AES -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">AES (Advanced Encryption Standard)</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A modern, widely-used symmetric encryption algorithm characterized by speed and high efficiency.</p>
+                                                </div>
+                                                <!-- Asymmetric Encryption -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">Asymmetric Encryption</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A cryptographic system using a public key for encryption and a mathematically linked private key for decryption.</p>
+                                                </div>
+                                                <!-- CA -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">CA (Certificate Authority)</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An entity that issues and signs digital certificates to verify the identity of a person, service, or device.</p>
+                                                </div>
+                                                <!-- CRL -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">CRL (Certificate Revocation List)</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A list maintained by a CA containing serial numbers of certificates that are no longer valid.</p>
+                                                </div>
+                                                <!-- CSR -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">CSR (Certificate Signing Request)</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A request sent from an applicant to a CA to obtain a signed digital certificate.</p>
+                                                </div>
+                                                <!-- Data Masking -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">Data Masking</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A technique used to hide sensitive data visually by replacing it with characters like asterisks or Xs.</p>
+                                                </div>
+                                                <!-- DES -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">DES (Data Encryption Standard)</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An older symmetric encryption algorithm with 56-bit keys, now largely deprecated and replaced by AES.</p>
+                                                </div>
+                                                <!-- HSM -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">HSM (Hardware Security Module)</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A centralized hardware device used for high-speed cryptographic processing and key management.</p>
+                                                </div>
+                                                <!-- Key Stretching -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">Key Stretching</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A method used to strengthen weak keys by repeating the hashing or encryption process multiple times.</p>
+                                                </div>
+                                                <!-- Non-repudiation -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">Non-repudiation</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A security property (typically via digital signatures) that prevents a sender from denying they sent a message.</p>
+                                                </div>
+                                                <!-- OCSP -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">OCSP (Online Certificate Status Protocol)</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A real-time protocol used to check the revocation status of a digital certificate dynamically.</p>
+                                                </div>
+                                                <!-- Perfect Forward Secrecy -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">Perfect Forward Secrecy / Ephemeral Keys</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Temporary session keys that are generated dynamically for a single session and then immediately discarded.</p>
+                                                </div>
+                                                <!-- PKI -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">PKI (Public Key Infrastructure)</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The entire framework of hardware, software, roles, and policies used to manage digital certificates.</p>
+                                                </div>
+                                                <!-- Rainbow Table -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">Rainbow Table</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A pre-compiled list of plaintext passwords and their corresponding hashes, used to crack passwords rapidly.</p>
+                                                </div>
+                                                <!-- Salt -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">Salt</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Random data added to a plaintext password before hashing to ensure identical passwords produce unique hashes.</p>
+                                                </div>
+                                                <!-- Symmetric Encryption -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">Symmetric Encryption</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An encryption method that uses the exact same key for both encryption and decryption operations.</p>
+                                                </div>
+                                                <!-- TPM -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">TPM (Trusted Platform Module)</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A hardware chip embedded on a computer's motherboard providing cryptographic security functions locally.</p>
+                                                </div>
+                                                <!-- X.509 -->
+                                                <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                    <strong class="text-xs text-purple-950 uppercase tracking-wide block">X.509</strong>
+                                                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The global standard format defining the structure and fields contained within a digital certificate.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -3760,33 +4428,42 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             titleEl.textContent = "Professor Messer's SY0-701 Training Video " + (deckId === 10 ? "101 to 110" : deckId === 11 ? "111 to 121" : ((deckId - 1) * 10 + 1) + " to " + (deckId * 10));
             keyTermsEl.innerHTML = '';
 
-            if (deckId >= 3) {
-                subtitleEl.textContent = "📚 " + deck.title + " // Coming Soon";
-                summaryEl.textContent = "This study reference guide is currently under construction. Please check back later!";
-                const li = document.createElement('li');
-                li.className = "leading-relaxed italic text-gray-400";
-                li.textContent = "Content coming soon...";
-                keyTermsEl.appendChild(li);
+            if (deckId === 1) {
+                document.getElementById('study-guide-standard-card').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card').classList.remove('hidden');
+                loadEssayNotes();
             } else {
-                subtitleEl.textContent = "📚 " + deck.title + " // " + deck.subtitle;
-                summaryEl.textContent = deck.summary;
+                document.getElementById('study-guide-detailed-card').classList.add('hidden');
+                document.getElementById('study-guide-standard-card').classList.remove('hidden');
 
-                deck.terms.forEach(term => {
+                if (deckId >= 3) {
+                    subtitleEl.textContent = "📚 " + deck.title + " // Coming Soon";
+                    summaryEl.textContent = "This study reference guide is currently under construction. Please check back later!";
                     const li = document.createElement('li');
-                    li.className = "leading-relaxed";
-                    
-                    const parts = term.split(':');
-                    if (parts.length > 1) {
-                        const boldSpan = document.createElement('strong');
-                        boldSpan.className = "text-purple-900";
-                        boldSpan.textContent = parts[0] + ":";
-                        li.appendChild(boldSpan);
-                        li.appendChild(document.createTextNode(parts.slice(1).join(':')));
-                    } else {
-                        li.textContent = term;
-                    }
+                    li.className = "leading-relaxed italic text-gray-400";
+                    li.textContent = "Content coming soon...";
                     keyTermsEl.appendChild(li);
-                });
+                } else {
+                    subtitleEl.textContent = "📚 " + deck.title + " // " + deck.subtitle;
+                    summaryEl.textContent = deck.summary;
+
+                    deck.terms.forEach(term => {
+                        const li = document.createElement('li');
+                        li.className = "leading-relaxed";
+                        
+                        const parts = term.split(':');
+                        if (parts.length > 1) {
+                            const boldSpan = document.createElement('strong');
+                            boldSpan.className = "text-purple-900";
+                            boldSpan.textContent = parts[0] + ":";
+                            li.appendChild(boldSpan);
+                            li.appendChild(document.createTextNode(parts.slice(1).join(':')));
+                        } else {
+                            li.textContent = term;
+                        }
+                        keyTermsEl.appendChild(li);
+                    });
+                }
             }
 
             selectView.classList.add('hidden');
@@ -3913,6 +4590,35 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             if (selectView && deckView) {
                 selectView.classList.remove('hidden');
                 deckView.classList.add('hidden');
+            }
+        }
+
+        function toggleDetailedQuiz(idx) {
+            const el = document.getElementById('detailed-quiz-ans-' + idx);
+            if (el) {
+                el.classList.toggle('hidden');
+            }
+        }
+
+        function saveEssayNotes(idx) {
+            const txt = document.getElementById('essay-ans-' + idx).value;
+            localStorage.setItem('sy0701_essay_' + idx, txt);
+            const status = document.getElementById('essay-save-status-' + idx);
+            if (status) {
+                status.classList.remove('hidden');
+                setTimeout(function() {
+                    status.classList.add('hidden');
+                }, 2000);
+            }
+        }
+
+        function loadEssayNotes() {
+            for (let i = 1; i <= 5; i++) {
+                const txt = localStorage.getItem('sy0701_essay_' + i);
+                const el = document.getElementById('essay-ans-' + i);
+                if (el && txt) {
+                    el.value = txt;
+                }
             }
         }
     </script>
