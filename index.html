@@ -3620,8 +3620,13 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             if (!deck) return;
 
             titleEl.textContent = deck.title;
-            frontText.textContent = deck.q;
-            backText.textContent = deck.a;
+            if (deckId >= 3) {
+                frontText.textContent = "Flashcard deck content coming soon!";
+                backText.textContent = "Under Construction // Please check back later.";
+            } else {
+                frontText.textContent = deck.q;
+                backText.textContent = deck.a;
+            }
 
             frontDiv.classList.remove('hidden');
             backDiv.classList.add('hidden');
@@ -3672,20 +3677,29 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             if (!deck) return;
 
             titleEl.textContent = deck.title;
-            questionText.textContent = deck.q;
             feedbackText.textContent = '';
             resetBtn.classList.add('hidden');
-
             optionsContainer.innerHTML = '';
-            deck.opts.forEach((opt, idx) => {
+
+            if (deckId >= 3) {
+                questionText.textContent = "This quiz is coming soon!";
                 const btn = document.createElement('button');
-                btn.className = "quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors";
-                btn.textContent = opt;
-                btn.onclick = function() {
-                    answerQuizDeck(idx === deck.ans, btn);
-                };
+                btn.className = "quiz-opt-btn w-full text-center p-3 border border-purple-100 rounded-xl bg-purple-50/50 text-xs font-bold text-purple-700 cursor-not-allowed";
+                btn.textContent = "Quiz Under Construction";
+                btn.disabled = true;
                 optionsContainer.appendChild(btn);
-            });
+            } else {
+                questionText.textContent = deck.q;
+                deck.opts.forEach((opt, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = "quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors";
+                    btn.textContent = opt;
+                    btn.onclick = function() {
+                        answerQuizDeck(idx === deck.ans, btn);
+                    };
+                    optionsContainer.appendChild(btn);
+                });
+            }
 
             selectView.classList.add('hidden');
             deckView.classList.remove('hidden');
@@ -3744,26 +3758,36 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             if (!deck) return;
 
             titleEl.textContent = "Professor Messer's SY0-701 Training Video " + (deckId === 10 ? "101 to 110" : deckId === 11 ? "111 to 121" : ((deckId - 1) * 10 + 1) + " to " + (deckId * 10));
-            subtitleEl.textContent = "📚 " + deck.title + " // " + deck.subtitle;
-            summaryEl.textContent = deck.summary;
-
             keyTermsEl.innerHTML = '';
-            deck.terms.forEach(term => {
+
+            if (deckId >= 3) {
+                subtitleEl.textContent = "📚 " + deck.title + " // Coming Soon";
+                summaryEl.textContent = "This study reference guide is currently under construction. Please check back later!";
                 const li = document.createElement('li');
-                li.className = "leading-relaxed";
-                
-                const parts = term.split(':');
-                if (parts.length > 1) {
-                    const boldSpan = document.createElement('strong');
-                    boldSpan.className = "text-purple-900";
-                    boldSpan.textContent = parts[0] + ":";
-                    li.appendChild(boldSpan);
-                    li.appendChild(document.createTextNode(parts.slice(1).join(':')));
-                } else {
-                    li.textContent = term;
-                }
+                li.className = "leading-relaxed italic text-gray-400";
+                li.textContent = "Content coming soon...";
                 keyTermsEl.appendChild(li);
-            });
+            } else {
+                subtitleEl.textContent = "📚 " + deck.title + " // " + deck.subtitle;
+                summaryEl.textContent = deck.summary;
+
+                deck.terms.forEach(term => {
+                    const li = document.createElement('li');
+                    li.className = "leading-relaxed";
+                    
+                    const parts = term.split(':');
+                    if (parts.length > 1) {
+                        const boldSpan = document.createElement('strong');
+                        boldSpan.className = "text-purple-900";
+                        boldSpan.textContent = parts[0] + ":";
+                        li.appendChild(boldSpan);
+                        li.appendChild(document.createTextNode(parts.slice(1).join(':')));
+                    } else {
+                        li.textContent = term;
+                    }
+                    keyTermsEl.appendChild(li);
+                });
+            }
 
             selectView.classList.add('hidden');
             deckView.classList.remove('hidden');
@@ -3791,10 +3815,15 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             if (!deck) return;
 
             titleEl.textContent = "Professor Messer's SY0-701 Training Video " + (deckId === 10 ? "101 to 110" : deckId === 11 ? "111 to 121" : ((deckId - 1) * 10 + 1) + " to " + (deckId * 10));
-            descEl.textContent = deck.desc;
 
-            const elementId = "mermaid-chart-" + deckId;
-            containerEl.innerHTML = '<pre class="mermaid text-center w-full" id="' + elementId + '">' + deck.code + '</pre>';
+            if (deckId >= 3) {
+                descEl.textContent = "Visual flowchart coming soon!";
+                containerEl.innerHTML = '<pre class="mermaid text-center w-full" id="mermaid-chart-' + deckId + '">graph TD\n    Soon[Visual Chart Coming Soon] --> Const[Under Construction]</pre>';
+            } else {
+                descEl.textContent = deck.desc;
+                const elementId = "mermaid-chart-" + deckId;
+                containerEl.innerHTML = '<pre class="mermaid text-center w-full" id="' + elementId + '">' + deck.code + '</pre>';
+            }
 
             selectView.classList.add('hidden');
             deckView.classList.remove('hidden');
@@ -3835,13 +3864,24 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             if (!deck) return;
 
             titleEl.textContent = "Professor Messer's SY0-701 Training Video " + (deckId === 10 ? "101 to 110" : deckId === 11 ? "111 to 121" : ((deckId - 1) * 10 + 1) + " to " + (deckId * 10));
-            nameEl.textContent = deck.name;
-            obj1.textContent = deck.obj1;
-            obj2.textContent = deck.obj2;
-            obj3.textContent = deck.obj3;
 
             const checkboxes = document.querySelectorAll('.quest-checkbox');
-            checkboxes.forEach(cb => cb.checked = false);
+            checkboxes.forEach(cb => {
+                cb.checked = false;
+                cb.disabled = (deckId >= 3);
+            });
+
+            if (deckId >= 3) {
+                nameEl.textContent = "Quest Coming Soon";
+                obj1.textContent = "Objective details coming soon...";
+                obj2.textContent = "Objective details coming soon...";
+                obj3.textContent = "Objective details coming soon...";
+            } else {
+                nameEl.textContent = deck.name;
+                obj1.textContent = deck.obj1;
+                obj2.textContent = deck.obj2;
+                obj3.textContent = deck.obj3;
+            }
 
             updateQuestProgress();
 
