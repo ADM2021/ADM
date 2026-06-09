@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
@@ -8,85 +9,107 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
         body {
             font-family: 'Inter', sans-serif;
         }
+
         .tab-content {
             display: none;
         }
+
         .tab-content.active {
             display: block;
         }
+
         .tab-btn.active {
             background-color: #581c87;
             color: white;
             border-color: #581c87;
         }
+
         code {
             font-family: 'Courier New', Courier, monospace;
         }
+
         @keyframes pulse-banner {
+
             0%,
             100% {
                 opacity: 1;
                 transform: scale(1);
             }
+
             50% {
                 opacity: 0.9;
                 transform: scale(0.98);
             }
         }
+
         .animate-banner {
             animation: pulse-banner 3s infinite ease-in-out;
         }
+
         /* THE STABLE CROSS-BROWSER FLIPPER */
         @-webkit-keyframes vertical-carousel {
+
             0%,
             20% {
                 -webkit-transform: translateY(0);
                 transform: translateY(0);
             }
+
             25%,
             45% {
                 -webkit-transform: translateY(-20%);
                 transform: translateY(-20%);
             }
+
             50%,
             70% {
                 -webkit-transform: translateY(-40%);
                 transform: translateY(-40%);
             }
+
             75%,
             95% {
                 -webkit-transform: translateY(-60%);
                 transform: translateY(-60%);
             }
+
             100% {
                 -webkit-transform: translateY(-80%);
                 transform: translateY(-80%);
             }
         }
+
         @keyframes vertical-carousel {
+
             0%,
             20% {
                 transform: translateY(0);
             }
+
             25%,
             45% {
                 transform: translateY(-20%);
             }
+
             50%,
             70% {
                 transform: translateY(-40%);
             }
+
             75%,
             95% {
                 transform: translateY(-60%);
             }
+
             100% {
                 transform: translateY(-80%);
             }
         }
+
         .animate-carousel {
             display: flex;
             flex-direction: column;
@@ -96,23 +119,28 @@
             transform: translateZ(0);
             /* Hardware acceleration */
         }
+
         /* SECURE MODAL STYLES */
         #secure-modal {
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
+
         .terminal-text {
             font-family: 'Courier New', Courier, monospace;
             text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
         }
+
         .cursor-blink {
             animation: blink 1s step-end infinite;
         }
+
         @keyframes blink {
             50% {
                 opacity: 0;
             }
         }
+
         .scanline {
             width: 100%;
             height: 10px;
@@ -123,14 +151,17 @@
             animation: scanline 8s linear infinite;
             pointer-events: none;
         }
+
         @keyframes scanline {
             0% {
                 bottom: 100%;
             }
+
             100% {
                 bottom: -100px;
             }
         }
+
         /* AUDIO VISUALIZER */
         .audio-bar {
             width: 3px;
@@ -141,6 +172,7 @@
             transform: scaleY(0.2);
             transition: transform 0.2s ease;
         }
+
         .audio-bars-container {
             display: flex;
             align-items: flex-end;
@@ -148,71 +180,90 @@
             height: 12px;
             margin-right: 4px;
         }
+
         @keyframes play-bar {
+
             0%,
             100% {
                 transform: scaleY(0.2);
             }
+
             50% {
                 transform: scaleY(1);
             }
         }
+
         .audio-bars-container.playing .audio-bar {
             animation: play-bar 1s ease-in-out infinite;
         }
+
         .audio-bars-container.playing .audio-bar:nth-child(1) {
             animation-duration: 0.7s;
             animation-delay: 0.0s;
         }
+
         .audio-bars-container.playing .audio-bar:nth-child(2) {
             animation-duration: 1.1s;
             animation-delay: 0.2s;
         }
+
         .audio-bars-container.playing .audio-bar:nth-child(3) {
             animation-duration: 0.8s;
             animation-delay: 0.4s;
         }
+
         .audio-bars-container.playing .audio-bar:nth-child(4) {
             animation-duration: 1.0s;
             animation-delay: 0.1s;
         }
+
         .audio-bars-container.playing .audio-bar:nth-child(5) {
             animation-duration: 0.9s;
             animation-delay: 0.3s;
         }
+
         /* GOOGLE TRANSLATE OVERRIDES */
         body {
             top: 0 !important;
             position: static !important;
         }
+
         .goog-te-banner-frame {
             display: none !important;
         }
+
         .skiptranslate>iframe.goog-te-banner-frame {
             display: none !important;
         }
+
         #goog-gt-tt,
         .goog-te-balloon-frame {
             display: none !important;
         }
+
         .goog-text-highlight {
             background: none !important;
             box-shadow: none !important;
         }
+
         #google_translate_element {
             display: none !important;
         }
+
         body.skiptranslate {
             top: 0 !important;
         }
     </style>
 </head>
+
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
+
     <nav class="print:hidden p-8 flex justify-between items-center max-w-5xl mx-auto flex-wrap gap-4">
         <div class="flex flex-col leading-tight">
             <span class="text-2xl font-black tracking-tighter text-purple-900 leading-none">Hi I'm Aisha</span>
             <span class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">A Data Enthusiast</span>
         </div>
+
         <div class="flex items-center gap-4 flex-wrap">
             <!-- LANGUAGE SWITCHER -->
             <div class="flex bg-white border border-purple-100 rounded-full shadow-sm overflow-hidden p-0.5">
@@ -225,6 +276,7 @@
                 <button onclick="translatePage('fr')"
                     class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 hover:bg-purple-50 hover:text-purple-900 rounded-full transition-colors focus:bg-purple-100">FR</button>
             </div>
+
             <!-- SECURE TERMINAL -->
             <div id="dynamic-date" onclick="openSecureModal('level1')"
                 class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 cursor-pointer hover:bg-purple-100 hover:border-purple-300 transition-colors">
@@ -232,6 +284,7 @@
             </div>
         </div>
     </nav>
+
     <div class="print:hidden max-w-fit mx-auto mb-4 animate-banner">
         <div class="bg-amber-50 border border-amber-200 px-8 py-2 rounded-full flex items-center gap-3 shadow-sm">
             <span class="text-amber-600 font-bold">🚧</span>
@@ -240,6 +293,7 @@
             <span class="text-amber-600 font-bold">🚧</span>
         </div>
     </div>
+
     <header class="print:hidden max-w-6xl mx-auto pt-4 pb-12 px-6 text-center">
         <div class="flex flex-col items-center justify-center">
             <div
@@ -265,6 +319,7 @@
             honestly, at the end of the day, I’m just a woman making sense of the numbers and the data that tells the
             story."</p>
     </header>
+
     <div class="print:hidden max-w-4xl mx-auto flex flex-wrap justify-center gap-2 mb-8 px-6 relative z-50">
         <button onclick="openTab(event, 'readme')"
             class="tab-btn active px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-200 rounded-full transition-all hover:bg-purple-100">00
@@ -512,6 +567,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="portfolio" class="tab-content animate-in fade-in duration-500">
                 <!-- Mobile Warning Banner -->
                 <div
@@ -525,6 +581,7 @@
                             tablet is strongly recommended.</p>
                     </div>
                 </div>
+
                 <div class="flex justify-between items-start mb-6 px-2">
                     <div>
                         <h2 class="text-2xl font-black italic text-purple-900 uppercase leading-none">CEC 2026 Orbital
@@ -538,6 +595,7 @@
                         Live
                     </span>
                 </div>
+
                 <div class="w-full bg-purple-50 rounded-[2rem] border border-purple-100 shadow-inner overflow-hidden relative mx-auto"
                     style="height: 600px;">
                     <iframe
@@ -547,6 +605,7 @@
                         allowfullscreen scrolling="no">
                     </iframe>
                 </div>
+
                 <div class="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-purple-50 text-center">
                     <div>
                         <p class="text-[10px] font-black text-purple-300 uppercase tracking-widest mb-1">Efficiency</p>
@@ -562,6 +621,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="rfis" class="tab-content animate-in fade-in duration-500">
                 <!-- Mobile Warning Banner -->
                 <div
@@ -575,6 +635,7 @@
                             tablet is strongly recommended.</p>
                     </div>
                 </div>
+
                 <!-- ADDED WORKFLOW PLANNER ABOVE CEC DASHBOARD -->
                 <div class="mb-16">
                     <h2 class="text-2xl font-black italic text-purple-900 mb-4 uppercase leading-none px-2">RFI Examples Workflows</h2>
@@ -585,6 +646,7 @@
                         <span class="text-[10px] font-black uppercase tracking-widest text-purple-600 border border-purple-200 bg-purple-50 px-3 py-1 rounded-full shadow-sm">MS Teams</span>
                     </div>
                     <div class="relative pl-6 border-l-2 border-purple-200 space-y-8 mx-2" id="workflow-timeline">
+
                         <!-- RFI Node -->
                         <div class="workflow-step relative" id="wf-step-0">
                             <span
@@ -611,6 +673,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 1 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-1">
@@ -634,6 +697,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 2 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-2">
@@ -660,6 +724,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 3 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-3">
@@ -690,6 +755,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 4 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-4">
@@ -718,6 +784,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 5 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-5">
@@ -748,6 +815,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 6 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-6">
@@ -780,6 +848,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 7 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-7">
@@ -808,6 +877,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 8 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-8">
@@ -839,6 +909,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 9 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-9">
@@ -868,6 +939,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <!-- Step 10 -->
                         <div class="workflow-step relative opacity-0 hidden transition-all duration-700 transform translate-y-4"
                             id="wf-step-10">
@@ -907,9 +979,11 @@
                                 </button>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
             <div id="methodology" class="tab-content animate-in fade-in duration-500">
                 <div class="mb-8 p-6 bg-purple-50/50 rounded-2xl border border-purple-100 flex flex-col gap-3">
                     <label for="case-study-select"
@@ -930,19 +1004,24 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Text-to-Speech Controls (Hidden until project selected) -->
                 <div id="tts-container" class="hidden mb-6 flex justify-end">
                     <div
                         class="flex items-center gap-3 bg-[#FAF5FF] border border-purple-200 rounded-full shadow-sm p-1.5 focus-within:ring-2 focus-within:ring-purple-500 transition-all">
+
                         <button id="tts-play-btn" onclick="toggleTTSPlay()" aria-label="Play or pause audio"
                             class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-900 transition-colors focus:outline-none">
                             <span id="tts-play-icon" class="text-xs">▶</span>
                         </button>
+
                         <button id="tts-stop-btn" onclick="stopTTS()" aria-label="Stop audio"
                             class="flex items-center justify-center w-8 h-8 rounded-full hover:bg-red-50 text-red-600 transition-colors focus:outline-none">
                             <span class="text-xs">⏹</span>
                         </button>
+
                         <div class="h-4 w-px bg-purple-200 mx-1"></div>
+
                         <div class="flex items-center gap-2 px-2">
                             <div id="tts-visualizer" class="audio-bars-container">
                                 <div class="audio-bar"></div>
@@ -953,10 +1032,12 @@
                             </div>
                             <span id="tts-status"
                                 class="text-[9px] font-black uppercase tracking-widest text-purple-600 min-w-[60px] text-center">Ready</span>
+
                             <select id="tts-voice" onchange="changeTTSVoice(this.value)" aria-label="Voice selection"
                                 class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1 max-w-[100px] truncate">
                                 <option value="">Loading Voices...</option>
                             </select>
+
                             <select id="tts-speed" onchange="changeTTSSpeed(this.value)" aria-label="Playback speed"
                                 class="text-[9px] font-black uppercase tracking-widest text-purple-900 bg-transparent cursor-pointer focus:outline-none appearance-none pr-1">
                                 <option value="0.9">0.9x</option>
@@ -966,6 +1047,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div id="case-studies-container">
                     <div id="cec-2026" class="case-study hidden space-y-6 animate-in fade-in duration-500">
                         <h2 class="text-2xl font-black italic text-purple-900 mb-6 uppercase leading-none mt-2">
@@ -1028,6 +1110,7 @@ df['Alpha'] = (df['Yield_Tons'] / df['Op_Cost_B'])</code></pre>
                             </div>
                         </div>
                     </div>
+
                     <div id="email-workflow" class="case-study hidden space-y-6 animate-in fade-in duration-500">
                         <h2 class="text-2xl font-black italic text-purple-900 mb-4 uppercase leading-none mt-2">
                             Dynamic Automation Construction Methodology
@@ -1072,6 +1155,7 @@ flowchart TD
     classDef autoNode fill:#f0fdf4,stroke:#86efac,stroke-width:2px,color:#166534
     classDef humanNode fill:#fffbeb,stroke:#fcd34d,stroke-width:2px,color:#92400e
     classDef finalNode fill:#22c55e,stroke:#166534,stroke-width:2px,color:#ffffff,font-weight:bold
+
     RFI(["Stakeholder RFI"]) ::: startNode --> Q1{"Identify Platform"} ::: decisionNode
     Q1 -- "Outlook" --> Data["Data Sampling 3 Clusters"] ::: processNode
     Data --> Cat("Categorize Keywords & Logic") ::: processNode
@@ -1092,6 +1176,7 @@ flowchart TD
                                     </pre>
                                 </div>
                             </div>
+
                             <!-- Document Packet Tracker Component -->
                             <div class="mt-12">
                                 <h3 class="font-black text-purple-900 uppercase text-xs tracking-widest mb-4 border-b border-purple-100 pb-2">Document Packet Approval & Processing System</h3>
@@ -1110,6 +1195,7 @@ flowchart TD
     classDef rejectNode fill:#fef2f2,stroke:#fca5a5,stroke-width:2px,color:#991b1b
     
     Pre["Pre-Workflow Context: Define logic, formatting, and required packet contents"] ::: processNode
+
     subgraph UserLayer ["User Layer"]
         Upload(["Upload Document Packet (Metadata Included)"]) ::: startNode
     end
@@ -1166,6 +1252,7 @@ flowchart TD
                     </div>
                 </div>
             </div>
+
             <div id="tutorials" class="tab-content animate-in fade-in duration-500">
                 <h2 class="text-3xl font-black italic text-purple-900 mb-8 uppercase leading-none">Audio & Video Tutorials</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-left">
@@ -1184,6 +1271,7 @@ flowchart TD
                                 Studio recording discussing analytics methodology, automation triggers, and machine learning pipeline workflows.
                             </p>
                         </div>
+
                         <!-- Styled HTML5 Audio Player -->
                         <div class="mt-8 space-y-3 relative z-10">
                             <audio id="podcast-audio" class="hidden" src="riverside_podcast_1.wav"></audio>
@@ -1206,6 +1294,7 @@ flowchart TD
                             </div>
                         </div>
                     </div>
+
                     <!-- Setup Instructions Column -->
                     <div class="p-8 bg-[#FAF5FF] border border-purple-100 rounded-[2rem] flex flex-col justify-between text-left">
                         <div class="space-y-4">
@@ -1225,6 +1314,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     </div>
                 </div>
             </div>
+
             <div id="resources" class="tab-content animate-in fade-in duration-500">
                 <h2 class="text-3xl font-black italic text-purple-900 mb-10 uppercase leading-none">Learning &
                     Credentials</h2>
@@ -1321,6 +1411,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     </div>
                 </div>
             </div>
+
             <div id="study" class="tab-content animate-in fade-in duration-500">
                 <div class="space-y-10 text-gray-600 leading-relaxed">
                     <!-- Title Section -->
@@ -1328,6 +1419,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                         <h2 class="text-3xl font-black italic text-purple-900 uppercase leading-none mb-3"># Study Station</h2>
                         <p class="text-sm font-medium text-purple-600/80 italic">Interactive study modules and visual resources for data engineering and certifications.</p>
                     </div>
+
                     <!-- Study grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- Flash Cards Card -->
@@ -1342,6 +1434,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                 <span class="text-purple-600 transform group-hover:translate-x-1 transition-transform">→</span>
                             </div>
                         </div>
+
                         <!-- Quiz Card -->
                         <div onclick="selectStudyModule('quiz')" class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
                             <div>
@@ -1354,6 +1447,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                 <span class="text-purple-600 transform group-hover:translate-x-1 transition-transform">→</span>
                             </div>
                         </div>
+
                         <!-- Study Guide Card -->
                         <div onclick="selectStudyModule('study-guide')" class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
                             <div>
@@ -1366,6 +1460,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                 <span class="text-purple-600 transform group-hover:translate-x-1 transition-transform">→</span>
                             </div>
                         </div>
+
                         <!-- Visual Guide Card -->
                         <div onclick="selectStudyModule('visual-guide')" class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
                             <div>
@@ -1378,6 +1473,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                 <span class="text-purple-600 transform group-hover:translate-x-1 transition-transform">→</span>
                             </div>
                         </div>
+
                         <!-- GameFII Card -->
                         <div onclick="selectStudyModule('gamefii')" class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
                             <div>
@@ -1391,6 +1487,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                             </div>
                         </div>
                     </div>
+
                     <!-- Interactive Module Content Viewer -->
                     <div id="study-module-display" class="hidden mt-8 p-6 bg-purple-50/50 border border-purple-100 rounded-3xl animate-in fade-in duration-500 relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-purple-200/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -1403,11 +1500,119 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                             </button>
                         </div>
                         <div id="study-module-content" class="relative z-10">
-                            <!-- Content Injected Here -->
+                            <!-- Flash Cards Module -->
+                            <div id="content-flashcards" class="study-module-tab hidden">
+                                <div class="flex flex-col items-center justify-center p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm">
+                                    <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-2">Question 1 of 5</p>
+                                    <div id="demo-flashcard" class="w-full aspect-[1.6] bg-purple-950 text-white rounded-xl flex flex-col items-center justify-center p-6 text-center cursor-pointer select-none transition-all duration-300 transform hover:scale-[1.02] shadow-inner" onclick="toggleFlashcard()">
+                                        <div id="flashcard-front" class="flex flex-col justify-center items-center h-full">
+                                            <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Web Security</p>
+                                            <h4 class="text-lg font-black">What is HSTS?</h4>
+                                            <p class="text-[9px] text-purple-400 mt-4 uppercase">Click card to reveal answer</p>
+                                        </div>
+                                        <div id="flashcard-back" class="hidden flex flex-col justify-center items-center h-full">
+                                            <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Web Security</p>
+                                            <h4 class="text-xs font-semibold leading-relaxed px-4">HTTP Strict Transport Security (HSTS) is a web security policy mechanism that helps to protect websites against man-in-the-middle attacks such as protocol downgrade attacks and cookie hijacking.</h4>
+                                            <p class="text-[9px] text-purple-400 mt-4 uppercase">Click to view question</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-[10px] text-gray-400 mt-4 italic">Tip: Click the card to flip it!</p>
+                                </div>
+                            </div>
+
+                            <!-- Quiz Module -->
+                            <div id="content-quiz" class="study-module-tab hidden">
+                                <div id="quiz-start-view" class="text-center py-6 max-w-md mx-auto bg-white border border-purple-100 rounded-2xl p-6 shadow-sm">
+                                    <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-2">Ready to test your skills?</p>
+                                    <h4 class="text-lg font-black text-purple-950 mb-4">PL-900 & AWS Fundamentals Practice Quiz</h4>
+                                    <button onclick="startDemoQuiz()" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-3 rounded-full transition-colors shadow-md">
+                                        Start Quiz
+                                    </button>
+                                </div>
+                                <div id="quiz-question-view" class="hidden p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="text-[9px] font-black uppercase tracking-widest text-purple-400">AWS Fundamentals Quiz</span>
+                                        <span class="text-[9px] font-black uppercase tracking-widest text-purple-600">Question 1/1</span>
+                                    </div>
+                                    <h4 class="text-sm font-bold text-purple-950 mb-4">Which AWS service is best suited for storing backup files and hosting static web content?</h4>
+                                    <div class="space-y-2">
+                                        <button onclick="answerDemoQuiz(false, this)" class="quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">A) Amazon EC2</button>
+                                        <button onclick="answerDemoQuiz(false, this)" class="quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">B) Amazon RDS</button>
+                                        <button onclick="answerDemoQuiz(true, this)" class="quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">C) Amazon S3</button>
+                                        <button onclick="answerDemoQuiz(false, this)" class="quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">D) AWS Lambda</button>
+                                    </div>
+                                    <p id="quiz-feedback" class="text-xs text-center font-bold mt-4 h-4"></p>
+                                    <button id="quiz-retry-btn" onclick="startDemoQuiz()" class="hidden mt-4 w-full bg-purple-900 hover:bg-purple-800 text-white text-[9px] font-black uppercase tracking-widest py-2 rounded-full transition-colors shadow-sm">
+                                        Retry Quiz
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Study Guide Module -->
+                            <div id="content-study-guide" class="study-module-tab hidden">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                        <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">📚 PL-900 Power Platform Cheat Sheet</h4>
+                                        <p class="text-xs text-gray-500">Summary of Power Apps, Power Automate, Power BI, Power Virtual Agents, and Dataverse connectors.</p>
+                                        <a href="#" class="inline-block text-[10px] font-black uppercase tracking-widest text-purple-600 mt-3 hover:text-purple-900">Download Guide →</a>
+                                    </div>
+                                    <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                        <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">☁️ AWS Fundamentals Quick-Reference</h4>
+                                        <p class="text-xs text-gray-500">Essential IAM policies, EC2 pricing models, S3 bucket storage classes, and VPC guidelines.</p>
+                                        <a href="#" class="inline-block text-[10px] font-black uppercase tracking-widest text-purple-600 mt-3 hover:text-purple-900">Download Guide →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Visual Guide Module -->
+                            <div id="content-visual-guide" class="study-module-tab hidden">
+                                <div class="p-6 bg-purple-950 rounded-2xl border border-white/10 shadow-inner text-center">
+                                    <h4 class="font-black text-purple-200 text-xs uppercase tracking-wider mb-4">> PIPELINE_VISUALIZER // LOADING</h4>
+                                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-white text-xs">
+                                        <div class="px-4 py-2 bg-purple-900 border border-purple-700 rounded-lg">Raw Telemetry</div>
+                                        <span class="text-purple-400">→</span>
+                                        <div class="px-4 py-2 bg-purple-900 border border-purple-700 rounded-lg">Python Cleanse</div>
+                                        <span class="text-purple-400">→</span>
+                                        <div class="px-4 py-2 bg-purple-900 border border-purple-700 rounded-lg">Power BI/Tableau</div>
+                                    </div>
+                                    <p class="text-[10px] text-purple-200/70 mt-6 italic">Interactive workflow mapping under construction. Check back soon!</p>
+                                </div>
+                            </div>
+
+                            <!-- GameFII Module -->
+                            <div id="content-gamefii" class="study-module-tab hidden">
+                                <div class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm max-w-md mx-auto">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider">Aisha's Learning Journey</h4>
+                                        <span class="text-[9px] font-black bg-purple-100 text-purple-700 px-2.5 py-1 rounded-full uppercase tracking-widest">Level 4</span>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div>
+                                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                                <span>Data Engineering Quest</span>
+                                                <span>75%</span>
+                                            </div>
+                                            <div class="h-2 w-full bg-purple-100 rounded-full overflow-hidden">
+                                                <div class="h-full bg-purple-600 w-3/4 rounded-full"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                                <span>Security & HSTS Mastery</span>
+                                                <span>40%</span>
+                                            </div>
+                                            <div class="h-2 w-full bg-purple-100 rounded-full overflow-hidden">
+                                                <div class="h-full bg-purple-600 w-2/5 rounded-full"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- SECURE SECTION PAGES -->
             <div id="resume" class="tab-content animate-in fade-in duration-500">
                 <div
@@ -1415,14 +1620,19 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     > Decrypting secure content...
                 </div>
             </div>
+
             <div id="extrapolio" class="tab-content animate-in fade-in duration-500">
                 <div
                     class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
                     > Decrypting secure content...
                 </div>
             </div>
+
         </div>
     </section>
+
+
+
     <!-- SECURE TERMINAL MODAL -->
     <div id="secure-modal" class="fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4"
         style="display: none;">
@@ -1432,6 +1642,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             <div
                 class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent">
             </div>
+
             <div class="mb-8 text-center" id="modal-header-container">
                 <p id="modal-subtitle"
                     class="terminal-text text-purple-400 text-sm font-bold tracking-[0.3em] uppercase mb-2">SYSTEM
@@ -1441,6 +1652,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     > Terminal Access <span class="cursor-blink w-2 h-5 bg-purple-500 inline-block"></span>
                 </h3>
             </div>
+
             <!-- Main Auth View -->
             <div id="auth-view" class="space-y-6">
                 <div class="space-y-4">
@@ -1456,6 +1668,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 <!-- Auth Feedback -->
                 <p id="auth-feedback" class="terminal-text text-xs text-center h-4"></p>
             </div>
+
             <!-- Password Input View -->
             <div id="password-view" class="hidden space-y-6 animate-in fade-in duration-300">
                 <div>
@@ -1475,6 +1688,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 </div>
                 <p id="pwd-feedback" class="terminal-text text-xs text-center h-4"></p>
             </div>
+
             <!-- Request Access View -->
             <div id="request-view" class="hidden space-y-4 animate-in fade-in duration-300">
                 <p class="terminal-text text-purple-400 text-xs mb-4">> INITIALIZE_ACCESS_REQUEST</p>
@@ -1496,6 +1710,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 </div>
                 <p id="req-feedback" class="terminal-text text-xs text-center h-4"></p>
             </div>
+
             <!-- Close button -->
             <button onclick="closeSecureModal()"
                 class="absolute top-4 right-4 text-gray-500 hover:text-white terminal-text text-lg leading-none">
@@ -1503,6 +1718,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             </button>
         </div>
     </div>
+
     <script>
         // SECURE TERMINAL LOGIC
         let pendingTabTarget = null;
@@ -1510,44 +1726,54 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
         let authAttempts = 0;
         let isLockedOut = false;
         let currentAuthLevel = 'level1';
+
         function isAuthenticated(level = 'level1') {
             if (level === 'level2') return sessionStorage.getItem('extraToken') === 'valid-extra-xyz';
             return sessionStorage.getItem('secureToken') === 'valid-session-abc';
         }
+
         async function fetchSecureFiles() {
             try {
                 const res1 = await fetch('resume-8f7x9A2q.html');
                 if (res1.ok) document.getElementById('resume').innerHTML = await res1.text();
+
                 const res2 = await fetch('extrapolio-2b9y4Z1m.html');
                 if (res2.ok) document.getElementById('extrapolio').innerHTML = await res2.text();
             } catch (err) {
                 console.warn("Secure fetch failed (normal if viewed as local file without a server):", err);
             }
         }
+
         function unlockSecureUI() {
             // Unhide secure tabs if they exist
             const resumeTab = document.getElementById('tab-resume');
             const extraTab = document.getElementById('tab-extrapolio');
             if (resumeTab) resumeTab.classList.remove('hidden');
             if (extraTab) extraTab.classList.remove('hidden');
+
             fetchSecureFiles();
         }
+
         function openTab(evt, tabName) {
             if (typeof stopTTS === 'function') stopTTS();
+
             // Protected tabs logic
             const protectedTabs = ['resume', 'extrapolio'];
+
             if (protectedTabs.includes(tabName) && !isAuthenticated('level1')) {
                 pendingTabTarget = tabName;
                 pendingTabEvent = evt;
                 openSecureModal('level1');
                 return;
             }
+
             if (tabName === 'extrapolio' && !isAuthenticated('level2')) {
                 pendingTabTarget = tabName;
                 pendingTabEvent = evt;
                 openSecureModal('level2');
                 return;
             }
+
             console.log('Tab switch triggered:', tabName);
             const tabcontent = document.getElementsByClassName("tab-content");
             for (let i = 0; i < tabcontent.length; i++) {
@@ -1558,19 +1784,27 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 tablinks[i].classList.remove("active");
             }
             document.getElementById(tabName).classList.add("active");
-            if (evt && evt.currentTarget) {
-                evt.currentTarget.classList.add("active");
-            } else {
-                const btns = Array.from(tablinks).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabName));
-                if (btns) btns.classList.add("active");
+
+            let btn = null;
+            if (evt) {
+                btn = evt.currentTarget || (evt.target && evt.target.closest('.tab-btn'));
+            }
+            if (!btn) {
+                btn = document.querySelector(`button[onclick*="${tabName}"]`);
+            }
+            if (btn) {
+                btn.classList.add("active");
             }
         }
+
         function openSecureModal(level = 'level1') {
             currentAuthLevel = level;
             document.getElementById('secure-modal').style.display = 'flex';
             resetModalView();
+
             const subtitleEl = document.getElementById('modal-subtitle');
             const titleEl = document.getElementById('modal-title');
+
             if (level === 'level2') {
                 subtitleEl.innerText = "RESTRICTED AREA";
                 subtitleEl.className = "terminal-text text-red-500 text-sm font-bold tracking-[0.3em] uppercase mb-2";
@@ -1583,39 +1817,48 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 titleEl.className = "terminal-text text-white text-xl uppercase tracking-widest flex items-center justify-center gap-2";
             }
         }
+
         function closeSecureModal() {
             document.getElementById('secure-modal').style.display = 'none';
             pendingTabTarget = null;
             pendingTabEvent = null;
         }
+
         function resetModalView() {
             document.getElementById('auth-view').classList.remove('hidden');
             document.getElementById('password-view').classList.add('hidden');
             document.getElementById('request-view').classList.add('hidden');
+
             document.getElementById('auth-feedback').innerText = '';
             document.getElementById('pwd-feedback').innerText = '';
             document.getElementById('req-feedback').innerText = '';
+
             document.getElementById('terminal-password').value = '';
         }
+
         function showPasswordForm() {
             document.getElementById('auth-view').classList.add('hidden');
             document.getElementById('password-view').classList.remove('hidden');
             setTimeout(() => document.getElementById('terminal-password').focus(), 100);
         }
+
         function showRequestForm() {
             document.getElementById('auth-view').classList.add('hidden');
             document.getElementById('request-view').classList.remove('hidden');
         }
+
         async function hashString(input) {
             const encoder = new TextEncoder();
             const data = encoder.encode(input);
             const hashBuffer = await crypto.subtle.digest('SHA-256', data);
             return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
         }
+
         async function verifyPassword(input, level) {
             const p1Hash = '01232636c9f70d6cb849605c50375fcbcbaf2ed0084334697481b9d68526f92f';
             const p2Hash = '6374dccb667f724ff27c651a3865c797560ac19bdf5fae190d5b429502938e49';
             const inputHash = await hashString(input);
+
             // Simulated validation - backend replacement target
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -1629,27 +1872,35 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 }, 500); // simulate latency
             });
         }
+
         async function submitPassword() {
             if (isLockedOut) return;
+
             const input = document.getElementById('terminal-password').value;
             const feedback = document.getElementById('pwd-feedback');
+
             if (!input) {
                 feedback.innerText = "> ERROR: EMPTY INPUT";
                 feedback.className = "terminal-text text-xs text-center h-4 text-red-500 mt-2";
                 return;
             }
+
             feedback.innerText = "> AUTHENTICATING...";
             feedback.className = "terminal-text text-xs text-center h-4 text-purple-400 cursor-blink mt-2";
+
             try {
                 const token = await verifyPassword(input, currentAuthLevel);
+
                 if (currentAuthLevel === 'level1') {
                     sessionStorage.setItem('secureToken', token);
                     unlockSecureUI();
                 } else {
                     sessionStorage.setItem('extraToken', token);
                 }
+
                 feedback.innerText = "> ACCESS GRANTED";
                 feedback.className = "terminal-text text-xs text-center h-4 text-green-400 mt-2";
+
                 setTimeout(() => {
                     closeSecureModal();
                     if (pendingTabTarget) {
@@ -1658,10 +1909,12 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                         openTab(null, 'resume'); // Auto-route to Resume tab on fresh auth
                     }
                 }, 800);
+
             } catch (err) {
                 authAttempts++;
                 feedback.innerText = `> ERROR: INVALID CREDENTIALS (${authAttempts}/3)`;
                 feedback.className = "terminal-text text-xs text-center h-4 text-red-500 mt-2";
+
                 if (authAttempts >= 3) {
                     isLockedOut = true;
                     feedback.innerText = "> SYSTEM LOCKED. TRY AGAIN IN 5S.";
@@ -1674,27 +1927,34 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 }
             }
         }
+
         function submitRequest() {
             const name = document.getElementById('req-name').value;
             const email = document.getElementById('req-email').value;
             const feedback = document.getElementById('req-feedback');
+
             if (!name || !email) {
                 feedback.innerText = "> ERROR: NAME AND EMAIL REQUIRED";
                 feedback.className = "terminal-text text-xs text-center h-4 text-red-500 mt-2";
                 return;
             }
+
             feedback.innerText = "> TRANSMITTING LOGS...";
             feedback.className = "terminal-text text-xs text-center h-4 text-purple-400 cursor-blink mt-2";
+
             // Console logging mock request
             setTimeout(() => {
                 console.log(`[SECURE LOG/MOCK] Access explicitly requested by identifier: ${name} (${email}) timestamp: ${new Date().toISOString()}`);
+
                 feedback.innerText = "> TRANSMISSION SECURE. LOG RECORDED.";
                 feedback.className = "terminal-text text-xs text-center h-4 text-green-400 mt-2";
+
                 setTimeout(() => {
                     closeSecureModal();
                 }, 1500);
             }, 800);
         }
+
         // Initialize state logic after DOM Content Load
         document.addEventListener('DOMContentLoaded', () => {
             const pwdInput = document.getElementById('terminal-password');
@@ -1709,6 +1969,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 unlockSecureUI();
             }
         });
+
         // Set dynamic date
         const dateEl = document.getElementById('dynamic-date');
         const now = new Date();
@@ -1716,13 +1977,16 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
         const month = String(now.getMonth() + 1).padStart(2, '0');
         const day = String(now.getDate()).padStart(2, '0');
         dateEl.textContent = `Secure Terminal // ${year}.${month}.${day}`;
+
         function toggleCaseStudy(studyId) {
             if (typeof stopTTS === 'function') stopTTS();
+
             const studies = document.querySelectorAll('.case-study');
             studies.forEach(study => {
                 study.classList.add('hidden');
             });
             const selectedStudy = document.getElementById(studyId);
+
             const ttsContainer = document.getElementById('tts-container');
             if (selectedStudy) {
                 selectedStudy.classList.remove('hidden');
@@ -1739,43 +2003,56 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
         let currentChunkIndex = 0;
         let speechSynth = window.speechSynthesis;
         let ttsState = 'stopped'; // 'stopped', 'playing', 'paused', 'changing-speed'
+
         // Initialize voices for highest quality
         function loadVoices() {
             allVoices = speechSynth.getVoices();
             if (!allVoices.length) return;
+
             const allowedNames = ['Moira', 'Tara', 'Tessa', 'Whisper', 'Aman', 'Daniel', 'Good News', 'Karen', 'Ralph', 'Ralpha', 'Rishi', 'Rocko', 'Samantha'];
+
             // Filter allVoices down to only the ones explicitly allowed
             let validVoices = allVoices.filter(v => allowedNames.some(allowed => v.name.includes(allowed)));
+
             // Fallback gracefully if the OS has none of the explicit voices
             if (validVoices.length === 0) validVoices = allVoices.filter(v => v.lang.startsWith('en'));
             if (validVoices.length === 0) validVoices = allVoices;
+
             // Priority: Tara -> First Valid
             let best = validVoices.find(v => v.name.includes('Tara'));
             if (!best) best = validVoices[0];
+
             if (!preferredVoice) preferredVoice = best;
+
             // Populate Voice Dropdown UI
             const voiceSelect = document.getElementById('tts-voice');
             if (voiceSelect) {
                 voiceSelect.innerHTML = '';
+
                 validVoices.forEach((v) => {
                     const opt = document.createElement('option');
                     // Store the raw index from allVoices
                     opt.value = allVoices.indexOf(v);
+
                     // Clean up voice names to fit nicely in the mini player
                     let cleanName = v.name.replace('Microsoft ', '').replace('Google ', '').replace(' Desktop', '');
                     opt.textContent = `${cleanName} (${v.lang})`;
+
                     if (v === preferredVoice) opt.selected = true;
                     voiceSelect.appendChild(opt);
                 });
             }
         }
+
         if (speechSynth && speechSynth.onvoiceschanged !== undefined) {
             speechSynth.onvoiceschanged = loadVoices;
         }
+
         // Smart text extraction into chunks
         function prepareChunks() {
             const activeStudy = document.querySelector('.case-study:not(.hidden)');
             if (!activeStudy) return [];
+
             let rawText = "";
             const elements = activeStudy.querySelectorAll('h2, h3, p');
             elements.forEach(el => {
@@ -1783,18 +2060,22 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 if (el.closest('pre') || el.closest('.hidden')) return;
                 rawText += el.innerText.trim() + " ";
             });
+
             rawText = rawText.replace(/\s{2,}/g, ' ').trim();
             if (!rawText) return [];
+
             // Split into chunks by sentence-ending punctuation safely
             let chunks = rawText.match(/[^.!?]+[.!?]+/g);
             if (!chunks || chunks.length === 0) chunks = [rawText];
             return chunks.map(c => c.trim()).filter(c => c.length > 0);
         }
+
         function toggleTTSPlay() {
             if (!speechSynth) {
                 alert("Audio not supported in this browser.");
                 return;
             }
+
             if (ttsState === 'playing') {
                 speechSynth.pause();
                 ttsState = 'paused';
@@ -1808,27 +2089,33 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 loadVoices(); // Ensure voices are loaded
                 chunkQueue = prepareChunks();
                 if (chunkQueue.length === 0) return;
+
                 currentChunkIndex = 0;
                 ttsState = 'playing';
                 updateTTSUI();
                 playNextChunk();
             }
         }
+
         function playNextChunk() {
             if (ttsState !== 'playing') return;
             if (currentChunkIndex >= chunkQueue.length) {
                 stopTTS();
                 return;
             }
+
             let utterance = new SpeechSynthesisUtterance(chunkQueue[currentChunkIndex]);
+
             // Set properties BEFORE voice (critical for WebKit/macOS Safari)
             utterance.rate = ttsRate;
             utterance.pitch = 1;
             utterance.volume = 1;
+
             if (preferredVoice) {
                 utterance.lang = preferredVoice.lang;
                 utterance.voice = preferredVoice; // Voice must be the absolute LAST property set
             }
+
             utterance.onend = () => {
                 if (ttsState === 'playing') {
                     currentChunkIndex++;
@@ -1836,6 +2123,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     playNextChunk();
                 }
             };
+
             utterance.onerror = (e) => {
                 console.warn('TTS Error with voice:', preferredVoice ? preferredVoice.name : 'Unknown', e);
                 // Recover from a stuck queue if the voice engine crashes
@@ -1844,8 +2132,10 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     playNextChunk();
                 }
             };
+
             speechSynth.speak(utterance);
         }
+
         function stopTTS() {
             if (!speechSynth) return;
             speechSynth.cancel();
@@ -1854,6 +2144,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             ttsState = 'stopped';
             updateTTSUI();
         }
+
         function changeTTSSpeed(speedStr) {
             ttsRate = parseFloat(speedStr);
             if (ttsState === 'playing' || ttsState === 'paused') {
@@ -1861,6 +2152,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 // Temporarily mask state so onend doesn't advance index
                 ttsState = 'changing-speed';
                 speechSynth.cancel();
+
                 ttsState = wasPlaying ? 'playing' : 'paused';
                 if (ttsState === 'playing') {
                     playNextChunk();
@@ -1868,14 +2160,17 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 updateTTSUI();
             }
         }
+
         // Hot-swap the voice during active playback
         function changeTTSVoice(voiceIndex) {
             if (voiceIndex === "" || !allVoices.length) return;
             preferredVoice = allVoices[parseInt(voiceIndex)];
+
             if (ttsState === 'playing' || ttsState === 'paused') {
                 let wasPlaying = (ttsState === 'playing');
                 ttsState = 'changing-speed'; // Reuse state flag to suppress chunk advancement
                 speechSynth.cancel();
+
                 ttsState = wasPlaying ? 'playing' : 'paused';
                 if (ttsState === 'playing') {
                     playNextChunk(); // Re-fires Utterance which will read the new preferredVoice
@@ -1883,11 +2178,13 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 updateTTSUI();
             }
         }
+
         function updateTTSUI() {
             const playIcon = document.getElementById('tts-play-icon');
             const statusText = document.getElementById('tts-status');
             const visualizer = document.getElementById('tts-visualizer');
             if (!playIcon || !statusText) return;
+
             if (ttsState === 'playing') {
                 playIcon.innerText = "⏸";
                 statusText.innerText = "Playing...";
@@ -1902,6 +2199,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 if (visualizer) visualizer.classList.remove('playing');
             }
         }
+
         function translatePage(langCode) {
             const selectField = document.querySelector('.goog-te-combo');
             if (selectField) {
@@ -1911,6 +2209,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 console.warn("Google Translate has not loaded yet.");
             }
         }
+
         // WORKFLOW INTERACTIVITY LOGIC
         function nextWorkflowStep(stepId) {
             if (stepId === 1) {
@@ -1919,6 +2218,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     currentButton.dataset.loading = "true";
                     currentButton.disabled = true;
                     currentButton.innerHTML = `Analyzing Mailbox <span class="animate-pulse">...</span>`;
+
                     // Create and append the GIF loader container
                     const loader = document.createElement('div');
                     loader.id = "analysis-loader";
@@ -1931,20 +2231,24 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     `;
                     currentButton.parentNode.insertBefore(loader, currentButton);
                     currentButton.classList.add('hidden'); // Hide the button during the animation
+
                     setTimeout(() => {
                         // Remove loader
                         if (loader) loader.remove();
                         currentButton.classList.remove('hidden');
+
                         // Proceed to step complete and show next step
                         completeStepAndProceed(stepId, currentButton);
                     }, 3000); // 3 seconds delay
                     return;
                 }
             }
+
             // For other steps, just proceed immediately
             const currentButton = document.querySelector(`#wf-step-${stepId - 1} button`);
             completeStepAndProceed(stepId, currentButton);
         }
+
         function completeStepAndProceed(stepId, currentButton) {
             if (currentButton) {
                 // Change button style to indicate completion
@@ -1952,10 +2256,12 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 currentButton.innerHTML = `Step Completed ✓`;
                 currentButton.removeAttribute('onclick');
                 currentButton.removeAttribute('disabled');
+
                 // Stop the previous pulse
                 const prevPulse = document.querySelector(`#wf-step-${stepId - 1} .animate-pulse`);
                 if (prevPulse) prevPulse.classList.remove('animate-pulse');
             }
+
             const nextStep = document.getElementById(`wf-step-${stepId}`);
             if (nextStep) {
                 nextStep.classList.remove('hidden');
@@ -1963,15 +2269,18 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 void nextStep.offsetWidth;
                 nextStep.classList.remove('opacity-0', 'translate-y-4');
                 nextStep.classList.add('opacity-100', 'translate-y-0');
+
                 // Add pulse to new step dot
                 const newPulse = nextStep.querySelector('.rounded-full.bg-purple-600, .rounded-full.bg-green-500');
                 if (newPulse && stepId < 10) newPulse.classList.add('animate-pulse');
             }
         }
+
         function resetWorkflow() {
             // Remove any active loader
             const loader = document.getElementById('analysis-loader');
             if (loader) loader.remove();
+
             // Hide all steps except the first
             const steps = document.querySelectorAll('.workflow-step');
             steps.forEach((step, index) => {
@@ -1984,12 +2293,14 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     btn.removeAttribute('disabled');
                     btn.removeAttribute('data-loading');
                     btn.classList.remove('hidden');
+
                     // Reset Pulse
                     const pulse = step.querySelector('.rounded-full.bg-purple-600');
                     if (pulse) pulse.classList.add('animate-pulse');
                 } else {
                     step.classList.add('hidden', 'opacity-0', 'translate-y-4');
                     step.classList.remove('opacity-100', 'translate-y-0');
+
                     // Reset Buttons
                     const btn = step.querySelector('button');
                     if (btn && index < 10) {
@@ -2026,11 +2337,13 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 }
             });
         }
+
         // PODCAST AUDIO CONTROLLER LOGIC
         let podcastAudio = document.getElementById('podcast-audio');
         let podcastPlayIcon = document.getElementById('podcast-play-icon');
         let podcastProgress = document.getElementById('podcast-progress');
         let podcastTime = document.getElementById('podcast-time');
+
         function togglePodcastPlay() {
             if (!podcastAudio) return;
             if (podcastAudio.paused) {
@@ -2041,6 +2354,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 podcastPlayIcon.textContent = '▶';
             }
         }
+
         if (podcastAudio) {
             podcastAudio.addEventListener('timeupdate', () => {
                 let current = podcastAudio.currentTime;
@@ -2053,6 +2367,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     podcastTime.textContent = formatTime(current) + ' / ' + formatTime(duration);
                 }
             });
+
             podcastAudio.addEventListener('ended', () => {
                 if (podcastPlayIcon) podcastPlayIcon.textContent = '▶';
                 if (podcastProgress) podcastProgress.style.width = '0%';
@@ -2064,11 +2379,13 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 }
             });
         }
+
         function formatTime(secs) {
             let m = Math.floor(secs / 60);
             let s = Math.floor(secs % 60);
             return m + ':' + (s < 10 ? '0' : '') + s;
         }
+
         function seekPodcast(e) {
             if (!podcastAudio) return;
             let rect = e.currentTarget.getBoundingClientRect();
@@ -2077,188 +2394,103 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             let duration = podcastAudio.duration || 0;
             if (width > 0) {
                 podcastAudio.currentTime = (clickX / width) * duration;
+            }
         }
+
         // STUDY STATION MODULE SYSTEM
         function selectStudyModule(moduleName) {
             const displayContainer = document.getElementById('study-module-display');
-            const titleEl = document.getElementById('study-module-title');
-            const contentEl = document.getElementById('study-module-content');
-            if (!displayContainer || !titleEl || !contentEl) return;
+            if (!displayContainer) return;
+
             displayContainer.classList.remove('hidden');
-            // Trigger animation
-            displayContainer.classList.add('animate-in', 'fade-in', 'duration-500');
-            if (moduleName === 'flashcards') {
-                titleEl.innerHTML = '<span>🎴</span> Flash Cards';
-                contentEl.innerHTML = `
-                    <div class="flex flex-col items-center justify-center p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm">
-                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-2">Question 1 of 5</p>
-                        <div id="demo-flashcard" data-side="front" class="w-full aspect-[1.6] bg-purple-950 text-white rounded-xl flex flex-col items-center justify-center p-6 text-center cursor-pointer select-none transition-all duration-300 transform hover:scale-[1.02] shadow-inner" onclick="toggleFlashcard()">
-                            <div class="flex flex-col justify-center items-center h-full">
-                                <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Web Security</p>
-                                <h4 class="text-lg font-black">What is HSTS?</h4>
-                                <p class="text-[9px] text-purple-400 mt-4 uppercase">Click card to reveal answer</p>
-                            </div>
-                        </div>
-                        <p class="text-[10px] text-gray-400 mt-4 italic">Tip: Click the card to flip it!</p>
-                    </div>
-                `;
-            } else if (moduleName === 'quiz') {
-                titleEl.innerHTML = '<span>🧠</span> Quiz';
-                contentEl.innerHTML = `
-                    <div class="text-center py-6 max-w-md mx-auto bg-white border border-purple-100 rounded-2xl p-6 shadow-sm">
-                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-2">Ready to test your skills?</p>
-                        <h4 class="text-lg font-black text-purple-950 mb-4">PL-900 & AWS Fundamentals Practice Quiz</h4>
-                        <div class="flex justify-center gap-4">
-                            <button onclick="startDemoQuiz()" class="bg-purple-900 hover:bg-purple-800 text-white text-[10px] font-black uppercase tracking-widest px-6 py-3 rounded-full transition-colors shadow-md">
-                                Start Quiz
-                            </button>
-                        </div>
-                    </div>
-                `;
-            } else if (moduleName === 'study-guide') {
-                titleEl.innerHTML = '<span>📖</span> Study Guide';
-                contentEl.innerHTML = `
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                            <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">📚 PL-900 Power Platform Cheat Sheet</h4>
-                            <p class="text-xs text-gray-500">Summary of Power Apps, Power Automate, Power BI, Power Virtual Agents, and Dataverse connectors.</p>
-                            <a href="#" class="inline-block text-[10px] font-black uppercase tracking-widest text-purple-600 mt-3 hover:text-purple-900">Download Guide →</a>
-                        </div>
-                        <div class="p-5 bg-white border border-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                            <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">☁️ AWS Fundamentals Quick-Reference</h4>
-                            <p class="text-xs text-gray-500">Essential IAM policies, EC2 pricing models, S3 bucket storage classes, and VPC guidelines.</p>
-                            <a href="#" class="inline-block text-[10px] font-black uppercase tracking-widest text-purple-600 mt-3 hover:text-purple-900">Download Guide →</a>
-                        </div>
-                    </div>
-                `;
-            } else if (moduleName === 'visual-guide') {
-                titleEl.innerHTML = '<span>📊</span> Visual Guide';
-                contentEl.innerHTML = `
-                    <div class="p-6 bg-purple-950 rounded-2xl border border-white/10 shadow-inner text-center">
-                        <h4 class="font-black text-purple-200 text-xs uppercase tracking-wider mb-4">> PIPELINE_VISUALIZER // LOADING</h4>
-                        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-white text-xs">
-                            <div class="px-4 py-2 bg-purple-900 border border-purple-700 rounded-lg">Raw Telemetry</div>
-                            <span class="text-purple-400">→</span>
-                            <div class="px-4 py-2 bg-purple-900 border border-purple-700 rounded-lg">Python Cleanse</div>
-                            <span class="text-purple-400">→</span>
-                            <div class="px-4 py-2 bg-purple-900 border border-purple-700 rounded-lg">Power BI/Tableau</div>
-                        </div>
-                        <p class="text-[10px] text-purple-200/70 mt-6 italic">Interactive workflow mapping under construction. Check back soon!</p>
-                    </div>
-                `;
-            } else if (moduleName === 'gamefii') {
-                titleEl.innerHTML = '<span>🎮</span> GameFII';
-                contentEl.innerHTML = `
-                    <div class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm max-w-md mx-auto">
-                        <div class="flex justify-between items-center mb-4">
-                            <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider">Aisha's Learning Journey</h4>
-                            <span class="text-[9px] font-black bg-purple-100 text-purple-700 px-2.5 py-1 rounded-full uppercase tracking-widest">Level 4</span>
-                        </div>
-                        <div class="space-y-3">
-                            <div>
-                                <div class="flex justify-between text-xs font-semibold mb-1">
-                                    <span>Data Engineering Quest</span>
-                                    <span>75%</span>
-                                </div>
-                                <div class="h-2 w-full bg-purple-100 rounded-full overflow-hidden">
-                                    <div class="h-full bg-purple-600 w-3/4 rounded-full"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-xs font-semibold mb-1">
-                                    <span>Security & HSTS Mastery</span>
-                                    <span>40%</span>
-                                </div>
-                                <div class="h-2 w-full bg-purple-100 rounded-full overflow-hidden">
-                                    <div class="h-full bg-purple-600 w-2/5 rounded-full"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
+
+            // Hide all sub-contents
+            const tabs = document.querySelectorAll('.study-module-tab');
+            tabs.forEach(t => t.classList.add('hidden'));
+
+            // Show the selected one
+            const target = document.getElementById('content-' + moduleName);
+            if (target) {
+                target.classList.remove('hidden');
             }
+
+            // Update the title
+            const titleEl = document.getElementById('study-module-title');
+            if (titleEl) {
+                const titles = {
+                    'flashcards': '<span>🎴</span> Flash Cards',
+                    'quiz': '<span>🧠</span> Quiz',
+                    'study-guide': '<span>📖</span> Study Guide',
+                    'visual-guide': '<span>📊</span> Visual Guide',
+                    'gamefii': '<span>🎮</span> GameFII'
+                };
+                titleEl.innerHTML = titles[moduleName] || 'Study Module';
+            }
+
             // Scroll module into view smoothly
             setTimeout(() => {
                 displayContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }, 100);
         }
+
         function closeStudyModule() {
             const displayContainer = document.getElementById('study-module-display');
             if (displayContainer) {
                 displayContainer.classList.add('hidden');
             }
         }
-        // Toggle visual content of demo flashcard
+
         function toggleFlashcard() {
-            const card = document.getElementById('demo-flashcard');
-            if (!card) return;
-            const side = card.dataset.side;
-            if (side === 'front') {
-                card.innerHTML = `
-                    <div class="flex flex-col justify-center items-center h-full animate-in fade-in duration-300">
-                        <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Web Security</p>
-                        <h4 class="text-xs font-semibold leading-relaxed px-4">HTTP Strict Transport Security (HSTS) is a web security policy mechanism that helps to protect websites against man-in-the-middle attacks such as protocol downgrade attacks and cookie hijacking.</h4>
-                        <p class="text-[9px] text-purple-400 mt-4 uppercase">Click to view question</p>
-                    </div>
-                `;
-                card.dataset.side = 'back';
-            } else {
-                card.innerHTML = `
-                    <div class="flex flex-col justify-center items-center h-full animate-in fade-in duration-300">
-                        <p class="text-xs uppercase tracking-widest text-purple-300 font-bold mb-2">Topic: Web Security</p>
-                        <h4 class="text-lg font-black">What is HSTS?</h4>
-                        <p class="text-[9px] text-purple-400 mt-4 uppercase">Click card to reveal answer</p>
-                    </div>
-                `;
-                card.dataset.side = 'front';
+            const front = document.getElementById('flashcard-front');
+            const back = document.getElementById('flashcard-back');
+            if (front && back) {
+                front.classList.toggle('hidden');
+                back.classList.toggle('hidden');
             }
         }
+
         function startDemoQuiz() {
-            const contentEl = document.getElementById('study-module-content');
-            if (!contentEl) return;
-            contentEl.innerHTML = `
-                <div class="p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm animate-in fade-in duration-300">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-[9px] font-black uppercase tracking-widest text-purple-400">AWS Fundamentals Quiz</span>
-                        <span class="text-[9px] font-black uppercase tracking-widest text-purple-600">Question 1/1</span>
-                    </div>
-                    <h4 class="text-sm font-bold text-purple-950 mb-4">Which AWS service is best suited for storing backup files and hosting static web content?</h4>
-                    <div class="space-y-2">
-                        <button onclick="answerDemoQuiz(false, this)" class="w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">A) Amazon EC2</button>
-                        <button onclick="answerDemoQuiz(false, this)" class="w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">B) Amazon RDS</button>
-                        <button onclick="answerDemoQuiz(true, this)" class="w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">C) Amazon S3</button>
-                        <button onclick="answerDemoQuiz(false, this)" class="w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors">D) AWS Lambda</button>
-                    </div>
-                    <p id="quiz-feedback" class="text-xs text-center font-bold mt-4 h-4"></p>
-                </div>
-            `;
+            const startView = document.getElementById('quiz-start-view');
+            const qView = document.getElementById('quiz-question-view');
+            const feedback = document.getElementById('quiz-feedback');
+            const retryBtn = document.getElementById('quiz-retry-btn');
+
+            if (startView) startView.classList.add('hidden');
+            if (qView) qView.classList.remove('hidden');
+            if (feedback) feedback.innerText = '';
+            if (retryBtn) retryBtn.classList.add('hidden');
+
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+            buttons.forEach(btn => {
+                btn.disabled = false;
+                btn.className = "quiz-opt-btn w-full text-left p-3 border border-purple-100 rounded-xl hover:bg-purple-50 text-xs font-medium transition-colors";
+            });
         }
+
         function answerDemoQuiz(isCorrect, element) {
             const feedback = document.getElementById('quiz-feedback');
-            const buttons = element.parentNode.querySelectorAll('button');
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
             buttons.forEach(btn => btn.disabled = true);
+
             if (isCorrect) {
-                element.className = "w-full text-left p-3 border border-green-200 bg-green-50 text-green-700 text-xs font-bold rounded-xl transition-all";
+                element.className = "quiz-opt-btn w-full text-left p-3 border border-green-200 bg-green-50 text-green-700 text-xs font-bold rounded-xl transition-all";
                 feedback.className = "text-xs text-center font-bold mt-4 text-green-600";
                 feedback.innerText = "Correct! Amazon S3 is designed for object storage.";
             } else {
-                element.className = "w-full text-left p-3 border border-red-200 bg-red-50 text-red-700 text-xs font-bold rounded-xl transition-all";
+                element.className = "quiz-opt-btn w-full text-left p-3 border border-red-200 bg-red-50 text-red-700 text-xs font-bold rounded-xl transition-all";
                 feedback.className = "text-xs text-center font-bold mt-4 text-red-600";
                 feedback.innerText = "Incorrect. Try starting the quiz again!";
             }
-            // Add reset option
-            setTimeout(() => {
-                const contentEl = document.getElementById('study-module-content');
-                if (contentEl) {
-                    const resetBtn = document.createElement('button');
-                    resetBtn.className = "mt-4 w-full bg-purple-900 hover:bg-purple-800 text-white text-[9px] font-black uppercase tracking-widest py-2 rounded-full transition-colors shadow-sm";
-                    resetBtn.innerText = "Retry Quiz";
-                    resetBtn.onclick = startDemoQuiz;
-                    contentEl.querySelector('.max-w-md').appendChild(resetBtn);
-                }
-            }, 1000);
+
+            const retryBtn = document.getElementById('quiz-retry-btn');
+            if (retryBtn) {
+                setTimeout(() => {
+                    retryBtn.classList.remove('hidden');
+                }, 1000);
+            }
         }
     </script>
+
     <!-- GOOGLE TRANSLATE SCRIPT -->
     <div id="google_translate_element" style="display:none;"></div>
     <script type="text/javascript">
@@ -2272,10 +2504,12 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
     </script>
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <!-- MERMAID SCRIPT FOR DYNAMIC FLOWCHARTS -->
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
         mermaid.initialize({ startOnLoad: true });
     </script>
 </body>
+
 </html>
