@@ -3374,6 +3374,277 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 </div>
                                             </div>
                                         </div>
+                                        <div id="study-guide-detailed-card-3" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
+                                             <!-- Header -->
+                                             <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                                 <div>
+                                                     <span class="text-[9px] font-black text-purple-500 uppercase tracking-widest block mb-1">Detailed Study Reference</span>
+                                                     <h3 class="text-xl font-black text-purple-950 uppercase tracking-wide">Video 21 to 30 Study Guide</h3>
+                                                     <p class="text-xs text-gray-500 mt-1">Cybersecurity Threat Landscapes and System Vulnerabilities: A Briefing Document</p>
+                                                 </div>
+                                                 <div class="flex gap-2 self-start md:self-center">
+                                                     <button onclick="window.print()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                                         🖨️ Print Guide
+                                                     </button>
+                                                 </div>
+                                             </div>
+
+                                             <!-- Executive Summary -->
+                                             <div class="bg-purple-50/50 border border-purple-100 p-5 rounded-2xl">
+                                                 <h4 class="text-[10px] font-black uppercase tracking-widest text-purple-900 mb-2">Executive Summary</h4>
+                                                 <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                     Modern cybersecurity threats are characterized by a diverse array of attack vectors ranging from sophisticated technical exploits to psychological manipulation. Attackers leverage vulnerabilities in memory management (buffer overflows, DLL injections), software development (race conditions), and the human element (social engineering and impersonation). Critical risks emerge from unpatched operating systems, compromised supply chains—as seen in the SolarWinds incident—and the physical bypass of digital security via USB devices. Mitigation requires a "defense in depth" strategy, involving rigorous patch management, digital signature verification, robust backups, and employee awareness to counter evolving threat vectors.
+                                                 </p>
+                                             </div>
+
+                                             <!-- Section 1 -->
+                                             <div class="space-y-4">
+                                                 <div class="flex items-center gap-2 border-b border-purple-100 pb-2">
+                                                     <span class="text-sm font-black text-purple-900">1.</span>
+                                                     <h4 class="text-xs font-black uppercase text-purple-950 tracking-wider">Technical Memory and Software Exploits</h4>
+                                                 </div>
+                                                 <p class="text-xs text-gray-600 leading-relaxed">
+                                                     Attackers frequently target the way applications manage data within system memory to alter intended functionality or escalate privileges.
+                                                 </p>
+                                                 
+                                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                     <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-2">
+                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block">Buffer Overflows</strong>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                             A buffer overflow occurs when an attacker writes more data into a memory buffer than it is designed to hold, causing the extra data to "overflow" into adjacent memory areas.
+                                                         </p>
+                                                         <ul class="list-disc pl-4 text-[10px] text-gray-500 space-y-1">
+                                                             <li><strong>Mechanism:</strong> While developers typically use bounds checking to limit data input (e.g., ensuring only 8 bytes are written), attackers search for areas where this check is missing.</li>
+                                                             <li><strong>Consequences:</strong> Can cause system crashes or, if executed precisely, allow attackers to modify variables to gain unauthorized advantages.</li>
+                                                         </ul>
+                                                     </div>
+                                                     
+                                                     <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-2">
+                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block">Memory and DLL Injections</strong>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                             Malware must reside in memory to execute. Rather than running as a standalone process, which is easily detected, malware can inject itself into a legitimate running process.
+                                                         </p>
+                                                         <ul class="list-disc pl-4 text-[10px] text-gray-500 space-y-1">
+                                                             <li><strong>DLL Injection:</strong> The attacker places a malicious DLL on a storage drive and inserts a path to it within a target process. The process then calls the malicious DLL into memory.</li>
+                                                             <li><strong>Privilege Escalation:</strong> This method allows malware to inherit the rights and permissions of the hijacked process.</li>
+                                                         </ul>
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Variable B Privilege Escalation Example -->
+                                                 <div class="p-4 bg-amber-50/40 border border-amber-200 rounded-xl space-y-2">
+                                                     <div class="flex items-center gap-1.5 text-amber-900 font-bold text-[10px] uppercase tracking-widest">
+                                                         <span>⚠️</span> Privilege Escalation Case: Buffer Overflow of Variable B
+                                                     </div>
+                                                     <p class="text-[11px] text-amber-800 leading-relaxed font-medium">
+                                                         In an application where <strong>Variable B</strong> controls permissions (e.g., value &lt; 2000 for guest rights; &gt; 24,000 for admin), an attacker can overflow <strong>Variable A</strong> to change Variable B. For instance, writing the 9-character word <code>"excessive"</code> into an 8-byte buffer for Variable A might push the ninth character (<code>'e'</code>, hex 65) into Variable B, potentially changing its value from 1979 to <strong>25,856</strong>, thereby granting administrative access without credentials.
+                                                     </p>
+                                                 </div>
+
+                                                 <!-- Race Conditions -->
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-2">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block font-black">Race Conditions & TOCTOU</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                         A race condition occurs when an application fails to account for events happening simultaneously or in an unexpected sequence.
+                                                     </p>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                         <strong>Time-of-Check to Time-of-Use (TOCTOU):</strong> This specific race condition happens when a system checks a value, but that value is modified by another process before the system actually uses it.
+                                                     </p>
+                                                     <div class="mt-2 space-y-1.5">
+                                                         <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block font-black">Real-World Impacts:</span>
+                                                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                                             <div class="bg-white p-2.5 rounded-lg border border-purple-50">
+                                                                 <span class="text-[9px] font-bold text-purple-900 block font-black">Financial Systems</span>
+                                                                 <span class="text-[9px] text-gray-500">Ledger errors can occur if withdrawals are not updated immediately across all users, potentially allowing accounts to be overdrawn.</span>
+                                                             </div>
+                                                             <div class="bg-white p-2.5 rounded-lg border border-purple-50">
+                                                                 <span class="text-[9px] font-bold text-purple-900 block font-black">Space Exploration</span>
+                                                                 <span class="text-[9px] text-gray-500">The Mars Rover Spirit experienced a "reboot loop" due to a race condition in its file system in 2004.</span>
+                                                             </div>
+                                                             <div class="bg-white p-2.5 rounded-lg border border-purple-50">
+                                                                 <span class="text-[9px] font-bold text-purple-900 block font-black">Automotive</span>
+                                                                 <span class="text-[9px] text-gray-500">Attackers earned a $100,000 prize for using a TOCTOU exploit via Bluetooth to gain root access to a Tesla Model 3 infotainment system.</span>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                             </div>
+
+                                             <!-- Section 2 -->
+                                             <div class="space-y-4">
+                                                 <div class="flex items-center gap-2 border-b border-purple-100 pb-2">
+                                                     <span class="text-sm font-black text-purple-900">2.</span>
+                                                     <h4 class="text-xs font-black uppercase text-purple-950 tracking-wider">Social Engineering and Human-Centric Vectors</h4>
+                                                 </div>
+                                                 <p class="text-xs text-gray-600 leading-relaxed">
+                                                     Social engineering leverages trust, fear, or misinformation to bypass technical security measures.
+                                                 </p>
+                                                 
+                                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                     <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-2">
+                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block">Messaging-Based Attacks</strong>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                             Messaging systems (Email, SMS, IM) are common threat vectors because they facilitate direct communication with users.
+                                                         </p>
+                                                         <ul class="list-disc pl-4 text-[10px] text-gray-500 space-y-1">
+                                                             <li><strong>Phishing:</strong> Deceptive emails to steal credentials. Attackers often use <em>pretexting</em> (a fake story like an urgent account block).</li>
+                                                             <li><strong>Vishing (Voice Phishing):</strong> Phone calls to elicit sensitive data by impersonating help desks or executives.</li>
+                                                             <li><strong>Smishing (SMS Phishing):</strong> Text messages claiming package delivery issues to prompt malicious link clicks.</li>
+                                                         </ul>
+                                                     </div>
+                                                     
+                                                     <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-2">
+                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block">Impersonation & Identity Fraud</strong>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                             Attackers pretend to be trusted entities to gain information or financial advantage.
+                                                         </p>
+                                                         <ul class="list-disc pl-4 text-[10px] text-gray-500 space-y-1">
+                                                             <li><strong>Impersonation:</strong> Using technical jargon to confuse targets or assuming a higher rank (e.g., VP of Finance) to demand compliance.</li>
+                                                             <li><strong>Identity Fraud:</strong> Using stolen private information to open fraudulent bank accounts, loans, or file tax returns to steal refunds.</li>
+                                                         </ul>
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Influence Campaigns -->
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-3">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block font-black">Influence Campaigns & Misinformation</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                         Attackers use social media to disseminate factually incorrect information to divide or confuse the public.
+                                                     </p>
+                                                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+                                                         <div class="bg-white p-3 rounded-xl border border-purple-50">
+                                                             <span class="text-[10px] font-black text-purple-800 uppercase block mb-1">Step 1: Creation</span>
+                                                             <span class="text-[10px] text-gray-500 font-medium">Attackers create networks of multiple fake user accounts (bots).</span>
+                                                         </div>
+                                                         <div class="bg-white p-3 rounded-xl border border-purple-50">
+                                                             <span class="text-[10px] font-black text-purple-800 uppercase block mb-1">Step 2: Amplification</span>
+                                                             <span class="text-[10px] text-gray-500 font-medium">Fake accounts like and share content, triggering algorithms to show it to real users.</span>
+                                                         </div>
+                                                         <div class="bg-white p-3 rounded-xl border border-purple-50">
+                                                             <span class="text-[10px] font-black text-purple-800 uppercase block mb-1">Step 3: Adoption</span>
+                                                             <span class="text-[10px] text-gray-500 font-medium">Mainstream media outlets report on the viral topic, giving it unintended legitimacy.</span>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                             </div>
+
+                                             <!-- Section 3 -->
+                                             <div class="space-y-4">
+                                                 <div class="flex items-center gap-2 border-b border-purple-100 pb-2">
+                                                     <span class="text-sm font-black text-purple-900">3.</span>
+                                                     <h4 class="text-xs font-black uppercase text-purple-950 tracking-wider">Infrastructure and System-Level Threat Vectors</h4>
+                                                 </div>
+                                                 <p class="text-xs text-gray-600 leading-relaxed">
+                                                     Attackers exploit physical, network, and supply chain components of an organization’s IT environment.
+                                                 </p>
+                                                 
+                                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                     <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-1.5">
+                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block">USB Attacks</strong>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                             A $10 USB drive can bypass millions of dollars in network security. Attackers leave drives in parking lots hoping employees plug them into air-gapped networks. Some act as "rubber ducky" keyboards to execute commands.
+                                                         </p>
+                                                     </div>
+                                                     <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-1.5">
+                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block font-black">Open Ports & Default Credentials</strong>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                             Every open service port (e.g. TCP 80/443) is an entry point if service software is vulnerable. Devices shipping with default credentials (like <code>admin/admin</code>) are indexed on public sites.
+                                                         </p>
+                                                     </div>
+                                                     <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-1.5">
+                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block font-black">Watering Hole Attacks</strong>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                             Infecting a third-party website that the organization's employees frequently visit (like local dining or niche news). E.g. in Polish/Mexican banking commission attacks, JS payloads targeted specific organization IP blocks.
+                                                         </p>
+                                                     </div>
+                                                 </div>
+
+                                                 <!-- Supply Chain -->
+                                                 <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-2">
+                                                     <strong class="text-xs text-purple-950 uppercase tracking-wide block font-black">Supply Chain and Third-Party Risks</strong>
+                                                     <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                         Attackers target the "front door" by compromising the equipment, software, or providers an organization trusts.
+                                                     </p>
+                                                     <ul class="list-disc pl-4 text-[10px] text-gray-500 space-y-1">
+                                                         <li><strong>Managed Service Providers (MSPs):</strong> Breaching an MSP provides an attacker access to the systems of all the MSP's clients.</li>
+                                                         <li><strong>Case Study (Target 2013):</strong> Attackers gained network access by first compromising a third-party HVAC contractor, eventually stealing credentials and point-of-sale data.</li>
+                                                         <li><strong>Counterfeit Hardware:</strong> Fake networking equipment (e.g. counterfeit switches) may contain pre-installed malware or lack critical security update support.</li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+
+                                             <!-- Section 4 -->
+                                             <div class="space-y-4">
+                                                 <div class="flex items-center gap-2 border-b border-purple-100 pb-2">
+                                                     <span class="text-sm font-black text-purple-900">4.</span>
+                                                     <h4 class="text-xs font-black uppercase text-purple-950 tracking-wider">Software Maintenance and Defense Strategies</h4>
+                                                 </div>
+                                                 <p class="text-xs text-gray-600 leading-relaxed">
+                                                     The complexity of modern software necessitates rigorous maintenance and a layered approach to security.
+                                                 </p>
+
+                                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                     <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-2">
+                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block">OS Patch Management</strong>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                             Large operating systems contain tens of millions of lines of code, making unknown vulnerabilities inevitable.
+                                                         </p>
+                                                         <ul class="list-disc pl-4 text-[10px] text-gray-500 space-y-1">
+                                                             <li><strong>Patch Tuesday:</strong> Microsoft releases security patches on the second Tuesday of each month.</li>
+                                                             <li><strong>Environment Testing:</strong> Patches must be tested in non-production environments to ensure they do not break configurations before deployment.</li>
+                                                         </ul>
+                                                     </div>
+                                                     
+                                                     <div class="p-4 bg-purple-50/10 border border-purple-100 rounded-xl space-y-2">
+                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block">Malicious Updates & Signatures</strong>
+                                                         <p class="text-[11px] text-gray-500 leading-relaxed">
+                                                             The update process itself can be a threat vector, as seen in the 2020 SolarWinds Orion compromise.
+                                                         </p>
+                                                         <ul class="list-disc pl-4 text-[10px] text-gray-500 space-y-1">
+                                                             <li><strong>SolarWinds Incident:</strong> Attackers compromised the development system, embedding malware into a legitimate, digitally signed update, breaching government agencies.</li>
+                                                             <li><strong>Digital Signatures:</strong> Indispensable for verifying that code updates come from a trusted developer (Microsoft, Adobe, Google).</li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+
+                                             <!-- Defense in depth Table -->
+                                             <div class="border border-purple-100 rounded-2xl overflow-hidden mt-4">
+                                                 <div class="bg-purple-955 px-4 py-2 text-white text-[10px] font-black uppercase tracking-widest">
+                                                     Defense in Depth / Layered Security Matrix
+                                                 </div>
+                                                 <table class="w-full text-left border-collapse text-[10px]">
+                                                     <thead>
+                                                         <tr class="bg-purple-900/10 text-purple-950 border-b border-purple-100 font-bold">
+                                                             <th class="p-3 border-r border-purple-50 w-1/4 font-black">Layer</th>
+                                                             <th class="p-3 font-black">Function / Security Value</th>
+                                                         </tr>
+                                                     </thead>
+                                                     <tbody class="divide-y divide-purple-50 text-gray-600">
+                                                         <tr>
+                                                             <td class="p-3 font-bold border-r border-purple-50 text-purple-950 font-black">Antivirus</td>
+                                                             <td class="p-3">Detects and neutralizes malicious code on individual host machines.</td>
+                                                         </tr>
+                                                         <tr class="bg-purple-50/10">
+                                                             <td class="p-3 font-bold border-r border-purple-50 text-purple-950 font-black">Firewall</td>
+                                                             <td class="p-3">Filters network traffic at boundary points based on ports, protocols, and IP addresses.</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td class="p-3 font-bold border-r border-purple-50 text-purple-950 font-black">IPS (Intrusion Prevention System)</td>
+                                                             <td class="p-3">Sits inline to actively recognize and block malicious patterns inside network packets.</td>
+                                                         </tr>
+                                                         <tr class="bg-purple-50/10">
+                                                             <td class="p-3 font-bold border-r border-purple-50 text-purple-950 font-black">Backups</td>
+                                                             <td class="p-3">Critical recovery option for reverting systems after a failed update, corruption, or successful ransomware lock.</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td class="p-3 font-bold border-r border-purple-50 text-purple-950 font-black">Inventory Management</td>
+                                                             <td class="p-3">Essential for discovering "shadow IT" and cataloging legacy/unsupported hardware that no longer receives security updates.</td>
+                                                         </tr>
+                                                     </tbody>
+                                                 </table>
+                                             </div>
+                                         </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -5181,8 +5452,58 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             },
             3: {
                 title: "Professor Messer's SY0-701 Security+ Training Video 21 to 30 // Social Engineering",
-                q: "What is Social Engineering?",
-                a: "The psychological manipulation of people into performing actions or divulging confidential information (e.g., Phishing, Vishing, Tailgating)."
+                cards: [
+                    { q: "What occurs when an attacker writes more data into a memory area than it is designed to hold?", a: "A buffer overflow." },
+                    { q: "What development practice is used to ensure that input into a memory section does not exceed its allocated size?", a: "Bounds checking." },
+                    { q: "What is the primary objective of an attacker when performing a repeatable buffer overflow?", a: "To gain a particular functional advantage, such as elevated permissions." },
+                    { q: "In a buffer overflow attack, the data that exceeds the intended space spills over into ______.", a: "another area of memory" },
+                    { q: "What is the general term for the method an attacker uses to gain access to a system?", a: "Threat vector (or attack vector)." },
+                    { q: "Which messaging-based threat vector uses malicious links or attachments sent to a user's inbox?", a: "Email." },
+                    { q: "What is the specific name for phishing attacks delivered via Short Message Service (SMS)?", a: "Smishing." },
+                    { q: "Why is the Scalable Vector Graphic (SVG) format considered a threat vector?", a: "It is an XML file that can contain embedded HTML or JavaScript." },
+                    { q: "What allows attackers to execute malicious code when a user opens a seemingly benign Microsoft Office document?", a: "Macros." },
+                    { q: "How can compressed files like ZIP or RAR be used to obfuscate a threat?", a: "They can hide malicious software among hundreds or thousands of benign files." },
+                    { q: "What is the term for voice-based phishing used to steal credit card or personal information?", a: "Vishing." },
+                    { q: "What is the practice of automatically dialing unpublished phone numbers to find entry points into a system?", a: "War dialing." },
+                    { q: "How can an attacker breach an 'air-gapped' network that has no internet connection?", a: "By leaving infected USB drives in a public area for employees to find and plug in." },
+                    { q: "What type of hardware device can mimic a keyboard to automatically type malicious commands when plugged into a USB port?", a: "A specially modified USB drive." },
+                    { q: "Why is it critical for organizations to identify and secure 'unsupported systems'?", a: "The manufacturer no longer provides security patches for them." },
+                    { q: "Which wireless security protocol is currently the most secure for modern infrastructure?", a: "WPA3." },
+                    { q: "What authentication protocol prevents unauthorized network access by requiring credentials before a port is opened?", a: "802.1X." },
+                    { q: "Which network service ports are typically associated with web servers?", a: "TCP port 80 and TCP port 443." },
+                    { q: "How does using application-aware firewalls enhance security for systems with open ports?", a: "They can limit external access to only specific, necessary services." },
+                    { q: "What is the security risk of failing to change the 'admin/admin' credentials on a new router?", a: "Attackers can use known default credentials to gain full administrative access." },
+                    { q: "What threat vector involves a third party compromising equipment or software during or after the manufacturing process?", a: "Supply chain vector." },
+                    { q: "In the 2013 Target breach, the attackers gained access by first compromising a third-party ______ contractor.", a: "HVAC (Heating, Ventilation, and Air Conditioning)" },
+                    { q: "What is the term for an attacker pretending to be a help desk employee or an executive to build trust?", a: "Impersonation." },
+                    { q: "What is the specific goal of an attacker engaging in identity fraud via tax forms?", a: "To receive the victim's tax refund before they can file themselves." },
+                    { q: "How should a user verify a caller who claims to be from a legitimate organization but asks for sensitive data?", a: "Hang up and call the organization back using a known, public phone number." },
+                    { q: "What is the primary risk associated with installing software updates from unverified sources?", a: "The update itself may contain embedded malicious code." },
+                    { q: "How do operating systems validate that an update is legitimate and comes from a specific developer like Microsoft or Adobe?", a: "By checking the digital signature." },
+                    { q: "Which high-end management software was compromised in 2020 to distribute malicious, digitally signed updates to thousands of organizations?", a: "SolarWinds Orion." },
+                    { q: "What is the advantage of malware injecting itself into an existing process rather than running as its own process?", a: "It can avoid detection by anti-malware and inherit the permissions of the host process." },
+                    { q: "In Windows, what does the abbreviation 'DLL' stand for?", a: "Dynamic-Link Library." },
+                    { q: "What is the core method used in a DLL injection attack?", a: "An attacker places a malicious DLL path into a target process, causing the process to load it into memory." },
+                    { q: "Why are operating systems highly attractive targets for security vulnerabilities?", a: "They are foundational platforms that almost everyone runs, and their complexity offers more lines of code to exploit." },
+                    { q: "On which day of the month does Microsoft typically release its monthly security patches?", a: "The second Tuesday of each month (Patch Tuesday)." },
+                    { q: "Why is testing a security patch in a non-production environment recommended for large organizations?", a: "To ensure the patch does not break existing software or system configurations." },
+                    { q: "What is the difference between misinformation and disinformation in social engineering?", a: "Disinformation is specifically designed to divide or confuse, often as part of an influence campaign." },
+                    { q: "How do social media algorithms contribute to the spread of misinformation?", a: "They amplify posts that receive high numbers of likes and shares, even if the accounts are fake." },
+                    { q: "What is 'typosquatting'?", a: "Registering a domain name that is a slight misspelling of a legitimate site to trick users." },
+                    { q: "The social engineering technique where an attacker makes up a complex story to drag a victim into a 'drama' is called ______.", a: "pretexting" },
+                    { q: "A ______ condition occurs when an application fails to account for two events happening simultaneously.", a: "race" },
+                    { q: "What does the acronym TOCTOU stand for in the context of race conditions?", a: "Time-Of-Check to Time-Of-Use." },
+                    { q: "What was the cause of the reboot loop experienced by the Mars rover Spirit in 2004?", a: "A race condition related to the file system." },
+                    { q: "In a 'watering hole' attack, who does the attacker target to eventually reach their primary victim?", a: "A third-party website that the primary victim's organization frequently visits." },
+                    { q: "What security strategy uses multiple layers of security, such as firewalls, IPS, and antivirus, to protect a network?", a: "Defense in depth (or layered defense)." },
+                    { q: "What is the benefit of an Intrusion Prevention System (IPS) in a watering hole attack defense?", a: "It can recognize malicious contents in network traffic that a firewall might allow through." },
+                    { q: "What is the risk of an 'agentless' web-based system being compromised at the server level?", a: "Every client connecting to the server can be automatically infected with a new instance of the malicious software." },
+                    { q: "Why is an accurate inventory of systems essential for IT security?", a: "It allows the IT department to identify and secure legacy or unsupported hardware that might otherwise be forgotten." },
+                    { q: "What term describes attackers moving freely between systems once they have gained an initial foothold in a network?", a: "Moving through a digital highway (lateral movement)." },
+                    { q: "What is the purpose of using a Managed Service Provider (MSP) as a threat vector?", a: "Compromising an MSP provides an attacker with access to the systems of all the MSP's clients." },
+                    { q: "How can an attacker use an SVG file to conduct a cross-site scripting attack?", a: "By injecting JavaScript into the XML code that describes the SVG image." },
+                    { q: "What is the decimal value of variable B in the buffer overflow example if its hex value is changed by an overflow of character 'E' (hex 65)?", a: "25,856" }
+                ]
             },
             4: {
                 title: "Professor Messer's SY0-701 Security+ Training Video 31 to 40 // Malware Varieties",
@@ -5446,7 +5767,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 code: "graph LR\n    Actor[Threat Actor] -->|Finds| Vuln[Vulnerability/Weakness]\n    Vuln -->|Launches| Exploit[Exploit Code]\n    Exploit -->|Compromises| Asset[Target Systems]"
             },
             3: {
-                desc: "Social engineering vishing attack path demonstrating credential harvesting steps.",
+                desc: "The Kawaii Guide to Cyber Spooks: Staying Safe in a Digital World interactive visual dashboard.",
                 code: "graph TD\n    Attacker -->|Calls Target| Phone[Spoofed Phone Call]\n    Phone -->|Urgency/Panic| Target[Target Employee]\n    Target -->|Discloses| Creds[SSO Credentials]\n    Creds -->|Access Gained| Attacker"
             },
             4: {
@@ -5593,7 +5914,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             frontDiv.classList.remove('hidden');
             backDiv.classList.add('hidden');
 
-            if (activeFlashcardDeckId >= 3) {
+            if (activeFlashcardDeckId >= 4) {
                 frontText.textContent = "Flashcard deck content coming soon!";
                 backText.textContent = "Under Construction // Please check back later.";
                 progressIndicator.textContent = "Card 1 of 1";
@@ -5798,17 +6119,25 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             if (deckId === 1) {
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-3')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-1').classList.remove('hidden');
             } else if (deckId === 2) {
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-3')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-2').classList.remove('hidden');
+            } else if (deckId === 3) {
+                document.getElementById('study-guide-standard-card').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-3').classList.remove('hidden');
             } else {
                 document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-3')?.classList.add('hidden');
                 document.getElementById('study-guide-standard-card').classList.remove('hidden');
 
-                if (deckId >= 3) {
+                if (deckId >= 4) {
                     subtitleEl.textContent = "📚 " + deck.title + " // Coming Soon";
                     summaryEl.textContent = "This study reference guide is currently under construction. Please check back later!";
                     const li = document.createElement('li');
@@ -6268,6 +6597,322 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                         '</div>' +
                     '</div>' +
                 '</div>';
+            } else if (deckId === 3) {
+                if (cardWrapper) cardWrapper.className = "p-6 bg-white border border-purple-100 rounded-2xl max-w-5xl mx-auto shadow-sm space-y-6";
+                if (chartWrapper) chartWrapper.className = "flex justify-center p-0 bg-transparent rounded-xl border-none shadow-none overflow-x-auto w-full";
+                
+                descEl.textContent = "The Kawaii Guide to Cyber Spooks: Staying Safe in a Digital World interactive visual dashboard.";
+                
+                containerEl.innerHTML = '<div class="w-full text-slate-900 bg-[#FFFDF9] p-6 font-sans select-none rounded-2xl text-left border border-orange-100/40 shadow-sm">' +
+                    '<div class="text-center mb-8 border-b border-rose-100 pb-4">' +
+                        '<h3 class="text-lg md:text-xl font-black text-rose-950 tracking-tight uppercase flex items-center justify-center gap-2">' +
+                            '<span>👻</span> The Kawaii Guide to Cyber Spooks: Staying Safe in a Digital World <span>👻</span>' +
+                        '</h3>' +
+                        '<p class="text-[10px] text-rose-500 font-bold uppercase tracking-widest mt-1">Interactive Kawaii Infographic // Deck 3 Visual Aid</p>' +
+                    '</div>' +
+                    '<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">' +
+                        '<div class="p-5 bg-gradient-to-br from-rose-50/50 to-pink-50/20 border-2 border-rose-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                            '<div class="flex items-center gap-2 border-b border-rose-200 pb-2 mb-2">' +
+                                '<span class="text-xl">🤫</span>' +
+                                '<div>' +
+                                    '<h4 class="text-xs font-black uppercase text-rose-950 tracking-wider">Sneaky Social Engineering</h4>' +
+                                    '<p class="text-[8px] text-rose-500 font-bold uppercase tracking-wide">Human Exploits & Pretexting</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="space-y-3">' +
+                                '<div onclick="showSpookDetail(\'phishing\')" class="cursor-pointer p-3 bg-white border border-rose-200/80 hover:border-rose-400 hover:bg-rose-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-rose-50 rounded-xl">📧</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-rose-950 uppercase tracking-wide">Phishing, Smishing, & Vishing</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-rose-100 text-rose-700 rounded-md font-bold uppercase tracking-wider">The Big Three</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Pretexting via email, SMS, or voice calls to steal credentials or launch links.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div onclick="showSpookDetail(\'usps\')" class="cursor-pointer p-3 bg-white border border-rose-200/80 hover:border-rose-400 hover:bg-rose-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-rose-50 rounded-xl">📬</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-rose-950 uppercase tracking-wide">USPS Delivery Scam</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-rose-100 text-rose-700 rounded-md font-bold uppercase tracking-wider">SMS Smishing</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Fake notification texts claiming package delivery is suspended to force credentials harvesting.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div onclick="showSpookDetail(\'brand\')" class="cursor-pointer p-3 bg-white border border-rose-200/80 hover:border-rose-400 hover:bg-rose-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-rose-50 rounded-xl">👑</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-rose-950 uppercase tracking-wide">Identity & Brand Fraud</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-rose-100 text-rose-700 rounded-md font-bold uppercase tracking-wider">Impersonation</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Pretending to be trusted partners, brands (Microsoft), or executives to bypass user caution.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="p-5 bg-gradient-to-br from-emerald-50/50 to-teal-50/20 border-2 border-emerald-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                            '<div class="flex items-center gap-2 border-b border-emerald-200 pb-2 mb-2">' +
+                                '<span class="text-xl">🤖</span>' +
+                                '<div>' +
+                                    '<h4 class="text-xs font-black uppercase text-emerald-950 tracking-wider">Technical Trickery</h4>' +
+                                    '<p class="text-[8px] text-emerald-600 font-bold uppercase tracking-wide">Software & Memory Exploits</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="space-y-3">' +
+                                '<div onclick="showSpookDetail(\'buffer\')" class="cursor-pointer p-3 bg-white border border-emerald-200/80 hover:border-emerald-400 hover:bg-emerald-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-emerald-50 rounded-xl">☕</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-emerald-950 uppercase tracking-wide">Buffer Overflow</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-emerald-100 text-emerald-700 rounded-md font-bold uppercase tracking-wider">Bounds Defect</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Writing extra data to memory to spill past boundary slots and rewrite adjacent program logic.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div onclick="showSpookDetail(\'dll\')" class="cursor-pointer p-3 bg-white border border-emerald-200/80 hover:border-emerald-400 hover:bg-emerald-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-emerald-50 rounded-xl">🧪</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-emerald-950 uppercase tracking-wide">DLL Injection</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-emerald-100 text-emerald-700 rounded-md font-bold uppercase tracking-wider">Process Hijack</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Injecting external code libraries into running systems to inherit authority and avoid antivirus tools.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div onclick="showSpookDetail(\'os\')" class="cursor-pointer p-3 bg-white border border-emerald-200/80 hover:border-emerald-400 hover:bg-emerald-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-emerald-50 rounded-xl">🗄️</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-emerald-950 uppercase tracking-wide">OS Vulnerabilities</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-emerald-100 text-emerald-700 rounded-md font-bold uppercase tracking-wider">Complexity Bugs</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Millions of code lines inevitably harbor vulnerabilities, requiring weekly vendor patch updates.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="p-5 bg-gradient-to-br from-sky-50/50 to-blue-50/20 border-2 border-sky-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                            '<div class="flex items-center gap-2 border-b border-sky-200 pb-2 mb-2">' +
+                                '<span class="text-xl">⏳</span>' +
+                                '<div>' +
+                                    '<h4 class="text-xs font-black uppercase text-sky-950 tracking-wider">Timing & Trapdoors</h4>' +
+                                    '<p class="text-[8px] text-sky-600 font-bold uppercase tracking-wide">Race Conditions & Physical Bypass</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="space-y-3">' +
+                                '<div onclick="showSpookDetail(\'toctou\')" class="cursor-pointer p-3 bg-white border border-sky-200/80 hover:border-sky-400 hover:bg-sky-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-sky-50 rounded-xl">⏱️</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-sky-950 uppercase tracking-wide">Race Conditions (TOCTOU)</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-sky-100 text-sky-700 rounded-md font-bold uppercase tracking-wider">Time-of-Check / Use</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Exploiting timing gaps between system parameter validation and execution to modify parameters.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div onclick="showSpookDetail(\'watering\')" class="cursor-pointer p-3 bg-white border border-sky-200/80 hover:border-sky-400 hover:bg-sky-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-sky-50 rounded-xl">🥪</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-sky-950 uppercase tracking-wide">Watering Hole Attack</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-sky-100 text-sky-700 rounded-md font-bold uppercase tracking-wider">Indirect Malicious Site</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Infecting popular external websites frequented by employees (like local eateries) to compromise targets.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div onclick="showSpookDetail(\'ducky\')" class="cursor-pointer p-3 bg-white border border-sky-200/80 hover:border-sky-400 hover:bg-sky-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-sky-50 rounded-xl">🦆</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-sky-950 uppercase tracking-wide">USB "Rubber Ducky"</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-sky-100 text-sky-700 rounded-md font-bold uppercase tracking-wider">Hardware Emulator</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">A flash drive simulating a keyboard that types predefined shell script commands at high speed on connection.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="p-5 bg-gradient-to-br from-purple-50/50 to-indigo-50/20 border-2 border-purple-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                            '<div class="flex items-center gap-2 border-b border-purple-200 pb-2 mb-2">' +
+                                '<span class="text-xl">☁️</span>' +
+                                '<div>' +
+                                    '<h4 class="text-xs font-black uppercase text-purple-950 tracking-wider">Safe Habits & Supply Chains</h4>' +
+                                    '<p class="text-[8px] text-purple-600 font-bold uppercase tracking-wide">Software Updates & Verifications</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="space-y-3">' +
+                                '<div onclick="showSpookDetail(\'solarwinds\')" class="cursor-pointer p-3 bg-white border border-purple-200/80 hover:border-purple-400 hover:bg-purple-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-purple-50 rounded-xl">☁️</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-purple-950 uppercase tracking-wide">The SolarWinds Incident</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-purple-100 text-purple-700 rounded-md font-bold uppercase tracking-wider">Supply Chain Attack</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Poisoning signed software updates during vendor builds to infect downstream client networks automatically.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div onclick="showSpookDetail(\'patching\')" class="cursor-pointer p-3 bg-white border border-purple-200/80 hover:border-purple-400 hover:bg-purple-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                    '<div class="text-2xl p-2 bg-purple-50 rounded-xl">📅</div>' +
+                                    '<div class="flex-1">' +
+                                        '<div class="flex items-center justify-between mb-0.5">' +
+                                            '<span class="text-[10.5px] font-black text-purple-950 uppercase tracking-wide">Safe Patching Best Practices</span>' +
+                                            '<span class="text-[8px] px-1.5 py-0.5 bg-purple-100 text-purple-700 rounded-md font-bold uppercase tracking-wider">Backup & Sign</span>' +
+                                        '</div>' +
+                                        '<p class="text-[9.5px] text-gray-500 leading-normal">Rigorous update procedures enforcing backups, verifying file hashes, and checking digital signatures.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div id="spooks-details" class="p-4 bg-amber-50 text-[10.5px] rounded-2xl border border-amber-200 text-amber-950 font-bold transition-all duration-300 flex items-center gap-3">' +
+                        '<span class="text-xl">💡</span>' +
+                        '<div>' +
+                            '<p class="uppercase text-[9px] text-amber-800 tracking-wider">Interactive Cybersecurity Threat Explorer</p>' +
+                            '<p class="font-normal mt-0.5">Click any threat card above to deep-dive into its execution path, defense tactics, and interactive mitigation tips!</p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+
+                const details = {
+                    phishing: {
+                        title: "📧 Phishing, Smishing, & Vishing",
+                        subtitle: "The 'Big Three' of Social Engineering",
+                        exp: "Psychological manipulation targeting human vulnerabilities. Phishing targets email users; Smishing compromises users via SMS/text messaging; Vishing exploits targets via direct spoofed phone calls. Pretexting (acting out a fabricated scenario) is standard across all three.",
+                        path: "Attacker writes fake scenario ➔ Spoofs caller ID / email domain ➔ Triggers panic or urgency ➔ Target clicks URL or exposes password.",
+                        mitigation: "Interactive security awareness training, verifying caller identities via official directory callbacks, enabling advanced email gateway filters, and enforcing FIDO2-based MFA.",
+                        tip: "🌸 \"Hover over links to verify destinations before clicking, and always hang up to dial back on official listed numbers!\""
+                    },
+                    usps: {
+                        title: "📱 USPS Delivery Smishing Scam",
+                        subtitle: "A highly common SMS text phishing technique",
+                        exp: "A subclass of smishing designed to steal financial credentials. Targets receive a text purporting to be from USPS or DHL stating a delivery is 'suspended' due to a wrong address or minor fee, redirecting targets to a cloned login/credit card harvesting portal.",
+                        path: "SMS broad-cast to range ➔ Target clicks URL out of curiosity ➔ Domain mocks official postal branding ➔ Page steals details.",
+                        mitigation: "Strict security hygiene: never trust urgent postal SMS links. Verify delivery status directly on the official shipping portal or app. Use automated SMS spam filters.",
+                        tip: "🍓 \"No federal mail service demands immediate credit card details or login verification over SMS! Ignore and delete!\""
+                    },
+                    brand: {
+                        title: "🏢 Identity & Brand Impersonation",
+                        subtitle: "Pretending to be trusted partners or executives",
+                        exp: "Exploiting trust relationships by mimicking executives (CEO fraud) or dominant technology brands (Microsoft, Google). Attacking domains are registered with lookalike names (typosquatting) to bypass suspicion.",
+                        path: "Register typosquat domain (e.g. micr0soft.com) ➔ Send phishing message requesting security consent ➔ Establish access permissions.",
+                        mitigation: "Enforce SPF, DKIM, and DMARC policies; run domain spoofing detectors; require secondary out-of-band approvals for money/access requests.",
+                        tip: "🍊 \"Always verify sender domains character by character! A zero instead of an 'o' makes a huge difference!\""
+                    },
+                    buffer: {
+                        title: "☕ Buffer Overflow",
+                        subtitle: "Spilling over system memory boundaries",
+                        exp: "A code defect in languages without managed memory (like C/C++). If input bounds aren't checked, inputting larger datasets than expected spills into adjacent memory, letting attackers corrupt variables or redirect the Return Address to run malicious shellcode.",
+                        path: "Buffer allocated with size limit ➔ Large input entered without check ➔ Adjacent registers overwritten ➔ Instruction Pointer hijacked.",
+                        mitigation: "Use modern memory-safe languages (Rust, Python), run rigorous static and dynamic source code analyzers, compile with stack canaries, ASLR, and DEP/NX.",
+                        tip: "☕ \"It's like pouring an entire pot of tea into a small teacup—the liquid spills over and ruins everything! Keep buffers bounded!\""
+                    },
+                    dll: {
+                        title: "🧪 DLL Injection",
+                        subtitle: "Hiding malware inside clean processes",
+                        exp: "An evasion technique where an attacker forces a legitimate Windows OS process to load and run a malicious Dynamic Link Library (DLL). The malware executes within the memory space of the trusted process, inheriting its access and avoiding simple file scanners.",
+                        path: "Identify running system process ➔ Open process handle ➔ Allocate memory space in process ➔ Write path & load malicious library.",
+                        mitigation: "Restrict administrative rights to prevent process write operations, employ Endpoint Detection & Response (EDR) to monitor load events, configure OS security baselines.",
+                        tip: "🦠 \"By hiding in a clean process, the bad code acts like a Trojan. Continuous behavioral analysis of memory keeps it in check!\""
+                    },
+                    os: {
+                        title: "🗄️ Operating System Vulnerabilities",
+                        subtitle: "Massive code bases mean inevitable hidden bugs",
+                        exp: "Modern computer operating systems contain tens of millions of lines of code. This scale means bugs and zero-day vulnerabilities are mathematically guaranteed to exist, requiring continuous updates and regular patch cycles.",
+                        path: "Developer writes complex code ➔ Security vulnerability goes unnoticed ➔ Attacker discovers and exploits ➔ Security patch released.",
+                        mitigation: "Establish a robust patch management schedule, perform pre-deployment sandbox staging tests for updates, utilize host-based firewalls and endpoint protection.",
+                        tip: "🪵 \"A larger house has more windows for thieves to inspect. Keeping your systems patched secures the openings!\""
+                    },
+                    toctou: {
+                        title: "⏱️ Race Conditions (TOCTOU)",
+                        subtitle: "\"Time-of-Check to Time-of-Use\" timing exploit",
+                        exp: "A vulnerability where an exploit occurs in the small delay between the check of a condition (e.g. validating a file's access right) and its actual use. Attackers swap files or parameters in that window to access unauthorized files.",
+                        path: "System checks file permission ➔ Attacker swaps valid file with symlink ➔ System writes/reads swapped target file.",
+                        mitigation: "Use atomic system file actions, lock active files during execution phases, prevent parameters from being modified mid-process.",
+                        tip: "🦆 \"It's like swapping a relay baton right when the runner isn't looking! Make checks and actions atomic!\""
+                    },
+                    watering: {
+                        title: "🥪 Watering Hole Attack",
+                        subtitle: "Poisoning the local favorite website",
+                        exp: "Instead of attacking a hardened corporate network directly, the attacker finds and infects a weaker third-party website frequently visited by company staff (e.g., local sandwich shop, regional newsletter), installing drive-by malware.",
+                        path: "Identify targets' favorite websites ➔ Inject script into vulnerable site ➔ Employees visit site ➔ Browser exploit runs.",
+                        mitigation: "Enforce network traffic inspection and web content filters, run browser isolation solutions, keep client browser applications up to date.",
+                        tip: "🏡 \"Why attack the front gate when you can poison the water well outside? Stay alert on external sites!\""
+                    },
+                    ducky: {
+                        title: "🦆 USB \"Rubber Ducky\"",
+                        subtitle: "A $10 device vs. a million-dollar firewall",
+                        exp: "A physical security threat where a custom micro-controller shaped like a flash drive mimics a USB keyboard (Human Interface Device). Since operating systems implicitly trust keyboards, it types pre-coded scripts at extreme speeds to hijack shells.",
+                        path: "Device plugged in ➔ Detected as standard keyboard ➔ Automatically launches terminal ➔ Types malicious scripts to inject backdoors.",
+                        mitigation: "Apply corporate policies disabling USB mass storage/HID on critical servers, perform physical audits of ports, provide physical security training.",
+                        tip: "🎒 \"Never plug in any device you find on the ground! It could type command codes to compromise your system in seconds!\""
+                    },
+                    solarwinds: {
+                        title: "☁️ The SolarWinds Supply Chain Incident",
+                        subtitle: "A supply chain cautionary tale",
+                        exp: "A critical compromise of a software vendor's build pipeline. Attackers injected a backdoor into SolarWinds Orion updates. Because the code was signed with official digital signatures, downstream targets updated automatically.",
+                        path: "Infiltrate vendor build server ➔ Inject malicious code block ➔ System compiles and digitally signs update ➔ Pushed to clients.",
+                        mitigation: "Enforce code integrity reviews in compilation pipelines, strictly monitor out-of-band communication from servers, enforce least privilege.",
+                        tip: "🕸️ \"Supply chain trust is highly vulnerable. Monitor network traffic from all servers, even clean, newly updated ones!\""
+                    },
+                    patching: {
+                        title: "📅 Safe Patching Best Practices",
+                        subtitle: "Backup first, then update!",
+                        exp: "Proper system maintenance policies that reduce downtime and verify code safety. These mandate full backups before changes, sourcing files only via developer channels, and checking digital signatures.",
+                        path: "Create offline restore point ➔ Download update from secure portal ➔ Verify file SHA-256 hash ➔ Apply in test environment ➔ Roll out.",
+                        mitigation: "Rigorous change management boards, automated fallback scripts, digital certificate verification, regular backup restore testing.",
+                        tip: "🛁 \"Never update systems without a verified, working restore point. It is your ultimate safety net!\""
+                    }
+                };
+
+                window.showSpookDetail = function(key) {
+                    const data = details[key];
+                    if (!data) return;
+                    const detailBox = document.getElementById('spooks-details');
+                    if (detailBox) {
+                        detailBox.className = "p-5 bg-purple-50 text-[10.5px] rounded-2xl border border-purple-200 text-purple-950 font-normal transition-all duration-300 space-y-2.5";
+                        detailBox.innerHTML = 
+                            '<div class="flex items-center justify-between border-b border-purple-200 pb-1.5">' +
+                                '<div>' +
+                                    '<span class="text-xs font-black uppercase text-purple-950 block">' + data.title + '</span>' +
+                                    '<span class="text-[9px] text-purple-500 font-bold uppercase tracking-wide">' + data.subtitle + '</span>' +
+                                '</div>' +
+                                '<button onclick="resetSpookDetail()" class="text-[9px] font-black uppercase text-purple-600 hover:text-purple-900 bg-purple-100 hover:bg-purple-200 px-2 py-0.5 rounded-md transition-colors">Reset</button>' +
+                            '</div>' +
+                            '<div>' +
+                                '<p class="leading-relaxed"><strong class="font-black text-purple-900 uppercase text-[9px] tracking-wider block mb-0.5">Explanation:</strong>' + data.exp + '</p>' +
+                            '</div>' +
+                            '<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1 border-t border-purple-100">' +
+                                '<div>' +
+                                    '<p class="leading-relaxed"><strong class="font-black text-purple-900 uppercase text-[9px] tracking-wider block mb-0.5">Execution Path:</strong>' + data.path + '</p>' +
+                                '</div>' +
+                                '<div>' +
+                                    '<p class="leading-relaxed"><strong class="font-black text-purple-900 uppercase text-[9px] tracking-wider block mb-0.5">Mitigation / Defense:</strong>' + data.mitigation + '</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="bg-white p-2.5 rounded-xl border border-purple-100 flex items-center gap-2 mt-1">' +
+                                '<span class="text-lg">🦦</span>' +
+                                '<div>' +
+                                    '<span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block">Caypi\'s Kawaii Security Tip</span>' +
+                                    '<p class="text-[9.5px] italic text-purple-950 font-bold leading-normal">' + data.tip + '</p>' +
+                                '</div>' +
+                            '</div>';
+                    }
+                };
+
+                window.resetSpookDetail = function() {
+                    const detailBox = document.getElementById('spooks-details');
+                    if (detailBox) {
+                        detailBox.className = "p-4 bg-amber-50 text-[10.5px] rounded-2xl border border-amber-200 text-amber-950 font-bold transition-all duration-300 flex items-center gap-3";
+                        detailBox.innerHTML = 
+                            '<span class="text-xl">💡</span>' +
+                            '<div>' +
+                                '<p class="uppercase text-[9px] text-amber-800 tracking-wider">Interactive Cybersecurity Threat Explorer</p>' +
+                                '<p class="font-normal mt-0.5">Click any threat card above to deep-dive into its execution path, defense tactics, and interactive mitigation tips!</p>' +
+                            '</div>';
+                    }
+                };
             } else {
                 if (cardWrapper) cardWrapper.className = "p-6 bg-white border border-purple-100 rounded-2xl max-w-2xl mx-auto shadow-sm space-y-6";
                 if (chartWrapper) chartWrapper.className = "flex justify-center p-4 bg-purple-950 rounded-xl border border-white/10 shadow-inner overflow-x-auto";
@@ -6280,7 +6925,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             selectView.classList.add('hidden');
             deckView.classList.remove('hidden');
 
-            if (deckId > 2 && window.mermaid) {
+            if (deckId > 3 && window.mermaid) {
                 try {
                     window.mermaid.run({ querySelector: '.mermaid' });
                 } catch(e) {
@@ -6941,7 +7586,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             activeQuizIndex = 0;
             
             let deckId = gameState.selectedDeck || 1;
-            let sourceDeckId = (deckId === 1 || deckId === 2) ? deckId : (deckId % 2 === 0 ? 2 : 1);
+            let sourceDeckId = (deckId === 1 || deckId === 2 || deckId === 3) ? deckId : (deckId % 2 === 0 ? 2 : 1);
             
             let cards = flashcardDecks[sourceDeckId]?.cards || [];
             let quizQ = quizDecks[sourceDeckId];
@@ -7297,4 +7942,4 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
     </script>
 </body>
 
-</html>
+</html><!-- Please paste the source code of index_copy.html here -->
