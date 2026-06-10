@@ -6232,18 +6232,20 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
 
             updateQuestProgress();
 
-            // Reset toggle states for game integration when opening objectives card
+            // Go straight to the game view on quest select
             const checklistCard = document.getElementById('gamefii-checklist-card');
             const gameApp = document.getElementById('game-app');
             const btnBackQuests = document.getElementById('btn-gamefii-back-to-quests');
             const btnBackObjs = document.getElementById('btn-gamefii-back-to-objectives');
-            if (checklistCard) checklistCard.classList.remove('hidden');
-            if (gameApp) gameApp.classList.add('hidden');
-            if (btnBackQuests) btnBackQuests.classList.remove('hidden');
-            if (btnBackObjs) btnBackObjs.classList.add('hidden');
+            if (checklistCard) checklistCard.classList.add('hidden');
+            if (gameApp) gameApp.classList.remove('hidden');
+            if (btnBackQuests) btnBackQuests.classList.add('hidden');
+            if (btnBackObjs) btnBackObjs.classList.remove('hidden');
 
             selectView.classList.add('hidden');
             deckView.classList.remove('hidden');
+
+            initOrStartCaypiGame(deckId);
         }
 
         function updateQuestProgress() {
@@ -6336,13 +6338,22 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 caypiGame.scene.pause('JungleTrekScene');
             }
         }
-
         function initOrStartCaypiGame(deckId) {
             let savedState = localStorage.getItem('caypi_jungle_trek_state');
             if (savedState) {
                 try {
-                    gameState = JSON.parse(savedState);
-                    if (gameState.selectedDeck !== deckId) {
+                    let parsed = JSON.parse(savedState);
+                    if (parsed && typeof parsed === 'object') {
+                        gameState = parsed;
+                        if (gameState.selectedDeck !== deckId) {
+                            gameState = {
+                                health: 5,
+                                checkpoint: 1,
+                                selectedDeck: deckId,
+                                unlockedStage: 1
+                            };
+                        }
+                    } else {
                         gameState = {
                             health: 5,
                             checkpoint: 1,
@@ -6351,7 +6362,12 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                         };
                     }
                 } catch(e) {
-                    // ignore
+                    gameState = {
+                        health: 5,
+                        checkpoint: 1,
+                        selectedDeck: deckId,
+                        unlockedStage: 1
+                    };
                 }
             } else {
                 gameState = {
