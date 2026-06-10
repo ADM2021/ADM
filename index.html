@@ -275,7 +275,145 @@
         body.skiptranslate {
             top: 0 !important;
         }
+
+        /* Game App Wrapper Sizing & Center alignment */
+        #game-app {
+          position: relative;
+          width: 100%;
+          max-width: 800px;
+          height: 450px;
+          margin: 1.5rem auto;
+          border-radius: 1.5rem;
+          overflow: hidden;
+          box-shadow: 0 25px 50px -12px rgba(88, 28, 135, 0.25);
+          background-color: #0b0712;
+          border: 2px solid rgba(139, 92, 246, 0.15);
+          user-select: none;
+        }
+
+        #game-container {
+          width: 100%;
+          height: 100%;
+        }
+
+        /* UI Overlays Overlay Panel System */
+        #ui-overlay-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 10;
+          pointer-events: none;
+        }
+
+        .overlay-panel {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: opacity 0.4s ease, transform 0.4s ease;
+          pointer-events: auto;
+          padding: 1.5rem;
+        }
+
+        .overlay-panel.hidden {
+          opacity: 0;
+          transform: scale(0.98);
+          pointer-events: none;
+          display: none !important;
+        }
+
+        .perspective {
+          perspective: 1000px;
+        }
+
+        .transform-style {
+          transform-style: preserve-3d;
+        }
+
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+
+        .flashcard-inner {
+          transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #decks-list {
+          max-height: 180px;
+          overflow-y: auto;
+          width: 100%;
+        }
+
+        #decks-list::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        #decks-list::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.03);
+          border-radius: 3px;
+        }
+
+        #decks-list::-webkit-scrollbar-thumb {
+          background: rgba(124, 58, 237, 0.3);
+          border-radius: 3px;
+        }
+
+        .deck-item-btn {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 0.85rem 1.25rem;
+          background: rgba(124, 58, 237, 0.08);
+          border: 1px solid rgba(139, 92, 246, 0.15);
+          color: #e9d5ff;
+          border-radius: 0.75rem;
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          font-size: 0.75rem;
+          transition: all 0.2s ease;
+          cursor: pointer;
+        }
+
+        .deck-item-btn:hover {
+          background: rgba(124, 58, 237, 0.15);
+          border-color: rgba(139, 92, 246, 0.35);
+        }
+
+        .deck-item-btn.selected {
+          background: rgba(124, 58, 237, 0.35);
+          border-color: #a78bfa;
+          color: white;
+        }
+
+        .deck-item-btn::after {
+          content: '☐';
+          font-size: 1rem;
+        }
+
+        .deck-item-btn.selected::after {
+          content: '✓';
+          color: #4ade80;
+          font-weight: 800;
+        }
+
+        .animate-bounce {
+          animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
     </style>
+    <!-- Phaser 3 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
 </head>
 
 <body class="bg-[#FAF5FF] text-[#2D2433] selection:bg-purple-200">
@@ -454,8 +592,8 @@
                                      One of the flagship integrations showcased through this hub is my custom, end-to-end <strong class="text-purple-900">Boxing Vision Model</strong> (not shown yet, will integrate soon).
                                  </p>
                                  <div class="relative rounded-2xl overflow-hidden border border-purple-100 shadow-sm">
-                                     <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzZlemI3dXU2YjQ1YjcwZmp5MmVrNnZla2VoeThyenBuZzQzdTVieiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt0hHil6MqeJgHu/giphy.gif" 
-                                          alt="Boxing Computer Vision Simulation" 
+                                     <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzZlemI3dXU2YjQ1YjcwZmp5MmVrNnZla2VoeThyenBuZzQzdTVieiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt0hHil6MqeJgHu/giphy.gif"
+                                          alt="Boxing Computer Vision Simulation"
                                           class="w-full h-48 object-cover">
                                      <div class="absolute top-3 left-3 bg-purple-950/80 backdrop-blur-sm px-2.5 py-1 rounded-md text-[8px] font-black uppercase tracking-wider text-purple-200 border border-white/10">
                                          CV_STREAM // FEED_ACTIVE
@@ -3556,13 +3694,16 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                 <!-- Active GameFII Quest View -->
                                 <div id="gamefii-deck-view" class="hidden space-y-6 animate-in fade-in duration-300">
                                     <div class="flex items-center gap-3">
-                                        <button onclick="backToGamefiiDecks()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                        <button onclick="backToGamefiiDecks()" id="btn-gamefii-back-to-quests" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
                                             ← Back to Quests
+                                        </button>
+                                        <button onclick="backToQuestObjectives()" id="btn-gamefii-back-to-objectives" class="hidden text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                            ← Back to Objectives
                                         </button>
                                         <span id="active-gamefii-title" class="text-xs font-black text-purple-900 uppercase tracking-wider"></span>
                                     </div>
 
-                                    <div class="p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm space-y-4">
+                                    <div id="gamefii-checklist-card" class="p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm space-y-4">
                                         <div class="flex justify-between items-center mb-2">
                                             <h4 id="gamefii-quest-name" class="font-black text-purple-950 text-xs uppercase tracking-wider"></h4>
                                             <span id="gamefii-quest-pct" class="text-[10px] font-black bg-purple-100 text-purple-700 px-2.5 py-1 rounded-full uppercase tracking-widest">0% Complete</span>
@@ -3588,6 +3729,152 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                     <input type="checkbox" onchange="updateQuestProgress()" class="quest-checkbox rounded border-purple-300 text-purple-600 focus:ring-purple-500">
                                                     <span id="obj-3"></span>
                                                 </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="pt-4 border-t border-purple-100 flex justify-center">
+                                            <button id="btn-launch-trek" onclick="launchCaypiTrek()" class="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white text-[11px] font-black uppercase tracking-widest rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                                                🎮 Launch Caypi's Jungle Trek
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Game app wrapper -->
+                                    <div id="game-app" class="hidden relative w-full max-w-4xl mx-auto bg-[#0a0710] rounded-[2rem] overflow-hidden shadow-2xl border border-purple-950 font-sans">
+                                        <!-- Top HUD -->
+                                        <div id="hud" class="absolute top-4 left-4 right-4 z-40 flex justify-between items-center pointer-events-none hidden">
+                                            <div class="flex items-center gap-3 bg-purple-950/90 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/10 pointer-events-auto">
+                                                <div class="w-8 h-8 rounded-full bg-purple-900 border border-purple-50/30 flex items-center justify-center text-lg">🦫</div>
+                                                <div class="flex flex-col">
+                                                    <span class="text-[8px] font-black text-purple-300 uppercase tracking-widest leading-none">Caypi's Health</span>
+                                                    <div id="hearts-row" class="flex gap-1 mt-1">
+                                                        <!-- Hearts dynamically injected -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="stage-banner" class="bg-purple-950/90 backdrop-blur-md px-5 py-2 rounded-2xl border border-white/10 text-purple-200 text-xs font-black uppercase tracking-widest pointer-events-auto">
+                                                Stage 1: The Anaconda
+                                            </div>
+                                            <button id="btn-reset-progress" class="bg-purple-950/90 hover:bg-purple-900/90 backdrop-blur-md text-purple-300 hover:text-white px-4 py-2 rounded-2xl border border-white/10 text-xs font-black uppercase tracking-widest transition-colors pointer-events-auto">
+                                                🔄 Reset
+                                            </button>
+                                        </div>
+
+                                        <!-- Phaser Canvas Container -->
+                                        <div id="game-container" class="w-full h-[450px]"></div>
+
+                                        <!-- UI Overlay Panels -->
+                                        <div id="ui-overlay-container" class="absolute inset-0 z-30 pointer-events-none">
+                                            
+                                            <!-- Main Menu -->
+                                            <div id="main-menu" class="absolute inset-0 flex items-center justify-center p-6 bg-purple-950/45 backdrop-blur-sm pointer-events-auto active">
+                                                <div class="w-full max-w-md bg-purple-950/95 border border-white/10 p-8 rounded-3xl shadow-2xl text-center flex flex-col items-center">
+                                                    <span class="text-[8px] font-black tracking-widest uppercase bg-purple-900 border border-purple-50/30 px-3 py-1 rounded-full text-purple-200">Educational Adventure</span>
+                                                    <h2 class="text-3xl font-black italic uppercase text-white tracking-tighter mt-4 mb-2">Caypi's Jungle Trek</h2>
+                                                    <p class="text-xs text-purple-200/80 mb-6">Help Caypi the Capybara navigate ancient ruins, cross rivers, and reach the relaxing hot springs by answering study questions!</p>
+                                                    
+                                                    <div class="flex items-center gap-4 bg-purple-900/40 border border-white/5 p-4 rounded-2xl w-full mb-6 justify-center">
+                                                        <span class="text-4xl">🦫</span>
+                                                        <div class="text-left">
+                                                            <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest leading-none block">Your Guide</span>
+                                                            <span class="text-xs text-purple-100 italic">"Let's learn and explore together!"</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <button id="btn-open-decks" class="w-full py-4 bg-purple-600 hover:bg-purple-500 text-white font-black uppercase tracking-widest rounded-2xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]">
+                                                        Start Quest
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Study Modal -->
+                                            <div id="study-modal" class="absolute inset-0 flex items-center justify-center p-6 pointer-events-auto hidden">
+                                                <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+                                                <div class="relative w-full max-w-md bg-purple-950/95 border border-white/10 p-6 rounded-3xl shadow-2xl flex flex-col">
+                                                    <div class="flex justify-between items-center mb-4 border-b border-white/5 pb-3">
+                                                        <span id="question-type-badge" class="text-[8px] font-black uppercase tracking-widest bg-purple-900 px-2 py-0.5 rounded border border-purple-50/30 text-purple-200">MULTIPLE CHOICE</span>
+                                                        <span id="question-progress" class="text-[10px] font-bold text-purple-300">Q: 1/4</span>
+                                                    </div>
+
+                                                    <div class="mb-6">
+                                                        <p id="question-text" class="text-sm font-semibold text-white leading-relaxed">Question text goes here?</p>
+                                                    </div>
+
+                                                    <!-- MCQ Options -->
+                                                    <div id="mcq-options-container" class="flex flex-col gap-2.5 hidden">
+                                                        <button class="option-btn w-full text-left p-3.5 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-xs text-purple-100 font-semibold transition-all" data-index="0">A</button>
+                                                        <button class="option-btn w-full text-left p-3.5 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-xs text-purple-100 font-semibold transition-all" data-index="1">B</button>
+                                                        <button class="option-btn w-full text-left p-3.5 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-xs text-purple-100 font-semibold transition-all" data-index="2">C</button>
+                                                        <button class="option-btn w-full text-left p-3.5 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-xs text-purple-100 font-semibold transition-all" data-index="3">D</button>
+                                                    </div>
+
+                                                    <!-- TF Options -->
+                                                    <div id="tf-options-container" class="flex gap-3 hidden">
+                                                        <button class="option-btn tf-btn flex-1 py-4 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-sm text-purple-100 font-bold transition-all" data-value="True">True</button>
+                                                        <button class="option-btn tf-btn flex-1 py-4 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-sm text-purple-100 font-bold transition-all" data-value="False">False</button>
+                                                    </div>
+
+                                                    <!-- Flashcards -->
+                                                    <div id="flashcard-container" class="flex flex-col gap-4 hidden">
+                                                        <div class="h-36 relative perspective" style="perspective: 1000px;">
+                                                            <div id="flashcard-card" class="w-full h-full relative transition-transform duration-500 transform-style" style="transform-style: preserve-3d; transform-origin: center center;">
+                                                                <!-- Front -->
+                                                                <div class="absolute inset-0 bg-purple-900/40 border border-white/10 rounded-2xl flex flex-col items-center justify-center p-4 backface-hidden" style="backface-visibility: hidden;">
+                                                                    <p class="text-xs text-purple-200/80 mb-3 text-center">Think of the answer, then click Flip Card!</p>
+                                                                    <button id="btn-flip-card" class="px-5 py-2.5 bg-purple-700 hover:bg-purple-600 text-white text-xs font-black uppercase tracking-widest rounded-xl transition-colors">Flip Card 🔄</button>
+                                                                </div>
+                                                                <!-- Back -->
+                                                                <div class="absolute inset-0 bg-purple-900/70 border border-purple-500/30 rounded-2xl flex flex-col items-center justify-center p-4 backface-hidden" style="backface-visibility: hidden; transform: rotateY(180deg);">
+                                                                    <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest leading-none mb-1">Correct Answer</span>
+                                                                    <p id="flashcard-answer-text" class="text-sm font-bold text-white text-center mb-3">Answer text</p>
+                                                                    <div class="flex gap-2 w-full max-w-[200px]">
+                                                                        <button class="grade-btn wrong-btn flex-1 py-2 bg-red-950/80 hover:bg-red-900/80 border border-red-500/20 text-red-300 text-[10px] font-black uppercase tracking-widest rounded-lg transition-colors" data-correct="false">❌ Wrong</button>
+                                                                        <button class="grade-btn correct-btn flex-1 py-2 bg-green-950/80 hover:bg-green-900/80 border border-green-500/20 text-green-300 text-[10px] font-black uppercase tracking-widest rounded-lg transition-colors" data-correct="true">✅ Correct</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="border-t border-white/5 pt-4">
+                                                            <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block text-center mb-2">OR TYPE YOUR ANSWER</span>
+                                                            <div class="flex gap-2">
+                                                                <input type="text" id="flashcard-input" class="flex-1 px-4 py-3 bg-purple-950 border border-white/10 rounded-xl text-xs text-white placeholder-purple-300/30 focus:outline-none focus:border-purple-500" placeholder="Type answer here..." autocomplete="off">
+                                                                <button id="btn-submit-flashcard" class="px-5 py-3 bg-purple-600 hover:bg-purple-500 text-white text-xs font-black uppercase tracking-widest rounded-xl transition-all">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Feedback Panel -->
+                                                    <div id="answer-feedback" class="absolute inset-0 bg-[#0f091a] rounded-3xl p-6 flex flex-col items-center justify-center text-center hidden">
+                                                        <div id="feedback-icon" class="w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center text-green-400 text-xl font-bold mb-4">✓</div>
+                                                        <h4 id="feedback-title" class="text-lg font-black uppercase text-white mb-1">Correct!</h4>
+                                                        <p id="feedback-message" class="text-xs text-purple-200/80 mb-6">Great job. Caypi progresses forward!</p>
+                                                        <button id="btn-next-question" class="w-full py-4 bg-purple-600 hover:bg-purple-500 text-white font-black uppercase tracking-widest rounded-xl shadow-lg transition-colors">Continue</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Faint Screen -->
+                                            <div id="faint-screen" class="absolute inset-0 flex items-center justify-center p-6 bg-red-950/80 backdrop-blur-sm pointer-events-auto hidden">
+                                                <div class="w-full max-w-md bg-purple-950/95 border border-red-500/30 p-8 rounded-3xl shadow-2xl text-center flex flex-col items-center">
+                                                    <span class="text-4xl animate-bounce mb-4">😵</span>
+                                                    <h2 class="text-2xl font-black uppercase text-red-400 tracking-tight mb-2">Caypi Fainted!</h2>
+                                                    <p class="text-xs text-purple-200/80 mb-6">Don't worry! Every mistake is a learning opportunity. Caypi will respawn at the last checkpoint with full health.</p>
+                                                    <div class="w-full bg-purple-900/30 border border-white/5 p-4 rounded-2xl mb-6">
+                                                        <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block mb-1">Checkpoint</span>
+                                                        <span id="checkpoint-name-display" class="text-xs font-black uppercase text-purple-200">Stage 1: The Anaconda</span>
+                                                    </div>
+                                                    <button id="btn-respawn" class="w-full py-4 bg-red-900 hover:bg-red-800 text-white font-black uppercase tracking-widest rounded-xl transition-all">Try Again</button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Victory Screen -->
+                                            <div id="victory-screen" class="absolute inset-0 flex items-center justify-center p-6 bg-purple-950/80 backdrop-blur-sm pointer-events-auto hidden">
+                                                <div class="w-full max-w-md bg-purple-950/95 border border-purple-50/30 p-8 rounded-3xl shadow-2xl text-center flex flex-col items-center">
+                                                    <span class="text-4xl animate-bounce mb-4">♨️🦫🎉</span>
+                                                    <h2 class="text-2xl font-black uppercase text-green-400 tracking-tight mb-2">Jungle Trek Complete!</h2>
+                                                    <p class="text-xs text-purple-200/80 mb-6">You helped Caypi navigate all the jungle dangers and reach the relaxing Hot Springs. Excellent work!</p>
+                                                    <button id="btn-restart-game" class="w-full py-4 bg-green-600 hover:bg-green-500 text-white font-black uppercase tracking-widest rounded-xl transition-all">Play Again</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -5943,6 +6230,16 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
 
             updateQuestProgress();
 
+            // Reset toggle states for game integration when opening objectives card
+            const checklistCard = document.getElementById('gamefii-checklist-card');
+            const gameApp = document.getElementById('game-app');
+            const btnBackQuests = document.getElementById('btn-gamefii-back-to-quests');
+            const btnBackObjs = document.getElementById('btn-gamefii-back-to-objectives');
+            if (checklistCard) checklistCard.classList.remove('hidden');
+            if (gameApp) gameApp.classList.add('hidden');
+            if (btnBackQuests) btnBackQuests.classList.remove('hidden');
+            if (btnBackObjs) btnBackObjs.classList.add('hidden');
+
             selectView.classList.add('hidden');
             deckView.classList.remove('hidden');
         }
@@ -5995,6 +6292,864 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 }
             });
         }
+
+        // ==========================================
+        // CAYPI'S JUNGLE TREK GAME INTEGRATION
+        // ==========================================
+
+        var caypiGame = null;
+        var gameState = {
+            health: 5,
+            checkpoint: 1,
+            selectedDeck: 1,
+            unlockedStage: 1
+        };
+
+        function launchCaypiTrek() {
+            const checklistCard = document.getElementById('gamefii-checklist-card');
+            const gameApp = document.getElementById('game-app');
+            const btnBackQuests = document.getElementById('btn-gamefii-back-to-quests');
+            const btnBackObjs = document.getElementById('btn-gamefii-back-to-objectives');
+            
+            if (checklistCard) checklistCard.classList.add('hidden');
+            if (gameApp) gameApp.classList.remove('hidden');
+            if (btnBackQuests) btnBackQuests.classList.add('hidden');
+            if (btnBackObjs) btnBackObjs.classList.remove('hidden');
+
+            initOrStartCaypiGame(activeGamefiiId || 1);
+        }
+
+        function backToQuestObjectives() {
+            const checklistCard = document.getElementById('gamefii-checklist-card');
+            const gameApp = document.getElementById('game-app');
+            const btnBackQuests = document.getElementById('btn-gamefii-back-to-quests');
+            const btnBackObjs = document.getElementById('btn-gamefii-back-to-objectives');
+            
+            if (checklistCard) checklistCard.classList.remove('hidden');
+            if (gameApp) gameApp.classList.add('hidden');
+            if (btnBackQuests) btnBackQuests.classList.remove('hidden');
+            if (btnBackObjs) btnBackObjs.classList.add('hidden');
+
+            if (caypiGame) {
+                caypiGame.scene.pause('JungleTrekScene');
+            }
+        }
+
+        function initOrStartCaypiGame(deckId) {
+            let savedState = localStorage.getItem('caypi_jungle_trek_state');
+            if (savedState) {
+                try {
+                    gameState = JSON.parse(savedState);
+                    if (gameState.selectedDeck !== deckId) {
+                        gameState = {
+                            health: 5,
+                            checkpoint: 1,
+                            selectedDeck: deckId,
+                            unlockedStage: 1
+                        };
+                    }
+                } catch(e) {
+                    // ignore
+                }
+            } else {
+                gameState = {
+                    health: 5,
+                    checkpoint: 1,
+                    selectedDeck: deckId,
+                    unlockedStage: 1
+                };
+            }
+            
+            localStorage.setItem('caypi_jungle_trek_state', JSON.stringify(gameState));
+
+            const hud = document.getElementById('hud');
+            if (hud) hud.classList.remove('hidden');
+            updateHeartsHUD();
+            updateStageBanner();
+
+            if (!caypiGame) {
+                const config = {
+                    type: Phaser.AUTO,
+                    width: 800,
+                    height: 450,
+                    parent: 'game-container',
+                    physics: {
+                        default: 'arcade',
+                        arcade: {
+                            gravity: { y: 600 },
+                            debug: false
+                        }
+                    },
+                    scene: JungleTrekScene
+                };
+                caypiGame = new Phaser.Game(config);
+            } else {
+                caypiGame.scene.resume('JungleTrekScene');
+                let scene = caypiGame.scene.getScene('JungleTrekScene');
+                if (scene && typeof scene.resetLevel === 'function') {
+                    scene.resetLevel(gameState.checkpoint);
+                }
+            }
+        }
+
+        class JungleTrekScene extends Phaser.Scene {
+            constructor() {
+                super('JungleTrekScene');
+            }
+
+            preload() {
+                // Procedural Capybara Sprite
+                let caypiCanvas = this.textures.createCanvas('caypi', 32, 24);
+                let ctx = caypiCanvas.context;
+                ctx.fillStyle = '#ab7451';
+                ctx.fillRect(4, 4, 24, 18);
+                ctx.fillStyle = '#513a2a';
+                ctx.fillRect(22, 6, 8, 12);
+                ctx.fillStyle = '#8f5b3a';
+                ctx.fillRect(20, 4, 4, 10);
+                ctx.fillStyle = '#1a1a1a';
+                ctx.fillRect(18, 8, 2, 2);
+                ctx.fillStyle = '#ab7451';
+                ctx.fillRect(10, 0, 4, 4);
+                ctx.fillStyle = '#513a2a';
+                ctx.fillRect(11, 1, 2, 3);
+                ctx.fillStyle = '#513a2a';
+                ctx.fillRect(8, 22, 4, 2);
+                ctx.fillRect(20, 22, 4, 2);
+                ctx.fillStyle = '#ffa3b1';
+                ctx.fillRect(18, 12, 2, 2);
+                caypiCanvas.refresh();
+
+                // Procedural Anaconda Sprite
+                let snakeCanvas = this.textures.createCanvas('anaconda', 48, 48);
+                ctx = snakeCanvas.context;
+                ctx.fillStyle = '#2e7d32';
+                ctx.fillRect(8, 24, 32, 16);
+                ctx.fillRect(16, 12, 24, 12);
+                ctx.fillRect(24, 0, 16, 12);
+                ctx.fillStyle = '#1b5e20';
+                ctx.fillRect(32, 4, 16, 12);
+                ctx.fillStyle = '#ffd600';
+                ctx.fillRect(42, 6, 2, 2);
+                ctx.fillStyle = '#d50000';
+                ctx.fillRect(48, 10, 4, 2);
+                ctx.fillStyle = '#ffeb3b';
+                ctx.fillRect(12, 28, 4, 4);
+                ctx.fillRect(24, 16, 4, 4);
+                snakeCanvas.refresh();
+
+                // Procedural Panther Sprite
+                let pantherCanvas = this.textures.createCanvas('panther', 48, 24);
+                ctx = pantherCanvas.context;
+                ctx.fillStyle = '#120b24';
+                ctx.fillRect(6, 6, 32, 14);
+                ctx.fillRect(32, 2, 10, 10);
+                ctx.fillStyle = '#4ade80';
+                ctx.fillRect(38, 4, 2, 2);
+                ctx.fillStyle = '#120b24';
+                ctx.fillRect(34, 0, 2, 2);
+                ctx.fillRect(8, 20, 4, 4);
+                ctx.fillRect(16, 20, 4, 4);
+                ctx.fillRect(28, 20, 4, 4);
+                ctx.fillRect(34, 20, 4, 4);
+                ctx.fillRect(0, 8, 6, 2);
+                pantherCanvas.refresh();
+
+                // Procedural Crocodile Sprite
+                let crocCanvas = this.textures.createCanvas('croc', 64, 16);
+                ctx = crocCanvas.context;
+                ctx.fillStyle = '#33691e';
+                ctx.fillRect(16, 4, 32, 10);
+                ctx.fillRect(44, 6, 20, 6);
+                ctx.fillRect(0, 6, 16, 6);
+                ctx.fillStyle = '#ffd600';
+                ctx.fillRect(42, 2, 2, 2);
+                ctx.fillStyle = '#1b5e20';
+                ctx.fillRect(20, 2, 4, 2);
+                ctx.fillRect(28, 2, 4, 2);
+                ctx.fillRect(36, 2, 4, 2);
+                crocCanvas.refresh();
+
+                // Procedural Hippo Sprite
+                let hippoCanvas = this.textures.createCanvas('hippo', 56, 32);
+                ctx = hippoCanvas.context;
+                ctx.fillStyle = '#546e7a';
+                ctx.fillRect(8, 4, 40, 24);
+                ctx.fillRect(40, 8, 16, 16);
+                ctx.fillStyle = '#37474f';
+                ctx.fillRect(48, 14, 8, 10);
+                ctx.fillStyle = '#546e7a';
+                ctx.fillRect(42, 4, 4, 4);
+                ctx.fillStyle = '#37474f';
+                ctx.fillRect(12, 28, 6, 4);
+                ctx.fillRect(32, 28, 6, 4);
+                hippoCanvas.refresh();
+
+                // Procedural Monkey Sprite
+                let monkeyCanvas = this.textures.createCanvas('monkey', 24, 24);
+                ctx = monkeyCanvas.context;
+                ctx.fillStyle = '#6d4c41';
+                ctx.fillRect(4, 8, 12, 12);
+                ctx.fillRect(8, 2, 8, 8);
+                ctx.fillStyle = '#ffcc80';
+                ctx.fillRect(11, 4, 5, 5);
+                ctx.fillStyle = '#1a1a1a';
+                ctx.fillRect(13, 5, 1, 1);
+                ctx.fillStyle = '#6d4c41';
+                ctx.fillRect(6, 4, 2, 2);
+                ctx.fillRect(0, 14, 4, 2);
+                ctx.fillRect(0, 8, 2, 6);
+                monkeyCanvas.refresh();
+
+                // Dirt Grass Tile
+                let tileCanvas = this.textures.createCanvas('tile', 32, 32);
+                ctx = tileCanvas.context;
+                ctx.fillStyle = '#5c3826';
+                ctx.fillRect(0, 0, 32, 32);
+                ctx.fillStyle = '#4caf50';
+                ctx.fillRect(0, 0, 32, 6);
+                ctx.fillStyle = '#81c784';
+                ctx.fillRect(0, 0, 32, 2);
+                tileCanvas.refresh();
+
+                // Stone Ruins Tile
+                let ruinsCanvas = this.textures.createCanvas('ruins', 32, 32);
+                ctx = ruinsCanvas.context;
+                ctx.fillStyle = '#78909c';
+                ctx.fillRect(0, 0, 32, 32);
+                ctx.fillStyle = '#cfd8dc';
+                ctx.fillRect(0, 0, 32, 2);
+                ctx.fillRect(0, 0, 2, 32);
+                ctx.fillRect(16, 0, 2, 32);
+                ctx.fillRect(0, 16, 32, 2);
+                ctx.fillStyle = '#37474f';
+                ctx.fillRect(14, 2, 2, 14);
+                ctx.fillRect(30, 18, 2, 14);
+                ruinsCanvas.refresh();
+            }
+
+            create() {
+                this.physics.world.setBounds(0, 0, 2400, 450);
+                this.cameras.main.setBounds(0, 0, 2400, 450);
+                
+                this.bgGraphics = this.add.graphics();
+                this.bgGraphics.fillGradientStyle(0x1a0933, 0x1a0933, 0x5c2575, 0x5c2575, 1);
+                this.bgGraphics.fillRect(0, 0, 2400, 450);
+                
+                this.bgGraphics.fillStyle(0x381254, 0.5);
+                this.bgGraphics.beginPath();
+                this.bgGraphics.moveTo(0, 450);
+                this.bgGraphics.lineTo(200, 250);
+                this.bgGraphics.lineTo(400, 450);
+                this.bgGraphics.lineTo(600, 200);
+                this.bgGraphics.lineTo(800, 450);
+                this.bgGraphics.lineTo(1000, 180);
+                this.bgGraphics.lineTo(1200, 450);
+                this.bgGraphics.lineTo(1500, 150);
+                this.bgGraphics.lineTo(1800, 450);
+                this.bgGraphics.closePath();
+                this.bgGraphics.fillPath();
+
+                this.platforms = this.physics.add.staticGroup();
+
+                for (let x = 0; x < 800; x += 32) {
+                    this.platforms.create(x + 16, 418, 'tile');
+                }
+                
+                this.waterGraphics = this.add.graphics();
+                this.waterGraphics.fillStyle(0x0288d1, 0.8);
+                this.waterGraphics.fillRect(800, 420, 300, 30);
+                
+                for (let x = 1100; x < 1400; x += 32) {
+                    this.platforms.create(x + 16, 418, 'tile');
+                }
+                
+                for (let x = 1400; x < 1496; x += 32) {
+                    this.platforms.create(x + 16, 320, 'ruins');
+                }
+                for (let x = 1520; x < 1616; x += 32) {
+                    this.platforms.create(x + 16, 220, 'ruins');
+                }
+                for (let x = 1680; x < 2100; x += 32) {
+                    this.platforms.create(x + 16, 150, 'ruins');
+                }
+
+                this.player = this.physics.add.sprite(50, 350, 'caypi');
+                this.player.setCollideWorldBounds(true);
+                this.player.setScale(1.5);
+                this.physics.add.collider(this.player, this.platforms);
+
+                this.anaconda = this.physics.add.staticSprite(450, 386, 'anaconda').setScale(1.2);
+                
+                this.crocs = this.add.group();
+                let croc1 = this.physics.add.sprite(880, 430, 'croc').setGravityY(-600);
+                let croc2 = this.physics.add.sprite(1020, 430, 'croc').setGravityY(-600);
+                this.crocs.add(croc1);
+                this.crocs.add(croc2);
+
+                this.monkey1 = this.physics.add.staticSprite(1460, 270, 'monkey').setScale(1.2);
+                this.monkey2 = this.physics.add.staticSprite(1580, 170, 'monkey').setScale(1.2);
+                
+                this.hotSpringGraphics = this.add.graphics();
+                this.hotSpringGraphics.fillStyle(0x80deea, 0.9);
+                this.hotSpringGraphics.fillRect(1900, 134, 120, 16);
+                
+                this.steamParticles = [];
+
+                this.cursors = this.input.keyboard.createCursorKeys();
+                this.wasd = this.input.keyboard.addKeys({
+                    up: Phaser.Input.Keyboard.KeyCodes.W,
+                    left: Phaser.Input.Keyboard.KeyCodes.A,
+                    down: Phaser.Input.Keyboard.KeyCodes.S,
+                    right: Phaser.Input.Keyboard.KeyCodes.D
+                });
+
+                this.cameras.main.startFollow(this.player, true, 0.08, 0.08);
+
+                this.resetLevel(gameState.checkpoint);
+            }
+
+            resetLevel(checkpoint) {
+                if (checkpoint === 1) {
+                    this.player.setPosition(50, 350);
+                    this.anaconda.setVisible(true);
+                    this.anaconda.setActive(true);
+                    if (this.panther) this.panther.destroy();
+                    if (this.hippos) {
+                        this.hippos.clear(true, true);
+                    }
+                    this.stage1Complete = false;
+                    this.stage2Complete = false;
+                    this.stage3Complete = false;
+                } else if (checkpoint === 2) {
+                    this.player.setPosition(600, 350);
+                    this.anaconda.setVisible(false);
+                    this.anaconda.setActive(false);
+                    this.stage1Complete = true;
+                    this.stage2Complete = false;
+                    this.stage3Complete = false;
+                    if (this.hippos) {
+                        this.hippos.clear(true, true);
+                    }
+                } else if (checkpoint === 3) {
+                    this.player.setPosition(1200, 350);
+                    this.anaconda.setVisible(false);
+                    this.anaconda.setActive(false);
+                    this.stage1Complete = true;
+                    this.createHippoBridge();
+                    this.stage2Complete = true;
+                    this.stage3Complete = false;
+                } else if (checkpoint === 4) {
+                    this.player.setPosition(1950, 80);
+                    this.anaconda.setVisible(false);
+                    this.anaconda.setActive(false);
+                    this.createHippoBridge();
+                    this.stage1Complete = true;
+                    this.stage2Complete = true;
+                    this.stage3Complete = true;
+                }
+                
+                this.player.setVelocity(0, 0);
+                this.blockMovement = false;
+            }
+
+            createHippoBridge() {
+                if (this.hippos) this.hippos.clear(true, true);
+                this.hippos = this.physics.add.staticGroup();
+                this.hippos.create(860, 418, 'hippo').setScale(1.2).refreshBody();
+                this.hippos.create(940, 418, 'hippo').setScale(1.2).refreshBody();
+                this.hippos.create(1020, 418, 'hippo').setScale(1.2).refreshBody();
+                this.physics.add.collider(this.player, this.hippos);
+            }
+
+            update(time, delta) {
+                if (Math.random() < 0.1) {
+                    let p = this.add.circle(1900 + Math.random() * 120, 130, 2 + Math.random() * 3, 0xffffff, 0.4);
+                    this.physics.add.existing(p);
+                    p.body.setGravityY(-650);
+                    p.body.setVelocityX((Math.random() - 0.5) * 20);
+                    this.steamParticles.push(p);
+                }
+
+                for (let i = this.steamParticles.length - 1; i >= 0; i--) {
+                    let p = this.steamParticles[i];
+                    if (p.y < 80) {
+                        p.destroy();
+                        this.steamParticles.splice(i, 1);
+                    }
+                }
+
+                if (this.blockMovement) {
+                    this.player.setVelocityX(0);
+                    return;
+                }
+
+                let speed = 160;
+                if (this.cursors.left.isDown || this.wasd.left.isDown) {
+                    this.player.setVelocityX(-speed);
+                    this.player.setFlipX(true);
+                } else if (this.cursors.right.isDown || this.wasd.right.isDown) {
+                    this.player.setVelocityX(speed);
+                    this.player.setFlipX(false);
+                } else {
+                    this.player.setVelocityX(0);
+                }
+
+                if ((this.cursors.up.isDown || this.wasd.up.isDown || this.cursors.space.isDown) && this.player.body.touching.down) {
+                    this.player.setVelocityY(-280);
+                }
+
+                if (!this.stage1Complete && this.player.x > 380 && this.player.x < 420) {
+                    this.triggerQuizCheckpoint(1);
+                }
+
+                if (!this.stage2Complete && this.player.x > 770 && this.player.x < 810) {
+                    this.triggerQuizCheckpoint(2);
+                }
+
+                if (!this.stage3Complete && this.player.x > 1320 && this.player.x < 1360) {
+                    this.triggerQuizCheckpoint(3);
+                }
+
+                if (this.player.y > 430 && !this.stage2Complete) {
+                    this.handleFaint('Stage 2: Drowned in the crocodile river!');
+                }
+
+                if (this.player.x > 1900 && this.player.x < 2020 && this.player.y > 100 && this.player.y < 135) {
+                    this.triggerVictory();
+                }
+            }
+
+            triggerQuizCheckpoint(stageNum) {
+                this.blockMovement = true;
+                this.player.setVelocityX(0);
+                startStageQuiz(stageNum);
+            }
+
+            resolveStage(stageNum) {
+                if (stageNum === 1) {
+                    this.stage1Complete = true;
+                    this.panther = this.physics.add.sprite(this.player.x - 100, 350, 'panther').setScale(1.2);
+                    this.physics.add.collider(this.panther, this.platforms);
+                    this.physics.add.overlap(this.panther, this.anaconda, () => {
+                        this.anaconda.body.enable = false;
+                        this.tweens.add({
+                            targets: this.anaconda,
+                            x: 800,
+                            alpha: 0,
+                            duration: 1500,
+                            onComplete: () => {
+                                this.anaconda.destroy();
+                                this.tweens.add({
+                                    targets: this.panther,
+                                    alpha: 0,
+                                    duration: 1000,
+                                    onComplete: () => {
+                                        this.panther.destroy();
+                                        this.blockMovement = false;
+                                        saveGameProgress(2);
+                                    }
+                                });
+                            }
+                        });
+                    });
+                    this.panther.setVelocityX(120);
+                } else if (stageNum === 2) {
+                    this.stage2Complete = true;
+                    this.createHippoBridge();
+                    this.crocs.getChildren().forEach(croc => {
+                        this.tweens.add({
+                            targets: croc,
+                            x: croc.x + 300,
+                            alpha: 0,
+                            duration: 2000,
+                            onComplete: () => croc.destroy()
+                        });
+                    });
+                    this.blockMovement = false;
+                    saveGameProgress(3);
+                } else if (stageNum === 3) {
+                    this.stage3Complete = true;
+                    this.tweens.add({
+                        targets: this.player,
+                        x: 1720,
+                        y: 110,
+                        duration: 2500,
+                        ease: 'Power2',
+                        onComplete: () => {
+                            this.blockMovement = false;
+                            saveGameProgress(4);
+                        }
+                    });
+                }
+            }
+
+            handleFaint(msg) {
+                this.blockMovement = true;
+                this.player.setVelocity(0, 0);
+                gameState.health = 0;
+                localStorage.setItem('caypi_jungle_trek_state', JSON.stringify(gameState));
+                updateHeartsHUD();
+                
+                const faintScreen = document.getElementById('faint-screen');
+                if (faintScreen) {
+                    faintScreen.classList.remove('hidden');
+                    const checkpointName = document.getElementById('checkpoint-name-display');
+                    if (checkpointName) {
+                        checkpointName.textContent = 'Stage ' + gameState.checkpoint + ': ' + (gameState.checkpoint === 1 ? 'The Anaconda' : gameState.checkpoint === 2 ? 'Hippos & Crocs' : 'Monkeys & Cliffs');
+                    }
+                }
+            }
+
+            triggerVictory() {
+                this.blockMovement = true;
+                this.player.setVelocity(0, 0);
+                const victoryScreen = document.getElementById('victory-screen');
+                if (victoryScreen) victoryScreen.classList.remove('hidden');
+            }
+        }
+
+        var activeQuizStage = 1;
+        var activeQuizIndex = 0;
+        var activeStageQuestions = [];
+
+        function startStageQuiz(stageNum) {
+            activeQuizStage = stageNum;
+            activeQuizIndex = 0;
+            
+            let deckId = gameState.selectedDeck || 1;
+            let sourceDeckId = (deckId === 1 || deckId === 2) ? deckId : (deckId % 2 === 0 ? 2 : 1);
+            
+            let cards = flashcardDecks[sourceDeckId]?.cards || [];
+            let quizQ = quizDecks[sourceDeckId];
+            
+            activeStageQuestions = [];
+            
+            if (quizQ) {
+                activeStageQuestions.push({
+                    type: 'mcq',
+                    question: quizQ.q,
+                    options: quizQ.opts,
+                    answer: quizQ.ans,
+                    explain: quizQ.explain
+                });
+            }
+            
+            let cardIdx1 = (stageNum * 2) % cards.length;
+            let cardIdx2 = (stageNum * 2 + 1) % cards.length;
+            
+            if (cards[cardIdx1]) {
+                activeStageQuestions.push({
+                    type: 'flashcard',
+                    question: cards[cardIdx1].q,
+                    answer: cards[cardIdx1].a
+                });
+            }
+            if (cards[cardIdx2]) {
+                activeStageQuestions.push({
+                    type: 'flashcard',
+                    question: cards[cardIdx2].q,
+                    answer: cards[cardIdx2].a
+                });
+            }
+            
+            while (activeStageQuestions.length < 3) {
+                activeStageQuestions.push({
+                    type: 'tf',
+                    question: 'Is the AAA framework composed of Authentication, Authorization, and Accounting?',
+                    answer: 'True'
+                });
+            }
+            
+            const studyModal = document.getElementById('study-modal');
+            if (studyModal) studyModal.classList.remove('hidden');
+            
+            showCurrentQuestion();
+        }
+
+        function showCurrentQuestion() {
+            if (activeQuizIndex >= activeStageQuestions.length) {
+                const studyModal = document.getElementById('study-modal');
+                if (studyModal) studyModal.classList.add('hidden');
+                
+                if (caypiGame) {
+                    let scene = caypiGame.scene.getScene('JungleTrekScene');
+                    if (scene) {
+                        scene.resolveStage(activeQuizStage);
+                    }
+                }
+                return;
+            }
+            
+            const progressEl = document.getElementById('question-progress');
+            if (progressEl) progressEl.textContent = 'Q: ' + (activeQuizIndex + 1) + '/' + activeStageQuestions.length;
+            
+            let q = activeStageQuestions[activeQuizIndex];
+            
+            const qText = document.getElementById('question-text');
+            if (qText) qText.textContent = q.question;
+            
+            const badge = document.getElementById('question-type-badge');
+            if (badge) badge.textContent = q.type.toUpperCase();
+            
+            const mcqBox = document.getElementById('mcq-options-container');
+            const tfBox = document.getElementById('tf-options-container');
+            const flashcardBox = document.getElementById('flashcard-container');
+            const feedbackBox = document.getElementById('answer-feedback');
+            
+            mcqBox.classList.add('hidden');
+            tfBox.classList.add('hidden');
+            flashcardBox.classList.add('hidden');
+            feedbackBox.classList.add('hidden');
+            
+            if (q.type === 'mcq') {
+                mcqBox.classList.remove('hidden');
+                const buttons = mcqBox.querySelectorAll('.option-btn');
+                buttons.forEach((btn, idx) => {
+                    if (q.options[idx]) {
+                        btn.style.display = '';
+                        btn.textContent = q.options[idx];
+                        btn.onclick = () => selectMCQOption(idx);
+                    } else {
+                        btn.style.display = 'none';
+                    }
+                });
+            } else if (q.type === 'tf') {
+                tfBox.classList.remove('hidden');
+                const buttons = tfBox.querySelectorAll('.option-btn');
+                buttons.forEach((btn) => {
+                    let val = btn.getAttribute('data-value');
+                    btn.onclick = () => selectTFVal(val);
+                });
+            } else if (q.type === 'flashcard') {
+                flashcardBox.classList.remove('hidden');
+                const card = document.getElementById('flashcard-card');
+                if (card) card.style.transform = 'rotateY(0deg)';
+                
+                const ansText = document.getElementById('flashcard-answer-text');
+                if (ansText) ansText.textContent = q.answer;
+                
+                const input = document.getElementById('flashcard-input');
+                if (input) input.value = '';
+                
+                const btnFlip = document.getElementById('btn-flip-card');
+                if (btnFlip) {
+                    btnFlip.onclick = () => {
+                        if (card) card.style.transform = 'rotateY(180deg)';
+                    };
+                }
+                
+                const wrongBtn = flashcardBox.querySelector('.wrong-btn');
+                const correctBtn = flashcardBox.querySelector('.correct-btn');
+                if (wrongBtn && correctBtn) {
+                    wrongBtn.onclick = () => handleAnswer(false, 'Self-graded incorrect.');
+                    correctBtn.onclick = () => handleAnswer(true, 'Self-graded correct!');
+                }
+                
+                const btnSubmit = document.getElementById('btn-submit-flashcard');
+                if (btnSubmit) {
+                    btnSubmit.onclick = () => {
+                        if (input) {
+                            let text = input.value.trim().toLowerCase();
+                            let correctA = q.answer.trim().toLowerCase();
+                            let isCorrect = text.length > 2 && (correctA.includes(text) || text.includes(correctA));
+                            handleAnswer(isCorrect, isCorrect ? 'Excellent! Your typed answer matches.' : 'Incorrect. The correct answer was: ' + q.answer);
+                        }
+                    };
+                }
+            }
+        }
+
+        function selectMCQOption(idx) {
+            let q = activeStageQuestions[activeQuizIndex];
+            let isCorrect = (idx === q.answer);
+            handleAnswer(isCorrect, isCorrect ? 'Correct!' : 'Incorrect. ' + (q.explain || ''));
+        }
+
+        function selectTFVal(val) {
+            let q = activeStageQuestions[activeQuizIndex];
+            let isCorrect = (val === q.answer);
+            handleAnswer(isCorrect, isCorrect ? 'Correct!' : 'Incorrect.');
+        }
+
+        function handleAnswer(isCorrect, msg) {
+            const mcqBox = document.getElementById('mcq-options-container');
+            const tfBox = document.getElementById('tf-options-container');
+            const flashcardBox = document.getElementById('flashcard-container');
+            mcqBox.classList.add('hidden');
+            tfBox.classList.add('hidden');
+            flashcardBox.classList.add('hidden');
+            
+            const feedbackBox = document.getElementById('answer-feedback');
+            feedbackBox.classList.remove('hidden');
+            
+            const icon = document.getElementById('feedback-icon');
+            const title = document.getElementById('feedback-title');
+            const message = document.getElementById('feedback-message');
+            const btnNext = document.getElementById('btn-next-question');
+            
+            if (isCorrect) {
+                if (icon) {
+                    icon.textContent = '✓';
+                    icon.className = 'w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center text-green-400 text-xl font-bold mb-4';
+                }
+                if (title) title.textContent = 'Correct!';
+                if (message) message.textContent = msg || 'Caypi progresses forward!';
+                
+                btnNext.onclick = () => {
+                    activeQuizIndex++;
+                    showCurrentQuestion();
+                };
+            } else {
+                if (icon) {
+                    icon.textContent = '✗';
+                    icon.className = 'w-12 h-12 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center text-red-400 text-xl font-bold mb-4';
+                }
+                if (title) title.textContent = 'Incorrect!';
+                if (message) message.textContent = msg || 'Caypi lost 1 Heart!';
+                
+                gameState.health--;
+                localStorage.setItem('caypi_jungle_trek_state', JSON.stringify(gameState));
+                updateHeartsHUD();
+                
+                if (gameState.health <= 0) {
+                    btnNext.textContent = 'Respawn 🔄';
+                    btnNext.onclick = () => {
+                        feedbackBox.classList.add('hidden');
+                        const studyModal = document.getElementById('study-modal');
+                        if (studyModal) studyModal.classList.add('hidden');
+                        
+                        if (caypiGame) {
+                            let scene = caypiGame.scene.getScene('JungleTrekScene');
+                            if (scene) {
+                                scene.handleFaint('Fainted from study stress!');
+                            }
+                        }
+                    };
+                } else {
+                    btnNext.textContent = 'Continue';
+                    btnNext.onclick = () => {
+                        activeQuizIndex++;
+                        showCurrentQuestion();
+                    };
+                }
+            }
+        }
+
+        function updateHeartsHUD() {
+            const heartsRow = document.getElementById('hearts-row');
+            if (heartsRow) {
+                heartsRow.innerHTML = '';
+                let maxHearts = 5;
+                let activeHearts = Math.max(0, gameState.health);
+                for (let i = 0; i < maxHearts; i++) {
+                    let heart = document.createElement('span');
+                    heart.textContent = i < activeHearts ? '❤️' : '🖤';
+                    heartsRow.appendChild(heart);
+                }
+            }
+        }
+
+        function updateStageBanner() {
+            const banner = document.getElementById('stage-banner');
+            if (banner) {
+                let check = gameState.checkpoint || 1;
+                banner.textContent = 'Stage ' + check + ': ' + (check === 1 ? 'The Anaconda' : check === 2 ? 'Hippos & Crocs' : check === 3 ? 'Monkeys & Cliffs' : 'Victory!');
+            }
+        }
+
+        function saveGameProgress(nextCheckpoint) {
+            gameState.checkpoint = nextCheckpoint;
+            if (nextCheckpoint > gameState.unlockedStage) {
+                gameState.unlockedStage = nextCheckpoint;
+            }
+            localStorage.setItem('caypi_jungle_trek_state', JSON.stringify(gameState));
+            updateStageBanner();
+        }
+
+        // DOM Content Loaded Bindings
+        window.addEventListener('DOMContentLoaded', () => {
+            const btnReset = document.getElementById('btn-reset-progress');
+            if (btnReset) {
+                btnReset.onclick = () => {
+                    gameState = {
+                        health: 5,
+                        checkpoint: 1,
+                        selectedDeck: activeGamefiiId || 1,
+                        unlockedStage: 1
+                    };
+                    localStorage.setItem('caypi_jungle_trek_state', JSON.stringify(gameState));
+                    updateHeartsHUD();
+                    updateStageBanner();
+                    
+                    const faintScreen = document.getElementById('faint-screen');
+                    const victoryScreen = document.getElementById('victory-screen');
+                    const studyModal = document.getElementById('study-modal');
+                    if (faintScreen) faintScreen.classList.add('hidden');
+                    if (victoryScreen) victoryScreen.classList.add('hidden');
+                    if (studyModal) studyModal.classList.add('hidden');
+                    
+                    if (caypiGame) {
+                        let scene = caypiGame.scene.getScene('JungleTrekScene');
+                        if (scene) {
+                            scene.resetLevel(1);
+                        }
+                    }
+                };
+            }
+
+            const btnRespawn = document.getElementById('btn-respawn');
+            if (btnRespawn) {
+                btnRespawn.onclick = () => {
+                    const faintScreen = document.getElementById('faint-screen');
+                    if (faintScreen) faintScreen.classList.add('hidden');
+                    
+                    gameState.health = 5;
+                    localStorage.setItem('caypi_jungle_trek_state', JSON.stringify(gameState));
+                    updateHeartsHUD();
+                    
+                    if (caypiGame) {
+                        let scene = caypiGame.scene.getScene('JungleTrekScene');
+                        if (scene) {
+                            scene.resetLevel(gameState.checkpoint);
+                        }
+                    }
+                };
+            }
+
+            const btnRestart = document.getElementById('btn-restart-game');
+            if (btnRestart) {
+                btnRestart.onclick = () => {
+                    const victoryScreen = document.getElementById('victory-screen');
+                    if (victoryScreen) victoryScreen.classList.add('hidden');
+                    
+                    gameState = {
+                        health: 5,
+                        checkpoint: 1,
+                        selectedDeck: activeGamefiiId || 1,
+                        unlockedStage: 1
+                    };
+                    localStorage.setItem('caypi_jungle_trek_state', JSON.stringify(gameState));
+                    updateHeartsHUD();
+                    updateStageBanner();
+                    
+                    if (caypiGame) {
+                        let scene = caypiGame.scene.getScene('JungleTrekScene');
+                        if (scene) {
+                            scene.resetLevel(1);
+                        }
+                    }
+                };
+            }
+
+            const btnOpenDecks = document.getElementById('btn-open-decks');
+            if (btnOpenDecks) {
+                btnOpenDecks.onclick = () => {
+                    const mainMenu = document.getElementById('main-menu');
+                    if (mainMenu) mainMenu.classList.add('hidden');
+                };
+            }
+        });
     </script>
 
     <!-- GOOGLE TRANSLATE SCRIPT -->
