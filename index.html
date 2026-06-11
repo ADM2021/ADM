@@ -4578,6 +4578,422 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Study Guide Detailed Card 6 -->
+                                        <div id="study-guide-detailed-card-6" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
+                                            <!-- Header -->
+                                            <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                                <div>
+                                                    <span class="text-[9px] font-black text-purple-500 uppercase tracking-widest block mb-1">Detailed Study Reference</span>
+                                                    <h3 class="text-xl font-black text-purple-950 uppercase tracking-wide">Video 51 to 60 Study Guide</h3>
+                                                    <p class="text-xs text-gray-500 mt-1">Infrastructure and Data Security: Data classifications, network firewalls, intrusion systems, load balancing, 802.1X, hashing, tokenization, data states, and cloud architectures.</p>
+                                                </div>
+                                                <div class="flex gap-2 self-start md:self-center">
+                                                    <button onclick="window.print()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                                        🖨️ Print Guide
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Sticky Navigation Menu -->
+                                            <div class="sticky top-0 bg-white/95 backdrop-blur-md py-3 border-b border-purple-100 z-20 overflow-x-auto flex gap-2 no-scrollbar scroll-smooth">
+                                                <a href="#sg6-sec-1" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">I. Data & Sovereignty</a>
+                                                <a href="#sg6-sec-2" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">II. Firewalls & Monitoring</a>
+                                                <a href="#sg6-sec-3" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">III. Proxies & Load Balancers</a>
+                                                <a href="#sg6-sec-4" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">IV. Cryptography & Protocols</a>
+                                                <a href="#sg6-sec-5" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">V. Quiz</a>
+                                                <a href="#sg6-sec-6" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VI. Essays</a>
+                                                <a href="#sg6-sec-7" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VII. Glossary</a>
+                                            </div>
+
+                                            <!-- Executive Summary Callout -->
+                                            <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/20 space-y-2">
+                                                <strong class="text-xs text-purple-950 uppercase tracking-wide">Overview & Intent</strong>
+                                                <p class="text-[11px] text-gray-600 leading-relaxed font-medium">
+                                                    This study guide synthesizes key concepts regarding data types, infrastructure considerations, network appliances, and security protocols based on established technical standards and best practices.
+                                                </p>
+                                            </div>
+
+                                            <!-- I. Data Types, Classification, and Sovereignty -->
+                                            <div id="sg6-sec-1" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">I</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Data Types, Classification, and Sovereignty</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    Managing data security requires clear structures for identifying data sensitivity, protecting proprietary intellectual property, and complying with geographical legal boundaries:
+                                                </p>
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Regulated Data & Secrets</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Regulated data is governed by third-party rules (e.g. PCI DSS for card payment systems). Trade secrets consist of internal processes or formulas unique to an organization, while intellectual property is protected via copyrights and trademarks.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Classification Levels</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Data classification levels determine protection: Sensitive (contains PII/PHI/IP), Confidential (requires additional access rights), Public (anyone can view), and Private/Restricted (requires specific NDAs).</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Data Sovereignty & GDPR</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Data sovereignty dictates that data is subject to the laws of the country where it is physically stored. This creates compliance mandates, such as the EU's GDPR requiring that citizen data remain within the European Union.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- II. Network Infrastructure, Firewalls, & Monitoring -->
+                                            <div id="sg6-sec-2" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">II</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Network Infrastructure, Firewalls, & Monitoring</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    Modern network security designs deploy specialized packet filters, active threat prevention mechanisms, and passive network monitors to maintain integrity and uptime:
+                                                </p>
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Firewall Architectures (Layer 4 vs. Layer 7)</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Traditional network firewalls filter traffic at Layer 4 (using TCP/UDP port numbers). Next-Generation Firewalls (NGFW) operate at Layer 7, performing deep packet inspection and identifying application flows. Web Application Firewalls (WAF) inspect HTTP/HTTPS payloads to block SQL injection and XSS.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">UTM Appliances & Monitoring Modes</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Unified Threat Management (UTM) aggregates multiple services (antivirus, spam filter, URL filter) into one box, but suffers slowdowns when multiple modules are enabled. Traffic is monitored inline via IDS (detection only) or IPS (real-time prevention). Passive monitoring uses switch SPAN ports or hardware TAPs.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Fail-Open vs. Fail-Closed</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Inline devices must choose behaviors when they crash: fail-open allows unmonitored traffic to flow to preserve uptime, while fail-closed cuts the network connection entirely to prioritize absolute security.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Hardware Resilience & MTTR</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Infrastructure availability depends on metrics like Mean Time to Repair (MTTR). Redundancy is achieved using uninterruptible power supplies (UPS), backup generators, and fault-tolerant hardware configurations.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- III. Proxies, Load Balancers, and Access Management -->
+                                            <div id="sg6-sec-3" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">III</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Proxies, Load Balancers, and Access Management</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    Traffic routing and remote administration must use gateways that distribute network load and control administrative access points:
+                                                </p>
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Proxy Servers</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Forward proxies handle outbound requests from internal clients, reverse proxies secure and cache traffic in front of web servers, explicit proxies require client settings config, and transparent proxies intercept traffic silently.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Load Balancers</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Distribute traffic to ensure high efficiency. Setups include Active-Active (all nodes in use) or Active-Passive (standby nodes). Balancers provide fault tolerance and can perform SSL offloading to free server CPU capacity.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Jump Servers</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">A highly hardened, single-access stepping-stone gateway that allows administrators to connect remotely to a secure network. All administration of database and web servers must transit through this secure device.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- IV. Data Protection, Cryptography, and Protocols -->
+                                            <div id="sg6-sec-4" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">IV</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Data Protection, Cryptography, and Protocols</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    Protecting data as it moves across cloud environments or rests in storage involves cryptographic constructs, access protocols, and architectural zones:
+                                                </p>
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Cryptographic Foundations</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Plaintext is converted to unreadable ciphertext via encryption algorithms. Confusion prevents attackers from mapping relationships between key and ciphertext. Hashing generates one-way digests (e.g. SHA-256) for integrity. A collision occurs when different inputs yield identical hashes.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Data States & Protections</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Data resides in three states: at rest (storage), in transit (networks), and in use (active RAM/CPU processing). Threats in memory include the 2013 Target breach. Protections include obfuscation (making code unreadable), data masking (hiding with asterisks), and tokenization (replacing sensitive data with single-use tokens).</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">802.1X Access Protocol</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">An IEEE standard for port-based access control. The framework comprises a supplicant (client), an authenticator (switch/AP), and an authentication server (RADIUS/LDAP). It utilizes EAP (Extensible Authentication Protocol) to carry login messages securely.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">VPN, SD-WAN, & SASE Architectures</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">VPN concentrators aggregate remote encrypted tunnels. SSL/TLS VPNs use port 443 to bypass firewalls, and Site-to-site VPNs connect branches. SD-WAN builds software-defined WANs, and SASE (Secure Access Service Edge) consolidates VPN and SD-WAN into cloud-native security zones to shrink the overall attack surface.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- V. Interactive Practice Quiz -->
+                                            <div id="sg6-sec-5" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">V</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Practice Quiz</h4>
+                                                </div>
+                                                <div class="space-y-4">
+                                                    <!-- Question 1 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 1</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">What is the primary functional difference between an Intrusion Detection System (IDS) and an Intrusion Prevention System (IPS)?</p>
+                                                        <button onclick="toggleDetailedQuiz('6-1')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-1" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            An IDS is designed to monitor network traffic and provide alerts when vulnerabilities or malicious activities are detected, but it lacks the capability to block that traffic. In contrast, an IPS is positioned inline to monitor traffic in real time and can actively block dangerous exploits, such as buffer overflows or SQL injections, before they reach their destination.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Question 2 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 2</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">How does a Next-Generation Firewall (NGFW) differ from a traditional network-based firewall?</p>
+                                                        <button onclick="toggleDetailedQuiz('6-2')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-2" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            Traditional network-based firewalls typically control traffic based on OSI Layer 4, using TCP or UDP port numbers to allow or disallow flows. Next-Generation Firewalls operate at OSI Layer 7, allowing them to perform deep packet inspection and make forwarding decisions based on specific applications, regardless of the port being used.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Question 3 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 3</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">Explain the concept of "Data Sovereignty" and its legal implications.</p>
+                                                        <button onclick="toggleDetailedQuiz('6-3')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-3" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            Data sovereignty is the principle that data is subject to the laws and regulations of the country in which it is physically stored. This means that any legal proceedings, court orders, or privacy mandates—such as the GDPR's requirement that EU citizen data be stored within the European Union—are dictated by the geography of the data's location.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Question 4 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 4</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">What are the three essential components involved in the 802.1X authentication process?</p>
+                                                        <button onclick="toggleDetailedQuiz('6-4')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-4" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            The 802.1X process involves the supplicant (the client device or user requesting access), the authenticator (the switch or wireless access point providing the connection), and the authentication server (the backend database, such as RADIUS or LDAP, that validates credentials). Access to the network is prohibited by the authenticator until the authentication server confirms the supplicant's identity.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Question 5 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 5</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">Describe the performance trade-offs associated with Unified Threat Management (UTM) appliances.</p>
+                                                        <button onclick="toggleDetailedQuiz('6-5')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-5" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            UTM appliances are all-in-one security devices that bundle multiple features like URL filtering, malware identification, and spam filtering into a single piece of hardware. However, because these devices often handle many diverse services simultaneously and frequently operate at Layer 4, enabling too many features can significantly degrade the device's overall performance and speed.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Question 6 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 6</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">What is the difference between "fail-open" and "fail-closed" configurations for inline security devices?</p>
+                                                        <button onclick="toggleDetailedQuiz('6-6')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-6" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            A fail-open configuration ensures that if a security device crashes or loses power, network traffic continues to flow through the connection, albeit without security processing. A fail-closed configuration severs the network connection entirely if the device fails, prioritizing security by ensuring no unmonitored traffic can pass through the link.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Question 7 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 7</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">How does tokenization protect sensitive data during a transaction?</p>
+                                                        <button onclick="toggleDetailedQuiz('6-7')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-7" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            Tokenization replaces sensitive information, such as a credit card or Social Security number, with a non-sensitive, one-time-use token that is sent across the network. Because the token cannot be used to derive the original data and becomes invalid after its initial use, capturing the token during transit does not provide an attacker with usable sensitive information.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Question 8 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 8</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">Define Mean Time to Repair (MTTR) in the context of infrastructure resilience.</p>
+                                                        <button onclick="toggleDetailedQuiz('6-8')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-8" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            MTTR is a metric used to measure the average length of time required to repair a failed system or replace a non-available component with a working one. It is a critical measurement of an organization's resilience, though the actual time can vary depending on whether the root cause is hardware failure or a software bug requiring a patch.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Question 9 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 9</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">What is a Web Application Firewall (WAF), and what specific threats does it mitigate?</p>
+                                                        <button onclick="toggleDetailedQuiz('6-9')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-9" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            A WAF is a specialized firewall designed to analyze HTTP and HTTPS traffic to protect web-based applications by inspecting input data. It is specifically used to identify and block web-based attacks such as SQL injections, cross-site scripting (XSS), and other errors that traditional firewalls might miss.
+                                                        </div>
+                                                    </div>
+                                                    <!-- Question 10 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl space-y-3">
+                                                        <span class="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Question 10</span>
+                                                        <p class="text-xs text-purple-950 font-bold leading-normal">Explain the role of a Jump Server in a secure network architecture.</p>
+                                                        <button onclick="toggleDetailedQuiz('6-10')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-6-10" class="hidden mt-3 p-4 bg-purple-50/50 border border-purple-100 rounded-xl text-[11px] leading-relaxed font-semibold text-purple-950">
+                                                            A jump server is a highly hardened and secured device located inside a private network that serves as a single point of entry for authorized users connecting from the outside. Users must first authenticate to the jump server, and only then can they use it to access and manage other internal devices, such as web or database servers.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- VI. Essay Questions -->
+                                            <div id="sg6-sec-6" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VI</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Essay Questions</h4>
+                                                </div>
+                                                <div class="grid grid-cols-1 gap-4">
+                                                    <!-- Essay 1 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-2">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">1. The Evolution of Wide Area Networking</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Compare traditional centralized data center designs with SD-WAN and SASE architectures. Discuss how the shift to cloud services necessitated these new secure communication methods.</p>
+                                                    </div>
+                                                    <!-- Essay 2 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-2">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">2. Data Protection Strategies</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Analyze the differences between encryption, hashing, obfuscation, and data masking. In what scenarios would an organization choose one method over the others to protect sensitive PII or PHI?</p>
+                                                    </div>
+                                                    <!-- Essay 3 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-2">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">3. Infrastructure Availability and Resilience</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Discuss the financial and operational considerations of maintaining high availability (e.g., 99.999% uptime). Include the roles of redundancy, power backups (UPS/Generators), and MTTR.</p>
+                                                    </div>
+                                                    <!-- Essay 4 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-2">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">4. Minimizing the Attack Surface</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Explain the concept of an attack surface and how security zones, firewall rules, and application-level encryption work together to protect a network from human error and malicious actors.</p>
+                                                    </div>
+                                                    <!-- Essay 5 -->
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-2">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">5. States of Data and Modern Vulnerabilities</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Discuss the security challenges associated with Data at Rest, Data in Transit, and Data in Use. Use the 2013 Target breach as a case study to explain why protecting data in memory (RAM/CPU) is critical.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- VII. Glossary of Key Terms -->
+                                            <div id="sg6-sec-7" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VII</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Glossary of Key Terms</h4>
+                                                </div>
+
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    <!-- Term 1 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">802.1X</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An IEEE standard for Port-based Network Access Control (NAC) that manages user and device authentication.</p>
+                                                    </div>
+                                                    <!-- Term 2 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Ciphertext</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The unreadable, encrypted version of data resulting from an encryption process.</p>
+                                                    </div>
+                                                    <!-- Term 3 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Collector</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A central database or console (like a SIEM) that gathers statistics and logs from various network sensors.</p>
+                                                    </div>
+                                                    <!-- Term 4 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Confusion</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A term describing the dramatic difference between original plaintext and its resulting ciphertext after encryption.</p>
+                                                    </div>
+                                                    <!-- Term 5 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">EAP</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Extensible Authentication Protocol; a framework for authentication used by 802.1X and various network types.</p>
+                                                    </div>
+                                                    <!-- Term 6 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Elasticity</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The ability of an application or infrastructure to quickly expand or contract its footprint based on current demand.</p>
+                                                    </div>
+                                                    <!-- Term 7 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">GDPR</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">General Data Protection Regulation; an EU regulation dictating how data on EU citizens is collected, stored, and protected.</p>
+                                                    </div>
+                                                    <!-- Term 8 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Hashing</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A process that represents data as a fixed-length string (message digest); used for integrity and password storage.</p>
+                                                    </div>
+                                                    <!-- Term 9 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">IPsec</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Internet Protocol Security; a suite of protocols used to secure IP communications by authenticating and encrypting packets.</p>
+                                                    </div>
+                                                    <!-- Term 10 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Load Balancer</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A device that distributes network or application traffic across multiple servers to ensure efficiency and fault tolerance.</p>
+                                                    </div>
+                                                    <!-- Term 11 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Obfuscation</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A technique that makes data or code difficult for humans to understand while maintaining its original functionality.</p>
+                                                    </div>
+                                                    <!-- Term 12 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">PCI DSS</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Payment Card Industry Data Security Standard; a set of rules for protecting credit card information.</p>
+                                                    </div>
+                                                    <!-- Term 13 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">PHI</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Protected Health Information; sensitive health-related details specific to an individual.</p>
+                                                    </div>
+                                                    <!-- Term 14 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">PII</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Personally Identifiable Information; any data that can be used to identify a specific individual (e.g., name, DOB, biometrics).</p>
+                                                    </div>
+                                                    <!-- Term 15 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Plaintext</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Data that is stored or transmitted in a clear, human-readable format.</p>
+                                                    </div>
+                                                    <!-- Term 16 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Proxy Server</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A device that makes requests on behalf of a user, providing features like caching, URL filtering, and anonymity.</p>
+                                                    </div>
+                                                    <!-- Term 17 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SASE</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Secure Access Service Edge; a cloud-based security architecture that combines VPN and SD-WAN capabilities.</p>
+                                                    </div>
+                                                    <!-- Term 18 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SD-WAN</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Software-Defined Wide Area Network; a flexible network architecture designed for cloud-based application access.</p>
+                                                    </div>
+                                                    <!-- Term 19 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SIEM</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Security Information and Event Manager; a tool used to consolidate, correlate, and report on security data from diverse sources.</p>
+                                                    </div>
+                                                    <!-- Term 20 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SPAN / TAP</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Methods for passive monitoring; SPAN (Switch Port Analyzer) mirrors traffic via a switch, while a TAP is a physical hardware break.</p>
+                                                    </div>
+                                                    <!-- Term 21 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SSL / TLS</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Protocols used to encrypt communication, commonly over TCP port 443; used for web traffic and VPNs.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     </div>
 
                             <!-- Visual Guide Module -->
@@ -4656,7 +5072,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             <div>
                                                 <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 06</span>
                                                 <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 51 to 60</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authorization and access controls, RBAC, ABAC, ACLs, and privilege management.</p>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Infrastructure and data security, states of data, network guardians, safety tricks, and availability.</p>
                                             </div>
                                             <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
                                                 <span>View Diagram</span>
@@ -6628,8 +7044,86 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             },
             6: {
                 title: "Professor Messer's SY0-701 Security+ Training Video 51 to 60 // Authorization Controls",
-                q: "What is the difference between RBAC and ACLs?",
-                a: "Access Control Lists (ACLs) specify permissions directly on resources per user, while Role-Based Access Control (RBAC) assigns permissions to roles, and users are assigned to those roles."
+                cards: [
+                    { q: "What type of data is subject to rules set by a third party, such as the Payment Card Industry Standards?", a: "Regulated data" },
+                    { q: "Which data type consists of internal processes or secrets known only to a specific organization?", a: "Trade secrets" },
+                    { q: "How do organizations typically protect intellectual property like logos or creative works?", a: "Using copyrights and trademark law" },
+                    { q: "In many regions, legal records like court cases are considered _____ information.", a: "Public" },
+                    { q: "Which specific data type involves details that could tie information back to an individual, such as a name or biometric data?", a: "Personally Identifiable Information (PII)" },
+                    { q: "What acronym describes health-specific details like medical records or healthcare payment history?", a: "PHI (Protected Health Information)" },
+                    { q: "Data that is unique to an organization and not commonly found elsewhere is classified as _____.", a: "Proprietary" },
+                    { q: "Which data classification level covers information like intellectual property, PII, and PHI?", a: "Sensitive" },
+                    { q: "A higher classification of sensitive data that requires additional access rights to view is called _____.", a: "Confidential" },
+                    { q: "In government contexts, what term refers to information that anyone should be able to view?", a: "Unclassified (or Public)" },
+                    { q: "Which classification level requires additional permissions or a signed non-disclosure agreement?", a: "Private (or Restricted/Classified)" },
+                    { q: "What is the priority for data classified as 'critical'?", a: "It must always be accessible with high uptime." },
+                    { q: "What security device is designed to control the flow of traffic between two points?", a: "Firewall" },
+                    { q: "Traditional network-based firewalls manage traffic based on which OSI layer?", a: "Layer 4" },
+                    { q: "Which OSI layer is utilized by modern Next-Generation Firewalls (NGFW) to manage application-specific traffic?", a: "Layer 7" },
+                    { q: "What does the acronym UTM stand for in network security appliances?", a: "Unified Threat Management" },
+                    { q: "What is a common performance drawback of using a UTM device with all features enabled?", a: "The device tends to slow down significantly." },
+                    { q: "Which firewall feature allows or blocks access to specific websites based on their category?", a: "URL filtering" },
+                    { q: "What type of firewall is specifically designed to analyze input into web-based applications to block SQL injections?", a: "Web Application Firewall (WAF)" },
+                    { q: "According to PCI DSS, what type of firewall should be used to protect credit card-based applications?", a: "Web Application Firewall (WAF)" },
+                    { q: "In cybersecurity, the concept of 'availability' ensures systems are accessible only to _____.", a: "The right people" },
+                    { q: "What metric describes the length of time it takes to replace a failed component with a working one?", a: "Mean Time to Repair (MTTR)" },
+                    { q: "The ability to quickly expand or contract the footprint of an application is known as _____.", a: "Elasticity" },
+                    { q: "What term describes the automated building of cloud-based infrastructure on demand?", a: "Orchestration" },
+                    { q: "What is a common financial tool used to transfer the risk of ransomware losses to a third party?", a: "Cybersecurity insurance" },
+                    { q: "Why are embedded systems, like HVAC controls, often difficult to patch?", a: "They are purpose-built systems that often lack easy connectivity or a patching process." },
+                    { q: "Which backup component provides power to systems when the primary electrical source fails?", a: "UPS (Uninterruptible Power Supply) or Generator" },
+                    { q: "In cloud environments, what is the term for the component that performs data processing and 'thinking'?", a: "Compute engine" },
+                    { q: "Which system is designed to watch traffic in real time and block dangerous exploits immediately?", a: "Intrusion Prevention System (IPS)" },
+                    { q: "What is the primary difference between an IDS and an IPS?", a: "An IDS only alerts on vulnerabilities, while an IPS can actively block them." },
+                    { q: "If an inline security device is 'fail-open', what happens to traffic during a system crash?", a: "Data continues to flow through the connection without security processing." },
+                    { q: "In a 'fail-closed' scenario, what happens to the network link if the security device fails?", a: "The network connection is severed and communication stops." },
+                    { q: "What monitoring configuration involves a switch sending a copy of traffic to the IPS rather than the IPS being in the line of flow?", a: "Passive monitoring" },
+                    { q: "What switch feature is used to duplicate traffic and send it to an IPS for evaluation?", a: "Port mirror (or SPAN)" },
+                    { q: "Which hardened device acts as a secure bridge for external clients to manage internal network resources?", a: "Jump server" },
+                    { q: "What type of proxy must be specifically named in an application's or operating system's settings?", a: "Explicit proxy" },
+                    { q: "A proxy that sits in the middle of a conversation without the user's knowledge is called a _____ proxy.", a: "Transparent" },
+                    { q: "Which proxy type manages outbound requests from internal users to the internet?", a: "Forward (or Internal) proxy" },
+                    { q: "What is the purpose of a reverse proxy in front of a web server?", a: "To handle inbound traffic, provide security, and cache identical requests." },
+                    { q: "Why do organizations often block 'open proxies' on the internet?", a: "They can be used to circumvent security and may inject malicious code or ads." },
+                    { q: "What appliance distributes a high volume of requests across multiple servers to maintain efficiency?", a: "Load balancer" },
+                    { q: "Which load balancer configuration ensures all connected servers are active and in use simultaneously?", a: "Active-Active" },
+                    { q: "How does a load balancer provide 'fault tolerance' for a server farm?", a: "It recognizes a failed server and redistributes the load to the remaining active servers." },
+                    { q: "What load balancer feature moves the encryption/decryption process from the servers to the appliance?", a: "SSL offloading" },
+                    { q: "In an 'Active-Passive' load balancer setup, what happens when an active server fails?", a: "The load balancer activates a standby or passive device to take its place." },
+                    { q: "What centralized database tool consolidates and correlates data from various network sensors and logs?", a: "SIEM (Security Information and Event Manager)" },
+                    { q: "Which protocol provides the framework for port security on wired and wireless networks?", a: "EAP (Extensible Authentication Protocol)" },
+                    { q: "What IEEE standard manages the authentication process for users and devices connecting to a network port?", a: "802.1X (or NAC)" },
+                    { q: "In the 802.1X framework, what term refers to the client device attempting to connect?", a: "Supplicant" },
+                    { q: "In the 802.1X framework, what role does the switch or access point play?", a: "Authenticator" },
+                    { q: "Which component in 802.1X contains the database of login credentials to validate a user?", a: "Authentication server" },
+                    { q: "What technique uses GPS or wireless SSID databases to determine a user's physical location?", a: "Geolocation" },
+                    { q: "What is 'geofencing' in the context of data protection?", a: "Creating policies that restrict data access based on whether a user is within a specific geographic area." },
+                    { q: "What is the term for data in its original, readable form before encryption?", a: "Plaintext" },
+                    { q: "What term describes the readable data once it has been processed by an encryption algorithm?", a: "Ciphertext" },
+                    { q: "In encryption, what does the term 'confusion' refer to?", a: "The dramatic change between the original plaintext and the resulting ciphertext." },
+                    { q: "What is a 'hash' (message digest) primarily used for in data security?", a: "To provide a unique digital fingerprint for ensuring data integrity." },
+                    { q: "Why is it impossible to recreate the original data from its hash value?", a: "Hashing is a one-way function designed only to represent the data, not store it." },
+                    { q: "What occurs if two different inputs produce the exact same hash output?", a: "A collision" },
+                    { q: "How many bits are in the output of a SHA-256 hashing algorithm?", a: "256 bits" },
+                    { q: "What security technique takes perfectly understandable code and makes it difficult for humans to follow?", a: "Obfuscation" },
+                    { q: "What is 'data masking' used for?", a: "To hide specific parts of sensitive data, like masking credit card numbers with asterisks." },
+                    { q: "Which method replaces sensitive info (like a Social Security number) with a one-time use identifier for network transmission?", a: "Tokenization" },
+                    { q: "How does data 'segmentation' help mitigate the impact of a breach?", a: "It separates data into smaller pieces in different locations so an attacker cannot access everything at once." },
+                    { q: "What is the state of data when it is stored on a hard drive, SSD, or flash drive?", a: "Data at rest" },
+                    { q: "What is 'data in transit' (or data in motion)?", a: "Data currently being transferred across a network." },
+                    { q: "In what state is data usually found in a decrypted, readable format inside RAM or the CPU?", a: "Data in use" },
+                    { q: "Which 2013 corporate breach involved attackers retrieving millions of credit card numbers from memory terminals (data in use)?", a: "Target Corporation" },
+                    { q: "What concept describes how the laws of a country apply to the data stored within its borders?", a: "Data sovereignty" },
+                    { q: "What GDPR regulation mandates that data collected on EU citizens must be stored where?", a: "In the European Union (EU)" },
+                    { q: "What device is used to terminate encrypted tunnels for everyone connecting back to the corporate network?", a: "VPN concentrator" },
+                    { q: "Which VPN protocol is favored for passing through firewalls because it uses TCP port 443?", a: "SSL/TLS VPN" },
+                    { q: "What type of VPN connects two remote offices automatically without requiring software on individual user devices?", a: "Site-to-site VPN" },
+                    { q: "What does SD-WAN stand for in the context of connecting to cloud-based applications?", a: "Software Defined Networking in a Wide Area Network" },
+                    { q: "What is SASE (Secure Access Service Edge)?", a: "A cloud-based security framework that provides secure connectivity to web applications." },
+                    { q: "What is the goal of creating a 'security zone' in a network architecture?", a: "To logically separate devices by their use or access type for better rule management." },
+                    { q: "What term describes the combination of all potential openings (code, ports, human error) an attacker could use?", a: "Attack surface" },
+                    { q: "Why is it important to provide application-level encryption even for physically secured network cabling?", a: "To prevent an attacker who taps the line from seeing the actual contents of the packets." }
+                ]
             },
             7: {
                 title: "Professor Messer's SY0-701 Security+ Training Video 61 to 70 // Network Security",
@@ -7025,7 +7519,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             frontDiv.classList.remove('hidden');
             backDiv.classList.add('hidden');
 
-            if (activeFlashcardDeckId >= 6) {
+            if (activeFlashcardDeckId >= 7) {
                 frontText.textContent = "Flashcard deck content coming soon!";
                 backText.textContent = "Under Construction // Please check back later.";
                 progressIndicator.textContent = "Card 1 of 1";
@@ -7233,6 +7727,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 document.getElementById('study-guide-detailed-card-3')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-4')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-5')?.classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-6')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-1').classList.remove('hidden');
             } else if (deckId === 2) {
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
@@ -7240,6 +7735,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 document.getElementById('study-guide-detailed-card-3')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-4')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-5')?.classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-6')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-2').classList.remove('hidden');
             } else if (deckId === 3) {
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
@@ -7247,6 +7743,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-4')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-5')?.classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-6')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-3').classList.remove('hidden');
             } else if (deckId === 4) {
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
@@ -7254,6 +7751,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-3').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-5')?.classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-6')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-4').classList.remove('hidden');
             } else if (deckId === 5) {
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
@@ -7262,15 +7760,25 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 document.getElementById('study-guide-detailed-card-3').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-4').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-5')?.classList.remove('hidden');
+                document.getElementById('study-guide-detailed-card-6')?.classList.add('hidden');
+            } else if (deckId === 6) {
+                document.getElementById('study-guide-standard-card').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-3').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-4').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-5').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-6')?.classList.remove('hidden');
             } else {
                 document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-3')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-4')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-5')?.classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-6')?.classList.add('hidden');
                 document.getElementById('study-guide-standard-card').classList.remove('hidden');
 
-                if (deckId >= 6) {
+                if (deckId >= 7) {
                     subtitleEl.textContent = "📚 " + deck.title + " // Coming Soon";
                     summaryEl.textContent = "This study reference guide is currently under construction. Please check back later!";
                     const li = document.createElement('li');
@@ -9020,6 +9528,393 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                             '</div>';
                     }
                 };
+            } else if (deckId === 6) {
+                if (cardWrapper) cardWrapper.className = "p-6 bg-white border border-purple-100 rounded-2xl max-w-5xl mx-auto shadow-sm space-y-6";
+                if (chartWrapper) chartWrapper.className = "flex justify-center p-0 bg-transparent rounded-xl border-none shadow-none overflow-x-auto w-full";
+                
+                descEl.textContent = "A Kawaii Guide to Keeping Data Happy and Safe interactive visual dashboard.";
+                
+                containerEl.innerHTML = '<div class="w-full text-slate-900 bg-[#FAF9F6] p-6 font-sans select-none rounded-2xl text-left border border-purple-100/40 shadow-sm space-y-6">' +
+                    '<div class="text-center mb-6 border-b border-purple-200 pb-4">' +
+                        '<h3 class="text-lg md:text-xl font-black text-purple-950 tracking-tight uppercase flex items-center justify-center gap-2">' +
+                            '<span>🌸</span> A Kawaii Guide to Keeping Data Happy and Safe <span>🌸</span>' +
+                        '</h3>' +
+                        '<p class="text-[10px] text-purple-500 font-bold uppercase tracking-widest mt-1">Interactive Diagram // Deck 6 Visual Aid</p>' +
+                    '</div>' +
+
+                    '<!-- Category 1: States of Data -->' +
+                    '<div class="space-y-3">' +
+                        '<div class="flex items-center gap-2 border-b border-blue-200 pb-1.5">' +
+                            '<span class="text-lg">🗂️</span>' +
+                            '<div>' +
+                                '<h4 class="text-xs font-black uppercase text-blue-950 tracking-wider">States of Data</h4>' +
+                                '<p class="text-[8px] text-blue-600 font-bold uppercase tracking-wide">Data States & Life Cycle</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="grid grid-cols-1 md:grid-cols-3 gap-4">' +
+                            '<div onclick="showHappyDataDetail(\'at_rest\')" class="cursor-pointer p-3 bg-white border border-blue-200 hover:border-blue-400 hover:bg-blue-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-blue-50 rounded-xl">🛌</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-blue-950 uppercase tracking-wide block">Data at Rest</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Stationary data on SSDs/flash drives. Protected by full-disk encryption.</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'in_transit\')" class="cursor-pointer p-3 bg-white border border-blue-200 hover:border-blue-400 hover:bg-blue-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-blue-50 rounded-xl">🌈</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-blue-950 uppercase tracking-wide block">Data in Transit</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Moving across networks. Secured via TLS or VPN tunnels.</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'in_use\')" class="cursor-pointer p-3 bg-white border border-blue-200 hover:border-blue-400 hover:bg-blue-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-blue-50 rounded-xl">🤸</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-blue-950 uppercase tracking-wide block">Data in Use</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Active in CPU/RAM cleartext. Vulnerable to memory-scraping.</p>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<!-- Category 2: Data Personalities -->' +
+                    '<div class="space-y-3">' +
+                        '<div class="flex items-center gap-2 border-b border-green-200 pb-1.5">' +
+                            '<span class="text-lg">🧑‍💼</span>' +
+                            '<div>' +
+                                '<h4 class="text-xs font-black uppercase text-green-950 tracking-wider">Data Personalities</h4>' +
+                                '<p class="text-[8px] text-green-600 font-bold uppercase tracking-wide">Sensitivity & Classifications</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="grid grid-cols-1 md:grid-cols-3 gap-4">' +
+                            '<div onclick="showHappyDataDetail(\'pii\')" class="cursor-pointer p-3 bg-white border border-green-200 hover:border-green-400 hover:bg-green-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-green-50 rounded-xl">🆔</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-green-950 uppercase tracking-wide block">PII (Personal)</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Identifiable details (birth dates, biometrics, addresses) tying to users.</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'phi\')" class="cursor-pointer p-3 bg-white border border-green-200 hover:border-green-400 hover:bg-green-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-green-50 rounded-xl">🏥</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-green-950 uppercase tracking-wide block">PHI (Health)</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Medical status bills, records, or tests needing legal HIPAA shields.</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'proprietary\')" class="cursor-pointer p-3 bg-white border border-green-200 hover:border-green-400 hover:bg-green-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-green-50 rounded-xl">🕵️</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-green-950 uppercase tracking-wide block">Proprietary Data</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Unique trade secrets, patents, or internal processes of companies.</p>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<!-- Category 3: Network Guardians -->' +
+                    '<div class="space-y-3">' +
+                        '<div class="flex items-center gap-2 border-b border-indigo-200 pb-1.5">' +
+                            '<span class="text-lg">🛡️</span>' +
+                            '<div>' +
+                                '<h4 class="text-xs font-black uppercase text-indigo-950 tracking-wider">Network Guardians</h4>' +
+                                '<p class="text-[8px] text-indigo-600 font-bold uppercase tracking-wide">Boundary & Monitoring Controls</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">' +
+                            '<div onclick="showHappyDataDetail(\'firewall\')" class="cursor-pointer p-3 bg-white border border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-indigo-50 rounded-xl">🧱</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-indigo-950 uppercase tracking-wide block">Firewalls</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Controls traffic: Layer 4 ports or Layer 7 deep packet inspection.</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'load_balancer\')" class="cursor-pointer p-3 bg-white border border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-indigo-50 rounded-xl">⚖️</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-indigo-950 uppercase tracking-wide block">Load Balancers</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Distribute requests to backend pools for scale and fault tolerance.</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'proxy\')" class="cursor-pointer p-3 bg-white border border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-indigo-50 rounded-xl">🛜</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-indigo-950 uppercase tracking-wide block">Proxies</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Middlemen hiding user IPs (forward) or caching server requests (reverse).</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'ips\')" class="cursor-pointer p-3 bg-white border border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-indigo-50 rounded-xl">🔎</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-indigo-950 uppercase tracking-wide block">IPS</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Inline monitor that matches signatures and drops malicious packets.</p>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<!-- Category 4: Secret Codes & Safety Tricks -->' +
+                    '<div class="space-y-3">' +
+                        '<div class="flex items-center gap-2 border-b border-pink-200 pb-1.5">' +
+                            '<span class="text-lg">🔑</span>' +
+                            '<div>' +
+                                '<h4 class="text-xs font-black uppercase text-pink-950 tracking-wider">Secret Codes & Safety Tricks</h4>' +
+                                '<p class="text-[8px] text-pink-600 font-bold uppercase tracking-wide">Data Hiding & Cryptography</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="grid grid-cols-1 md:grid-cols-3 gap-4">' +
+                            '<div onclick="showHappyDataDetail(\'encryption\')" class="cursor-pointer p-3 bg-white border border-pink-200 hover:border-pink-400 hover:bg-pink-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-pink-50 rounded-xl">📦</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-pink-950 uppercase tracking-wide block">Crypto & Hashing</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Encryption hides plaintext, while hashing runs checksums for integrity.</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'tokenization\')" class="cursor-pointer p-3 bg-white border border-pink-200 hover:border-pink-400 hover:bg-pink-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-pink-50 rounded-xl">🍬</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-pink-950 uppercase tracking-wide block">Tokenization</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Replaces real details with temporary non-sensitive token identifiers.</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'masking\')" class="cursor-pointer p-3 bg-white border border-pink-200 hover:border-pink-400 hover:bg-pink-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-pink-50 rounded-xl">🎭</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-pink-950 uppercase tracking-wide block">Data Masking</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Hides specific digits (like credit cards) to prevent shoulder surfing.</p>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<!-- Category 5: Keeping the Lights On (Availability) -->' +
+                    '<div class="space-y-3">' +
+                        '<div class="flex items-center gap-2 border-b border-amber-200 pb-1.5">' +
+                            '<span class="text-lg">💡</span>' +
+                            '<div>' +
+                                '<h4 class="text-xs font-black uppercase text-amber-950 tracking-wider">Keeping the Lights On</h4>' +
+                                '<p class="text-[8px] text-amber-600 font-bold uppercase tracking-wide">Uptime, Recovery, & Resilience</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="grid grid-cols-1 md:grid-cols-3 gap-4">' +
+                            '<div onclick="showHappyDataDetail(\'uptime\')" class="cursor-pointer p-3 bg-white border border-amber-200 hover:border-amber-400 hover:bg-amber-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-amber-50 rounded-xl">⏰</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-amber-950 uppercase tracking-wide block">Uptime (Five Nines)</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Targeting 99.999% availability (max 5 mins downtime per year).</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'mttr\')" class="cursor-pointer p-3 bg-white border border-amber-200 hover:border-amber-400 hover:bg-amber-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-amber-50 rounded-xl">🔧</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-amber-950 uppercase tracking-wide block">MTTR (Repair)</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">The average length of time needed to fix a failed system component.</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div onclick="showHappyDataDetail(\'elasticity\')" class="cursor-pointer p-3 bg-white border border-amber-200 hover:border-amber-400 hover:bg-amber-50/20 rounded-2xl shadow-sm hover:scale-[1.02] transition-all duration-200 flex gap-3 items-center">' +
+                                '<div class="text-2xl p-2 bg-amber-50 rounded-xl">☁️</div>' +
+                                '<div class="flex-1">' +
+                                    '<span class="text-[10.5px] font-black text-amber-950 uppercase tracking-wide block">Elasticity</span>' +
+                                    '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Cloud auto-scaling to expand or contract resources based on active traffic.</p>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<!-- Shared Interactive Details Explorer -->' +
+                    '<div id="happy-data-details" class="p-4 bg-pink-50 text-[10.5px] rounded-2xl border border-pink-200 text-purple-950 font-bold transition-all duration-300 flex items-center gap-3">' +
+                        '<span class="text-xl">💡</span>' +
+                        '<div>' +
+                            '<p class="uppercase text-[9px] text-pink-800 tracking-wider">Interactive Data Protection Explorer</p>' +
+                            '<p class="font-normal mt-0.5">Click any visual guide card above to inspect data states, network guardians, safety tricks, or availability concepts!</p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+
+                const happyDataDetails = {
+                    at_rest: {
+                        title: "Data at Rest",
+                        cat: "States of Data",
+                        desc: "Information currently sitting on storage devices like SSDs, hard drives, or flash drives. Since the data is stationary, physical theft of the drive or host compromise are the primary vectors.",
+                        path: "1. Data is written to storage blocks on disk.<br/>2. Data remains unaccessed until requested.<br/>3. Unauthorized access is prevented via access controls or full-disk encryption.",
+                        defense: "Enforce Full-Disk Encryption (FDE), use file-level or folder-level encryption (e.g. BitLocker, FileVault), and implement strong OS-level file access permissions.",
+                        tip: "Data at Rest is like a sleeping capybara! Keep it tucked in safely under a warm blanket of full-disk encryption so nobody can wake it up or steal it! 🛌"
+                    },
+                    in_transit: {
+                        title: "Data in Transit",
+                        cat: "States of Data",
+                        desc: "Also called 'data in motion,' this is information traveling across a network via switches, routers, and cabling. It is highly vulnerable to packet sniffing and on-path interception.",
+                        path: "1. Client packages data into network frames.<br/>2. Frames travel through local switches and routers.<br/>3. Attacker taps line or sniffs wireless packets.<br/>4. Session encryption (TLS/HTTPS) renders packet payload unreadable.",
+                        defense: "Enforce Transport Layer Security (TLS) for all web traffic, utilize secure VPN tunnels (IPsec/SSL) for remote links, and disable outdated, cleartext protocols (HTTP, FTP).",
+                        tip: "Data in Transit is like a folder flying through a pipe on a rainbow! Use TLS or VPN tunnels to wrap it in a secure capsule so sniffers can't see inside! 🌈"
+                    },
+                    in_use: {
+                        title: "Data in Use",
+                        cat: "States of Data",
+                        desc: "Data actively being processed in CPU registers, caches, or system RAM. Because applications must read data in cleartext to compute, it is vulnerable to memory-scraping malware.",
+                        path: "1. Encrypted data is loaded from storage into RAM.<br/>2. Data is decrypted in memory for processing.<br/>3. CPU executes instructions on cleartext values.<br/>4. Memory-scraping malware targets active processes to read credentials.",
+                        defense: "Implement secure coding practices (clear sensitive buffers immediately), use hardware-isolated memory enclaves (SGX, Secure Enclave), and deploy endpoint detection (EDR) to block memory dumps.",
+                        tip: "Data in Use is like a folder jumping on a trampoline! Since it has to be unencrypted to play, keep memory-scraping malware away with EDR and secure enclaves! 🤸"
+                    },
+                    pii: {
+                        title: "Personally Identifiable Information (PII)",
+                        cat: "Data Personalities",
+                        desc: "Any details that could be used to distinguish or trace an individual's identity, either alone or when combined with other personal or identifying information.",
+                        path: "1. Name, birth date, SSN, or biometric data is collected.<br/>2. Data is stored in customer profiles.<br/>3. If leaked, it enables identity theft, credential stuffing, or targeted phishing.",
+                        defense: "Apply strict access control lists (ACLs), mask field displays, use tokenization for transmission, and minimize storage durations.",
+                        tip: "PII is your digital fingerprint! Keep birth dates and biometrics under lock and key so bad guys can't pretend to be you! 🆔"
+                    },
+                    phi: {
+                        title: "Protected Health Information (PHI)",
+                        cat: "Data Personalities",
+                        desc: "Any health-related details, healthcare payment history, or medical test results that can be tied to a specific individual. Governed strictly by laws like HIPAA.",
+                        path: "1. Medical records, diagnosis results, or healthcare bills are generated.<br/>2. Data is transmitted to insurance providers.<br/>3. PHI requires stringent access tracking and encryption.",
+                        defense: "Implement end-to-end encryption, maintain detailed access logs (SIEM), and restrict medical record access to authorized medical personnel only.",
+                        tip: "PHI is all about keeping your health cards happy and secure! Treat medical logs with the highest care to stay compliant! 🏥"
+                    },
+                    proprietary: {
+                        title: "Proprietary Data & Trade Secrets",
+                        cat: "Data Personalities",
+                        desc: "An organization's unique trade secrets, patents, custom source code, and internal processes that are not found anywhere else and provide competitive advantage.",
+                        path: "1. Secret formulas or designs are developed internally.<br/>2. Stored on secure corporate repositories.<br/>3. Industrial spies or insider threats attempt extraction.",
+                        defense: "Deploy Data Loss Prevention (DLP) agents, label files as confidential, use network segmentation, and enforce non-disclosure agreements (NDAs).",
+                        tip: "Proprietary Data is like a top-secret recipe in a detective's coat! Use DLP systems and NDAs to keep competitors from copying your secret sauce! 🕵️"
+                    },
+                    firewall: {
+                        title: "Firewalls (Layer 4 vs. Layer 7)",
+                        cat: "Network Guardians",
+                        desc: "The primary boundary defense device. Traditional firewalls filter at Layer 4 (ports/IPs), while Next-Generation Firewalls (NGFW) perform deep packet inspection at Layer 7.",
+                        path: "1. Packet arrives at network gateway.<br/>2. Firewall checks rule tables (ports/state).<br/>3. NGFW inspects application payload.<br/>4. Block or allow decisions are logged.",
+                        defense: "Implement default-deny firewall rules, use NGFW application filtering to block port-hopping evasion, and deploy Web Application Firewalls (WAF) for HTTP apps.",
+                        tip: "Firewalls are a cute brick wall with a shield! NGFWs can look inside packets at Layer 7 to spot sneaks hiding under common ports! 🧱"
+                    },
+                    load_balancer: {
+                        title: "Load Balancers",
+                        cat: "Network Guardians",
+                        desc: "Appliance that distributes incoming user requests across a pool of servers. Provides scalability, high availability, and redundancy.",
+                        path: "1. Thousands of users connect to virtual IP (VIP).<br/>2. Balancer distributes requests using round-robin or least-connections.<br/>3. Monitors server health.<br/>4. Skips failed servers (fault tolerance).",
+                        defense: "Deploy in redundant pairs, configure SSL offloading to speed up backend servers, and utilize secure cookie-based session persistence.",
+                        tip: "Load Balancers are helpful friends dividing up the work! They balance traffic so no single server gets overwhelmed, keeping everyone fast! ⚖️"
+                    },
+                    proxy: {
+                        title: "Proxies (Forward & Reverse)",
+                        cat: "Network Guardians",
+                        desc: "Middlemen making requests on behalf of clients. Forward proxies handle outgoing client traffic; Reverse proxies protect incoming server traffic and cache files.",
+                        path: "1. Client requests external webpage.<br/>2. Forward proxy fetches request, hiding client IP.<br/>3. Outbound request checked against URL filters.<br/>4. Reverse proxy directs incoming traffic to web pool.",
+                        defense: "Block open proxies, enable HTTPS decryption on forward proxies for inspection, and use reverse proxies to mask real backend web server IPs.",
+                        tip: "Proxies are like ninjas doing errands for you! They hide your real IP address from the internet and filter out bad websites! 🥷"
+                    },
+                    ips: {
+                        title: "Intrusion Prevention System (IPS)",
+                        cat: "Network Guardians",
+                        desc: "An inline network security device that monitors traffic in real-time and actively blocks detected exploits (signature-based or anomaly-based).",
+                        path: "1. Network packet flows inline through the IPS.<br/>2. Engine matches packet payload against known vulnerability signatures.<br/>3. Exploit payload detected.<br/>4. IPS drops connection instantly and alerts SIEM.",
+                        defense: "Regularly update signature databases, deploy inline rather than passive SPAN (passive only alerts), and configure custom rate limits.",
+                        tip: "IPS is like a vigilant detective holding a magnifying glass! It watches traffic in real-time and immediately drops bad packets before they do harm! 🔎"
+                    },
+                    encryption: {
+                        title: "Encryption & Hashing",
+                        cat: "Secret Codes & Safety Tricks",
+                        desc: "Core cryptographic concepts. Encryption converts plaintext to ciphertext using keys. Hashing uses mathematical one-way functions to ensure integrity.",
+                        path: "1. Plaintext is put into crypto function.<br/>2. Ciphertext is transmitted.<br/>3. Hashing creates fixed-length message digest.<br/>4. Recipient hashes file to verify no tampering.",
+                        defense: "Use AES-256 for symmetric encryption, utilize SHA-256/SHA-3 for hashing, and implement secure key management systems.",
+                        tip: "Encryption hides secrets in a chest, and Hashing puts a unique fingerprint seal on the box to prove nobody opened it! 📦"
+                    },
+                    tokenization: {
+                        title: "Tokenization",
+                        cat: "Secret Codes & Safety Tricks",
+                        desc: "Data protection method that replaces sensitive values (like credit card numbers) with a randomly generated, non-reversible single-use token.",
+                        path: "1. User submits credit card.<br/>2. Tokenization engine replaces card number with random token.<br/>3. Token is stored and sent across network.<br/>4. Secure vault maps token back to card.",
+                        defense: "Secure the centralized token vault with high-level encryption, isolate database servers, and ensure tokens cannot be mathematically reversed.",
+                        tip: "Tokenization replaces real gold with a candy token! If a thief steals the token during transit, it's completely worthless to them! 🍬"
+                    },
+                    masking: {
+                        title: "Data Masking",
+                        cat: "Secret Codes & Safety Tricks",
+                        desc: "Technique that alters sensitive data fields, displaying only partial characters (e.g. asterisks over card digits) to prevent shoulder surfing or unauthorized views.",
+                        path: "1. User requests account page.<br/>2. Database retrieves full account number.<br/>3. UI masks first 12 digits with asterisks.<br/>4. User only sees the last 4 digits on screen.",
+                        defense: "Perform masking at the database level rather than just hiding characters in client-side CSS or Javascript, and apply masking to logs.",
+                        tip: "Data Masking puts a cute mask on sensitive fields! Displaying only the last 4 digits keeps nosy onlookers from seeing private details! 🎭"
+                    },
+                    uptime: {
+                        title: "Uptime (The Five Nines)",
+                        cat: "Keeping the Lights On",
+                        desc: "The goal of 99.999% system availability, representing a maximum of 5.26 minutes of downtime per year. Requires highly redundant architectures.",
+                        path: "1. Critical services run on redundant hardware.<br/>2. Power failures trigger UPS/Generators.<br/>3. System failures trigger automated failover.<br/>4. Network traffic is re-routed with zero packet loss.",
+                        defense: "Eliminate Single Points of Failure (SPOF), establish dual ISP links, deploy redundant power sources, and test failover recovery weekly.",
+                        tip: "Uptime is like a clock with wings and a crown! Five Nines means your system is almost never asleep, keeping users happy all year! ⏰"
+                    },
+                    mttr: {
+                        title: "Mean Time to Repair (MTTR)",
+                        cat: "Keeping the Lights On",
+                        desc: "A key reliability metric tracking the average time required to troubleshoot, fix, and restore a failed system component.",
+                        path: "1. Component fails and triggers alert.<br/>2. Tech locates failure.<br/>3. Failed component is replaced or hot-patched.<br/>4. Service is validated and restored.",
+                        defense: "Keep on-site spare hardware, document rollback and recovery playbooks, and implement automated alerting with clear escalation paths.",
+                        tip: "MTTR is about how fast you can open your toolbox and fix a leak! Pre-stage hot spares and recovery playbooks to get back online in a flash! 🔧"
+                    },
+                    elasticity: {
+                        title: "Elasticity",
+                        cat: "Keeping the Lights On",
+                        desc: "The capability of cloud systems to dynamically scale computing resources (RAM, CPU, storage) up or down based on active consumer workload demands.",
+                        path: "1. Web traffic surges on cloud application.<br/>2. Orchestrator detects high CPU utilization.<br/>3. New compute engines are booted automatically.<br/>4. Traffic subsides, and unused nodes are terminated.",
+                        defense: "Define threshold parameters for auto-scaling, set budget alert caps, and design applications to be stateless for quick scaling.",
+                        tip: "Elasticity is a cloud that expands and contracts! It grows when traffic is high and shrinks when it is low to keep systems responsive and cheap! ☁️"
+                    }
+                };
+
+                window.showHappyDataDetail = function(key) {
+                    const data = happyDataDetails[key];
+                    const detailBox = document.getElementById('happy-data-details');
+                    if (data && detailBox) {
+                        detailBox.className = "p-6 bg-gradient-to-br from-pink-50 to-purple-50/40 text-[10.5px] rounded-3xl border-2 border-pink-200 text-purple-950 shadow-md transition-all duration-300 space-y-4 animate-in fade-in zoom-in-95 duration-200";
+                        detailBox.innerHTML = 
+                            '<div class="flex items-center justify-between border-b border-pink-200 pb-2.5">' +
+                                '<div class="flex items-center gap-2.5">' +
+                                    '<span class="text-xl">🌸</span>' +
+                                    '<div>' +
+                                        '<h5 class="text-xs font-black uppercase text-purple-950 tracking-wider">' + data.title + '</h5>' +
+                                        '<span class="text-[8px] font-black uppercase tracking-widest text-pink-500">' + data.cat + '</span>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<button onclick="resetHappyDataDetail()" class="text-[8px] font-black uppercase tracking-widest text-pink-700 hover:text-pink-950 bg-white border border-pink-200 hover:border-pink-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">' +
+                                    'Reset Details' +
+                                '</button>' +
+                            '</div>' +
+                            '<div class="grid grid-cols-1 md:grid-cols-2 gap-5">' +
+                                '<div class="space-y-3">' +
+                                    '<div>' +
+                                        '<span class="text-[8px] font-black text-pink-400 uppercase tracking-widest block">Core Concept</span>' +
+                                        '<p class="text-[9.5px] text-gray-600 mt-1 leading-relaxed font-medium">' + data.desc + '</p>' +
+                                    '</div>' +
+                                    '<div>' +
+                                        '<span class="text-[8px] font-black text-pink-400 uppercase tracking-widest block">Mitigation & Defense</span>' +
+                                        '<p class="text-[9.5px] text-gray-600 mt-1 leading-relaxed font-medium">' + data.defense + '</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="space-y-3 border-t md:border-t-0 md:border-l border-pink-100 pt-3 md:pt-0 md:pl-5">' +
+                                    '<div>' +
+                                        '<span class="text-[8px] font-black text-pink-400 uppercase tracking-widest block">Execution Path</span>' +
+                                        '<p class="text-[9px] text-gray-500 mt-1 leading-relaxed font-semibold">' + data.path + '</p>' +
+                                    '</div>' +
+                                    '<div class="p-3 bg-pink-100/40 border border-pink-200/50 rounded-xl space-y-1">' +
+                                        '<span class="text-[8px] font-black text-pink-400 uppercase tracking-widest block">Caypi\'s Kawaii Security Tip</span>' +
+                                        '<p class="text-[9.5px] italic text-purple-950 font-bold leading-normal">' + data.tip + '</p>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>';
+                    }
+                };
+
+                window.resetHappyDataDetail = function() {
+                    const detailBox = document.getElementById('happy-data-details');
+                    if (detailBox) {
+                        detailBox.className = "p-4 bg-pink-50 text-[10.5px] rounded-2xl border border-pink-200 text-purple-950 font-bold transition-all duration-300 flex items-center gap-3";
+                        detailBox.innerHTML = 
+                            '<span class="text-xl">💡</span>' +
+                            '<div>' +
+                                '<p class="uppercase text-[9px] text-pink-800 tracking-wider">Interactive Data Protection Explorer</p>' +
+                                '<p class="font-normal mt-0.5">Click any visual guide card above to inspect data states, network guardians, safety tricks, or availability concepts!</p>' +
+                            '</div>';
+                    }
+                };
             } else {
                 if (cardWrapper) cardWrapper.className = "p-6 bg-white border border-purple-100 rounded-2xl max-w-2xl mx-auto shadow-sm space-y-6";
                 if (chartWrapper) chartWrapper.className = "flex justify-center p-4 bg-purple-950 rounded-xl border border-white/10 shadow-inner overflow-x-auto";
@@ -9032,7 +9927,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             selectView.classList.add('hidden');
             deckView.classList.remove('hidden');
 
-            if (deckId > 5 && window.mermaid) {
+            if (deckId > 6 && window.mermaid) {
                 try {
                     window.mermaid.run({ querySelector: '.mermaid' });
                 } catch(e) {
@@ -9693,7 +10588,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             activeQuizIndex = 0;
             
             let deckId = gameState.selectedDeck || 1;
-            let sourceDeckId = (deckId >= 1 && deckId <= 5) ? deckId : (deckId % 2 === 0 ? 2 : 1);
+            let sourceDeckId = (deckId >= 1 && deckId <= 6) ? deckId : (deckId % 2 === 0 ? 2 : 1);
             
             let cards = flashcardDecks[sourceDeckId]?.cards || [];
             let quizQ = quizDecks[sourceDeckId];
