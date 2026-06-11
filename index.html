@@ -1742,7 +1742,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             <div>
                                                 <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Deck 05</span>
                                                 <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cybersecurity threats, network-based attacks, malicious code, physical and wireless vulnerabilities.</p>
                                             </div>
                                             <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
                                                 <span>Study Flash Cards</span>
@@ -1932,7 +1932,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             <div>
                                                 <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quiz 05</span>
                                                 <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cybersecurity threats, network-based attacks, malicious code, physical and wireless vulnerabilities.</p>
                                             </div>
                                             <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
                                                 <span>Take Quiz</span>
@@ -2107,7 +2107,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             <div>
                                                 <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Guide 05</span>
                                                 <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cybersecurity threats, network-based attacks, malicious code, physical and wireless vulnerabilities.</p>
                                             </div>
                                             <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
                                                 <span>Read Guide</span>
@@ -4332,8 +4332,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-1" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> Gaining administrative access to write fake mappings directly to the computer's local host file, bypassing DNS queries.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> To perform DNS poisoning via a local host file, an attacker must first obtain elevated administrative privileges on the target system. Once they have write access, they modify the system's local hosts text file to map domain names (e.g. google.com) directly to a malicious IP address of their choice. Because operating systems check the local hosts file for domain resolution before querying external DNS servers, the machine immediately routes traffic to the fake server.
+                                                            <strong>Answer Key:</strong> An attacker with elevated rights modifies the host file on a client computer, which contains a list of domain names and IP addresses. If a resolution is found in this local file, the system uses it immediately instead of querying a DNS server, allowing the attacker to redirect the user to a malicious site.
                                                         </div>
                                                     </div>
 
@@ -4344,8 +4343,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-2" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> DoS relies on a single source of attack traffic; DDoS utilizes a global network of malware-infected botnets under centralized command.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> A DoS attack is generated from a single computer or IP address, which makes it relatively easy to trace and filter using simple firewall rules. A DDoS attack, however, recruits thousands or millions of compromised systems (bots) globally, launching a coordinated flood of traffic at the target. This distributed nature makes blocking the source IPs extremely difficult without also blocking legitimate users.
+                                                            <strong>Answer Key:</strong> A DoS attack generally involves a single device or method forcing a service to fail by overloading it or exploiting a vulnerability. In contrast, a DDoS attack utilizes multiple devices (often a botnet) scattered worldwide to overwhelm a target’s bandwidth or resources simultaneously.
                                                         </div>
                                                     </div>
 
@@ -4356,8 +4354,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-3" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> Spoofing the victim's source IP address in queries to open DNS resolvers, which respond with highly scaled packets back to the victim.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> In a DNS amplification attack, the attacker crafts a small DNS query asking for large records (e.g. TXT or ANY records) and spoofs the source IP address in the packet header to match the victim's IP. The attacker sends these queries to open, misconfigured DNS resolvers on the internet. The resolvers generate a response that is up to 50 times larger than the request and send it back to the spoofed source IP, flooding the victim's network.
+                                                            <strong>Answer Key:</strong> The attacker sends a small DNS query to an open DNS resolver using a spoofed IP address belonging to the victim. Because the response from the DNS server is significantly larger than the initial request (often by a factor of 80 or more), the victim is overwhelmed by the reflected, amplified traffic.
                                                         </div>
                                                     </div>
 
@@ -4368,8 +4365,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-4" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> Attackers injected 22 lines of JavaScript to steal and exfiltrate card payment data directly from browser transaction forms.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> In the British Airways breach, attackers injected 22 lines of malicious JavaScript into the checkout pages of the company's website. When customers entered their payment details, this script executed locally within the client browser, silently copying the credit card numbers, CVVs, and personal information. The script then exfiltrated the copied data directly to the attacker's server without disrupting the booking process.
+                                                            <strong>Answer Key:</strong> Attackers placed 22 lines of malicious JavaScript on the airline's checkout pages to intercept and collect credit card information. This breach potentially compromised the financial data of approximately 380,000 victims before the code was discovered.
                                                         </div>
                                                     </div>
 
@@ -4380,8 +4376,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-5" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> Sending unsolicited ARP replies linking the attacker's MAC address with a target IP (e.g. gateway) in the cache of subnet hosts.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> ARP Poisoning involves an attacker on a local subnet sending unsolicited, forged ARP replies to other computers. These replies state that the IP address of a target system (such as the default gateway) is associated with the attacker's MAC address. Because ARP lacks verification, the devices update their ARP cache tables, causing all outgoing subnet traffic meant for the gateway to be sent to the attacker.
+                                                            <strong>Answer Key:</strong> The attacker sends unsolicited ARP replies to devices on the network, falsely claiming their MAC address is associated with a legitimate IP, such as the default gateway. This overwrites the victims' ARP caches, causing them to send all traffic through the attacker’s device, which can then monitor or modify the data.
                                                         </div>
                                                     </div>
 
@@ -4392,56 +4387,51 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-6" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> They run in kernel-mode, altering standard system calls to falsify reports and hide their own file assets and processes.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> Rootkits run with administrative privileges directly inside the operating system kernel (Ring 0). When a standard user-mode antivirus scanner requests a list of running processes or files from the OS, the rootkit intercepts the request and hides its own processes. Because the antivirus software relies on the infected OS to get information, the rootkit can make itself completely invisible.
+                                                            <strong>Answer Key:</strong> Rootkits typically hide within the kernel of the operating system, becoming part of the OS itself rather than appearing as a separate process. Because they operate at such a fundamental level, they can remain invisible to standard security tools that rely on identifying malicious tasks or files.
                                                         </div>
                                                     </div>
 
                                                     <!-- Q7 -->
                                                     <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
-                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">What is the function of a Command and Control (C2) server in a botnet?</div>
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">What is the function of a logic bomb, and what triggered the 2013 attack in South Korea?</div>
                                                         <button onclick="toggleDetailedQuiz('5-7')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-7" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> Serving as a central server that sends commands to and controls coordinates of globally infected botnet computers.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> The Command and Control (C2) server is the central computer used by a botmaster to control and direct a network of compromised systems (botnet). It broadcasts commands to the bots, directing them to perform actions such as executing a DDoS attack or sending spam emails. It also acts as a collection point for stolen information exfiltrated from the infected machines.
+                                                            <strong>Answer Key:</strong> A logic bomb is malicious code that remains dormant until a specific event or time occurs, at which point it executes a destructive action. In the South Korean attack, the bomb was programmed to activate at exactly 2:00 PM local time, deleting the master boot records of infected bank and media systems.
                                                         </div>
                                                     </div>
 
                                                     <!-- Q8 -->
                                                     <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
-                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">In a wireless network, how does an attacker execute an evil twin attack?</div>
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">Explain how RFID cloning can be used as a physical attack vector.</div>
                                                         <button onclick="toggleDetailedQuiz('5-8')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-8" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> Setting up a rogue access point close to users, configured with the exact SSID and channel settings as the legitimate network.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> To perform an evil twin attack, an attacker configures a wireless access point to use the exact same Service Set Identifier (SSID) and security settings as a nearby legitimate network. They broadcast this rogue signal at a higher power level or closer proximity to users. When users' devices attempt to connect to the network, they automatically associate with the attacker's stronger rogue access point.
+                                                            <strong>Answer Key:</strong> Attackers use inexpensive RFID duplicators to read the data from a legitimate user's access badge or key fob, often by simply being in close physical proximity. Once cloned, the attacker can use the duplicate card to bypass physical door locks and gain unauthorized access to secure facilities.
                                                         </div>
                                                     </div>
 
                                                     <!-- Q9 -->
                                                     <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
-                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">Describe a scenario where an attacker uses a rogue access point.</div>
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">How does session hijacking differ from a standard replay attack?</div>
                                                         <button onclick="toggleDetailedQuiz('5-9')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-9" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> An attacker physically plugs an unauthorized router into an active corporate Ethernet jack to bypass firewall restrictions.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> A rogue access point scenario typically involves an attacker plugging an unauthorized wireless router directly into an open, active Ethernet port inside an office building. This router bypasses the organization's network perimeter security and broadcasts an unsecured Wi-Fi network. Anyone outside the building within range can connect to the Wi-Fi and gain direct, unauthorized access to the internal network.
+                                                            <strong>Answer Key:</strong> While a standard replay attack might involve re-sending a hashed password to authenticate, session hijacking specifically targets the session ID stored in browser cookies. By stealing this ID, an attacker can bypass the login process entirely and take over an already active, authenticated session.
                                                         </div>
                                                     </div>
 
                                                     <!-- Q10 -->
                                                     <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
-                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">What is the purpose of MAC filtering, and how can an attacker bypass it?</div>
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">What is the security risk associated with "bloatware" on a new device?</div>
                                                         <button onclick="toggleDetailedQuiz('5-10')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
                                                             Reveal Answer Key
                                                         </button>
                                                         <div id="detailed-quiz-ans-5-10" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
-                                                            <strong>Answer Key:</strong> Filters network access based on approved hardware addresses. Attackers bypass this by sniffing wireless packets and spoofing their MAC address.<br/><br/>
-                                                            <strong>Detailed Explanation:</strong> MAC filtering is used on wireless networks to restrict access to a list of pre-approved 48-bit MAC addresses. An attacker can bypass this security by using a packet sniffer to capture unencrypted wireless traffic and identify the MAC addresses of devices that are currently communicating on the network. The attacker then configures their own network card to spoof one of these authorized MAC addresses to gain entry.
+                                                            <strong>Answer Key:</strong> Bloatware consumes storage and system resources, but more importantly, these pre-installed applications may contain known or unknown vulnerabilities. Because the user did not intentionally install them, they may go unpatched, leaving an open door for attackers on a brand-new system.
                                                         </div>
                                                     </div>
                                                 </div>
@@ -4459,31 +4449,31 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                     <!-- Essay 1 -->
                                                     <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
                                                         <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 01</span>
-                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">DNS Architecture & Hijacking Vulnerabilities: Analyze how domain name resolution security relies on trust. Compare DNS poisoning via local host files, server configuration breaches, and domain registrar account takeovers, highlighting how access permissions determine the scale of the exploit.</p>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">The Evolution of DNS Exploitation: Compare and contrast DNS server poisoning, domain registration hijacking, and typosquatting. Discuss the different levels of technical skill and access required for each.</p>
                                                     </div>
 
                                                     <!-- Essay 2 -->
                                                     <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
                                                         <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 02</span>
-                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">Asymmetric Network Threats: Discuss the mechanics of amplification attacks (DNS, NTP, ICMP). Why are UDP-based protocols particularly suited for traffic scaling, and what architectural defenses can organizations employ to neutralize these floods?</p>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">The Mechanics of Asymmetric Threats: Analyze how botnets and amplification techniques allow attackers with limited resources to take down massive organizations. Use the examples of the Zeus botnet and NTP/DNS protocols to support your analysis.</p>
                                                     </div>
 
                                                     <!-- Essay 3 -->
                                                     <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
                                                         <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 03</span>
-                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">Kernel-Level Evasion and Secure Boot: Examine the threat posed by rootkits. Explain how running at the ring 0 kernel level defeats user-mode auditing tools, and assess the role of UEFI Secure Boot and hardware-rooted trust in maintaining OS integrity during boot.</p>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">Malicious Code and System Persistence: Evaluate the different methods malware uses to survive a system reboot. Compare the persistence mechanisms of fileless viruses, rootkits, and worms.</p>
                                                     </div>
 
                                                     <!-- Essay 4 -->
                                                     <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
                                                         <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 04</span>
-                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">Physical and Environmental Attack Surfaces: Evaluate the security risk of physical access. Discuss how RFID badge cloning and environmental HVAC tampering bypass traditional software-based firewall rules, and recommend multi-layered controls to defend datacenters from physical entry.</p>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">The Intersection of Physical and Environmental Security: Discuss how an attacker might use non-technical means, such as HVAC manipulation, power disruption, or fire suppression systems, to achieve a denial of service. Explain why physical access is often considered a "full control" scenario.</p>
                                                     </div>
 
                                                     <!-- Essay 5 -->
                                                     <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
                                                         <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 05</span>
-                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">On-Path Subnet Exploits: Contrast ARP poisoning on a wired LAN with wireless deauthentication and rogue access points. How do these attacks manipulate foundational layer 2 protocols, and what protocols or security features (e.g. 802.11w, Dynamic ARP Inspection) prevent them?</p>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">On-Path Attack Methodologies: Detail the technical steps involved in a Man-in-the-Middle attack, specifically contrasting ARP poisoning on a local subnet with an On-Path Browser attack. Explain why encryption is the primary defense against these threats.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -4498,83 +4488,83 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                                     <!-- Term 1 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Address Resolution Protocol (ARP)</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A protocol used to map local network IP addresses to physical MAC hardware addresses.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">ARP Poisoning</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Redirecting network traffic on a local subnet by sending spoofed ARP replies to update the hardware address caches of victim devices.</p>
                                                     </div>
                                                     <!-- Term 2 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">ARP Poisoning</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An exploit where an attacker sends spoofed ARP responses to associate their MAC address with a legitimate IP address on the subnet.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Asymmetric Threat</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A security situation where an attacker with minimal resources can cause significant damage to a much larger and better-equipped organization.</p>
                                                     </div>
                                                     <!-- Term 3 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Botnet</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A network of private computers infected with malicious software and controlled as a group without the owners' knowledge.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Bloatware</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Unnecessary software pre-installed by hardware manufacturers that can consume resources and introduce security vulnerabilities.</p>
                                                     </div>
                                                     <!-- Term 4 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Command and Control (C2)</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A centralized server used by a botmaster to send commands and receive stolen data from infected botnet nodes.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Botnet</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A network of "robot" computers infected with malware and controlled by a single attacker to perform coordinated tasks, such as DDoS attacks.</p>
                                                     </div>
                                                     <!-- Term 5 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
                                                         <strong class="text-xs text-purple-950 uppercase tracking-wide block">Deauthentication Attack</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A wireless attack where an attacker floods deauth frames to disconnect a client from an access point.</p>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A wireless denial of service attack that sends unencrypted management frames to disconnect a user from an access point.</p>
                                                     </div>
                                                     <!-- Term 6 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Domain Name System (DNS)</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A hierarchical system for translating human-readable domain names into numerical IP addresses.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Domain Registration Hijacking</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Gaining access to a domain registrar account to change the DNS settings of a fully qualified domain name, often through social engineering or brute force.</p>
                                                     </div>
                                                     <!-- Term 7 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">DNS Poisoning</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An attack that corrupts DNS records to redirect users to a malicious website.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Fileless Virus</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Malicious code that operates entirely in the system's memory without writing files to the storage drive, often utilizing tools like PowerShell.</p>
                                                     </div>
                                                     <!-- Term 8 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Evil Twin</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A rogue wireless access point that masquerades as a legitimate Wi-Fi network by using the same SSID.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Keylogger</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Malware or a utility that records every keystroke made by a user to steal sensitive data like usernames, passwords, and credit card numbers.</p>
                                                     </div>
                                                     <!-- Term 9 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Fileless Virus</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Malware that operates directly in system memory (RAM) and registry keys without writing files to storage.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Logic Bomb</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Malicious code triggered by a specific event, such as a date, time, or a particular user logging into the system.</p>
                                                     </div>
                                                     <!-- Term 10 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">MAC Filtering</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A security access control method where 48-bit MAC addresses are checked to permit or deny network connection.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">On-path Attack</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Formerly known as Man-in-the-Middle; an attack where the perpetrator sits between two communicating devices to monitor or modify traffic.</p>
                                                     </div>
                                                     <!-- Term 11 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">On-Path Attack</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">An exploit where an attacker intercepts, sends, or modifies communication between two systems.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">RF Jamming</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A wireless denial of service attack that uses interfering radio signals to decrease the signal-to-noise ratio, making wireless communication impossible.</p>
                                                     </div>
                                                     <!-- Term 12 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Replay Attack</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A network attack where a valid data transmission is maliciously or fraudulently repeated or delayed.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Rootkit</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Malicious software that embeds itself in the kernel of the operating system to remain invisible to traditional security software.</p>
                                                     </div>
                                                     <!-- Term 13 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">RF Jamming</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A wireless denial of service attack where radio frequency signals interfere with authorized wireless communications.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Secure Boot</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A feature in UEFI BIOS that prevents rootkits by verifying the digital signature of the operating system kernel before booting.</p>
                                                     </div>
                                                     <!-- Term 14 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">RFID Cloning</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Copying the electronic data from a physical radio frequency badge to another card to bypass physical locks.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Session Hijacking</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Stealing a session ID (often from a cookie) to take over a user's authenticated web session without needing their login credentials.</p>
                                                     </div>
                                                     <!-- Term 15 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Rootkit</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A collection of software tools that enables an unauthorized user to gain administration control over a computer system while hiding its presence.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Typosquatting</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Also known as URL hijacking; registering misspelled versions of popular domain names to redirect users to malicious or fraudulent sites.</p>
                                                     </div>
                                                     <!-- Term 16 -->
                                                     <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
-                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Typosquatting / URL Hijacking</strong>
-                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Registering a domain name that is a common misspelling of a popular brand to redirect traffic.</p>
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Worm</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A type of malware capable of self-replicating and spreading across a network automatically without any human intervention.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -5061,7 +5051,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             <div>
                                                 <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Diagram 05</span>
                                                 <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cybersecurity threats, network-based attacks, malicious code, physical and wireless vulnerabilities.</p>
                                             </div>
                                             <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
                                                 <span>View Diagram</span>
@@ -5229,7 +5219,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             <div>
                                                 <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 05</span>
                                                 <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Authentication concepts, Multi-Factor Authentication (MFA), credentials, and biometrics.</p>
+                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cybersecurity threats, network-based attacks, malicious code, physical and wireless vulnerabilities.</p>
                                             </div>
                                             <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
                                                 <span>Begin Quest</span>
@@ -6949,7 +6939,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 ]
             },
             5: {
-                title: "Professor Messer's SY0-701 Security+ Training Video 41 to 50 // Authentication Concepts",
+                title: "Professor Messer's SY0-701 Security+ Training Video 41 to 50 // Cybersecurity Threats and Attack Vectors",
                 cards: [
                     { q: "What fundamental network service converts a fully qualified domain name into an IP address?", a: "Domain Name System (DNS)." },
                     { q: "How does DNS poisoning affect the end user's network traffic?", a: "It redirects users to an IP address that they did not originally intend to visit." },
@@ -7183,11 +7173,11 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 explain: "Ransomware holds files hostagely using strong encryption and demands payment."
             },
             5: {
-                title: "Professor Messer's SY0-701 Security+ Training Video 41 to 50 // Authentication Concepts",
-                q: "Which of the following is considered a 'something you are' authentication factor?",
-                opts: ["A) Hardware Security Token", "B) Retinal Scan", "C) Secret PIN Code", "D) Smart Card"],
+                title: "Professor Messer's SY0-701 Security+ Training Video 41 to 50 // Cybersecurity Threats and Attack Vectors",
+                q: "Which attack vector involves redirecting network traffic on a local subnet by sending spoofed ARP replies?",
+                opts: ["A) DNS Poisoning", "B) ARP Poisoning", "C) Session Hijacking", "D) RF Jamming"],
                 ans: 1,
-                explain: "Biometric factors like retinal scans or fingerprints represent 'something you are'."
+                explain: "ARP Poisoning redirects network traffic on a local subnet by sending spoofed ARP replies to update cache records."
             },
             6: {
                 title: "Professor Messer's SY0-701 Security+ Training Video 51 to 60 // Authorization Controls",
@@ -7283,15 +7273,26 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 ]
             },
             5: {
-                title: "Authentication Principles",
-                subtitle: "MFA Verification Parameters",
-                summary: "Authentication verifies the identity of request sources. Multi-Factor Authentication requires combinations from distinct factor pools to establish trust.",
+                title: "Cybersecurity Threats and Attack Vectors",
+                subtitle: "Modern Security Challenges",
+                summary: "This study guide provides a detailed review of various cybersecurity threats, ranging from network-based attacks and malicious code to physical and wireless vulnerabilities.",
                 terms: [
-                    "Something You Know: Passwords, PINs, security question challenge answers.",
-                    "Something You Have: Hardware keys, smartcards, software OTP tokens.",
-                    "Something You Are: Biometrics (fingerprint, retina/iris patterns, facial geometries).",
-                    "Somewhere You Are: Geolocation verification (IP address boundaries, GPS flags).",
-                    "Federated Authentication: SSO protocols (SAML 2.0, OAuth, OpenID Connect)."
+                    "ARP Poisoning: Redirecting network traffic on a local subnet by sending spoofed ARP replies to update the hardware address caches of victim devices.",
+                    "Asymmetric Threat: A security situation where an attacker with minimal resources can cause significant damage to a much larger and better-equipped organization.",
+                    "Bloatware: Unnecessary software pre-installed by hardware manufacturers that can consume resources and introduce security vulnerabilities.",
+                    "Botnet: A network of 'robot' computers infected with malware and controlled by a single attacker to perform coordinated tasks, such as DDoS attacks.",
+                    "Deauthentication Attack: A wireless denial of service attack that sends unencrypted management frames to disconnect a user from an access point.",
+                    "Domain Registration Hijacking: Gaining access to a domain registrar account to change the DNS settings of a fully qualified domain name, often through social engineering or brute force.",
+                    "Fileless Virus: Malicious code that operates entirely in the system's memory without writing files to the storage drive, often utilizing tools like PowerShell.",
+                    "Keylogger: Malware or a utility that records every keystroke made by a user to steal sensitive data like usernames, passwords, and credit card numbers.",
+                    "Logic Bomb: Malicious code triggered by a specific event, such as a date, time, or a particular user logging into the system.",
+                    "On-path Attack: Formerly known as Man-in-the-Middle; an attack where the perpetrator sits between two communicating devices to monitor or modify traffic.",
+                    "RF Jamming: A denial of service attack that uses interfering radio signals to decrease the signal-to-noise ratio, making wireless communication impossible.",
+                    "Rootkit: Malicious software that embeds itself in the kernel of the operating system to remain invisible to traditional security software.",
+                    "Secure Boot: A feature in UEFI BIOS that prevents rootkits by verifying the digital signature of the operating system kernel before booting.",
+                    "Session Hijacking: Stealing a session ID (often from a cookie) to take over a user's authenticated web session without needing their login credentials.",
+                    "Typosquatting: Also known as URL hijacking; registering misspelled versions of popular domain names to redirect users to malicious or fraudulent sites.",
+                    "Worm: A type of malware capable of self-replicating and spreading across a network automatically without any human intervention."
                 ]
             },
             6: {
