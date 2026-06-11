@@ -3746,6 +3746,441 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                                 </div>
                                             </div>
                                         </div>
+                                        
+                                        <div id="study-guide-detailed-card-4" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
+                                            <!-- Header -->
+                                            <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                                <div>
+                                                    <span class="text-[9px] font-black text-purple-500 uppercase tracking-widest block mb-1">Detailed Study Reference</span>
+                                                    <h3 class="text-xl font-black text-purple-950 uppercase tracking-wide">Video 31 to 40 Study Guide</h3>
+                                                    <p class="text-xs text-gray-500 mt-1">Comprehensive Cybersecurity Concepts: Malware, Vulnerabilities, and Exploits (nature of malware, common system vulnerabilities, and various attack vectors).</p>
+                                                </div>
+                                                <div class="flex gap-2 self-start md:self-center">
+                                                    <button onclick="window.print()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">
+                                                        🖨️ Print Guide
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Sticky Navigation Menu -->
+                                            <div class="sticky top-0 bg-white/95 backdrop-blur-md py-3 border-b border-purple-100 z-20 overflow-x-auto flex gap-2 no-scrollbar scroll-smooth">
+                                                <a href="#sg4-sec-1" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">I. Malware</a>
+                                                <a href="#sg4-sec-2" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">II. Web & Code</a>
+                                                <a href="#sg4-sec-3" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">III. Devices</a>
+                                                <a href="#sg4-sec-4" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">IV. Supply Chain</a>
+                                                <a href="#sg4-sec-5" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">V. Quiz</a>
+                                                <a href="#sg4-sec-6" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VI. Essays</a>
+                                                <a href="#sg4-sec-7" class="text-[9px] font-black uppercase tracking-wider text-purple-700 hover:bg-purple-50 px-3 py-2 rounded-xl transition-all whitespace-nowrap">VII. Glossary</a>
+                                            </div>
+
+                                            <!-- Executive Summary Callout -->
+                                            <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/20 space-y-2">
+                                                <strong class="text-xs text-purple-950 uppercase tracking-wide">Overview & Intent</strong>
+                                                <p class="text-[11px] text-gray-600 leading-relaxed font-medium">
+                                                    This study guide provides a detailed review of core cybersecurity concepts, focusing on the nature of malware, common system vulnerabilities, and various attack vectors as outlined in the provided technical transcripts.
+                                                </p>
+                                            </div>
+
+                                            <!-- I. Malware Varieties -->
+                                            <div id="sg4-sec-1" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">I</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Malware Varieties & Characteristics</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    Malicious software (malware) represents a wide variety of tools designed to compromise system integrity, steal data, or restrict access:
+                                                </p>
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Worms vs. Viruses</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">A computer worm propagates itself automatically across network systems by exploiting vulnerabilities without needing human interaction. Traditional viruses require human action (such as running an infected file) to replicate and spread.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Trojans & Ransomware</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Trojans disguise themselves as legitimate software while carrying a malicious payload in the background. Ransomware encrypts user data but leaves the OS running to display ransom notes. Backups must be offline to prevent their encryption.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Rootkits & Logic Bombs</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Rootkits grant administrative access while hiding themselves from detection tools by modifying OS components. Logic bombs remain dormant inside software until a specific trigger condition (e.g., date or event) fires their execution.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- II. Application & Web Vulnerabilities -->
+                                            <div id="sg4-sec-2" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">II</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Application & Web Vulnerabilities</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    Insecure coding and configuration practices expose applications to remote exploitation:
+                                                </p>
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SQL Injection (SQLi)</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Code injection that allows attackers to manipulate backend database queries. Injecting a tautology like "1=1" forces the database to evaluate the query as true for all records, returning sensitive tables without authentication.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Cross-Site Scripting (XSS)</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Exploits the client browser's trust in a website to run malicious scripts. Non-persistent (reflected) XSS is passed via client links and reflected off the server; persistent (stored) XSS is stored on a database and run by anyone visiting the page.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Memory & Path Exploits</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Directory Traversal manipulates web path directories to access files outside the web root. Out-of-bounds writes modify memory outside designated buffers (enabling RCE). Remote Code Execution (RCE) lets attackers run arbitrary commands.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- III. Infrastructure & Device Exploits -->
+                                            <div id="sg4-sec-3" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">III</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Infrastructure & Device Exploits</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    Device configurations and virtualization structures require strong controls to prevent lateral movement and isolation escape:
+                                                </p>
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Default Credentials & IoT</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Pre-configured passwords (e.g., admin/12345) left on IoT devices allow automated scanners like the Mirai botnet to log in, compromise systems globally, and organize them into distributed attack networks (DDoS).</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Mobile Sideloading & OS Modding</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Jailbreaking (iOS) and rooting (Android) replace secure vendor firmware with unvetted versions. This circumvents Mobile Device Management (MDM) security restrictions and permits "sideloading" of potentially insecure apps.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">VM Escape & Resource Reuse</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">VM escape allows an attacker to break out of guest VMs to access the host hypervisor or other guest VMs. Resource reuse occurs when a hypervisor reassigns memory/storage to a new VM without sanitizing or clearing legacy data.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- IV. Supply Chain, Zero-Days, & Management -->
+                                            <div id="sg4-sec-4" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">IV</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Supply Chain, Zero-Days, & Management</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                                                    Managing external dependencies and unpatched vulnerabilities is key to maintaining a strong organizational security posture:
+                                                </p>
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Supply Chain Integrity</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Attackers target third-party service providers or build pipelines. The 2013 Target breach utilized a compromised HVAC vendor. The SolarWinds attack compromised the build server to inject a backdoor (SUNBURST) into signed updates.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Zero-Days & CVE/CVSS</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">Zero-days are exploits targeting unknown, unpatched vulnerabilities. Cybersecurity professionals reference the public CVE database to track software vulnerabilities and use the CVSS scale (0-10) to rank severity levels.</p>
+                                                    </div>
+                                                    <div class="p-4 border border-purple-100 rounded-xl bg-purple-50/10 space-y-1">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Asset Lifecycle (EOL/EOSL)</strong>
+                                                        <p class="text-[11px] text-gray-500 leading-relaxed font-medium">End of Life (EOL) signals the stop of sales; End of Service Life (EOSL) means the vendor stops security updates, leaving systems exposed. Unreplaceable legacy systems must be isolated via strict firewall and IPS rules.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- V. Practice Quiz -->
+                                            <div id="sg4-sec-5" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">V</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Practice Quiz</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-500">Test your understanding. Read each question and click the button to show the answer key and detailed explanation.</p>
+
+                                                <div class="space-y-3">
+                                                    <!-- Q1 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">What is a "drive-by download" and how does it occur?</div>
+                                                        <button onclick="toggleDetailedQuiz('4-1')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-1" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> Definition: Automatic download of malware without user interaction. Occurrence: Visiting a malicious site that exploits known vulnerabilities.<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> A drive-by download refers to the automatic download of malicious information or software onto a system without the user clicking on any specific links or buttons. This typically occurs when a user visits a malicious website or location that takes advantage of a known vulnerability to propagate a worm or install malware.
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Q2 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">Explain the primary difference between a non-persistent (reflected) XSS attack and a persistent (stored) XSS attack.</div>
+                                                        <button onclick="toggleDetailedQuiz('4-2')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-2" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> Non-persistent: Script is sent to a specific user (e.g., via link) and reflected off a site. Persistent: Script is stored on a server (e.g., social media) and affects all visitors.<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> A non-persistent XSS attack involves an attacker sending a malicious script to a victim, often via an email or search query, which is then executed by the user’s browser against a third-party website. In contrast, a persistent XSS attack involves the attacker storing the malicious payload directly on a server—such as a social media site—so that it is automatically executed by the browser of anyone who visits the infected page.
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Q3 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">Why is it considered a best practice to store data backups offline?</div>
+                                                        <button onclick="toggleDetailedQuiz('4-3')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-3" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> Prevention: Disconnecting backups ensures ransomware cannot reach or encrypt them. Recovery: Allows for a clean restoration after wiping an infected system.<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> Storing backups offline prevents ransomware from identifying and encrypting the backup files during an infection. If the backup is disconnected from the network, an attacker cannot access or lock the data, allowing the user to delete the infected system and restore their files from a known good, clean copy.
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Q4 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">What is the significance of the statement "1=1" in the context of a SQL injection attack?</div>
+                                                        <button onclick="toggleDetailedQuiz('4-4')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-4" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> Condition: "1=1" is a tautology (always true). Outcome: It forces the database to validate the query as true for all rows, granting unauthorized access to all data in the database.<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> In SQL injection, "1=1" is a condition that is always true, which attackers append to database queries to circumvent security checks. By injecting this code into an input field, an attacker can trick the database into returning all records in a table rather than filtering for a specific, authorized result.
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Q5 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">How did the Target Corporation breach of 2013 demonstrate a supply chain vulnerability?</div>
+                                                        <button onclick="toggleDetailedQuiz('4-5')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-5" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> Entry Point: An HVAC vendor (third-party service provider). Vulnerability: Lack of network segmentation between the HVAC systems and the payment network (cash registers).<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> The breach began when attackers infected a third-party HVAC vendor with malware via email to gain access to their systems. Because the HVAC vendor had remote access to Target’s network, and because the HVAC systems were on the same network as the cash registers, the attackers were able to move laterally and steal 40 million credit card numbers.
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Q6 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">Define "VM escape" and explain the risk it poses to a virtualized environment?</div>
+                                                        <button onclick="toggleDetailedQuiz('4-6')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-6" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> Definition: Jumping from one VM to another via the hypervisor. Risk: Compromises the isolation of virtual environments, exposing data from all systems on that host.<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> VM escape is an exploit where an attacker gains access to one virtual machine (VM) and manages to jump across the hypervisor to access other VMs or the host system. This is a severe security risk because a single hypervisor may manage hundreds of VMs, potentially giving an attacker simultaneous access to a vast amount of sensitive data across multiple isolated systems.
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Q7 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">What is the difference between "End of Life" (EOL) and "End of Service Life" (EOSL)"?</div>
+                                                        <button onclick="toggleDetailedQuiz('4-7')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-7" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> EOL: Product is no longer sold, but may still receive updates. EOSL: All support and security patching have ceased.<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> End of Life (EOL) is a manufacturer’s notice that they will soon stop selling a particular product, though security patches may still be available for a limited time. End of Service Life (EOSL) indicates that the manufacturer has officially stopped all support, including security updates, making the device a significant risk if it remains on the network.
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Q8 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">How do jailbreaking and rooting impact the security of a mobile device?</div>
+                                                        <button onclick="toggleDetailedQuiz('4-8')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-8" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> Impact: Replaces the secure OS with one that provides unrestricted access. Consequence: Bypasses MDM security policies and enables the "sideloading" of unauthorized, potentially malicious apps.<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> Jailbreaking (on iOS) and rooting (on Android) involve replacing the device's original firmware or operating system with a third-party version to gain elevated access. This process circumvents built-in security restrictions and management controls, such as a Mobile Device Manager (MDM), potentially allowing for the installation of malicious unauthorized applications.
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Q9 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">Describe the risk associated with default credentials and how they are exploited by botnets like Mirai.</div>
+                                                        <button onclick="toggleDetailedQuiz('4-9')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-9" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> Risk: Known passwords (e.g., "admin/admin") are easily guessed. Exploitation: Botnets like Mirai use automated lists to compromise thousands of IoT devices globally.<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> Many Internet of Things (IoT) devices are shipped with standard usernames and passwords that users often fail to change. The Mirai botnet uses a list of over 60 of these default configurations to automatically scan the internet, gain access to vulnerable devices like cameras and routers, and incorporate them into a larger botnet for the attacker's use.
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Q10 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/20 space-y-3">
+                                                        <div class="text-xs font-black text-purple-950 leading-relaxed">What constitutes a "zero-day attack"?</div>
+                                                        <button onclick="toggleDetailedQuiz('4-10')" class="text-[9px] font-black uppercase tracking-widest text-purple-700 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-purple-50 transition-colors">
+                                                            Reveal Answer Key
+                                                        </button>
+                                                        <div id="detailed-quiz-ans-4-10" class="hidden mt-2 p-3 bg-white border border-purple-100 rounded-xl text-xs text-purple-900 leading-relaxed font-medium">
+                                                            <strong>Answer Key:</strong> Definition: An exploit of an unknown, unpatched vulnerability. Duration: The vulnerability remains active until the vendor discovers the issue and releases a patch.<br/><br/>
+                                                            <strong>Detailed Explanation:</strong> A zero-day attack occurs when an attacker exploits a software vulnerability that the vendor is not yet aware of and for which no patch has been created. Because the security community has "zero days" to prepare or defend against the exploit, these attacks can continue unabated until a fix is developed and deployed.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- VI. Essay Questions -->
+                                            <div id="sg4-sec-6" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VI</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Essay Questions (No Answers Provided)</h4>
+                                                </div>
+                                                <p class="text-xs text-gray-500 font-medium">Use these prompts to test your conceptual knowledge and practice critical analysis of security topics.</p>
+
+                                                <div class="space-y-4">
+                                                    <!-- Essay 1 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                        <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 01</span>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">The Evolution of Ransomware as a Business Model: Discuss how ransomware authors have transitioned from simple infections to sophisticated business operations, including their use of cryptography and the strategic decision to leave operating systems functional while targeting personal data.</p>
+                                                    </div>
+
+                                                    <!-- Essay 2 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                        <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 02</span>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">Mitigating Cloud-Specific Vulnerabilities: Analyze the security challenges associated with public cloud applications, focusing on the impact of unpatched code, the necessity of multi-factor authentication (MFA), and the risks posed by misconfigured directories.</p>
+                                                    </div>
+
+                                                    <!-- Essay 3 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                        <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 03</span>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">Hardware Lifecycle and Security: Examine the security implications of legacy systems and IoT devices in an organization. How do EOL/EOSL dates and slow manufacturer patch cycles create long-term risks, and what mitigation strategies can be used when devices cannot be replaced?</p>
+                                                    </div>
+
+                                                    <!-- Essay 4 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                        <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 04</span>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">The Criticality of Supply Chain Integrity: Using the examples of SolarWinds Orion and counterfeit Cisco hardware, discuss the challenges of maintaining a "trusted" supply chain and the methods organizations can use to verify the legitimacy of software updates and hardware components.</p>
+                                                    </div>
+
+                                                    <!-- Essay 5 -->
+                                                    <div class="p-5 border border-purple-100 rounded-2xl bg-purple-50/10 space-y-1">
+                                                        <span class="text-[9px] font-black text-purple-600 uppercase tracking-widest block">Essay Prompt 05</span>
+                                                        <p class="text-xs font-bold text-purple-950 leading-relaxed">Cross-Site Scripting (XSS) and the Trust Model: Explain how XSS attacks exploit the trust a browser has in a website. Compare the different delivery methods (links vs. stored scripts) and suggest developer-side and user-side protections against these vulnerabilities.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- VII. Glossary of Key Terms -->
+                                            <div id="sg4-sec-7" class="space-y-4 scroll-mt-20">
+                                                <div class="flex items-center gap-2 border-b border-purple-50 pb-2">
+                                                    <span class="p-1.5 bg-purple-100 text-purple-700 rounded-lg text-[10px] font-bold">VII</span>
+                                                    <h4 class="text-sm font-black text-purple-950 uppercase tracking-wider">Glossary of Key Terms</h4>
+                                                </div>
+
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    <!-- Term 1 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Acceptable Use Policy (AUP)</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A set of rules and procedures within an organization defining how employees are permitted to use technology resources.</p>
+                                                    </div>
+                                                    <!-- Term 2 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Bloatware</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A category of malware or unwanted software that consumes system resources and may slow down performance.</p>
+                                                    </div>
+                                                    <!-- Term 3 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Botnet</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A network of infected systems (bots) controlled remotely by an attacker to perform coordinated tasks, such as stealing data or launching DoS attacks.</p>
+                                                    </div>
+                                                    <!-- Term 4 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Common Vulnerabilities and Exposures (CVE)</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A public database and list of known cybersecurity vulnerabilities and exposures (maintained at cve.mitre.org).</p>
+                                                    </div>
+                                                    <!-- Term 5 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Common Vulnerability Scoring System (CVSS)</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A standardized scale (0 to 10) used to rank the severity of security vulnerabilities.</p>
+                                                    </div>
+                                                    <!-- Term 6 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Default Credentials</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Standard usernames and passwords (e.g., "admin/12345") pre-configured by manufacturers on hardware like IoT devices.</p>
+                                                    </div>
+                                                    <!-- Term 7 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Directory Traversal</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A web server misconfiguration that allows users to manually move through the server's folder structure to unauthorized directories.</p>
+                                                    </div>
+                                                    <!-- Term 8 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">DoS / DDoS</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Denial of Service (or Distributed Denial of Service); an attack intended to disable an application or system by overwhelming it with traffic.</p>
+                                                    </div>
+                                                    <!-- Term 9 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Firmware</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The specialized operating system running inside hardware devices (like thermostats or routers) that manages their specific functions.</p>
+                                                    </div>
+                                                    <!-- Term 10 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Hypervisor</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The software or hardware that creates and runs virtual machines, managing the relationship between physical and virtual resources.</p>
+                                                    </div>
+                                                    <!-- Term 11 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Input Validation</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A security practice where an application checks user-provided data to ensure it does not contain malicious scripts or unintended commands.</p>
+                                                    </div>
+                                                    <!-- Term 12 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Jailbreaking / Rooting</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The process of replacing a mobile device's operating system to circumvent security restrictions and gain full administrative access.</p>
+                                                    </div>
+                                                    <!-- Term 13 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Keylogger</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Malware designed to record every keystroke made on a system and send that data back to an attacker.</p>
+                                                    </div>
+                                                    <!-- Term 14 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Logic Bomb</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A type of malicious code that remains dormant until a specific event or condition triggers its execution.</p>
+                                                    </div>
+                                                    <!-- Term 15 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Malware</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A broad term describing any type of software designed to perform malicious actions on a system.</p>
+                                                    </div>
+                                                    <!-- Term 16 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Mobile Device Manager (MDM)</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A centralized system used by organizations to manage and secure mobile devices, including enforcing security policies.</p>
+                                                    </div>
+                                                    <!-- Term 17 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Packet Capture</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The process of intercepting and logging traffic as it moves across a network to inspect the data within the frames.</p>
+                                                    </div>
+                                                    <!-- Term 18 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Remote Code Execution (RCE)</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A vulnerability that allows an attacker to run any application or command of their choice on a remote system.</p>
+                                                    </div>
+                                                    <!-- Term 19 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Resource Reuse</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A virtualization vulnerability where memory or storage areas are shared between VMs, potentially allowing one VM to read data from another.</p>
+                                                    </div>
+                                                    <!-- Term 20 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Sideloading</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">The installation of applications on a mobile device from sources other than official app stores (e.g., local files or company libraries).</p>
+                                                    </div>
+                                                    <!-- Term 21 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SQL Injection (SQLi)</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A code injection attack where malicious SQL statements are inserted into an entry field for execution by a database.</p>
+                                                    </div>
+                                                    <!-- Term 22 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Trojan Horse</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">Malicious software that is disguised as legitimate or useful software to trick users into installing it.</p>
+                                                    </div>
+                                                    <!-- Term 23 -->
+                                                    <div class="p-4 bg-purple-50/10 border border-purple-100/70 rounded-xl hover:shadow-sm hover:scale-[1.01] transition-all duration-200">
+                                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">Worm</strong>
+                                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium">A type of malware capable of automatically propagating and spreading between systems, often by exploiting known vulnerabilities.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
                                     </div>
                                     </div>
                                 </div>
@@ -5609,8 +6044,98 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             },
             4: {
                 title: "Professor Messer's SY0-701 Security+ Training Video 31 to 40 // Malware Varieties",
-                q: "Define Malware and its common forms.",
-                a: "Malware (malicious software) includes viruses, worms, trojans, ransomware, spyware, and rootkits designed to cause harm or steal information."
+                cards: [
+                    { q: "How does a computer worm differ from a traditional virus in its method of propagation?", a: "A worm can automatically propagate itself between systems by exploiting known vulnerabilities without human intervention." },
+                    { q: "What is the primary objective of a Trojan Horse?", a: "To appear as legitimate software while installing malware in the background." },
+                    { q: "How does ransomware typically impact a user's access to their operating system?", a: "The operating system remains functional so the user can view the attacker's ransom messages, even though data is encrypted." },
+                    { q: "Why is it a security best practice to store data backups offline?", a: "It prevents ransomware from identifying and encrypting the backup files along with the local system data." },
+                    { q: "Term: Rootkit", a: "Definition: A type of malware designed to provide privileged access to a computer while actively hiding its presence from the OS and users." },
+                    { q: "Which specific category of malware records every input from a user's keyboard to steal sensitive data?", a: "Keylogger" },
+                    { q: "What is the primary function of a logic bomb?", a: "To execute malicious code only when a specific event or predefined condition occurs." },
+                    { q: "The method where malware is automatically downloaded to a user's system without them clicking on any links is called a _______.", a: "Drive-by download" },
+                    { q: "How does anti-malware software typically identify malicious code?", a: "By using signatures that match known patterns of malicious software." },
+                    { q: "According to industry estimates, what percentage of organizations do not use multi-factor authentication for their cloud control consoles?", a: "78%" },
+                    { q: "What percentage of code in the cloud is estimated to be unpatched?", a: "38%" },
+                    { q: "Vulnerabilities with a Common Vulnerability Scoring System (CVSS) score of ___ or higher are considered significant security concerns.", a: "7.0" },
+                    { q: "What is the primary risk of a Distributed Denial of Service (DDoS) attack against a public cloud application?", a: "It can make the application unavailable to legitimate users by overwhelming it with a simultaneous connections from multiple devices." },
+                    { q: "Concept: Directory Traversal", a: "Definition: A misconfiguration vulnerability that allows users to manually navigate through a web server's folders and subdirectories." },
+                    { q: "What is the result of a successful Remote Code Execution (RCE) exploit?", a: "An attacker can run any application or command they choose on the target system." },
+                    { q: "How does an out-of-bounds write exploit affect a system?", a: "It allows an attacker to write information into unauthorized sections of memory, potentially crashing the system or enabling RCE." },
+                    { q: "What application-level vulnerability allows an attacker to access database data using code injection?", a: "SQL Injection" },
+                    { q: "Why is 'XSS' used as the abbreviation for Cross-Site Scripting instead of 'CSS'?", a: "The abbreviation 'CSS' was already taken by Cascading Style Sheets." },
+                    { q: "What is the core mechanism behind a Cross-Site Scripting (XSS) attack?", a: "It exploits the trust a web browser has for a website to execute malicious JavaScript." },
+                    { q: "How is the malicious script delivered in a non-persistent (reflected) XSS attack?", a: "The attacker sends a link containing the malicious script to the victim via email or text message." },
+                    { q: "What is the defining characteristic of a persistent (stored) XSS attack?", a: "The malicious payload is stored on a third-party server, such as a social media site, where it affects everyone who visits the page." },
+                    { q: "In the 2017 Subaru XSS vulnerability, what was the primary security flaw of the authentication tokens?", a: "The tokens never expired, allowing permanent access to vehicle management if stolen." },
+                    { q: "What is the most effective way for application developers to prevent Cross-Site Scripting?", a: "Implementing strict input validation to ensure users cannot add their own scripts to input fields." },
+                    { q: "Why do Internet of Things (IoT) devices pose a unique security challenge compared to standard laptops?", a: "Users often lack direct access to the underlying operating system, making them dependent on the manufacturer for security updates." },
+                    { q: "Term: Firmware", a: "Definition: The specialized operating system that controls the hardware functions of an embedded or IoT device." },
+                    { q: "What is the difference between End of Life (EOL) and End of Service Life (EOSL)?", a: "EOL means a product is no longer sold, while EOSL means the manufacturer has stopped providing all security patches and support." },
+                    { q: "What is a major security risk of using legacy platforms in a critical infrastructure environment?", a: "They often run outdated software that has reached its EOSL and no longer receives security patches." },
+                    { q: "What mitigation can be used for legacy systems that cannot be easily replaced?", a: "Implementing restrictive firewall rules and specialized IPS signatures to limit and monitor access." },
+                    { q: "How do attackers typically discover open, unsecured data repositories on the internet?", a: "They perform automated reconnaissance to scan cloud services for repositories left without passwords or security." },
+                    { q: "What is the security implication of an \"unsecured admin account\"?", a: "It refers to a superuser account (Root or Administrator) that has no password or a very easy-to-guess password." },
+                    { q: "What is the best practice for managing superuser access on a server?", a: "Disable direct login to the administrator account and require users to use elevated access (su or sudo) after logging in as a standard user." },
+                    { q: "Which protocol is the secure alternative to HTTP for protecting data in transit?", a: "HTTPS" },
+                    { q: "Why are protocols like Telnet and FTP considered insecure?", a: "They transfer all data, including usernames and passwords, across the network in cleartext." },
+                    { q: "What was the purpose of the 'Wall of Sheep' at the DEFCON conference?", a: "To publicly demonstrate how much sensitive information can be captured from users using insecure protocols over wireless networks." },
+                    { q: "What list does the Mirai botnet use to compromise a wide variety of IoT devices?", a: "A list of over 60 default usernames and passwords for various networked hardware." },
+                    { q: "Why is it important to perform periodic audits of firewall rule sets?", a: "The complexity of large rule sets makes it easy to accidentally open ports or provide unintended access to attackers." },
+                    { q: "How does rooting differ from jailbreaking in the context of mobile devices?", a: "Rooting refers to gaining OS-level access on Android devices, while jailbreaking refers to the same process on Apple iOS devices." },
+                    { q: "What is the primary danger of an employee jailbreaking their work phone?", a: "It circumvents the security restrictions and management capabilities provided by the organization's Mobile Device Manager (MDM)." },
+                    { q: "What is the security term for installing mobile applications from sources other than an official app store?", a: "Sideloading" },
+                    { q: "Which organizational document typically forbids the installation of unauthorized firmware or software on company devices?", a: "Acceptable Use Policy (AUP)" },
+                    { q: "What does SQL stand for in the context of database management?", a: "Structured Query Language" },
+                    { q: "In a SQL injection attack, what is the role of the 'OR 1=1' statement?", a: "It creates a tautology that forces the database to return all records because the condition is always true." },
+                    { q: "How can a successful SQL injection attack compromise a database's integrity?", a: "An attacker can gain complete control to view, modify, or delete any data within the database." },
+                    { q: "Why is input validation critical for preventing code injection attacks?", a: "It ensures that the application filters out malicious code characters, like apostrophes, from being processed as part of a query." },
+                    { q: "What is the scope of a supply chain in a security context?", a: "It includes every step from raw materials and manufacturers to distributors and service providers." },
+                    { q: "How did the 2013 Target Corporation breach originate?", a: "Attackers infected an HVAC service provider with malware via email to gain access to Target's network." },
+                    { q: "What networking error allowed attackers to reach Target's cash registers after compromising the HVAC systems?", a: "The HVAC network and the cash register network were on the same segment with no internal access controls." },
+                    { q: "What is the security risk of counterfeit networking hardware?", a: "It may contain unauthorized software or hardware components that provide attackers with entry points into a network." },
+                    { q: "What tool does an operating system use to verify that a software update is from a legitimate, trusted source?", a: "Digital Signature" },
+                    { q: "How was the SolarWinds Orion attack delivered to its victims?", a: "Attackers injected malicious code into the software's build system, which was then distributed as an automated, digitally signed update." },
+                    { q: "Why is the detection of supply chain attacks like SolarWinds often delayed by several months?", a: "The malicious code is hidden within trusted software updates and operates stealthily within legitimate infrastructure." },
+                    { q: "What is the defining characteristic of a 'Zero-day' attack?", a: "It is an exploit of a vulnerability that has not yet been discovered by the software vendor, leaving no patch available." },
+                    { q: "Where can a security professional look for a public record of known software vulnerabilities?", a: "The Common Vulnerabilities and Exposures (CVE) website." },
+                    { q: "Concept: VM Escape", a: "Definition: A vulnerability that allows an attacker to break out of a guest virtual machine to access the hypervisor or other guest VMs." },
+                    { q: "What hardware simulation bug was used in the 2017 Pwn2Own competition to jump between VMs?", a: "A vulnerability within VMware combined with an exploit in the Windows 10 kernel." },
+                    { q: "How can 'resource reuse' lead to a security breach in a virtualized environment?", a: "If a hypervisor fails to clear memory after a VM is finished with it, a different VM might be able to read sensitive data from that shared memory." },
+                    { q: "Why do hypervisors often over-allocate physical RAM to virtual machines?", a: "To maximize efficiency by only providing memory to VMs as they actively need it, rather than reserving the full amount permanently." },
+                    { q: "What is the impact of a 'sandbox escape' in a web browser?", a: "It allows a malicious script to bypass the browser's isolated environment and interact directly with the host operating system." },
+                    { q: "Which type of malware is characterized by its focus on generating revenue for the attacker through unwanted on-screen advertisements?", a: "Adware" },
+                    { q: "In cloud security, what does a CVSS score measure?", a: "The severity and impact of a specific security vulnerability on a scale of 0 to 10." },
+                    { q: "What is the primary risk of using automated software updates without verification?", a: "If the developer's infrastructure is compromised, malicious code could be automatically installed on all user systems." },
+                    { q: "How can an attacker use an out-of-bounds write to cause a denial of service?", a: "By writing data to memory locations that cause the target application or the entire system to crash." },
+                    { q: "What does 'sideloading' allow a user to do on an Android or iOS device?", a: "Install applications that have not been vetted or approved by the official platform app store." },
+                    { q: "Why is 'input validation' considered a fundamental security practice for web applications?", a: "It prevents many types of code injection, including SQLi and XSS, by ensuring only expected data formats are accepted." },
+                    { q: "What is the specific danger of leaving a cloud 'S3 bucket' open to the public?", a: "Anyone with the URL can download the sensitive data stored within it without any authentication." },
+                    { q: "What is the main security purpose of using 'su' or 'sudo' in a Linux environment?", a: "To limit the time a user operates with administrative privileges, reducing the window of opportunity for an attack." },
+                    { q: "In the SolarWinds attack, how many customers were estimated to have received the malicious update?", a: "18,000" },
+                    { q: "What was the result of the memory corruption zero-day attack on Chrome in April 2023?", a: "It allowed for a sandbox escape, compromising the security of the user's system." },
+                    { q: "Why should organizations perform security audits on their third-party service providers?", a: "Service providers often have access to the organization's sensitive data or networks, creating a potential point of entry for attackers." },
+                    { q: "How can a logic bomb be used in an act of corporate sabotage?", a: "An employee could set it to delete company data if their name is ever removed from the payroll database." },
+                    { q: "What specific component in a hypervisor prevents one VM from accessing another VM's resources?", a: "The memory management unit or hypervisor resource isolation software." },
+                    { q: "In the context of SQL injection, what does the term 'blind SQLi' refer to?", a: "An attack where the database does not return data directly to the screen, but the attacker can infer data by observing system responses." },
+                    { q: "What is the significance of 'CVE-2023-32409' in the context of Apple devices?", a: "It was one of three zero-day patches released in May 2023 to fix vulnerabilities being exploited in the wild." },
+                    { q: "Why is it controversial for ransomware victims to pay the decryption fee?", a: "Paying the ransom funds criminal activity and provides no guarantee that the attacker will actually provide the decryption key." },
+                    { q: "How does 'bloatware' impact system security?", a: "It increases the attack surface of a system by installing unnecessary applications that may contain their own vulnerabilities." },
+                    { q: "In mobile device security, what does the term 'AUP' stand for?", a: "Acceptable Use Policy" },
+                    { q: "What is the goal of an attacker performing 'directory traversal'?", a: "To reach sensitive files, like configuration or password files, located outside the web server's public root directory." },
+                    { q: "Why is 'Remote Code Execution' often considered one of the most dangerous types of vulnerabilities?", a: "It gives an attacker the same level of control as a local user with administrative access." },
+                    { q: "What is the primary defense against a brute force attack on a root or administrator account?", a: "Using long, complex passwords and implementing account lockout policies." },
+                    { q: "How do researchers help software vendors deal with zero-day vulnerabilities?", a: "They discover and report vulnerabilities to the vendor so a patch can be developed before attackers exploit them." },
+                    { q: "In the virtualization world, what is a 'hardware simulation bug'?", a: "A flaw in the hypervisor's ability to emulate hardware, which can be exploited to move between virtual environments." },
+                    { q: "Why are default credentials for IoT devices often published in online databases?", a: "Manufacturers use standard defaults for ease of setup, which attackers compile into lists for automated exploits." },
+                    { q: "What role did JavaScript play in the XSS attack against Subaru users?", a: "It was used in a malicious link to steal the user's permanent authentication token from their browser." },
+                    { q: "What is the intended outcome of 'input validation' for a numeric field?", a: "To ensure the application rejects any input that contains non-numeric characters, such as SQL commands." },
+                    { q: "How can a worm's automatic propagation cause network congestion?", a: "By rapidly creating and sending copies of itself across the network to find new vulnerable hosts." },
+                    { q: "What is the risk of using an application that has reached its 'End of Service Life'?", a: "New vulnerabilities discovered in the application will not be patched by the developer, leaving the system permanently exposed." },
+                    { q: "Why is encryption alone not a complete solution for protecting data on a network?", a: "Encryption does not protect against vulnerabilities in the software that handles the data or the misuse of the encryption protocols." },
+                    { q: "How does a 'distributed' denial of service attack differ from a simple 'denial of service' attack?", a: "A DDoS uses a botnet of many different devices to attack a target, making it harder to block than a single-source DoS." },
+                    { q: "What is the purpose of 'sandboxing' in modern software architecture?", a: "To isolate applications from the rest of the system so that a vulnerability in one app cannot compromise the entire OS." },
+                    { q: "In the SolarWinds breach, which high-level US government departments were compromised?", a: "The Pentagon, Homeland Security, and the Department of the Treasury." }
+                ]
             },
             5: {
                 title: "Professor Messer's SY0-701 Security+ Training Video 41 to 50 // Authentication Concepts",
@@ -5873,7 +6398,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 code: "graph TD\n    Attacker -->|Calls Target| Phone[Spoofed Phone Call]\n    Phone -->|Urgency/Panic| Target[Target Employee]\n    Target -->|Discloses| Creds[SSO Credentials]\n    Creds -->|Access Gained| Attacker"
             },
             4: {
-                desc: "Ransomware execution timeline showing encryption of host system files.",
+                desc: "A Kawaii Guide to Staying Cyber-Safe! interactive visual dashboard.",
                 code: "graph TD\n    Entry[Malicious Attachment] -->|User Opens| Run[Malware Executed]\n    Run -->|Disable Backups| Prep[System Hooked]\n    Prep -->|Encrypt Drive| Crypto[Locked Files]\n    Crypto -->|Demand Notification| Ransom[Ransom Request]"
             },
             5: {
@@ -6016,7 +6541,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             frontDiv.classList.remove('hidden');
             backDiv.classList.add('hidden');
 
-            if (activeFlashcardDeckId >= 4) {
+            if (activeFlashcardDeckId >= 5) {
                 frontText.textContent = "Flashcard deck content coming soon!";
                 backText.textContent = "Under Construction // Please check back later.";
                 progressIndicator.textContent = "Card 1 of 1";
@@ -6222,24 +6747,34 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-3')?.classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-4')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-1').classList.remove('hidden');
             } else if (deckId === 2) {
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-3')?.classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-4')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-2').classList.remove('hidden');
             } else if (deckId === 3) {
                 document.getElementById('study-guide-standard-card').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-4')?.classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-3').classList.remove('hidden');
+            } else if (deckId === 4) {
+                document.getElementById('study-guide-standard-card').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-3').classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-4').classList.remove('hidden');
             } else {
                 document.getElementById('study-guide-detailed-card-1').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-2').classList.add('hidden');
                 document.getElementById('study-guide-detailed-card-3')?.classList.add('hidden');
+                document.getElementById('study-guide-detailed-card-4')?.classList.add('hidden');
                 document.getElementById('study-guide-standard-card').classList.remove('hidden');
 
-                if (deckId >= 4) {
+                if (deckId >= 5) {
                     subtitleEl.textContent = "📚 " + deck.title + " // Coming Soon";
                     summaryEl.textContent = "This study reference guide is currently under construction. Please check back later!";
                     const li = document.createElement('li');
@@ -7015,6 +7550,526 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                             '</div>';
                     }
                 };
+            } else if (deckId === 4) {
+                if (cardWrapper) cardWrapper.className = "p-6 bg-white border border-purple-100 rounded-2xl max-w-5xl mx-auto shadow-sm space-y-6";
+                if (chartWrapper) chartWrapper.className = "flex justify-center p-0 bg-transparent rounded-xl border-none shadow-none overflow-x-auto w-full";
+                
+                descEl.textContent = "A Kawaii Guide to Staying Cyber-Safe! interactive visual dashboard.";
+                
+                containerEl.innerHTML = '<div class="w-full text-slate-900 bg-[#F8F9FD] p-6 font-sans select-none rounded-2xl text-left border border-blue-100/40 shadow-sm">' +
+                    '<div class="text-center mb-8 border-b border-pink-100 pb-4">' +
+                        '<h3 class="text-lg md:text-xl font-black text-pink-950 tracking-tight uppercase flex items-center justify-center gap-2">' +
+                            '<span>🌸</span> A Kawaii Guide to Staying Cyber-Safe! <span>🌸</span>' +
+                        '</h3>' +
+                        '<p class="text-[10px] text-pink-500 font-bold uppercase tracking-widest mt-1">Interactive Kawaii Infographic // Deck 4 Visual Aid</p>' +
+                    '</div>' +
+                    '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">' +
+                        
+                        '<!-- Column 1: The Naughty Code & Hardware Heartaches -->' +
+                        '<div class="space-y-6">' +
+                            '<!-- 1. The Naughty Code -->' +
+                            '<div class="p-5 bg-gradient-to-br from-rose-50/50 to-pink-50/20 border-2 border-rose-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                                '<div class="flex items-center gap-2 border-b border-rose-200 pb-2 mb-2">' +
+                                    '<span class="text-xl">😈</span>' +
+                                    '<div>' +
+                                        '<h4 class="text-xs font-black uppercase text-rose-950 tracking-wider">The Naughty Code</h4>' +
+                                        '<p class="text-[8px] text-rose-500 font-bold uppercase tracking-wide">Malware Types</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="space-y-3">' +
+                                    '<div onclick="showCyberDetail(\'malware\')" class="cursor-pointer p-3 bg-white border border-rose-200/80 hover:border-rose-400 hover:bg-rose-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-rose-50 rounded-xl">👿</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-rose-950 uppercase tracking-wide">What is Malware?</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Software doing "bad things" like stealing keystrokes or encrypting files.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'teamwork\')" class="cursor-pointer p-3 bg-white border border-rose-200/80 hover:border-rose-400 hover:bg-rose-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-rose-50 rounded-xl">🐛</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-rose-950 uppercase tracking-wide">Malware Teamwork</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Different types work together (e.g., worm opens a backdoor for trojans).</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'ransomware\')" class="cursor-pointer p-3 bg-white border border-rose-200/80 hover:border-rose-400 hover:bg-rose-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-rose-50 rounded-xl">🔐</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-rose-950 uppercase tracking-wide">Ransomware & Crypto</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Encrypts files, demanding crypto for a key, keeping OS running.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                            
+                            '<!-- 4. Hardware & Supply Chain Heartaches -->' +
+                            '<div class="p-5 bg-gradient-to-br from-emerald-50/50 to-teal-50/20 border-2 border-emerald-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                                '<div class="flex items-center gap-2 border-b border-emerald-200 pb-2 mb-2">' +
+                                    '<span class="text-xl">📦</span>' +
+                                    '<div>' +
+                                        '<h4 class="text-xs font-black uppercase text-emerald-950 tracking-wider">Hardware Heartaches</h4>' +
+                                        '<p class="text-[8px] text-emerald-600 font-bold uppercase tracking-wide">Hardware & Supply Chain Risks</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="space-y-3">' +
+                                    '<div onclick="showCyberDetail(\'eol\')" class="cursor-pointer p-3 bg-white border border-emerald-200/80 hover:border-emerald-400 hover:bg-emerald-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-emerald-50 rounded-xl">🗑️</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-emerald-950 uppercase tracking-wide">EOL (End of Life)</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Products no longer sold, meaning organizations must plan replacements.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'eosl\')" class="cursor-pointer p-3 bg-white border border-emerald-200/80 hover:border-emerald-400 hover:bg-emerald-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-emerald-50 rounded-xl">📅</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-emerald-950 uppercase tracking-wide">EOSL (End of Service Life)</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Security updates stop entirely, leaving permanent vulnerabilities.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'counterfeit\')" class="cursor-pointer p-3 bg-white border border-emerald-200/80 hover:border-emerald-400 hover:bg-emerald-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-emerald-50 rounded-xl">🏷️</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-emerald-950 uppercase tracking-wide">Counterfeit Hardware</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Reselling fake, failure-prone, or backdoor-ready routing gear.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'hvac\')" class="cursor-pointer p-3 bg-white border border-emerald-200/80 hover:border-emerald-400 hover:bg-emerald-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-emerald-50 rounded-xl">🌡️</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-emerald-950 uppercase tracking-wide">Target HVAC Breach</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Pivot attack using access from a third-party cooling contractor portal.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'sideloading\')" class="cursor-pointer p-3 bg-white border border-emerald-200/80 hover:border-emerald-400 hover:bg-emerald-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-emerald-50 rounded-xl">📱</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-emerald-950 uppercase tracking-wide">Sideloading & Rooting</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Bypassing OS boundaries to run unverified software with root privileges.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+
+                        '<!-- Column 2: CloudOopsies & Cyber-Safe Checklist -->' +
+                        '<div class="space-y-6">' +
+                            '<!-- 2. Cloud & Virtualization Oopsies -->' +
+                            '<div class="p-5 bg-gradient-to-br from-sky-50/50 to-blue-50/20 border-2 border-sky-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                                '<div class="flex items-center gap-2 border-b border-sky-200 pb-2 mb-2">' +
+                                    '<span class="text-xl">☁️</span>' +
+                                    '<div>' +
+                                        '<h4 class="text-xs font-black uppercase text-sky-950 tracking-wider">Cloud & Virtualization</h4>' +
+                                        '<p class="text-[8px] text-sky-600 font-bold uppercase tracking-wide">Cloud Platform Configuration Flaws</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="space-y-3">' +
+                                    '<div onclick="showCyberDetail(\'mfagap\')" class="cursor-pointer p-3 bg-white border border-sky-200/80 hover:border-sky-400 hover:bg-sky-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-sky-50 rounded-xl">🔐</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-sky-950 uppercase tracking-wide">The MFA Gap</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">78% of organization cloud portals omit MFA, permitting direct entry.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'cloudcode\')" class="cursor-pointer p-3 bg-white border border-sky-200/80 hover:border-sky-400 hover:bg-sky-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-sky-50 rounded-xl">🎀</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-sky-950 uppercase tracking-wide">Unpatched Cloud Code</span>' +
+                                                '<span class="text-[8px] px-1.5 py-0.5 bg-red-100 text-red-700 rounded-md font-bold uppercase tracking-wider">CVSS 7</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Up to 63% of templates contain active software flaws in cloud images.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'vmescape\')" class="cursor-pointer p-3 bg-white border border-sky-200/80 hover:border-sky-400 hover:bg-sky-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-sky-50 rounded-xl">🦄</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-sky-950 uppercase tracking-wide">VM Escape</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Rare hypervisor breach letting a VM jump and access neighboring systems.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'resource\')" class="cursor-pointer p-3 bg-white border border-sky-200/80 hover:border-sky-400 hover:bg-sky-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-sky-50 rounded-xl">💾</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-sky-950 uppercase tracking-wide">Resource Reuse</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Shared physical memory reassigned to sibling VMs without zeroing data.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                            
+                            '<!-- 6. Your Cyber-Safe Checklist -->' +
+                            '<div class="p-5 bg-gradient-to-br from-orange-50/50 to-amber-50/20 border-2 border-orange-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                                '<div class="flex items-center gap-2 border-b border-orange-200 pb-2 mb-2">' +
+                                    '<span class="text-xl">🛠️</span>' +
+                                    '<div>' +
+                                        '<h4 class="text-xs font-black uppercase text-orange-950 tracking-wider">Your Cyber-Safe Checklist</h4>' +
+                                        '<p class="text-[8px] text-orange-600 font-bold uppercase tracking-wide">Best Practice Security Routines</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="space-y-3">' +
+                                    '<div onclick="showCyberDetail(\'backups\')" class="cursor-pointer p-3 bg-white border border-orange-200/80 hover:border-orange-400 hover:bg-orange-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-orange-50 rounded-xl">💾</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-orange-950 uppercase tracking-wide">Offline Backups</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Storing data disconnected from the network to block ransomware encryption.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'patching\')" class="cursor-pointer p-3 bg-white border border-orange-200/80 hover:border-orange-400 hover:bg-orange-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-orange-50 rounded-xl">🔄</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-orange-950 uppercase tracking-wide">Patching & Updates</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Routinely updating platforms to neutralize discovered entry gaps.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'cve\')" class="cursor-pointer p-3 bg-white border border-orange-200/80 hover:border-orange-400 hover:bg-orange-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-orange-50 rounded-xl">🔍</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-orange-950 uppercase tracking-wide">The CVE Database</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Using public repositories like cve.mitre.org to map and patch flaws.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+
+                        '<!-- Column 3: Sneaky App Attacks & Common Misconfigurations -->' +
+                        '<div class="space-y-6">' +
+                            '<!-- 3. Sneaky Application Attacks -->' +
+                            '<div class="p-5 bg-gradient-to-br from-amber-50/50 to-yellow-50/20 border-2 border-amber-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                                '<div class="flex items-center gap-2 border-b border-amber-200 pb-2 mb-2">' +
+                                    '<span class="text-xl">🥷</span>' +
+                                    '<div>' +
+                                        '<h4 class="text-xs font-black uppercase text-amber-950 tracking-wider">Sneaky App Attacks</h4>' +
+                                        '<p class="text-[8px] text-amber-600 font-bold uppercase tracking-wide">Code Injection & Input Vulnerabilities</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="space-y-3">' +
+                                    '<div onclick="showCyberDetail(\'sqli\')" class="cursor-pointer p-3 bg-white border border-amber-200/80 hover:border-amber-400 hover:bg-amber-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-amber-50 rounded-xl">🛢️</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-amber-950 uppercase tracking-wide">SQL Injection (SQLi)</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Entering characters like "\' OR 1=1 --" to extract backend databases.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'xss\')" class="cursor-pointer p-3 bg-white border border-amber-200/80 hover:border-amber-400 hover:bg-amber-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-amber-50 rounded-xl">🪟</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-amber-950 uppercase tracking-wide">Cross-Site Scripting (XSS)</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Injecting scripting code to capture visitor session cookies/cookies.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'validation\')" class="cursor-pointer p-3 bg-white border border-amber-200/80 hover:border-amber-400 hover:bg-amber-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-amber-50 rounded-xl">📋</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-amber-950 uppercase tracking-wide">Input Validation</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Sanitizing and checking inputs to block custom script injections.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                            
+                            '<!-- 5. Common Misconfigurations -->' +
+                            '<div class="p-5 bg-gradient-to-br from-purple-50/50 to-indigo-50/20 border-2 border-purple-100 rounded-3xl space-y-3.5 hover:shadow-sm transition-shadow">' +
+                                '<div class="flex items-center gap-2 border-b border-purple-200 pb-2 mb-2">' +
+                                    '<span class="text-xl">🐑</span>' +
+                                    '<div>' +
+                                        '<h4 class="text-xs font-black uppercase text-purple-950 tracking-wider">Common Misconfigurations</h4>' +
+                                        '<p class="text-[8px] text-purple-600 font-bold uppercase tracking-wide">Security Oversight Weaknesses</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="space-y-3">' +
+                                    '<div onclick="showCyberDetail(\'sheep\')" class="cursor-pointer p-3 bg-white border border-purple-200/80 hover:border-purple-400 hover:bg-purple-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-purple-50 rounded-xl">🐑</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-purple-950 uppercase tracking-wide">The "Wall of Sheep"</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Using unencrypted cleartext protocols (HTTP/Telnet) sniffing.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'defaults\')" class="cursor-pointer p-3 bg-white border border-purple-200/80 hover:border-purple-400 hover:bg-purple-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-purple-50 rounded-xl">🤖</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-purple-950 uppercase tracking-wide">Default Credentials</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Retaining OEM factory logins (e.g. admin/admin), enabling botnet hijacking.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div onclick="showCyberDetail(\'s3bucket\')" class="cursor-pointer p-3 bg-white border border-purple-200/80 hover:border-purple-400 hover:bg-purple-50/30 rounded-2xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
+                                        '<div class="text-2xl p-2 bg-purple-50 rounded-xl">🪣</div>' +
+                                        '<div class="flex-1">' +
+                                            '<div class="flex items-center justify-between mb-0.5">' +
+                                                '<span class="text-[10.5px] font-black text-purple-950 uppercase tracking-wide">Open S3 Buckets</span>' +
+                                            '</div>' +
+                                            '<p class="text-[9.5px] text-gray-500 leading-normal">Cloud databases left open to public indexing without authorization.</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+
+                    '</div>' +
+                    '<div id="cyber-details" class="p-4 bg-amber-50 text-[10.5px] rounded-2xl border border-amber-200 text-amber-950 font-bold transition-all duration-300 flex items-center gap-3">' +
+                        '<span class="text-xl">💡</span>' +
+                        '<div>' +
+                            '<p class="uppercase text-[9px] text-amber-800 tracking-wider">Interactive Cybersecurity Threat Explorer</p>' +
+                            '<p class="font-normal mt-0.5">Click any threat card above to deep-dive into its execution path, defense tactics, and interactive mitigation tips!</p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+
+                const details = {
+                    malware: {
+                        title: "👿 What is Malware?",
+                        subtitle: "Broad term for software doing bad things",
+                        exp: "Malware is any software designed to cause harm to a computer, server, client, or computer network. It can steal keystrokes, monitor user traffic, steal files, or encrypt storage.",
+                        path: "Attacker deploys payload ➔ Victim runs the application ➔ Payload installs spyware/stealer ➔ Exfiltrates private data.",
+                        mitigation: "Deploy endpoint detection software (EDR), restrict user access rights (least privilege), and perform routine vulnerability scanning.",
+                        tip: "🧁 \"Malware is like a grumpy little monster eating your cookies! Keep him out by scanning all downloads first!\""
+                    },
+                    teamwork: {
+                        title: "🐛 Malware Teamwork",
+                        subtitle: "Different types working together",
+                        exp: "Modern attacks rarely use a single file type. Often, a worm exploits a port vulnerability to enter a network, installs a downloader, which fetches a backdoor, allowing remote access.",
+                        path: "Worm scans and enters ➔ Downloader executes ➔ Fetches Remote Access Trojan (RAT) ➔ Hacker secures system control.",
+                        mitigation: "Implement strict network segmentation, firewall filters on inter-VLAN traffic, and configure intrusion detection.",
+                        tip: "🐛 \"These naughty bugs love to team up! Keep them separated and block ports they use to chat!\""
+                    },
+                    ransomware: {
+                        title: "🔐 Ransomware & Cryptography",
+                        subtitle: "Encrypting files for cryptocurrency",
+                        exp: "Ransomware leverages strong public/private key encryption to lock a target system\'s data files. The operating system remains running only to display a ransom message directing cryptocurrency payment.",
+                        path: "Ransomware payload runs ➔ Enumerates local drives ➔ Encrypts documents with AES/RSA keys ➔ Deletes backups ➔ Ransom note displayed.",
+                        mitigation: "Maintain offline/air-gapped backups, restrict administrative privileges, and deploy security tools with behavior blockers.",
+                        tip: "🔒 \"Always keep backups offline! If a monster locks your toys, you can just pull out your backup bin!\""
+                    },
+                    sqli: {
+                        title: "🛢️ SQL Injection (SQLi)",
+                        subtitle: "Tricking the database layer",
+                        exp: "By typing special query syntax (like \"\' OR 1=1 --\") into user input fields, attackers bypass authorization controls, forcing database engines to dump raw records.",
+                        path: "Form input submitted ➔ App concatenates SQL query unsanitized ➔ Database runs malicious query ➔ Returns sensitive tables.",
+                        mitigation: "Always use prepared statements and parameterized queries. Implement strict input validation.",
+                        tip: "🥛 \"Database barrels should only share food, not spill secrets! Validate all input labels!\""
+                    },
+                    xss: {
+                        title: "🪟 Cross-Site Scripting (XSS)",
+                        subtitle: "Stealing session IDs and cookies",
+                        exp: "XSS occurs when malicious JavaScript is injected into trusted web applications. Reflected XSS executes instantly in the victim\'s browser, while Stored XSS stays in the database to infect all visitors.",
+                        path: "Script uploaded to site forum ➔ Forum saves script ➔ Victims view page ➔ Script steals cookies and sends to attacker.",
+                        mitigation: "Enforce Content Security Policy (CSP), encode all output data, and sanitize input fields.",
+                        tip: "🍪 \"Keep your session cookies safe in a jar! Secure headers ensure browsers don\'t leak cookie crumbs!\""
+                    },
+                    validation: {
+                        title: "📋 Input Validation",
+                        subtitle: "Sanitizing user inputs",
+                        exp: "The first line of defense in web applications. Validation ensures all user input matches expected formats, lengths, and types, rejecting characters like \"<\" or \"\'\" that trigger injection.",
+                        path: "User enters form data ➔ Input validation engine checks characters ➔ Invalid characters stripped or block requested.",
+                        mitigation: "Use whitelist validation rules, restrict field lengths, and block known malicious tags.",
+                        tip: "🌸 \"A sweet gatekeeper checks all visitors! Block anyone trying to sneak code scripts through!\""
+                    },
+                    mfagap: {
+                        title: "🔐 The MFA Gap",
+                        subtitle: "78% of orgs skip cloud MFA",
+                        exp: "Cloud administrative consoles are high-value targets. A critical vulnerability is the lack of MFA, which allows attackers who compromise a single password to gain full access to the cloud deployment.",
+                        path: "Attacker phishes password ➔ Logs in directly to admin console ➔ Fully control cloud compute & storage resources.",
+                        mitigation: "Enforce mandatory Multi-Factor Authentication (MFA) for all console logins and service accounts.",
+                        tip: "☁️ \"Just a password is not enough to guard your cloud castle! Add a second verification key!\""
+                    },
+                    cloudcode: {
+                        title: "🎀 Unpatched Cloud Code",
+                        subtitle: "Outdated software in cloud instances",
+                        exp: "Organizations often deploy pre-packaged cloud images without checking for updates. Up to 63% of running cloud templates have unpatched security flaws, often scoring CVSS 7 or higher.",
+                        path: "Deploy container image ➔ Attacker scans public container ports ➔ Exploits known vulnerability in unpatched software.",
+                        mitigation: "Incorporate automated dependency/container vulnerability scanning within CI/CD pipelines.",
+                        tip: "🎀 \"Don\'t let your cloud wear dirty clothes! Scan containers for patches before they go outside!\""
+                    },
+                    vmescape: {
+                        title: "🦄 VM Escape",
+                        subtitle: "Jumping boundaries to the hypervisor",
+                        exp: "A highly critical hypervisor exploit where code running inside a virtual machine escapes its partition, executing command lines on the host hypervisor and compromising other virtual servers.",
+                        path: "Exploit runs in VM ➔ Bypasses virtual environment sandbox ➔ Accesses host OS ➔ Gains access to sibling VMs.",
+                        mitigation: "Patch hypervisor systems immediately, segment high-security virtual environments, and use modern CPU mitigation flags.",
+                        tip: "🦄 \"Keep your horses in their own stalls! Updates keep hypervisor walls thick and secure!\""
+                    },
+                    resource: {
+                        title: "💾 Resource Reuse",
+                        subtitle: "Uncleared memory leaks",
+                        exp: "When a VM releases system RAM, the hypervisor reassigns it to other VMs. If the RAM contents are not properly cleared, the new VM can read leftover private data from the previous owner.",
+                        path: "VM 1 drops RAM allocation ➔ Hypervisor assigns RAM to VM 2 ➔ VM 2 reads memory registers before writing.",
+                        mitigation: "Configure hypervisor policies to zero out all physical RAM blocks prior to reallocation.",
+                        tip: "💾 \"Always wipe the blackboard before the next class starts! Clean memory prevents data leaks!\""
+                    },
+                    eol: {
+                        title: "🗑️ EOL (End of Life)",
+                        subtitle: "Vendor stops manufacturing item",
+                        exp: "End of Life (EOL) marks when a vendor stops selling or manufacturing a hardware product. While basic support may remain, companies should begin planning upgrades.",
+                        path: "Manufacturer declares EOL ➔ Product sales cease ➔ Support window shrinks ➔ Replacement timeline begins.",
+                        mitigation: "Track hardware assets lifecycle, prepare replacement budgets, and schedule hardware refresh projects.",
+                        tip: "📦 \"When a gadget goes EOL, it\'s retiring! Start looking for its fresh successor!\""
+                    },
+                    eosl: {
+                        title: "📅 EOSL (End of Service Life)",
+                        subtitle: "Security updates stop entirely",
+                        exp: "End of Service Life (EOSL) is a critical security risk. The vendor ceases all security patches and support. Any newly discovered vulnerabilities on these systems will remain unpatched forever.",
+                        path: "Vendor stops support ➔ Attacker finds exploit ➔ System cannot be patched ➔ Permanent security exposure.",
+                        mitigation: "Decommission all EOSL systems. If legacy systems must run, segment them on isolated VLANs with no internet path.",
+                        tip: "📅 \"A device past its EOSL is an easy target! Retire it or lock it behind strong network walls!\""
+                    },
+                    counterfeit: {
+                        title: "🏷️ Counterfeit Hardware",
+                        subtitle: "$1 Billion in fake network gear",
+                        exp: "Counterfeit network components are cheap lookalikes that mimic authentic hardware. They are highly prone to failure, lack certified security code signatures, and may contain pre-installed spying backdoors.",
+                        path: "Reseller sells fake router ➔ System fails under stress or leaks corporate network packets to external nodes.",
+                        mitigation: "Purchase enterprise network devices only from verified, direct manufacturer partners and authorized dealers.",
+                        tip: "🏷️ \"Fakes can be sneaky! Only buy gear from trusted shops to keep bugs out of your routers!\""
+                    },
+                    hvac: {
+                        title: "🌡️ The Target HVAC Breach",
+                        subtitle: "Supply chain vendor compromise",
+                        exp: "Attackers gained network access to retail giant Target by stealing credentials from a third-party heating, ventilation, and air conditioning (HVAC) vendor, using their vendor portal to pivot into the main billing network.",
+                        path: "HVAC vendor compromised ➔ Credentials used on Target billing portal ➔ Pivot to corporate system ➔ POS card readers infected.",
+                        mitigation: "Enforce network segmentation between enterprise operations and vendor controls. Require MFA for all vendor access.",
+                        tip: "🌡️ \"A backdoor for the AC repairman shouldn\'t open the bank vault! Segment all third-party gates!\""
+                    },
+                    sideloading: {
+                        title: "📱 Sideloading & Rooting",
+                        subtitle: "Bypassing app store safety gates",
+                        exp: "Rooting (Android) or Jailbreaking (iOS) disables the device\'s native security boundaries. This allows sideloading apps from untrusted sites, bypassing security scans and exposing the system to root exploits.",
+                        path: "User roots operating system ➔ Downloads untrusted app ➔ App installs with administrative permissions ➔ Steals credentials.",
+                        mitigation: "Utilize Mobile Device Management (MDM) profiles to block rooted systems and prevent unauthorized app installs.",
+                        tip: "📱 \"Jailbreaking lets cool themes in, but also opens the door to monsters! Play safe in the official garden!\""
+                    },
+                    sheep: {
+                        title: "🐑 The \"Wall of Sheep\"",
+                        subtitle: "Cleartext credentials sniffing",
+                        exp: "A visual demonstration displaying names/passwords of users logging in via cleartext protocols. Protocols like HTTP, Telnet, and FTP send packets unencrypted, allowing attackers on the local network to sniff details.",
+                        path: "User logs in via HTTP ➔ Attacker intercepts local traffic ➔ Wireshark logs plaintext password ➔ Account compromised.",
+                        mitigation: "Enforce secure, encrypted communication protocols (HTTPS, SSH, SFTP) and deprecate legacy cleartext protocols.",
+                        tip: "🐑 \"Don\'t be a sheep sending letters in transparent envelopes! Enforce encryption everywhere!\""
+                    },
+                    defaults: {
+                        title: "🤖 Default Credentials",
+                        subtitle: "The entry point for IoT botnets",
+                        exp: "IoT devices are frequently deployed with factory settings. Attackers scan the internet using automated scripts to attempt login with known default credentials (like admin/admin), creating botnets like Mirai.",
+                        path: "Attacker scans IP ranges ➔ Tries default login on IoT camera ➔ Authenticates successfully ➔ Installs botnet payload.",
+                        mitigation: "Enforce mandatory password changes on initial setup, and disable external management console routes.",
+                        tip: "🤖 \"A door locked with \'admin/admin\' is basically wide open! Always change the key on day one!\""
+                    },
+                    s3bucket: {
+                        title: "🪣 Open S3 Buckets",
+                        subtitle: "Cloud data repositories left public",
+                        exp: "Cloud storage buckets default to private but are often misconfigured to public access. In 2017, Verizon suffered a major leak of 14 million records due to an S3 bucket left public without a password.",
+                        path: "Storage bucket set to public ➔ Web scanner identifies URL ➔ Attacker downloads all private customer logs.",
+                        mitigation: "Block public access by default, use automated auditing tools to monitor buckets, and configure IAM role access.",
+                        tip: "🪣 \"An open bucket leaks all its water! Ensure your cloud storage has a tight password lid!\""
+                    },
+                    backups: {
+                        title: "💾 Offline Backups",
+                        subtitle: "The ultimate ransomware defense",
+                        exp: "Backups stored completely offline (air-gapped) and disconnected from the corporate network. Because they lack physical network links, they are immune to remote malware propagation.",
+                        path: "Ransomware spreads via network ➔ Encrypts all servers ➔ Offline backups remain untouched ➔ Admin restores system.",
+                        mitigation: "Implement the 3-2-1 backup strategy, store critical files offline, and verify restoration processes regularly.",
+                        tip: "💾 \"Unplug your backup drive when you\'re done! Ransomware monsters can\'t touch what they can\'t reach!\""
+                    },
+                    patching: {
+                        title: "🔄 Patching & Updates",
+                        subtitle: "Securing known software flaws",
+                        exp: "Vulnerabilities are discovered regularly. Applying vendor patches quickly secures systems before attackers can build scripts. Patching remains the absolute highest-value security habit.",
+                        path: "Flaw announced ➔ Patch downloaded and staged ➔ Tested in sandbox ➔ Rolled out to production systems.",
+                        mitigation: "Establish patch cycles, perform staging validation, and automate security updates on endpoints.",
+                        tip: "🔄 \"Fixing holes in your fence keeps the rabbits out! Update your system software weekly!\""
+                    },
+                    cve: {
+                        title: "🔍 The CVE Database",
+                        subtitle: "Public directory of software bugs",
+                        exp: "The Common Vulnerabilities and Exposures (CVE) list provides a unified identification registry for security flaws. Overseen by Mitre, it helps security managers map vulnerabilities to active systems.",
+                        path: "Bug identified ➔ Registered with CVE number ➔ Vendors construct patches ➔ Administrators track deployment.",
+                        mitigation: "Subscribe to CVE tracking alerts and use CVE scanner tools to identify outdated endpoints.",
+                        tip: "🔍 \"The CVE list is like a monster encyclopedia! Know the monster\'s weaknesses to stay safe!\""
+                    }
+                };
+
+                window.showCyberDetail = function(key) {
+                    const data = details[key];
+                    if (!data) return;
+                    const detailBox = document.getElementById('cyber-details');
+                    if (detailBox) {
+                        detailBox.className = "p-5 bg-purple-50 text-[10.5px] rounded-2xl border border-purple-200 text-purple-950 font-normal transition-all duration-300 space-y-2.5";
+                        detailBox.innerHTML = 
+                            '<div class="flex items-center justify-between border-b border-purple-200 pb-1.5">' +
+                                '<div>' +
+                                    '<span class="text-xs font-black uppercase text-purple-950 block">' + data.title + '</span>' +
+                                    '<span class="text-[9px] text-purple-500 font-bold uppercase tracking-wide">' + data.subtitle + '</span>' +
+                                '</div>' +
+                                '<button onclick="resetCyberDetail()" class="text-[9px] font-black uppercase text-purple-600 hover:text-purple-900 bg-purple-100 hover:bg-purple-200 px-2 py-0.5 rounded-md transition-colors">Reset</button>' +
+                            '</div>' +
+                            '<div>' +
+                                '<p class="leading-relaxed"><strong class="font-black text-purple-900 uppercase text-[9px] tracking-wider block mb-0.5">Explanation:</strong>' + data.exp + '</p>' +
+                            '</div>' +
+                            '<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1 border-t border-purple-100">' +
+                                '<div>' +
+                                    '<p class="leading-relaxed"><strong class="font-black text-purple-900 uppercase text-[9px] tracking-wider block mb-0.5">Execution Path:</strong>' + data.path + '</p>' +
+                                '</div>' +
+                                '<div>' +
+                                    '<p class="leading-relaxed"><strong class="font-black text-purple-900 uppercase text-[9px] tracking-wider block mb-0.5">Mitigation / Defense:</strong>' + data.mitigation + '</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="bg-white p-2.5 rounded-xl border border-purple-100 flex items-center gap-2 mt-1">' +
+                                '<span class="text-lg">🦦</span>' +
+                                '<div>' +
+                                    '<span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block">Caypi\'s Kawaii Security Tip</span>' +
+                                    '<p class="text-[9.5px] italic text-purple-950 font-bold leading-normal">' + data.tip + '</p>' +
+                                '</div>' +
+                            '</div>';
+                    }
+                };
+
+                window.resetCyberDetail = function() {
+                    const detailBox = document.getElementById('cyber-details');
+                    if (detailBox) {
+                        detailBox.className = "p-4 bg-amber-50 text-[10.5px] rounded-2xl border border-amber-200 text-amber-950 font-bold transition-all duration-300 flex items-center gap-3";
+                        detailBox.innerHTML = 
+                            '<span class="text-xl">💡</span>' +
+                            '<div>' +
+                                '<p class="uppercase text-[9px] text-amber-800 tracking-wider">Interactive Cybersecurity Threat Explorer</p>' +
+                                '<p class="font-normal mt-0.5">Click any threat card above to deep-dive into its execution path, defense tactics, and interactive mitigation tips!</p>' +
+                            '</div>';
+                    }
+                };
             } else {
                 if (cardWrapper) cardWrapper.className = "p-6 bg-white border border-purple-100 rounded-2xl max-w-2xl mx-auto shadow-sm space-y-6";
                 if (chartWrapper) chartWrapper.className = "flex justify-center p-4 bg-purple-950 rounded-xl border border-white/10 shadow-inner overflow-x-auto";
@@ -7027,7 +8082,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             selectView.classList.add('hidden');
             deckView.classList.remove('hidden');
 
-            if (deckId > 3 && window.mermaid) {
+            if (deckId > 4 && window.mermaid) {
                 try {
                     window.mermaid.run({ querySelector: '.mermaid' });
                 } catch(e) {
@@ -8044,4 +9099,4 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
     </script>
 </body>
 
-</html><!-- Please paste the source code of index_copy.html here -->
+</html>
