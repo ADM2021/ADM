@@ -1635,12 +1635,12 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                             </div>
                         </div>
 
-                        <!-- GameFII Card -->
-                        <div onclick="selectStudyModule('gamefii')" class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                        <!-- Acronyms Card -->
+                        <div onclick="selectStudyModule('acronyms')" class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
                             <div>
-                                <div class="text-3xl mb-4 group-hover:scale-110 transition-transform w-fit">🎮</div>
-                                <h3 class="font-black text-purple-950 text-sm uppercase tracking-wider mb-2">GameFII</h3>
-                                <p class="text-xs text-gray-500 leading-relaxed">Gamified workflows, status completion meters, and reward-based challenges.</p>
+                                <div class="text-3xl mb-4 group-hover:scale-110 transition-transform w-fit">🔤</div>
+                                <h3 class="font-black text-purple-950 text-sm uppercase tracking-wider mb-2">Acronyms</h3>
+                                <p class="text-xs text-gray-500 leading-relaxed">Essential Security+ acronyms, their expansions, and key contextual concepts.</p>
                             </div>
                             <div class="mt-6 flex items-center justify-between">
                                 <span class="text-[9px] font-black uppercase tracking-widest text-purple-600">Open Module</span>
@@ -5570,448 +5570,223 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                 </div>
                             </div>
 
-                            <!-- GameFII Module -->
-                            <div id="content-gamefii" class="study-module-tab hidden">
-                                <!-- GameFII Selector Screen -->
-                                <div id="gamefii-select-view" class="space-y-6 animate-in fade-in duration-300">
-                                    <div class="text-center max-w-md mx-auto mb-6">
-                                        <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-1">Select a learning quest</p>
-                                        <h4 class="text-lg font-black text-purple-950">Security+ SY0-701 Gamified Quests</h4>
-                                        <p class="text-[10px] text-gray-500 italic">Complete interactive challenges for each training video range</p>
-                                    </div>
-                                    
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                        <!-- Deck Cards -->
-                                        <div onclick="startGamefiiDeck(1)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 01</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 1 to 10</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">General security concepts, core CIA triad, control types, and security posture frameworks.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
+                            <!-- Acronyms Module -->
+                            <div id="content-acronyms" class="study-module-tab hidden space-y-6 animate-in fade-in duration-300">
+                                <div class="text-center max-w-md mx-auto mb-6">
+                                    <p class="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-1">Interactive Reference</p>
+                                    <h4 class="text-lg font-black text-purple-950">Security+ SY0-701 Acronyms</h4>
+                                    <p class="text-[10px] text-gray-500 italic font-medium">Key security acronyms, expansions, and core concepts.</p>
+                                </div>
 
-                                        <div onclick="startGamefiiDeck(2)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 02</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 11 to 20</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Threat actors, vectors, vulnerabilities, threat feeds, and indicators of compromise.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
-
-                                        <div onclick="startGamefiiDeck(3)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 03</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 21 to 30</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Social engineering principles, phishing techniques, impersonation, and tailgating attacks.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
-
-                                        <div onclick="startGamefiiDeck(4)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 04</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 31 to 40</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Malware varieties, viruses, ransomware, spyware, Trojans, and hardware rootkits.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
-
-                                        <div onclick="startGamefiiDeck(5)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 05</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 41 to 50</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cybersecurity threats, network-based attacks, malicious code, physical and wireless vulnerabilities.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
-
-                                        <div onclick="startGamefiiDeck(6)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 06</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 51 to 60</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Application attack vectors, cloud infrastructure management, cryptographic vulnerabilities, and system hardening techniques.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
-
-                                        <div onclick="startGamefiiDeck(7)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 07</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 61 to 70</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Network security, firewalls, stateful filters, packet routing, and network segments.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
-
-                                        <div onclick="startGamefiiDeck(8)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 08</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 71 to 80</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Web security architectures, HTTPS enforcement, HSTS, SSL strips, and web firewalls.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
-
-                                        <div onclick="startGamefiiDeck(9)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 09</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 81 to 90</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Cryptography paradigms, symmetric vs asymmetric encryption, keys, and algorithms.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
-
-                                        <div onclick="startGamefiiDeck(10)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 10</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 101 to 110</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Public Key Infrastructure (PKI), digital certificates, certificate authorities, and trusts.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
-
-                                        <div onclick="startGamefiiDeck(11)" class="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
-                                            <div>
-                                                <span class="text-[9px] font-black text-purple-400 block mb-1 uppercase tracking-widest">Quest 11</span>
-                                                <h5 class="text-xs font-black text-purple-950 uppercase tracking-wider mb-2">Professor Messer's SY0-701 Security+ Training Video 111 to 121</h5>
-                                                <p class="text-[11px] text-gray-500 leading-relaxed">Business continuity, disaster recovery plans, backup methodologies, and system redundancy.</p>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-purple-600">
-                                                <span>Begin Quest</span>
-                                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                                            </div>
-                                        </div>
+                                <!-- Acronyms search bar -->
+                                <div class="max-w-md mx-auto mb-6">
+                                    <div class="relative">
+                                        <input type="text" id="acronyms-search-input" oninput="filterAcronyms()" class="w-full text-xs p-3 pl-10 border border-purple-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 font-medium" placeholder="Search acronyms (e.g. AES, PKI, MFA)...">
+                                        <span class="absolute left-3 top-3.5 text-xs text-purple-300">🔍</span>
                                     </div>
                                 </div>
-                                
-                                <!-- Active GameFII Quest View -->
-                                <div id="gamefii-deck-view" class="hidden space-y-6 animate-in fade-in duration-300">
-                                    <div class="flex items-center gap-3">
-                                        <button onclick="backToGamefiiDecks()" id="btn-gamefii-back-to-quests" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
-                                            ← Back to Quests
-                                        </button>
-                                        <button onclick="backToQuestObjectives()" id="btn-gamefii-back-to-objectives" class="hidden text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 px-3 py-1.5 rounded-full shadow-sm transition-colors">
-                                            ← Back to Objectives
-                                        </button>
-                                        <span id="active-gamefii-title" class="text-xs font-black text-purple-900 uppercase tracking-wider"></span>
+
+                                <div id="acronyms-terms-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <!-- Acronym items -->
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="aaa authentication authorization accounting access control tracking framework">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">AAA</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Authentication, Authorization, and Accounting</span> - A core security framework used to manage access control, verify user identities, grant resource permissions, and log system activity.</p>
                                     </div>
-
-                                    <div id="gamefii-checklist-card" class="p-6 bg-white border border-purple-100 rounded-2xl max-w-md mx-auto shadow-sm space-y-4">
-                                        <div class="flex justify-between items-center mb-2">
-                                            <h4 id="gamefii-quest-name" class="font-black text-purple-950 text-xs uppercase tracking-wider"></h4>
-                                            <span id="gamefii-quest-pct" class="text-[10px] font-black bg-purple-100 text-purple-700 px-2.5 py-1 rounded-full uppercase tracking-widest">0% Complete</span>
-                                        </div>
-                                        
-                                        <!-- Launch Capy Jungle Trek Button right at the top -->
-                                        <div class="pb-3 border-b border-purple-100">
-                                            <button id="btn-launch-trek" onclick="launchCaypiTrek()" class="w-full py-3.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-black uppercase tracking-widest rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99]">
-                                                🎮 Launch Caypi's Jungle Trek
-                                            </button>
-                                        </div>
-
-                                        <!-- Progress Bar -->
-                                        <div class="h-2 w-full bg-purple-100 rounded-full overflow-hidden mb-2">
-                                            <div id="gamefii-quest-bar" class="h-full bg-purple-600 w-0 rounded-full transition-all duration-300"></div>
-                                        </div>
-
-                                        <div class="space-y-3">
-                                            <h5 class="text-[9px] font-black uppercase tracking-widest text-purple-400">Quest Objectives</h5>
-                                            <div class="space-y-2 text-xs font-medium text-gray-600">
-                                                <label class="flex items-center gap-3 p-3 bg-purple-50/50 border border-purple-100 rounded-xl cursor-pointer hover:bg-purple-100/30 transition-colors">
-                                                    <input type="checkbox" onchange="updateQuestProgress()" class="quest-checkbox rounded border-purple-300 text-purple-600 focus:ring-purple-500">
-                                                    <span id="obj-1"></span>
-                                                </label>
-                                                <label class="flex items-center gap-3 p-3 bg-purple-50/50 border border-purple-100 rounded-xl cursor-pointer hover:bg-purple-100/30 transition-colors">
-                                                    <input type="checkbox" onchange="updateQuestProgress()" class="quest-checkbox rounded border-purple-300 text-purple-600 focus:ring-purple-500">
-                                                    <span id="obj-2"></span>
-                                                </label>
-                                                <label class="flex items-center gap-3 p-3 bg-purple-50/50 border border-purple-100 rounded-xl cursor-pointer hover:bg-purple-100/30 transition-colors">
-                                                    <input type="checkbox" onchange="updateQuestProgress()" class="quest-checkbox rounded border-purple-300 text-purple-600 focus:ring-purple-500">
-                                                    <span id="obj-3"></span>
-                                                </label>
-                                            </div>
-                                        </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="aes advanced encryption standard symmetric algorithm secure data">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">AES</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Advanced Encryption Standard</span> - A modern, highly secure symmetric block cipher algorithm approved by NIST for protecting sensitive electronic data.</p>
                                     </div>
-
-                                    <!-- Game app wrapper -->
-                                    <div id="game-app" class="hidden relative w-full max-w-4xl mx-auto bg-[#0a0710] rounded-[2rem] overflow-hidden shadow-2xl border border-purple-950 font-sans">
-                                        <!-- Top HUD -->
-                                        <div id="hud" class="absolute top-4 left-4 right-4 z-40 flex justify-between items-center pointer-events-none hidden">
-                                            <div class="flex items-center gap-3 bg-purple-950/90 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/10 pointer-events-auto">
-                                                <div class="w-8 h-8 rounded-full bg-purple-900 border border-purple-50/30 flex items-center justify-center p-1 select-none overflow-hidden">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-full h-full">
-                                                        <!-- Back Legs -->
-                                                        <rect x="16" y="42" width="6" height="10" rx="3" fill="#8f5b3a" stroke="#2c1d11" stroke-width="2" />
-                                                        <rect x="34" y="42" width="6" height="10" rx="3" fill="#8f5b3a" stroke="#2c1d11" stroke-width="2" />
-                                                        <!-- Front Legs -->
-                                                        <rect x="23" y="42" width="6" height="10" rx="3" fill="#b17b57" stroke="#2c1d11" stroke-width="2" />
-                                                        <rect x="41" y="42" width="6" height="10" rx="3" fill="#b17b57" stroke="#2c1d11" stroke-width="2" />
-                                                        <!-- Ear -->
-                                                        <path d="M 24 16 C 22 13, 27 12, 27 15 Z" fill="#8f5b3a" stroke="#2c1d11" stroke-width="2" />
-                                                        <!-- Main Body & Head -->
-                                                        <path d="M 12 40 C 8 36, 8 26, 15 22 C 22 18, 25 15, 34 15 C 42 15, 45 18, 48 22 L 53 22 C 56 22, 57 26, 57 30 L 57 34 C 57 38, 54 40, 48 40 C 44 40, 16 40, 12 40 Z" fill="#c4906c" stroke="#2c1d11" stroke-width="2.5" stroke-linejoin="round" />
-                                                        <!-- Nose/muzzle -->
-                                                        <path d="M 53 22 L 57 22 C 57 22, 58 25, 58 28 C 58 31, 57 34, 57 34 L 54 34 C 52 34, 52 22, 53 22 Z" fill="#5e4431" stroke="#2c1d11" stroke-width="1.8" />
-                                                        <!-- Eye -->
-                                                        <circle cx="42" cy="22" r="2" fill="#2c1d11" />
-                                                        <!-- Cheek blush -->
-                                                        <ellipse cx="44" cy="27" rx="3" ry="1.8" fill="#ffa3b1" opacity="0.8" />
-                                                        <!-- Back coat dashes -->
-                                                        <line x1="16" y1="26" x2="16" y2="29" stroke="#8f5b3a" stroke-width="1.5" stroke-linecap="round" />
-                                                        <line x1="13" y1="30" x2="13" y2="33" stroke="#8f5b3a" stroke-width="1.5" stroke-linecap="round" />
-                                                        <line x1="20" y1="23" x2="20" y2="26" stroke="#8f5b3a" stroke-width="1.5" stroke-linecap="round" />
-                                                        <line x1="24" y1="21" x2="24" y2="24" stroke="#8f5b3a" stroke-width="1.5" stroke-linecap="round" />
-                                                    </svg>
-                                                </div>
-                                                <div class="flex flex-col">
-                                                    <span class="text-[8px] font-black text-purple-300 uppercase tracking-widest leading-none">Caypi's Health</span>
-                                                    <div id="hearts-row" class="flex gap-1 mt-1">
-                                                        <!-- Hearts dynamically injected -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="stage-banner" class="bg-purple-950/90 backdrop-blur-md px-5 py-2 rounded-2xl border border-white/10 text-purple-200 text-xs font-black uppercase tracking-widest pointer-events-auto">
-                                                Stage 1: The Anaconda
-                                            </div>
-                                            <button id="btn-reset-progress" class="bg-purple-950/90 hover:bg-purple-900/90 backdrop-blur-md text-purple-300 hover:text-white px-4 py-2 rounded-2xl border border-white/10 text-xs font-black uppercase tracking-widest transition-colors pointer-events-auto">
-                                                🔄 Reset
-                                            </button>
-                                        </div>
-
-                                        <!-- Phaser Canvas Container -->
-                                        <div id="game-container" class="w-full h-[450px]"></div>
-
-                                        <!-- UI Overlay Panels -->
-                                        <div id="ui-overlay-container" class="absolute inset-0 z-30 pointer-events-none">
-                                            
-                                            <!-- Main Menu -->
-                                            <div id="main-menu" class="absolute inset-0 flex items-center justify-center p-6 bg-purple-950/45 backdrop-blur-sm pointer-events-auto active">
-                                                <div class="w-full max-w-md bg-purple-950/95 border border-white/10 p-8 rounded-3xl shadow-2xl text-center flex flex-col items-center">
-                                                    <span class="text-[8px] font-black tracking-widest uppercase bg-purple-900 border border-purple-50/30 px-3 py-1 rounded-full text-purple-200">Educational Adventure</span>
-                                                    <h2 class="text-3xl font-black italic uppercase text-white tracking-tighter mt-4 mb-2">Caypi's Jungle Trek</h2>
-                                                    <p class="text-xs text-purple-200/80 mb-6">Help Caypi the Capybara navigate ancient ruins, cross rivers, and reach the relaxing hot springs by answering study questions!</p>
-                                                    
-                                                    <div class="flex items-center gap-4 bg-purple-900/40 border border-white/5 p-4 rounded-2xl w-full mb-6 justify-center">
-                                                        <div class="w-12 h-12 rounded-full bg-purple-900 border border-purple-50/30 flex items-center justify-center p-1 select-none overflow-hidden">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-full h-full">
-                                                                <!-- Back Legs -->
-                                                                <rect x="16" y="42" width="6" height="10" rx="3" fill="#8f5b3a" stroke="#2c1d11" stroke-width="2" />
-                                                                <rect x="34" y="42" width="6" height="10" rx="3" fill="#8f5b3a" stroke="#2c1d11" stroke-width="2" />
-                                                                <!-- Front Legs -->
-                                                                <rect x="23" y="42" width="6" height="10" rx="3" fill="#b17b57" stroke="#2c1d11" stroke-width="2" />
-                                                                <rect x="41" y="42" width="6" height="10" rx="3" fill="#b17b57" stroke="#2c1d11" stroke-width="2" />
-                                                                <!-- Ear -->
-                                                                <path d="M 24 16 C 22 13, 27 12, 27 15 Z" fill="#8f5b3a" stroke="#2c1d11" stroke-width="2" />
-                                                                <!-- Main Body & Head -->
-                                                                <path d="M 12 40 C 8 36, 8 26, 15 22 C 22 18, 25 15, 34 15 C 42 15, 45 18, 48 22 L 53 22 C 56 22, 57 26, 57 30 L 57 34 C 57 38, 54 40, 48 40 C 44 40, 16 40, 12 40 Z" fill="#c4906c" stroke="#2c1d11" stroke-width="2.5" stroke-linejoin="round" />
-                                                                <!-- Nose/muzzle -->
-                                                                <path d="M 53 22 L 57 22 C 57 22, 58 25, 58 28 C 58 31, 57 34, 57 34 L 54 34 C 52 34, 52 22, 53 22 Z" fill="#5e4431" stroke="#2c1d11" stroke-width="1.8" />
-                                                                <!-- Eye -->
-                                                                <circle cx="42" cy="22" r="2" fill="#2c1d11" />
-                                                                <!-- Cheek blush -->
-                                                                <ellipse cx="44" cy="27" rx="3" ry="1.8" fill="#ffa3b1" opacity="0.8" />
-                                                                <!-- Back coat dashes -->
-                                                                <line x1="16" y1="26" x2="16" y2="29" stroke="#8f5b3a" stroke-width="1.5" stroke-linecap="round" />
-                                                                <line x1="13" y1="30" x2="13" y2="33" stroke="#8f5b3a" stroke-width="1.5" stroke-linecap="round" />
-                                                                <line x1="20" y1="23" x2="20" y2="26" stroke="#8f5b3a" stroke-width="1.5" stroke-linecap="round" />
-                                                                <line x1="24" y1="21" x2="24" y2="24" stroke="#8f5b3a" stroke-width="1.5" stroke-linecap="round" />
-                                                            </svg>
-                                                        </div>
-                                                        <div class="text-left">
-                                                            <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest leading-none block">Your Guide</span>
-                                                            <span class="text-xs text-purple-100 italic">"Let's learn and explore together!"</span>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <button id="btn-open-decks" class="w-full py-4 bg-purple-600 hover:bg-purple-500 text-white font-black uppercase tracking-widest rounded-2xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]">
-                                                        Start Quest
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <!-- Study Modal -->
-                                            <div id="study-modal" class="absolute inset-0 flex items-center justify-center p-6 pointer-events-auto hidden">
-                                                <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-                                                <div class="relative w-full max-w-md bg-purple-950/95 border border-white/10 p-6 rounded-3xl shadow-2xl flex flex-col">
-                                                    <div class="flex justify-between items-center mb-4 border-b border-white/5 pb-3">
-                                                        <span id="question-type-badge" class="text-[8px] font-black uppercase tracking-widest bg-purple-900 px-2 py-0.5 rounded border border-purple-50/30 text-purple-200">MULTIPLE CHOICE</span>
-                                                        <span id="question-progress" class="text-[10px] font-bold text-purple-300">Q: 1/4</span>
-                                                    </div>
-
-                                                    <div class="mb-6">
-                                                        <p id="question-text" class="text-sm font-semibold text-white leading-relaxed">Question text goes here?</p>
-                                                    </div>
-
-                                                    <!-- MCQ Options -->
-                                                    <div id="mcq-options-container" class="flex flex-col gap-2.5 hidden">
-                                                        <button class="option-btn w-full text-left p-3.5 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-xs text-purple-100 font-semibold transition-all" data-index="0">A</button>
-                                                        <button class="option-btn w-full text-left p-3.5 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-xs text-purple-100 font-semibold transition-all" data-index="1">B</button>
-                                                        <button class="option-btn w-full text-left p-3.5 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-xs text-purple-100 font-semibold transition-all" data-index="2">C</button>
-                                                        <button class="option-btn w-full text-left p-3.5 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-xs text-purple-100 font-semibold transition-all" data-index="3">D</button>
-                                                    </div>
-
-                                                    <!-- TF Options -->
-                                                    <div id="tf-options-container" class="flex gap-3 hidden">
-                                                        <button class="option-btn tf-btn flex-1 py-4 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-sm text-purple-100 font-bold transition-all" data-value="True">True</button>
-                                                        <button class="option-btn tf-btn flex-1 py-4 bg-purple-900/35 hover:bg-purple-900/60 border border-white/5 hover:border-purple-500/30 rounded-xl text-sm text-purple-100 font-bold transition-all" data-value="False">False</button>
-                                                    </div>
-
-                                                    <!-- Flashcards -->
-                                                    <div id="flashcard-container" class="flex flex-col gap-4 hidden">
-                                                        <div class="h-36 relative perspective" style="perspective: 1000px;">
-                                                            <div id="flashcard-card" class="w-full h-full relative transition-transform duration-500 transform-style" style="transform-style: preserve-3d; transform-origin: center center;">
-                                                                <!-- Front -->
-                                                                <div class="absolute inset-0 bg-purple-900/40 border border-white/10 rounded-2xl flex flex-col items-center justify-center p-4 backface-hidden" style="backface-visibility: hidden;">
-                                                                    <p class="text-xs text-purple-200/80 mb-3 text-center">Think of the answer, then click Flip Card!</p>
-                                                                    <button id="btn-flip-card" class="px-5 py-2.5 bg-purple-700 hover:bg-purple-600 text-white text-xs font-black uppercase tracking-widest rounded-xl transition-colors">Flip Card 🔄</button>
-                                                                </div>
-                                                                <!-- Back -->
-                                                                <div class="absolute inset-0 bg-purple-900/70 border border-purple-500/30 rounded-2xl flex flex-col items-center justify-center p-4 backface-hidden" style="backface-visibility: hidden; transform: rotateY(180deg);">
-                                                                    <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest leading-none mb-1">Correct Answer</span>
-                                                                    <p id="flashcard-answer-text" class="text-sm font-bold text-white text-center mb-3">Answer text</p>
-                                                                    <div class="flex gap-2 w-full max-w-[200px]">
-                                                                        <button class="grade-btn wrong-btn flex-1 py-2 bg-red-950/80 hover:bg-red-900/80 border border-red-500/20 text-red-300 text-[10px] font-black uppercase tracking-widest rounded-lg transition-colors" data-correct="false">❌ Wrong</button>
-                                                                        <button class="grade-btn correct-btn flex-1 py-2 bg-green-950/80 hover:bg-green-900/80 border border-green-500/20 text-green-300 text-[10px] font-black uppercase tracking-widest rounded-lg transition-colors" data-correct="true">✅ Correct</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="border-t border-white/5 pt-4">
-                                                            <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block text-center mb-2">OR TYPE YOUR ANSWER</span>
-                                                            <div class="flex gap-2">
-                                                                <input type="text" id="flashcard-input" class="flex-1 px-4 py-3 bg-purple-950 border border-white/10 rounded-xl text-xs text-white placeholder-purple-300/30 focus:outline-none focus:border-purple-500" placeholder="Type answer here..." autocomplete="off">
-                                                                <button id="btn-submit-flashcard" class="px-5 py-3 bg-purple-600 hover:bg-purple-500 text-white text-xs font-black uppercase tracking-widest rounded-xl transition-all">Submit</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Feedback Panel -->
-                                                    <div id="answer-feedback" class="absolute inset-0 bg-[#0f091a] rounded-3xl p-6 flex flex-col items-center justify-center text-center hidden">
-                                                        <div id="feedback-icon" class="w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center text-green-400 text-xl font-bold mb-4">✓</div>
-                                                        <h4 id="feedback-title" class="text-lg font-black uppercase text-white mb-1">Correct!</h4>
-                                                        <p id="feedback-message" class="text-xs text-purple-200/80 mb-6">Great job. Caypi progresses forward!</p>
-                                                        <button id="btn-next-question" class="w-full py-4 bg-purple-600 hover:bg-purple-500 text-white font-black uppercase tracking-widest rounded-xl shadow-lg transition-colors">Continue</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Faint Screen -->
-                                            <div id="faint-screen" class="absolute inset-0 flex items-center justify-center p-6 bg-red-950/80 backdrop-blur-sm pointer-events-auto hidden">
-                                                <div class="w-full max-w-md bg-purple-950/95 border border-red-500/30 p-8 rounded-3xl shadow-2xl text-center flex flex-col items-center">
-                                                    <span class="text-4xl animate-bounce mb-4">😵</span>
-                                                    <h2 class="text-2xl font-black uppercase text-red-400 tracking-tight mb-2">Caypi Fainted!</h2>
-                                                    <p class="text-xs text-purple-200/80 mb-6">Don't worry! Every mistake is a learning opportunity. Caypi will respawn at the last checkpoint with full health.</p>
-                                                    <div class="w-full bg-purple-900/30 border border-white/5 p-4 rounded-2xl mb-6">
-                                                        <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block mb-1">Checkpoint</span>
-                                                        <span id="checkpoint-name-display" class="text-xs font-black uppercase text-purple-200">Stage 1: The Anaconda</span>
-                                                    </div>
-                                                    <button id="btn-respawn" class="w-full py-4 bg-red-900 hover:bg-red-800 text-white font-black uppercase tracking-widest rounded-xl transition-all">Try Again</button>
-                                                </div>
-                                            </div>
-
-                                            <!-- Victory Screen -->
-                                            <div id="victory-screen" class="absolute inset-0 flex items-center justify-center p-6 bg-purple-950/80 backdrop-blur-sm pointer-events-auto hidden">
-                                                <div class="w-full max-w-md bg-purple-950/95 border border-purple-50/30 p-8 rounded-3xl shadow-2xl text-center flex flex-col items-center">
-                                                    <div class="animate-bounce mb-4 select-none">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24">
-                                                            <!-- Steam lines -->
-                                                            <path d="M 28 22 Q 25 15 28 8 T 28 0" fill="none" stroke="#e9d5ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6" />
-                                                            <path d="M 52 18 Q 49 12 52 6 T 52 0" fill="none" stroke="#e9d5ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6" />
-                                                            <path d="M 72 24 Q 69 17 72 10 T 72 2" fill="none" stroke="#e9d5ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6" />
-
-                                                            <!-- Back of the Tub Rim (for depth) -->
-                                                            <ellipse cx="50" cy="56" rx="35" ry="8" fill="#5c3f2b" stroke="#2c1d11" stroke-width="2.5" />
-                                                            <ellipse cx="50" cy="56" rx="33" ry="6.5" fill="#4fc3f7" />
-
-                                                            <!-- Capybara inside the tub -->
-                                                            <!-- Capybara Back / Body inside water -->
-                                                            <path d="M 58 56 C 62 48, 68 45, 72 56 Z" fill="#c4906c" stroke="#2c1d11" stroke-width="2" />
-                                                            
-                                                            <!-- Capybara Head -->
-                                                            <path d="M 58 56 C 58 44, 58 35, 56 34 C 54 33, 52 33, 50 34 C 36 34, 30 35, 26 40 C 23 44, 22 47, 22 50 C 22 53, 25 55, 30 55 C 38 55, 42 56, 46 56 Z" fill="#c4906c" stroke="#2c1d11" stroke-width="2.5" stroke-linejoin="round" />
-                                                            
-                                                            <!-- Ear -->
-                                                            <path d="M 54 34 C 53 31, 57 30, 58 33 Z" fill="#8f5b3a" stroke="#2c1d11" stroke-width="2" />
-                                                            
-                                                            <!-- Muzzle/Nose -->
-                                                            <path d="M 22 46 C 22 46, 21 48, 22 51 C 23 53, 26 53, 26 53 L 26 46 Z" fill="#5e4431" stroke="#2c1d11" stroke-width="1.8" />
-                                                            
-                                                            <!-- Eye (Closed/relaxed arc) -->
-                                                            <path d="M 36 43 Q 39 40 42 43" fill="none" stroke="#2c1d11" stroke-width="2" stroke-linecap="round" />
-                                                            
-                                                            <!-- Cheek blush -->
-                                                            <ellipse cx="40" cy="48" rx="4" ry="2.5" fill="#ffa3b1" opacity="0.8" />
-
-                                                            <!-- Yuzu/Orange on head -->
-                                                            <circle cx="43" cy="27" r="5" fill="#ffa726" stroke="#2c1d11" stroke-width="1.5" />
-                                                            <!-- Yuzu leaf -->
-                                                            <path d="M 43 22 Q 46 19 48 22 Q 45 24 43 22 Z" fill="#4caf50" stroke="#2c1d11" stroke-width="1" />
-                                                            <!-- Small dot/cross on yuzu -->
-                                                            <line x1="42" y1="27" x2="44" y2="27" stroke="#2c1d11" stroke-width="1" />
-                                                            <line x1="43" y1="26" x2="43" y2="28" stroke="#2c1d11" stroke-width="1" />
-
-                                                            <!-- Front Rim of the Tub -->
-                                                            <path d="M 15 56 L 20 86 C 20 92, 80 92, 80 86 L 85 56 Z" fill="#e8b87d" stroke="#2c1d11" stroke-width="2.5" stroke-linejoin="round" />
-                                                            <!-- Rim front half -->
-                                                            <path d="M 15 56 C 15 64, 85 64, 85 56 C 85 54, 83 54, 80 54 C 80 54, 50 60, 20 54 Z" fill="#cf904c" stroke="#2c1d11" stroke-width="2" />
-
-                                                            <!-- Tub Planks vertical lines -->
-                                                            <line x1="28" y1="58" x2="31" y2="88" stroke="#2c1d11" stroke-width="2" />
-                                                            <line x1="42" y1="60" x2="44" y2="90" stroke="#2c1d11" stroke-width="2" />
-                                                            <line x1="58" y1="60" x2="56" y2="90" stroke="#2c1d11" stroke-width="2" />
-                                                            <line x1="72" y1="58" x2="69" y2="88" stroke="#2c1d11" stroke-width="2" />
-
-                                                            <!-- Green band on the tub -->
-                                                            <path d="M 17.5 71 C 17.5 71, 50 78, 82.5 71" fill="none" stroke="#7cb342" stroke-width="3.5" stroke-linecap="round" />
-                                                            <path d="M 17.5 71 C 17.5 71, 50 78, 82.5 71" fill="none" stroke="#2c1d11" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 6" />
-                                                            
-                                                            <!-- Front paws resting on the rim -->
-                                                            <path d="M 28 58 C 28 55, 32 55, 32 58 Z" fill="#c4906c" stroke="#2c1d11" stroke-width="2" />
-                                                            <path d="M 34 59 C 34 56, 38 56, 38 59 Z" fill="#c4906c" stroke="#2c1d11" stroke-width="2" />
-                                                        </svg>
-                                                    </div>
-                                                    <h2 class="text-2xl font-black uppercase text-green-400 tracking-tight mb-2">Jungle Trek Complete!</h2>
-                                                    <p class="text-xs text-purple-200/80 mb-6">You helped Caypi navigate all the jungle dangers and reach the relaxing Hot Springs. Excellent work!</p>
-                                                    <button id="btn-restart-game" class="w-full py-4 bg-green-600 hover:bg-green-500 text-white font-black uppercase tracking-widest rounded-xl transition-all">Play Again</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="des data encryption standard symmetric older deprecated algorithm">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">DES</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Data Encryption Standard</span> - An older, deprecated symmetric key algorithm with a 56-bit key size, now considered insecure and replaced by AES.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="3des triple data encryption standard symmetric legacy cipher">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">3DES</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Triple Data Encryption Standard</span> - A legacy symmetric encryption cipher that applies the DES algorithm three times to each data block, currently deprecated in favor of AES.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="rsa rivest shamir adleman asymmetric encryption public key algorithm">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">RSA</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Rivest-Shamir-Adleman</span> - One of the first widely used asymmetric cryptographic algorithms for secure data transmission and digital signatures.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="pki public key infrastructure digital certificates cryptography security trust">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">PKI</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Public Key Infrastructure</span> - The framework of roles, policies, hardware, software, and procedures needed to create, manage, distribute, use, store, and revoke digital certificates.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="mfa multi factor authentication verify identity credentials">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">MFA</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Multi-Factor Authentication</span> - A security system requiring multiple separate categories of credentials to verify a user's identity for login.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="xss cross site scripting web vulnerability attack injection script">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">XSS</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Cross-Site Scripting</span> - A web security vulnerability that allows an attacker to inject malicious client-side scripts into web pages viewed by other users.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="sqli sql injection database vulnerability execution exploit">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SQLi</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">SQL Injection</span> - A vulnerability where malicious SQL statements are inserted into entry fields for execution (e.g., to dump database contents to the attacker).</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="hsts http strict transport security header ssl tls force https">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">HSTS</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">HTTP Strict Transport Security</span> - A web server header forcing browsers to communicate only through secure HTTPS connections.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="csp content security policy header prevent xss script injection">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CSP</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Content Security Policy</span> - An HTTP header allowing site operators to restrict resources (JavaScript, CSS, Images) that the browser is allowed to load.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="ca certificate authority digital certificates sign identity trust">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CA</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Certificate Authority</span> - A trusted organization that issues digital certificates to verify identity entities on the internet.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="crl certificate revocation list revoked ca invalid certificates">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CRL</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Certificate Revocation List</span> - A list of digital certificates that have been revoked by the issuing CA before their scheduled expiration date.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="csr certificate signing request ca apply digital certificate keys">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CSR</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Certificate Signing Request</span> - An encoded message sent from an applicant to a CA in order to apply for a digital certificate.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="cia triad confidentiality integrity availability security standard model">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CIA Triad</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Confidentiality, Integrity, and Availability</span> - The core model designed to guide policies for information security within an organization.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="ids intrusion detection system monitor network alerts traffic logs">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">IDS</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Intrusion Detection System</span> - A device or software application that monitors a network or systems for malicious activity or policy violations and reports alerts.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="ips intrusion prevention system active block threat network firewall">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">IPS</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Intrustion Prevention System</span> - An active network security device that monitors network traffic and proactively blocks discovered threats.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="siem security information and event management real time analysis logs">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SIEM</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Security Information and Event Management</span> - A system that aggregates log data from multiple sources, analyzes it in real-time, and flags security alerts.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="saml security assertion markup language xml sso single sign on identity">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SAML</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Security Assertion Markup Language</span> - An XML-based open standard for exchanging authentication and authorization data between identity providers and service providers (used for SSO).</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="oidc openid connect oauth layer identity token login authentication">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">OIDC</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">OpenID Connect</span> - An identity layer built on top of the OAuth 2.0 framework, allowing clients to verify the identity of the end-user based on authentication.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="oauth open authorization API token authorization framework">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">OAuth</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Open Authorization</span> - An open standard authorization framework that provides secure delegated access for applications over APIs using tokens.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="rbac role based access control security policy roles permissions">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">RBAC</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Role-Based Access Control</span> - A method of restricting system access to authorized users based on defined organizational roles.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="abac attribute based access control policies subject environment">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">ABAC</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Attribute-Based Access Control</span> - Access control model where rights are granted based on attributes (user, resource, environment) evaluated against security policies.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="mac mandatory access control labels security clearances sensitivity admin">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">MAC</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Mandatory Access Control</span> - A strict access control system where the operating system constrains user rights based on security labels and clearances.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="dac discretionary access control resource owner permissions rights">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">DAC</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Discretionary Access Control</span> - An access control model where the owner of a resource determines who is permitted access and what privileges they have.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="cve common vulnerabilities and exposures public directory list security">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CVE</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Common Vulnerabilities and Exposures</span> - A public, standardized list of publicly known information security vulnerabilities and exposures.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="cvss common vulnerability scoring system severity rating score range">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">CVSS</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Common Vulnerability Scoring System</span> - An open framework for communicating the characteristics and severity scores (from 0 to 10) of IT vulnerabilities.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="rto recovery time objective disaster target restore systems duration">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">RTO</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Recovery Time Objective</span> - The target duration of time and service level within which a business process must be restored after a disaster or disruption.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="rpo recovery point objective maximum tolerable data loss backups age">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">RPO</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Recovery Point Objective</span> - The maximum tolerable age of data that must be recovered from backup storage for operations to resume after a disaster.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="mtbf mean time between failures average run time reliability breakdown">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">MTBF</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Mean Time Between Failures</span> - The average time elapsed between inhering failures of a system during normal system operation (measure of reliability).</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="mttr mean time to repair average fix repair restore duration system">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">MTTR</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Mean Time to Repair</span> - The average time required to repair a failed component or system and restore it to full operational status.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="sla service level agreement contract performance expectations targets">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SLA</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Service Level Agreement</span> - A contract between a service provider and its customer that documents what services the provider will furnish and the performance standards expected.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="bia business impact analysis operations critical functions outage loss">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">BIA</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Business Impact Analysis</span> - A systematic process to determine and evaluate the potential effects of an interruption to critical business operations.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="dlp data loss prevention strategy exfiltration network endpoints">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">DLP</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Data Loss Prevention</span> - A set of tools and processes designed to ensure that sensitive data is not lost, misused, or accessed by unauthorized users.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="vpn virtual private network secure tunnel encryption remote access">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">VPN</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Virtual Private Network</span> - A service that creates a safe, encrypted connection over a less secure network, such as the public internet.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="ipsec internet protocol security encrypt tunnel network layers packets">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">IPSec</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Internet Protocol Security</span> - A secure network protocol suite that authenticates and encrypts the packets of data sent over an IP network.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="sso single sign on session authentication credentials identity provider">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SSO</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Single Sign-On</span> - An authentication scheme that allows a user to log in with a single ID and password to any of several related, yet independent, software systems.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="acl access control list permissions network packets router firewall">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">ACL</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Access Control List</span> - A list of rules that specifies which users or system processes are granted access to objects, or which network packets are allowed through.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="mdm mobile device management software monitor enterprise policies">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">MDM</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Mobile Device Management</span> - Software that allows IT administrators to control, secure, and enforce policies on smartphones, tablets, and other endpoint devices.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="radius remote authentication dial in user service network aaa centralized">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">RADIUS</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Remote Authentication Dial-In User Service</span> - A networking protocol operating on port 1812/1813 providing centralized Authentication, Authorization, and Accounting management for users.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="tacacs terminal access controller access control system plus aaa cisco">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">TACACS+</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Terminal Access Controller Access-Control System Plus</span> - A proprietary Cisco protocol providing AAA services, separating authentication and authorization, running over TCP port 49.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="dnssec domain name system security extensions signing signatures authentication">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">DNSSEC</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Domain Name System Security Extensions</span> - A suite of extension specifications for securing certain kinds of information provided by the DNS using cryptographic signatures.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="sftp secure file transfer protocol ssh encryption connection port 22">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">SFTP</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Secure File Transfer Protocol</span> - A secure version of File Transfer Protocol (FTP) that facilitates data access and data transfer over a Secure Shell (SSH) data stream on port 22.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="ftps file transfer protocol secure ssl tls encryption transport layer">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">FTPS</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">File Transfer Protocol Secure</span> - An extension to FTP that adds support for the Transport Layer Security (TLS) and the Secure Sockets Layer (SSL) cryptographic protocols.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="wpa3 wi fi protected access 3 wireless secure authentication sae protocol">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">WPA3</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Wi-Fi Protected Access 3</span> - The third generation of wireless security standards, providing improved cryptographic strength and protection against offline dictionary attacks (using SAE).</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="tpm trusted platform module hardware secure cryptographic chip keys">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">TPM</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Trusted Platform Module</span> - A specialized, tamper-resistant cryptographic microchip integrated into device motherboards to secure hardware with cryptographic keys.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="hsm hardware security module physical device keys encryption acceleration">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">HSM</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Hardware Security Module</span> - A physical computing device that safeguards and manages digital keys, performs encryption and decryption functions, and strong authentication.</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="ddos distributed denial of service attack overwhelm bandwidth target botnet">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">DDoS</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Distributed Denial of Service</span> - A malicious attempt to disrupt normal traffic of a targeted server, service, or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic from multiple sources (botnet).</p>
+                                    </div>
+                                    <div class="acronym-item-card p-4 bg-white border border-purple-100 rounded-xl hover:shadow-md hover:scale-[1.01] hover:border-purple-200 transition-all duration-200" data-acronym="apt advanced persistent threat hacker group stealthy network cyber warfare">
+                                        <strong class="text-xs text-purple-950 uppercase tracking-wide block">APT</strong>
+                                        <p class="text-[11px] text-gray-500 mt-1 leading-relaxed font-medium"><span class="font-bold text-purple-900">Advanced Persistent Threat</span> - A stealthy threat actor, typically a nation-state or state-sponsored group, which conducts a continuous, highly targeted attack to establish and maintain access to a network.</p>
                                     </div>
                                 </div>
                             </div>
-
+                            
                             <!-- Glossary Module -->
                             <div id="content-glossary" class="study-module-tab hidden space-y-6 animate-in fade-in duration-300">
                                 <div class="text-center max-w-md mx-auto mb-6">
@@ -7013,8 +6788,12 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 backToStudyGuideDecks();
             } else if (moduleName === 'visual-guide') {
                 backToVisualGuideDecks();
-            } else if (moduleName === 'gamefii') {
-                startGamefiiDeck(activeGamefiiId || 1);
+            } else if (moduleName === 'acronyms') {
+                const searchInput = document.getElementById('acronyms-search-input');
+                if (searchInput) {
+                    searchInput.value = '';
+                    filterAcronyms();
+                }
             } else if (moduleName === 'glossary') {
                 const searchInput = document.getElementById('glossary-search-input');
                 if (searchInput) {
@@ -7031,7 +6810,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                     'quiz': '<span>🧠</span> Quiz',
                     'study-guide': '<span>📖</span> Study Guide',
                     'visual-guide': '<span>📊</span> Visual Guide',
-                    'gamefii': '<span>🎮</span> GameFII',
+                    'acronyms': '<span>🔤</span> Acronyms',
                     'glossary': '<span>📚</span> Glossary'
                 };
                 titleEl.innerHTML = titles[moduleName] || 'Study Module';
@@ -10536,6 +10315,21 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             const cards = document.querySelectorAll('.glossary-item-card');
             cards.forEach(function(card) {
                 const termText = card.getAttribute('data-term') || '';
+                if (termText.indexOf(filter) > -1) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function filterAcronyms() {
+            const input = document.getElementById('acronyms-search-input');
+            if (!input) return;
+            const filter = input.value.toLowerCase();
+            const cards = document.querySelectorAll('.acronym-item-card');
+            cards.forEach(function(card) {
+                const termText = card.getAttribute('data-acronym') || '';
                 if (termText.indexOf(filter) > -1) {
                     card.style.display = '';
                 } else {
