@@ -15032,7 +15032,16 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             unlockedStage: 1
         };
 
-        function launchCaypiTrek() {
+        var launchCaypiTrek = function() {
+            alert("The Phaser game library is not loaded. Please check your internet connection.");
+        };
+        var backToQuestObjectives = function() {};
+        var initOrStartCaypiGame = function(deckId) {};
+        var saveGameProgress = function(nextCheckpoint) {};
+
+        if (window.Phaser) {
+            launchCaypiTrek = function() {
+
             const checklistCard = document.getElementById('gamefii-checklist-card');
             const gameApp = document.getElementById('game-app');
             const btnBackQuests = document.getElementById('btn-gamefii-back-to-quests');
@@ -15046,7 +15055,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             initOrStartCaypiGame(activeGamefiiId || 1);
         }
 
-        function backToQuestObjectives() {
+        backToQuestObjectives = function() {
             const checklistCard = document.getElementById('gamefii-checklist-card');
             const gameApp = document.getElementById('game-app');
             const btnBackQuests = document.getElementById('btn-gamefii-back-to-quests');
@@ -15061,7 +15070,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 caypiGame.scene.pause('JungleTrekScene');
             }
         }
-        function initOrStartCaypiGame(deckId) {
+        initOrStartCaypiGame = function(deckId) {
             let savedState = localStorage.getItem('caypi_jungle_trek_state');
             if (savedState) {
                 try {
@@ -15799,7 +15808,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             }
         }
 
-        function saveGameProgress(nextCheckpoint) {
+        saveGameProgress = function(nextCheckpoint) {
             gameState.checkpoint = nextCheckpoint;
             if (nextCheckpoint > gameState.unlockedStage) {
                 gameState.unlockedStage = nextCheckpoint;
@@ -15891,6 +15900,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 };
             }
         });
+        }
     </script>
 
     <!-- GOOGLE TRANSLATE SCRIPT -->
