@@ -5749,7 +5749,9 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             </div>
                                         </div>
                                     </div>
-\n\n                                    <!-- study-guide-detailed-card-9 -->
+
+
+                                    <!-- study-guide-detailed-card-9 -->
                                     <div id="study-guide-detailed-card-9" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
                                         <!-- Header -->
                                         <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -6013,7 +6015,9 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             </div>
                                         </div>
                                     </div>
-\n\n                                    <!-- study-guide-detailed-card-10 -->
+
+
+                                    <!-- study-guide-detailed-card-10 -->
                                     <div id="study-guide-detailed-card-10" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
                                         <!-- Header -->
                                         <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -6281,7 +6285,9 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             </div>
                                         </div>
                                     </div>
-\n\n                                    <!-- study-guide-detailed-card-11 -->
+
+
+                                    <!-- study-guide-detailed-card-11 -->
                                     <div id="study-guide-detailed-card-11" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
                                         <!-- Header -->
                                         <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -6573,7 +6579,9 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                             </div>
                                         </div>
                                     </div>
-\n\n                                    <!-- study-guide-detailed-card-12 -->
+
+
+                                    <!-- study-guide-detailed-card-12 -->
                                     <div id="study-guide-detailed-card-12" class="hidden p-6 sm:p-8 bg-white border border-purple-100 rounded-[2rem] max-w-4xl mx-auto shadow-sm space-y-8">
                                         <!-- Header -->
                                         <div class="border-b border-purple-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -10997,7 +11005,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             frontDiv.classList.remove('hidden');
             backDiv.classList.add('hidden');
 
-            if (activeFlashcardDeckId >= 9) {
+            if (activeFlashcardDeckId >= 13) {
                 frontText.textContent = "Flashcard deck content coming soon!";
                 backText.textContent = "Under Construction // Please check back later.";
                 progressIndicator.textContent = "Card 1 of 1";
@@ -11090,7 +11098,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 if (gifImg) gifImg.src = '';
             }
 
-            if (deckId >= 3) {
+            if (deckId >= 13) {
                 questionText.textContent = "This quiz is coming soon!";
                 const btn = document.createElement('button');
                 btn.className = "quiz-opt-btn w-full text-center p-3 border border-purple-100 rounded-xl bg-purple-50/50 text-xs font-bold text-purple-700 cursor-not-allowed";
@@ -14867,7 +14875,6 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                         tip: "OPSEC (Operational Security) means looking at your actions and data from the perspective of an attacker!"
                     }
                 };
-            }
             } else {
                 if (cardWrapper) cardWrapper.className = "p-6 bg-white border border-purple-100 rounded-2xl max-w-2xl mx-auto shadow-sm space-y-6";
                 if (chartWrapper) chartWrapper.className = "flex justify-center p-4 bg-purple-950 rounded-xl border border-white/10 shadow-inner overflow-x-auto";
@@ -15733,202 +15740,8 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                 btnNext.onclick = () => {
                     activeQuizIndex++;
                     showCurrentQuestion();
-                }; } else if (deckId === 9) {             } else if (deckId === 9) {
-                if (cardWrapper) cardWrapper.className = "p-6 bg-white border border-purple-100 rounded-2xl max-w-5xl mx-auto shadow-sm space-y-6";
-                if (chartWrapper) chartWrapper.className = "flex justify-center p-0 bg-transparent rounded-xl border-none shadow-none overflow-x-auto w-full";
-                
-                descEl.textContent = "My Cute Cyber-Care Guide: Keeping Systems Happy & Safe interactive visual dashboard.";
-                
-                containerEl.innerHTML = '<div class="w-full text-slate-900 bg-white p-6 font-sans select-none rounded-2xl text-left border border-purple-100/40 shadow-sm space-y-6">' +
-                    '<div class="text-center mb-6 border-b border-purple-200 pb-4">' +
-                        '<h3 class="text-lg md:text-xl font-black text-purple-950 tracking-tight uppercase flex items-center justify-center gap-2">' +
-                            '<span>🌸</span> My Cute Cyber-Care Guide: Keeping Systems Happy & Safe <span>🌸</span>' +
-                        '</h3>' +
-                        '<p class="text-[10px] text-purple-500 font-bold uppercase tracking-widest mt-1">Interactive Infographic // Deck 9 Visual Aid</p>' +
-                    '</div>' +
-
-                    '<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">' +
-                        '<!-- Column 1: Spotting the Boo-Boos -->' +
-                        '<div class="p-5 bg-gradient-to-br from-rose-50/40 to-pink-50/10 border-2 border-rose-100 rounded-3xl space-y-4 hover:shadow-sm transition-shadow">' +
-                            '<div class="flex items-center gap-2 border-b border-rose-200 pb-2 mb-2">' +
-                                '<span class="text-xl">🩹</span>' +
-                                '<div>' +
-                                    '<h4 class="text-xs font-black uppercase text-rose-950 tracking-wider">Spotting the "Boo-Boos"</h4>' +
-                                    '<p class="text-[8px] text-rose-600 font-bold uppercase tracking-wide">Vulnerability Analysis</p>' +
-                                '</div>' +
-                            '</div>' +
-                            '<div class="space-y-3">' +
-                                '<div onclick="showCyberCareDetail(\'false_positives\')" class="cursor-pointer p-3 bg-white border border-rose-100 hover:border-rose-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-rose-50 rounded-xl">⏰</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-rose-950 uppercase tracking-wide block">False Positives vs. Negatives</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Mistaken alarms vs. missed real dangers.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div onclick="showCyberCareDetail(\'cvss_scores\')" class="cursor-pointer p-3 bg-white border border-rose-100 hover:border-rose-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-rose-50 rounded-xl">🌡️</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-rose-950 uppercase tracking-wide block">CVSS Severity Scores (0 to 10)</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Vulnerability severity ranking from 0 to 10.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div onclick="showCyberCareDetail(\'update_signatures\')" class="cursor-pointer p-3 bg-white border border-rose-100 hover:border-rose-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-rose-50 rounded-xl">🔍</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-rose-950 uppercase tracking-wide block">Update Your Signatures!</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Always use the latest database signatures for accuracy.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
-
-                        '<!-- Column 2: Taking Care of Our Digital Toys -->' +
-                        '<div class="p-5 bg-gradient-to-br from-amber-50/40 to-orange-50/10 border-2 border-amber-100 rounded-3xl space-y-4 hover:shadow-sm transition-shadow">' +
-                            '<div class="flex items-center gap-2 border-b border-amber-200 pb-2 mb-2">' +
-                                '<span class="text-xl">🤖</span>' +
-                                '<div>' +
-                                    '<h4 class="text-xs font-black uppercase text-amber-950 tracking-wider">Taking Care of Our Digital Toys</h4>' +
-                                    '<p class="text-[8px] text-amber-600 font-bold uppercase tracking-wide">Assets & Fixes</p>' +
-                                '</div>' +
-                            '</div>' +
-                            '<div class="space-y-3">' +
-                                '<div onclick="showCyberCareDetail(\'patching_lifecycle\')" class="cursor-pointer p-3 bg-white border border-amber-100 hover:border-amber-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-amber-50 rounded-xl">🏭</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-amber-950 uppercase tracking-wide block">The Patching Life Cycle</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Test in lab, deploy to production, keep running.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div onclick="showCyberCareDetail(\'asset_tracking\')" class="cursor-pointer p-3 bg-white border border-amber-100 hover:border-amber-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-amber-50 rounded-xl">🏷️</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-amber-950 uppercase tracking-wide block">Asset Tracking & Inventory</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Manage device lifecycle from purchase to disposal.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div onclick="showCyberCareDetail(\'media_destruction\')" class="cursor-pointer p-3 bg-white border border-amber-100 hover:border-amber-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-amber-50 rounded-xl">📟</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-amber-950 uppercase tracking-wide block">Secure Media Destruction</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Degaussing or shredding retired drives permanently.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
-                    '</div>' +
-
-                    '<!-- Interactive details box -->' +
-                    '<div id="cyber-care-details" class="p-4 bg-purple-50 text-[10.5px] rounded-2xl border border-purple-200 text-purple-950 font-bold transition-all duration-300 flex items-center gap-3">' +
-                        '<span class="text-xl">💡</span>' +
-                        '<div>' +
-                            '<p class="uppercase text-[9px] text-purple-800 tracking-wider">Interactive Cyber-Care Explorer</p>' +
-                            '<p class="font-normal mt-0.5">Click any component card above to inspect vulnerability spotting or asset lifecycle management concepts!</p>' +
-                        '</div>' +
-                    '</div>' +
-                '</div>';' +
-
-                'window.showCyberCareDetail = function(topicId) {' +
-                    'const data = cyberCareData[topicId];' +
-                    'const detailBox = document.getElementById(\'cyber-care-details\');' +
-                    'if (data && detailBox) {' +
-                        'detailBox.className = "p-5 bg-white text-slate-800 rounded-2xl border border-purple-200 shadow-sm transition-all duration-300 text-left";' +
-                        'detailBox.innerHTML = ' +
-                            \' <div class="flex items-center justify-between border-b border-purple-100 pb-2 mb-3">\' +' +
-                                \'  <div>\' +' +
-                                    \'   <span class="text-[8px] font-black text-purple-500 uppercase tracking-widest">\' + data.subtitle + \'</span>\' +' +
-                                    \'   <h4 class="text-[11px] font-black uppercase text-purple-950 tracking-wider">\' + data.title + \'</h4>\' +' +
-                                \'  </div>\' +' +
-                                \'  <button onclick="resetCyberCareDetail()" class="text-[8px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">Reset Details</button>\' +' +
-                            \' </div>\' +' +
-                            \' <div class="grid grid-cols-1 md:grid-cols-2 gap-4">\' +' +
-                                \'  <div class="space-y-2.5">\' +' +
-                                    \'   <div>\' +' +
-                                        \'    <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block">Concept Explanation</span>\' +' +
-                                        \'    <p class="text-[9.5px] text-gray-600 mt-1 leading-relaxed font-medium">\' + data.desc + \'</p>\' +' +
-                                    \'   </div>\' +' +
-                                    \'   <div>\' +' +
-                                        \'    <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block">Mitigation & Security Value</span>\' +' +
-                                        \'    <p class="text-[9.5px] text-gray-600 mt-1 leading-relaxed font-medium">\' + data.defense + \'</p>\' +' +
-                                    \'   </div>\' +' +
-                                \'  </div>\' +' +
-                                \'  <div class="space-y-2.5 border-t md:border-t-0 md:border-l border-purple-100 pt-2.5 md:pt-0 md:pl-4">\' +' +
-                                    \'   <div>\' +' +
-                                        \'    <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block">Execution Path</span>\' +' +
-                                        \'    <p class="text-[9px] text-gray-500 mt-1 leading-relaxed font-semibold">\' + data.path + \'</p>\' +' +
-                                    \'   </div>\' +' +
-                                    \'   <div class="p-2.5 bg-purple-50 border border-purple-100 rounded-xl space-y-1">\' +' +
-                                        \'    <span class="text-[8px] font-black text-purple-500 uppercase tracking-widest block">Cyber-Care Tip</span>\' +' +
-                                        \'    <p class="text-[9.5px] italic text-purple-950 font-bold leading-normal">\' + data.tip + \'</p>\' +' +
-                                    \'   </div>\' +' +
-                                \'  </div>\' +' +
-                                \' </div>\';' +
-                    '}' +
-                '};' +
-
-                'window.resetCyberCareDetail = function() {' +
-                    'const detailBox = document.getElementById(\'cyber-care-details\');' +
-                    'if (detailBox) {' +
-                        'detailBox.className = "p-4 bg-purple-50 text-[10.5px] rounded-2xl border border-purple-200 text-purple-950 font-bold transition-all duration-300 flex items-center gap-3";' +
-                        'detailBox.innerHTML = ' +
-                            \'  <span class="text-xl">💡</span>\' +' +
-                            \'  <div>\' +' +
-                                \'   <p class="uppercase text-[9px] text-purple-800 tracking-wider">Interactive Cyber-Care Explorer</p>\' +' +
-                                \'   <p class="font-normal mt-0.5">Click any component card above to inspect vulnerability spotting or asset lifecycle management concepts!</p>\' +' +
-                            \'  </div>\';' +
-                    '}' +
-                '};' +
-
-                'const cyberCareData = {' +
-                    'false_positives: {' +
-                        'title: "False Positives vs. False Negatives",' +
-                        'subtitle: "Vulnerability Scanning Alerts",' +
-                        'desc: "A false positive is a mistaken alarm where the scanner reports a vulnerability that does not exist. A false negative is a missed real danger where a vulnerability exists on the system but the scanner fails to detect it.",' +
-                        'defense: "Ensure signature databases are updated and run authenticated scans to increase detection accuracy.",' +
-                        'path: "Scanner Action ➔ Analyze Signatures ➔ Match Alert ➔ Verify if Real (False Positive) OR Missed (False Negative)",' +
-                        'tip: "False negatives are the most dangerous security outcome—they leave systems exposed under the false assumption of safety!"' +
-                    '},' +
-                    'cvss_scores: {' +
-                        'title: "CVSS Severity Scores (0 to 10)",' +
-                        'subtitle: "Common Vulnerability Scoring System",' +
-                        'desc: "A standardized rating system that scores vulnerabilities based on their exploitability and impact. The scale goes from 0.0 (no threat) to 10.0 (maximum emergency severity).",' +
-                        'defense: "Prioritize patching systems with critical scores (9.0–10.0) first, especially if they are public-facing.",' +
-                        'path: "Vulnerability Discovered ➔ Evaluate Metric Vector ➔ Generate Score (0–10) ➔ Prioritize Remediation",' +
-                        'tip: "A CVSS score can change between database versions (e.g. CVSS v2 vs v3) as scoring rubrics are refined over time!"' +
-                    '},' +
-                    'update_signatures: {' +
-                        'title: "Update Your Signatures!",' +
-                        'subtitle: "Maintaining Scanning Accuracy",' +
-                        'desc: "Scanning engines rely on known vulnerability signatures to match code patterns or network behaviors. Regular updates ensure the scanner recognizes the latest CVEs.",' +
-                        'defense: "Schedule automatic daily or weekly updates for your vulnerability scanner\'s database.",' +
-                        'path: "New Threat Discovered ➔ Vendor Publishes Signature ➔ Download Update ➔ Scan Detects New Threat",' +
-                        'tip: "Running a scan with outdated signatures is like searching for new keys using an old set of maps!"' +
-                    '},' +
-                    'patching_lifecycle: {' +
-                        'title: "The Patching Life Cycle",' +
-                        'subtitle: "Test in Lab ➔ Deploy to Production ➔ Keep Running",' +
-                        'desc: "The structured process of applying software updates. Patches are first tested in an isolated lab environment to prevent operational conflicts before they are deployed to active production systems.",' +
-                        'defense: "Establish strict change management review and rollback procedures before push deployments.",' +
-                        'path: "Identify Patch ➔ Test in Lab ➔ Obtain CAB Approval ➔ Deploy to Production ➔ Monitor Operations",' +
-                        'tip: "Never deploy a patch directly to production! Always verify its stability in a sandboxed lab first!"' +
-                    '},' +
-                    'asset_tracking: {' +
-                        'title: "Asset Tracking & Inventory",' +
-                        'subtitle: "Device Lifecycle Management",' +
-                        'desc: "The process of logging and identifying all physical and logical hardware/software assets. Uses unique identifiers like asset tags to track devices from purchase to disposal.",' +
-                        'defense: "Assign an owner to every device and record active system configuration data in a centralized asset tracker.",' +
-                        'path: "Procure Asset ➔ Apply Asset Tag ➔ Assign Owner ➔ Track Maintenance ➔ Secure Disposal Log",' +
-                        'tip: "You cannot secure what you do not know you own! An accurate inventory is a prerequisite for security compliance!"' +
-                    '},' +
-                    'media_destruction: {' +
-                        'title: "Secure Media Destruction",' +
-                        'subtitle: "Ensuring Safe Media Disposal",' +
-                        'desc: "Methods of sanitizing retired storage media to prevent data recovery. Includes degaussing (demagnetizing), physical shredding, or drilling/hammering hard drive platters.",' +
-                        'defense: "Always obtain a signed Certificate of Destruction from third-party sanitization vendors for compliance records.",' +
-                        'path: "Retire Drive ➔ Secure Transport ➔ Degauss/Shred Platters ➔ Issue Certificate of Destruction",' +
-                        'tip: "Simply deleting files or formatting a disk does not remove the data—physical destruction or degaussing is required for absolute assurance!"' +
-                    '}' +
-                '};'
- } else {
+                };
+            } else {
                 if (icon) {
                     icon.textContent = '✗';
                     icon.className = 'w-12 h-12 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center text-red-400 text-xl font-bold mb-4';
@@ -15953,202 +15766,8 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                 scene.handleFaint('Fainted from study stress!');
                             }
                         }
-                    }; } else if (deckId === 9) {             } else if (deckId === 9) {
-                if (cardWrapper) cardWrapper.className = "p-6 bg-white border border-purple-100 rounded-2xl max-w-5xl mx-auto shadow-sm space-y-6";
-                if (chartWrapper) chartWrapper.className = "flex justify-center p-0 bg-transparent rounded-xl border-none shadow-none overflow-x-auto w-full";
-                
-                descEl.textContent = "My Cute Cyber-Care Guide: Keeping Systems Happy & Safe interactive visual dashboard.";
-                
-                containerEl.innerHTML = '<div class="w-full text-slate-900 bg-white p-6 font-sans select-none rounded-2xl text-left border border-purple-100/40 shadow-sm space-y-6">' +
-                    '<div class="text-center mb-6 border-b border-purple-200 pb-4">' +
-                        '<h3 class="text-lg md:text-xl font-black text-purple-950 tracking-tight uppercase flex items-center justify-center gap-2">' +
-                            '<span>🌸</span> My Cute Cyber-Care Guide: Keeping Systems Happy & Safe <span>🌸</span>' +
-                        '</h3>' +
-                        '<p class="text-[10px] text-purple-500 font-bold uppercase tracking-widest mt-1">Interactive Infographic // Deck 9 Visual Aid</p>' +
-                    '</div>' +
-
-                    '<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">' +
-                        '<!-- Column 1: Spotting the Boo-Boos -->' +
-                        '<div class="p-5 bg-gradient-to-br from-rose-50/40 to-pink-50/10 border-2 border-rose-100 rounded-3xl space-y-4 hover:shadow-sm transition-shadow">' +
-                            '<div class="flex items-center gap-2 border-b border-rose-200 pb-2 mb-2">' +
-                                '<span class="text-xl">🩹</span>' +
-                                '<div>' +
-                                    '<h4 class="text-xs font-black uppercase text-rose-950 tracking-wider">Spotting the "Boo-Boos"</h4>' +
-                                    '<p class="text-[8px] text-rose-600 font-bold uppercase tracking-wide">Vulnerability Analysis</p>' +
-                                '</div>' +
-                            '</div>' +
-                            '<div class="space-y-3">' +
-                                '<div onclick="showCyberCareDetail(\'false_positives\')" class="cursor-pointer p-3 bg-white border border-rose-100 hover:border-rose-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-rose-50 rounded-xl">⏰</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-rose-950 uppercase tracking-wide block">False Positives vs. Negatives</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Mistaken alarms vs. missed real dangers.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div onclick="showCyberCareDetail(\'cvss_scores\')" class="cursor-pointer p-3 bg-white border border-rose-100 hover:border-rose-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-rose-50 rounded-xl">🌡️</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-rose-950 uppercase tracking-wide block">CVSS Severity Scores (0 to 10)</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Vulnerability severity ranking from 0 to 10.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div onclick="showCyberCareDetail(\'update_signatures\')" class="cursor-pointer p-3 bg-white border border-rose-100 hover:border-rose-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-rose-50 rounded-xl">🔍</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-rose-950 uppercase tracking-wide block">Update Your Signatures!</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Always use the latest database signatures for accuracy.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
-
-                        '<!-- Column 2: Taking Care of Our Digital Toys -->' +
-                        '<div class="p-5 bg-gradient-to-br from-amber-50/40 to-orange-50/10 border-2 border-amber-100 rounded-3xl space-y-4 hover:shadow-sm transition-shadow">' +
-                            '<div class="flex items-center gap-2 border-b border-amber-200 pb-2 mb-2">' +
-                                '<span class="text-xl">🤖</span>' +
-                                '<div>' +
-                                    '<h4 class="text-xs font-black uppercase text-amber-950 tracking-wider">Taking Care of Our Digital Toys</h4>' +
-                                    '<p class="text-[8px] text-amber-600 font-bold uppercase tracking-wide">Assets & Fixes</p>' +
-                                '</div>' +
-                            '</div>' +
-                            '<div class="space-y-3">' +
-                                '<div onclick="showCyberCareDetail(\'patching_lifecycle\')" class="cursor-pointer p-3 bg-white border border-amber-100 hover:border-amber-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-amber-50 rounded-xl">🏭</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-amber-950 uppercase tracking-wide block">The Patching Life Cycle</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Test in lab, deploy to production, keep running.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div onclick="showCyberCareDetail(\'asset_tracking\')" class="cursor-pointer p-3 bg-white border border-amber-100 hover:border-amber-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-amber-50 rounded-xl">🏷️</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-amber-950 uppercase tracking-wide block">Asset Tracking & Inventory</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Manage device lifecycle from purchase to disposal.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div onclick="showCyberCareDetail(\'media_destruction\')" class="cursor-pointer p-3 bg-white border border-amber-100 hover:border-amber-300 rounded-xl shadow-sm hover:scale-[1.01] transition-all duration-200 flex gap-3 items-center">' +
-                                    '<span class="text-2xl p-2 bg-amber-50 rounded-xl">📟</span>' +
-                                    '<div class="flex-1">' +
-                                        '<span class="text-[10px] font-black text-amber-950 uppercase tracking-wide block">Secure Media Destruction</span>' +
-                                        '<p class="text-[8.5px] text-gray-500 mt-0.5 leading-normal">Degaussing or shredding retired drives permanently.</p>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
-                    '</div>' +
-
-                    '<!-- Interactive details box -->' +
-                    '<div id="cyber-care-details" class="p-4 bg-purple-50 text-[10.5px] rounded-2xl border border-purple-200 text-purple-950 font-bold transition-all duration-300 flex items-center gap-3">' +
-                        '<span class="text-xl">💡</span>' +
-                        '<div>' +
-                            '<p class="uppercase text-[9px] text-purple-800 tracking-wider">Interactive Cyber-Care Explorer</p>' +
-                            '<p class="font-normal mt-0.5">Click any component card above to inspect vulnerability spotting or asset lifecycle management concepts!</p>' +
-                        '</div>' +
-                    '</div>' +
-                '</div>';' +
-
-                'window.showCyberCareDetail = function(topicId) {' +
-                    'const data = cyberCareData[topicId];' +
-                    'const detailBox = document.getElementById(\'cyber-care-details\');' +
-                    'if (data && detailBox) {' +
-                        'detailBox.className = "p-5 bg-white text-slate-800 rounded-2xl border border-purple-200 shadow-sm transition-all duration-300 text-left";' +
-                        'detailBox.innerHTML = ' +
-                            \' <div class="flex items-center justify-between border-b border-purple-100 pb-2 mb-3">\' +' +
-                                \'  <div>\' +' +
-                                    \'   <span class="text-[8px] font-black text-purple-500 uppercase tracking-widest">\' + data.subtitle + \'</span>\' +' +
-                                    \'   <h4 class="text-[11px] font-black uppercase text-purple-950 tracking-wider">\' + data.title + \'</h4>\' +' +
-                                \'  </div>\' +' +
-                                \'  <button onclick="resetCyberCareDetail()" class="text-[8px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3 py-1.5 rounded-full shadow-sm transition-colors">Reset Details</button>\' +' +
-                            \' </div>\' +' +
-                            \' <div class="grid grid-cols-1 md:grid-cols-2 gap-4">\' +' +
-                                \'  <div class="space-y-2.5">\' +' +
-                                    \'   <div>\' +' +
-                                        \'    <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block">Concept Explanation</span>\' +' +
-                                        \'    <p class="text-[9.5px] text-gray-600 mt-1 leading-relaxed font-medium">\' + data.desc + \'</p>\' +' +
-                                    \'   </div>\' +' +
-                                    \'   <div>\' +' +
-                                        \'    <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block">Mitigation & Security Value</span>\' +' +
-                                        \'    <p class="text-[9.5px] text-gray-600 mt-1 leading-relaxed font-medium">\' + data.defense + \'</p>\' +' +
-                                    \'   </div>\' +' +
-                                \'  </div>\' +' +
-                                \'  <div class="space-y-2.5 border-t md:border-t-0 md:border-l border-purple-100 pt-2.5 md:pt-0 md:pl-4">\' +' +
-                                    \'   <div>\' +' +
-                                        \'    <span class="text-[8px] font-black text-purple-400 uppercase tracking-widest block">Execution Path</span>\' +' +
-                                        \'    <p class="text-[9px] text-gray-500 mt-1 leading-relaxed font-semibold">\' + data.path + \'</p>\' +' +
-                                    \'   </div>\' +' +
-                                    \'   <div class="p-2.5 bg-purple-50 border border-purple-100 rounded-xl space-y-1">\' +' +
-                                        \'    <span class="text-[8px] font-black text-purple-500 uppercase tracking-widest block">Cyber-Care Tip</span>\' +' +
-                                        \'    <p class="text-[9.5px] italic text-purple-950 font-bold leading-normal">\' + data.tip + \'</p>\' +' +
-                                    \'   </div>\' +' +
-                                \'  </div>\' +' +
-                                \' </div>\';' +
-                    '}' +
-                '};' +
-
-                'window.resetCyberCareDetail = function() {' +
-                    'const detailBox = document.getElementById(\'cyber-care-details\');' +
-                    'if (detailBox) {' +
-                        'detailBox.className = "p-4 bg-purple-50 text-[10.5px] rounded-2xl border border-purple-200 text-purple-950 font-bold transition-all duration-300 flex items-center gap-3";' +
-                        'detailBox.innerHTML = ' +
-                            \'  <span class="text-xl">💡</span>\' +' +
-                            \'  <div>\' +' +
-                                \'   <p class="uppercase text-[9px] text-purple-800 tracking-wider">Interactive Cyber-Care Explorer</p>\' +' +
-                                \'   <p class="font-normal mt-0.5">Click any component card above to inspect vulnerability spotting or asset lifecycle management concepts!</p>\' +' +
-                            \'  </div>\';' +
-                    '}' +
-                '};' +
-
-                'const cyberCareData = {' +
-                    'false_positives: {' +
-                        'title: "False Positives vs. False Negatives",' +
-                        'subtitle: "Vulnerability Scanning Alerts",' +
-                        'desc: "A false positive is a mistaken alarm where the scanner reports a vulnerability that does not exist. A false negative is a missed real danger where a vulnerability exists on the system but the scanner fails to detect it.",' +
-                        'defense: "Ensure signature databases are updated and run authenticated scans to increase detection accuracy.",' +
-                        'path: "Scanner Action ➔ Analyze Signatures ➔ Match Alert ➔ Verify if Real (False Positive) OR Missed (False Negative)",' +
-                        'tip: "False negatives are the most dangerous security outcome—they leave systems exposed under the false assumption of safety!"' +
-                    '},' +
-                    'cvss_scores: {' +
-                        'title: "CVSS Severity Scores (0 to 10)",' +
-                        'subtitle: "Common Vulnerability Scoring System",' +
-                        'desc: "A standardized rating system that scores vulnerabilities based on their exploitability and impact. The scale goes from 0.0 (no threat) to 10.0 (maximum emergency severity).",' +
-                        'defense: "Prioritize patching systems with critical scores (9.0–10.0) first, especially if they are public-facing.",' +
-                        'path: "Vulnerability Discovered ➔ Evaluate Metric Vector ➔ Generate Score (0–10) ➔ Prioritize Remediation",' +
-                        'tip: "A CVSS score can change between database versions (e.g. CVSS v2 vs v3) as scoring rubrics are refined over time!"' +
-                    '},' +
-                    'update_signatures: {' +
-                        'title: "Update Your Signatures!",' +
-                        'subtitle: "Maintaining Scanning Accuracy",' +
-                        'desc: "Scanning engines rely on known vulnerability signatures to match code patterns or network behaviors. Regular updates ensure the scanner recognizes the latest CVEs.",' +
-                        'defense: "Schedule automatic daily or weekly updates for your vulnerability scanner\'s database.",' +
-                        'path: "New Threat Discovered ➔ Vendor Publishes Signature ➔ Download Update ➔ Scan Detects New Threat",' +
-                        'tip: "Running a scan with outdated signatures is like searching for new keys using an old set of maps!"' +
-                    '},' +
-                    'patching_lifecycle: {' +
-                        'title: "The Patching Life Cycle",' +
-                        'subtitle: "Test in Lab ➔ Deploy to Production ➔ Keep Running",' +
-                        'desc: "The structured process of applying software updates. Patches are first tested in an isolated lab environment to prevent operational conflicts before they are deployed to active production systems.",' +
-                        'defense: "Establish strict change management review and rollback procedures before push deployments.",' +
-                        'path: "Identify Patch ➔ Test in Lab ➔ Obtain CAB Approval ➔ Deploy to Production ➔ Monitor Operations",' +
-                        'tip: "Never deploy a patch directly to production! Always verify its stability in a sandboxed lab first!"' +
-                    '},' +
-                    'asset_tracking: {' +
-                        'title: "Asset Tracking & Inventory",' +
-                        'subtitle: "Device Lifecycle Management",' +
-                        'desc: "The process of logging and identifying all physical and logical hardware/software assets. Uses unique identifiers like asset tags to track devices from purchase to disposal.",' +
-                        'defense: "Assign an owner to every device and record active system configuration data in a centralized asset tracker.",' +
-                        'path: "Procure Asset ➔ Apply Asset Tag ➔ Assign Owner ➔ Track Maintenance ➔ Secure Disposal Log",' +
-                        'tip: "You cannot secure what you do not know you own! An accurate inventory is a prerequisite for security compliance!"' +
-                    '},' +
-                    'media_destruction: {' +
-                        'title: "Secure Media Destruction",' +
-                        'subtitle: "Ensuring Safe Media Disposal",' +
-                        'desc: "Methods of sanitizing retired storage media to prevent data recovery. Includes degaussing (demagnetizing), physical shredding, or drilling/hammering hard drive platters.",' +
-                        'defense: "Always obtain a signed Certificate of Destruction from third-party sanitization vendors for compliance records.",' +
-                        'path: "Retire Drive ➔ Secure Transport ➔ Degauss/Shred Platters ➔ Issue Certificate of Destruction",' +
-                        'tip: "Simply deleting files or formatting a disk does not remove the data—physical destruction or degaussing is required for absolute assurance!"' +
-                    '}' +
-                '};'
- } else {
+                    };
+                } else {
                     btnNext.textContent = 'Continue';
                     btnNext.onclick = () => {
                         activeQuizIndex++;
