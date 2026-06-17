@@ -411,6 +411,30 @@
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-10px); }
         }
+
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .print\:hidden {
+                display: none !important;
+            }
+            .tab-content:not(.active) {
+                display: none !important;
+            }
+            .max-w-6xl {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .bg-white\/95 {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+        }
     </style>
     <!-- Phaser 3 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
@@ -7922,9 +7946,229 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
 
             <!-- SECURE SECTION PAGES -->
             <div id="resume" class="tab-content animate-in fade-in duration-500">
-                <div
-                    class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
-                    > Decrypting secure content...
+                <!-- Resume Container -->
+                <div class="space-y-8 text-gray-700 leading-relaxed max-w-4xl mx-auto p-4 md:p-8">
+                    <!-- Action Bar / Print -->
+                    <div class="flex justify-between items-center border-b border-purple-100 pb-4 print:hidden">
+                        <span class="text-xs font-black text-purple-900 uppercase tracking-widest flex items-center gap-2">
+                            <span>🔑</span> Secure Clearance Level 1: Approved
+                        </span>
+                        <button onclick="window.print()" class="text-[9px] font-black uppercase tracking-widest text-purple-700 hover:text-purple-950 bg-white border border-purple-200 hover:border-purple-300 px-3.5 py-1.5 rounded-full shadow-sm transition-colors flex items-center gap-1.5">
+                            <span>🖨️</span> Print Resume
+                        </button>
+                    </div>
+
+                    <!-- Resume Header Card -->
+                    <div class="bg-white border border-purple-100 rounded-3xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-purple-100/30 rounded-full blur-3xl pointer-events-none"></div>
+                        <div class="space-y-3 relative z-10">
+                            <div>
+                                <h1 class="text-3xl font-black text-purple-950 tracking-tight leading-none">AISHA MONTGOMERY</h1>
+                                <p class="text-xs font-bold text-purple-700 uppercase tracking-wider mt-2">Strategic Operations & Applied Systems Analyst</p>
+                            </div>
+                            <!-- Clearance Badge -->
+                            <div class="inline-flex items-center gap-2 bg-purple-950 text-purple-100 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">
+                                <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                                Clearance: Active Top-Secret (SCI-eligible)
+                            </div>
+                        </div>
+                        <div class="text-xs text-gray-500 font-medium space-y-1.5 md:text-right relative z-10">
+                            <p class="flex md:justify-end items-center gap-1.5">
+                                <span>📍</span> Fredericksburg, VA
+                            </p>
+                            <p class="flex md:justify-end items-center gap-1.5">
+                                <span>📞</span> 540-394-0086
+                            </p>
+                            <p class="flex md:justify-end items-center gap-1.5">
+                                <span>📧</span> <a href="mailto:AMVPN22@proton.me" class="hover:text-purple-800 underline transition-colors">AMVPN22@proton.me</a>
+                            </p>
+                            <p class="flex md:justify-end items-center gap-1.5">
+                                <span>🔗</span> <a href="https://adm2021.github.io/ADM/" target="_blank" class="hover:text-purple-800 underline transition-colors">adm2021.github.io/ADM/</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Professional Summary -->
+                    <div class="bg-purple-50/40 border border-purple-100 rounded-2xl p-6 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-purple-200/20 rounded-full blur-2xl pointer-events-none"></div>
+                        <h3 class="text-xs font-black text-purple-900 uppercase tracking-widest mb-3 flex items-center gap-2">
+                            <span>📄</span> Professional Summary
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                            Strategic, highly organized Operations and Applied Systems Analyst with over a decade of experience bridging the gap between advanced research data ecosystems and production platform engineering. Proven track record of translating complex analytical data models into executive-level strategic frameworks, building scalable automated workflows, and validating technical pipelines. Expert in navigating the intersection of algorithmic data processing, workflow automation, and cross-functional compliance. Bi-lingual (English/Spanish).
+                        </p>
+                    </div>
+
+                    <!-- Core Competencies -->
+                    <div>
+                        <h3 class="text-xs font-black text-purple-900 uppercase tracking-widest mb-4 flex items-center gap-2">
+                            <span>🛠️</span> Core Competencies
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Comp 1 -->
+                            <div class="p-5 bg-white border border-purple-100 rounded-2xl shadow-xs">
+                                <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-3 block">Applied AI & Systems Engineering</h4>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Translational Research</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Workflow Automation</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Benchmarking & Evaluation</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Interface Design</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Data Pipelines</span>
+                                </div>
+                            </div>
+                            <!-- Comp 2 -->
+                            <div class="p-5 bg-white border border-purple-100 rounded-2xl shadow-xs">
+                                <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-3 block">Workflow Optimization</h4>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Process Automation</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Python Scripting</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">High-Volume Inbox Architecture</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Technical Writing</span>
+                                </div>
+                            </div>
+                            <!-- Comp 3 -->
+                            <div class="p-5 bg-white border border-purple-100 rounded-2xl shadow-xs">
+                                <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-3 block">Core Technologies</h4>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Python</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Power BI</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Power Automate</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">AWS</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">NoSQL Databases</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Google Workspace</span>
+                                </div>
+                            </div>
+                            <!-- Comp 4 -->
+                            <div class="p-5 bg-white border border-purple-100 rounded-2xl shadow-xs">
+                                <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-3 block">Leadership & Strategy</h4>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Executive Storytelling</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Senior Leadership Comm.</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Cross-Functional Coord.</span>
+                                    <span class="bg-purple-50/70 border border-purple-100/80 text-[10px] font-semibold text-purple-900 px-2.5 py-1 rounded-full">Risk Mitigation & Compliance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Experience -->
+                    <div>
+                        <h3 class="text-xs font-black text-purple-900 uppercase tracking-widest mb-6 flex items-center gap-2">
+                            <span>💼</span> Professional Experience
+                        </h3>
+                        <div class="relative border-l border-purple-100 pl-6 ml-3 space-y-8">
+                            <!-- Job 1 -->
+                            <div class="relative">
+                                <span class="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-purple-600 border border-white"></span>
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                                    <h4 class="text-xs font-black text-purple-950 uppercase tracking-wider">Lead Senior Operations & Research Analyst</h4>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-purple-600 sm:text-right">Nov 2022 – Oct 2025</span>
+                                </div>
+                                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wide mt-1">Rmantras (OSD Policy) | Fredericksburg, VA</p>
+                                <ul class="list-disc pl-4 text-xs text-gray-500 space-y-1.5 mt-3 leading-relaxed font-medium">
+                                    <li>Manage complex data ecosystems and act as the central point of technical coordination, delivering data-driven stakeholder reporting for overarching operational and research objectives.</li>
+                                    <li>Design and execute comprehensive technical research frameworks to investigate operational system vulnerabilities and evaluate data ecosystem scaling constraints for high-priority defense objectives.</li>
+                                    <li>Engineer end-to-end automated workflows utilizing <strong class="text-purple-900 font-bold">Python</strong>, <strong class="text-purple-900 font-bold">NoSQL</strong>, and <strong class="text-purple-900 font-bold">Power Automate</strong> to optimize cross-departmental business processes and eliminate manual data processing bottlenecks.</li>
+                                    <li>Conduct deep-dive analyses on large-scale datasets to isolate operational constraints, executing rigorous evaluation methodologies to recommend and deploy platform improvements.</li>
+                                    <li>Optimized high-traffic shared inbox management by deploying an intelligent triage automated workflow, accelerating routing capabilities and saving significant weekly engineering/processing time.</li>
+                                    <li>Author and maintain comprehensive technical documentation, schemas, and system workflows to ensure high-fidelity knowledge transfer and continuity for both technical and non-technical stakeholders.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Job 2 -->
+                            <div class="relative">
+                                <span class="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-purple-400 border border-white"></span>
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                                    <h4 class="text-xs font-black text-purple-950 uppercase tracking-wider">Data Systems Engineer & Operations Analyst</h4>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-purple-600 sm:text-right">Jan 2020 – Nov 2022</span>
+                                </div>
+                                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wide mt-1">Katmai (USMC Warfighting Laboratory) | Fredericksburg, VA</p>
+                                <ul class="list-disc pl-4 text-xs text-gray-500 space-y-1.5 mt-3 leading-relaxed font-medium">
+                                    <li>Deployed to diverse operational test sites across the country, executing 500+ hours of on-site field research and validation to ensure continuous data integrity for autonomous systems in degraded tactical environments.</li>
+                                    <li>Led qualitative and quantitative research initiatives, translating field testing data from active autonomous environments into structured technical reports and baseline evaluation metrics for engineering teams.</li>
+                                    <li>Engineered robust, multi-source data pipelines incorporating <strong class="text-purple-900 font-bold">Python</strong> scripts and <strong class="text-purple-900 font-bold">NoSQL</strong> databases to integrate disparate research inputs and ensure structural integrity for executive platform reporting.</li>
+                                    <li>Designed and built interactive visualization dashboards using <strong class="text-purple-900 font-bold">Power BI</strong> and advanced DAX formulas to establish clear benchmarking metrics and track mission-critical systems priorities.</li>
+                                    <li>Developed and deployed custom automation tools and provider plug-ins utilizing the Microsoft Power Platform to democratize data access and streamline system reporting workflows.</li>
+                                    <li>Designed and delivered high-impact executive storytelling presentations and research findings to senior leadership, including a three-star command; awarded <span class="font-bold text-purple-900">"Command Contractor of the Quarter"</span> for exceptional operational and proactive engineering impact.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Job 3 -->
+                            <div class="relative">
+                                <span class="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-purple-400 border border-white"></span>
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                                    <h4 class="text-xs font-black text-purple-950 uppercase tracking-wider">Plans Analyst</h4>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-purple-600 sm:text-right">Jan 2019 – Jan 2020</span>
+                                </div>
+                                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wide mt-1">Katmai (USMC Warfighting Laboratory) | Fredericksburg, VA</p>
+                                <ul class="list-disc pl-4 text-xs text-gray-500 space-y-1.5 mt-3 leading-relaxed font-medium">
+                                    <li>Restructured government policies and created comprehensive briefing packs to translate complex, inter-departmental requirements into actionable strategies for senior leadership.</li>
+                                    <li>Conducted independent secondary research and comparative analyses on federal procurement frameworks and emerging agency guidelines to isolate operational bottlenecks and map policy requirements.</li>
+                                    <li>Prepared annual operating plans, resource allocations, and predictive budget forecasts for government review, maintaining a 98% accuracy rate between projected and actual milestones.</li>
+                                    <li>Facilitated stakeholder roundtables for requirements gathering, mapping out user constraints to draft agency-wide technical policy and strategic recommendations.</li>
+                                    <li>Conducted independent compliance reviews of procurement programs to ensure strict adherence to federal regulations and standard engineering risk-mitigation frameworks.</li>
+                                    <li>Managed complex logistical planning, multi-step dependency tracking, and cross-functional coordination to successfully deliver high-priority departmental initiatives.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Job 4 -->
+                            <div class="relative">
+                                <span class="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-purple-400 border border-white"></span>
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                                    <h4 class="text-xs font-black text-purple-950 uppercase tracking-wider">Financial Analyst</h4>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-purple-600 sm:text-right">Oct 2018 – Jan 2019</span>
+                                </div>
+                                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wide mt-1">Katmai (USMC Warfighting Laboratory) | Fredericksburg, VA</p>
+                                <ul class="list-disc pl-4 text-xs text-gray-500 space-y-1.5 mt-3 leading-relaxed font-medium">
+                                    <li>Managed financial modeling, precise resource allocation, and tracking for a major portfolio to ensure strict audit readiness and operational compliance.</li>
+                                    <li>Executed data-driven predictive research and statistical trend analysis across complex funding histories to model long-term resource allocation constraints and mitigate operational project risks.</li>
+                                    <li>Conducted routine predictive data modeling and forecasting to support leadership in strategic decision-making regarding long-horizon program funding and scalability frontiers.</li>
+                                    <li>Reconciled complex accounts and identified baseline variances, executing swift root-cause analysis and recommending corrective actions to prevent project shortfalls.</li>
+                                    <li>Prepared comprehensive data performance reports and variance analyses for senior stakeholders to maintain system transparency and strict baseline verification.</li>
+                                    <li>Collaborated closely with cross-functional project managers to align operational engineering milestones with available financial and logistical resources.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Job 5 -->
+                            <div class="relative">
+                                <span class="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-purple-400 border border-white"></span>
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                                    <h4 class="text-xs font-black text-purple-950 uppercase tracking-wider">Financial Technician</h4>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-purple-600 sm:text-right">Feb 2015 – Oct 2018</span>
+                                </div>
+                                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wide mt-1">U.S. Department of The Navy | Fredericksburg, VA</p>
+                                <ul class="list-disc pl-4 text-xs text-gray-500 space-y-1.5 mt-3 leading-relaxed font-medium">
+                                    <li>Processed vendor invoices and multi-source incoming transactions, ensuring 100% data accuracy and strict compliance with rigorous DoD regulations.</li>
+                                    <li>Performed historical data audits and root-cause research to investigate complex multi-source account discrepancies, standardizing investigative workflows to ensure continuous compliance and clean system reporting.</li>
+                                    <li>Provided targeted technical support for accounting, data management, and operational systems, optimizing query workflows to reduce resolution turnaround time by 35%.</li>
+                                    <li>Reconciled deep inconsistencies across systemic accounts, clearing technical discrepancies to achieve a clean audit opinion for three consecutive fiscal years.</li>
+                                    <li>Maintained highly structured, audited filing systems and digital tracking schemas to support daily data tracking operations and long-term compliance.</li>
+                                    <li>Recognized twice as Employee of the Month for outstanding operational excellence, peer mentorship on data standards, and proactive problem-solving.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div>
+                        <h3 class="text-xs font-black text-purple-900 uppercase tracking-widest mb-4 flex items-center gap-2">
+                            <span>🎓</span> Education
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-5 bg-white border border-purple-100 rounded-2xl shadow-xs">
+                                <span class="text-[10px] font-black uppercase tracking-widest text-purple-400 block mb-1">Bachelor of Science</span>
+                                <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">Life Science and Human Behavior</h4>
+                                <p class="text-[11px] text-gray-500 leading-relaxed font-semibold">An Interdisciplinary Studies Program (Biology, Sociology, Psychology)</p>
+                                <p class="text-[10px] font-bold text-purple-700 mt-2">Virginia Commonwealth University</p>
+                            </div>
+                            <div class="p-5 bg-white border border-purple-100 rounded-2xl shadow-xs">
+                                <span class="text-[10px] font-black uppercase tracking-widest text-purple-400 block mb-1">Associate of Science</span>
+                                <h4 class="font-black text-purple-950 text-xs uppercase tracking-wider mb-2">Biological Science</h4>
+                                <p class="text-[11px] text-gray-500 leading-relaxed font-semibold">General biological sciences and foundational laboratory research.</p>
+                                <p class="text-[10px] font-bold text-purple-700 mt-2">Northern Virginia Community College</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
