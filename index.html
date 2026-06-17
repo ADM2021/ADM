@@ -8285,13 +8285,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
 
         async function fetchSecureFiles() {
             try {
-                const res1 = await fetch('resume-8f7x9A2q.html');
-                if (res1.ok) {
-                    const text = await res1.text();
-                    if (text.trim().length > 200 && text.includes("AISHA")) {
-                        document.getElementById('resume').innerHTML = text;
-                    }
-                }
+                // Resume is fully embedded inline inside the HTML index file.
 
                 const res2 = await fetch('extrapolio-2b9y4Z1m.html');
                 if (res2.ok) {
