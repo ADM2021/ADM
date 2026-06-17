@@ -8286,10 +8286,20 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
         async function fetchSecureFiles() {
             try {
                 const res1 = await fetch('resume-8f7x9A2q.html');
-                if (res1.ok) document.getElementById('resume').innerHTML = await res1.text();
+                if (res1.ok) {
+                    const text = await res1.text();
+                    if (text.trim().length > 200 && text.includes("AISHA")) {
+                        document.getElementById('resume').innerHTML = text;
+                    }
+                }
 
                 const res2 = await fetch('extrapolio-2b9y4Z1m.html');
-                if (res2.ok) document.getElementById('extrapolio').innerHTML = await res2.text();
+                if (res2.ok) {
+                    const text = await res2.text();
+                    if (text.trim().length > 200) {
+                        document.getElementById('extrapolio').innerHTML = text;
+                    }
+                }
             } catch (err) {
                 console.warn("Secure fetch failed (normal if viewed as local file without a server):", err);
             }
