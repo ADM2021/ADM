@@ -536,7 +536,7 @@
              // Resume [SECURE]</button>
          <button onclick="openTab(event, 'extrapolio')" id="tab-extrapolio"
              class="tab-btn hidden px-4 py-2 text-[9px] font-bold uppercase tracking-widest border border-purple-600 bg-purple-50 text-purple-900 rounded-full transition-all hover:bg-purple-200">09
-             // Extra Portfolio [L2 SECURE]</button>
+             // Kinematic Tracking [L2 SECURE]</button>
      </div>
  
      <section class="max-w-6xl mx-auto p-4 mb-20">
@@ -7941,6 +7941,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
 
@@ -8173,10 +8174,709 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             </div>
 
             <div id="extrapolio" class="tab-content animate-in fade-in duration-500">
-                <div
-                    class="flex items-center justify-center p-12 text-purple-900 font-bold uppercase tracking-widest animate-pulse">
-                    > Decrypting secure content...
+                <!-- CSS Styles for Kinematic Tracking System -->
+                <style>
+                    #extrapolio .kts-scan-line {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: linear-gradient(90deg, transparent, #a855f7, #f472b6, #a855f7, transparent);
+                        animation: ktsScan 2s linear infinite;
+                        box-shadow: 0 0 8px #a855f7;
+                    }
+                    @keyframes ktsScan {
+                        0% { top: 0%; }
+                        50% { top: 100%; }
+                        100% { top: 0%; }
+                    }
+                    #extrapolio .animate-blink {
+                        animation: ktsBlink 1s step-end infinite;
+                    }
+                    @keyframes ktsBlink {
+                        from, to { opacity: 0; }
+                        50% { opacity: 1; }
+                    }
+                </style>
+
+                <!-- UI Layout -->
+                <div class="bg-slate-950 border border-purple-500/30 rounded-[2rem] p-4 md:p-8 shadow-2xl text-purple-100 font-mono relative overflow-hidden">
+                    <div class="absolute -top-40 -right-40 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <!-- Header -->
+                    <div class="border-b border-purple-500/20 pb-4 mb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                        <div>
+                            <div class="text-[10px] text-purple-400 font-bold uppercase tracking-widest flex items-center gap-2 mb-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-purple-500 animate-ping"></span> SECURE FEED // LEVEL 2 AUTHORIZED
+                            </div>
+                            <h2 class="text-xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-purple-500 uppercase">
+                                // 09 KINEMATIC TRACKING SYSTEM
+                            </h2>
+                        </div>
+                        <div class="text-[10px] text-purple-400/70 border border-purple-500/20 px-2 py-1 rounded bg-purple-950/20">
+                            SYSTEM STATUS: <span class="text-emerald-400 font-bold">ONLINE</span>
+                        </div>
+                    </div>
+
+                    <!-- Main Setup Interface -->
+                    <div id="kts-setup-container" class="space-y-6">
+                        <div class="border border-purple-500/15 rounded-xl p-4 bg-purple-950/5">
+                            <h3 class="text-xs font-bold uppercase text-purple-400 tracking-wider mb-3 flex items-center gap-2">
+                                <span class="text-purple-500">01 //</span> Select Primary Fighter
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                                <div id="kts-fighter-aj" onclick="ktsSelectPrimary('aj')" class="cursor-pointer border border-purple-500/30 rounded-xl p-4 bg-purple-950/10 hover:border-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] transition-all flex flex-col items-center text-center relative group">
+                                    <div class="w-12 h-12 rounded-full border border-purple-500/20 flex items-center justify-center bg-purple-950/30 text-xl mb-3 group-hover:scale-110 transition-transform">
+                                        🥊
+                                    </div>
+                                    <div class="text-xs font-bold text-white uppercase mb-1">Anthony Joshua</div>
+                                    <div class="text-[9px] text-purple-400/80">Record: 28-4, 25 KO</div>
+                                    <div class="absolute top-2 right-2 text-[9px] text-emerald-400 font-bold border border-emerald-500/30 px-1 rounded bg-emerald-950/20">READY</div>
+                                </div>
+                                <div class="opacity-40 cursor-not-allowed border border-purple-500/10 rounded-xl p-4 bg-purple-950/5 flex flex-col items-center text-center relative">
+                                    <div class="w-12 h-12 rounded-full border border-purple-500/10 flex items-center justify-center bg-purple-950/10 text-xl mb-3">🔒</div>
+                                    <div class="text-xs font-bold text-purple-400/60 uppercase mb-1">Tyson Fury</div>
+                                    <div class="text-[9px] text-purple-400/40">Record: 34-1-1</div>
+                                    <div class="absolute top-2 right-2 text-[8px] text-purple-400/50 border border-purple-500/10 px-1 rounded bg-purple-950/10">COMING SOON</div>
+                                </div>
+                                <div class="opacity-40 cursor-not-allowed border border-purple-500/10 rounded-xl p-4 bg-purple-950/5 flex flex-col items-center text-center relative">
+                                    <div class="w-12 h-12 rounded-full border border-purple-500/10 flex items-center justify-center bg-purple-950/10 text-xl mb-3">🔒</div>
+                                    <div class="text-xs font-bold text-purple-400/60 uppercase mb-1">Oleksandr Usyk</div>
+                                    <div class="text-[9px] text-purple-400/40">Record: 22-0</div>
+                                    <div class="absolute top-2 right-2 text-[8px] text-purple-400/50 border border-purple-500/10 px-1 rounded bg-purple-950/10">COMING SOON</div>
+                                </div>
+                                <div class="opacity-40 cursor-not-allowed border border-purple-500/10 rounded-xl p-4 bg-purple-950/5 flex flex-col items-center text-center relative">
+                                    <div class="w-12 h-12 rounded-full border border-purple-500/10 flex items-center justify-center bg-purple-950/10 text-xl mb-3">🔒</div>
+                                    <div class="text-xs font-bold text-purple-400/60 uppercase mb-1">Daniel Dubois</div>
+                                    <div class="text-[9px] text-purple-400/40">Record: 22-2</div>
+                                    <div class="absolute top-2 right-2 text-[8px] text-purple-400/50 border border-purple-500/10 px-1 rounded bg-purple-950/10">COMING SOON</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="kts-opponent-section" class="border border-purple-500/15 rounded-xl p-4 bg-purple-950/5 transition-all duration-500 opacity-20 pointer-events-none">
+                            <h3 class="text-xs font-bold uppercase text-purple-400 tracking-wider mb-3 flex items-center gap-2">
+                                <span class="text-purple-500">02 //</span> Select Opponent / Matchup
+                            </h3>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                                <div onclick="ktsSelectOpponent('usyk1')" class="kts-opp-card cursor-pointer border border-purple-500/20 rounded-xl p-3 bg-purple-950/10 hover:border-purple-400 hover:bg-purple-900/10 transition-all flex flex-col items-center text-center">
+                                    <div class="text-[10px] font-bold text-white mb-1">Usyk I</div>
+                                    <div class="text-[8px] text-purple-400/70">Sep 25, 2021</div>
+                                </div>
+                                <div onclick="ktsSelectOpponent('usyk2')" class="kts-opp-card cursor-pointer border border-purple-500/20 rounded-xl p-3 bg-purple-950/10 hover:border-purple-400 hover:bg-purple-900/10 transition-all flex flex-col items-center text-center">
+                                    <div class="text-[10px] font-bold text-white mb-1">Usyk II</div>
+                                    <div class="text-[8px] text-purple-400/70">Aug 20, 2022</div>
+                                </div>
+                                <div onclick="ktsSelectOpponent('dubois')" class="kts-opp-card cursor-pointer border border-purple-500/20 rounded-xl p-3 bg-purple-950/10 hover:border-purple-400 hover:bg-purple-900/10 transition-all flex flex-col items-center text-center">
+                                    <div class="text-[10px] font-bold text-white mb-1">Dubois</div>
+                                    <div class="text-[8px] text-purple-400/70">Sep 21, 2024</div>
+                                </div>
+                                <div onclick="ktsSelectOpponent('ngannou')" class="kts-opp-card cursor-pointer border border-purple-500/20 rounded-xl p-3 bg-purple-950/10 hover:border-purple-400 hover:bg-purple-900/10 transition-all flex flex-col items-center text-center">
+                                    <div class="text-[10px] font-bold text-white mb-1">Ngannou</div>
+                                    <div class="text-[8px] text-purple-400/70">Mar 8, 2024</div>
+                                </div>
+                                <div onclick="ktsSelectOpponent('ruiz1')" class="kts-opp-card cursor-pointer border border-purple-500/20 rounded-xl p-3 bg-purple-950/10 hover:border-purple-400 hover:bg-purple-900/10 transition-all flex flex-col items-center text-center">
+                                    <div class="text-[10px] font-bold text-white mb-1">Ruiz I</div>
+                                    <div class="text-[8px] text-purple-400/70">Jun 1, 2019</div>
+                                </div>
+                                <div onclick="ktsSelectOpponent('ruiz2')" class="kts-opp-card cursor-pointer border border-purple-500/20 rounded-xl p-3 bg-purple-950/10 hover:border-purple-400 hover:bg-purple-900/10 transition-all flex flex-col items-center text-center">
+                                    <div class="text-[10px] font-bold text-white mb-1">Ruiz II</div>
+                                    <div class="text-[8px] text-purple-400/70">Dec 7, 2019</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center pt-4">
+                            <button id="kts-init-btn" onclick="ktsStartAnalysis()" disabled class="px-8 py-3 bg-purple-950/40 text-purple-400 border border-purple-500/20 rounded-xl font-bold uppercase tracking-widest text-xs transition-all duration-300 cursor-not-allowed">
+                                INITIALIZE ANALYSIS
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Scanning State -->
+                    <div id="kts-scan-container" class="hidden border border-purple-500/30 rounded-2xl p-6 bg-purple-950/20 min-h-[300px] flex flex-col justify-between relative overflow-hidden">
+                        <div class="kts-scan-line"></div>
+                        <div class="space-y-2 text-xs text-purple-300 font-mono" id="kts-scan-log"></div>
+                        <div class="pt-6">
+                            <div class="text-[10px] text-purple-400/70 mb-2 uppercase tracking-widest">Processing kinematic telemetry: <span id="kts-scan-pct">0%</span></div>
+                            <div class="w-full bg-purple-950 border border-purple-500/20 h-2.5 rounded-full overflow-hidden">
+                                <div id="kts-scan-bar" class="w-0 h-full bg-gradient-to-r from-purple-600 via-violet-500 to-fuchsia-500 shadow-[0_0_10px_#a855f7] transition-all duration-100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results Panel -->
+                    <div id="kts-results-container" class="hidden space-y-6">
+                        <div class="flex justify-between items-center bg-purple-950/30 border border-purple-500/15 p-4 rounded-xl">
+                            <div>
+                                <div class="text-[9px] text-purple-400 uppercase tracking-widest">Active Analysis Session</div>
+                                <h4 id="kts-active-fight-title" class="text-sm font-bold text-white uppercase tracking-tight">AJ vs Usyk II</h4>
+                            </div>
+                            <button onclick="ktsReset()" class="text-[10px] text-purple-400 hover:text-white border border-purple-500/30 px-3 py-1.5 rounded-lg bg-purple-950/20 hover:bg-purple-900/30 transition-all uppercase font-bold tracking-wider">
+                                🔄 Reset Session
+                            </button>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 border-b border-purple-500/10 pb-3">
+                            <button id="kts-tab-btn-stats" onclick="ktsSwitchTab('stats')" class="kts-tab-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-purple-500/20 rounded-lg transition-all bg-purple-950/40 text-purple-400 hover:text-white">Punch Stats</button>
+                            <button id="kts-tab-btn-kinematics" onclick="ktsSwitchTab('kinematics')" class="kts-tab-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-purple-500/20 rounded-lg transition-all bg-purple-950/40 text-purple-400 hover:text-white">Kinematics</button>
+                            <button id="kts-tab-btn-round" onclick="ktsSwitchTab('round')" class="kts-tab-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-purple-500/20 rounded-lg transition-all bg-purple-950/40 text-purple-400 hover:text-white">Round By Round</button>
+                            <button id="kts-tab-btn-spatial" onclick="ktsSwitchTab('spatial')" class="kts-tab-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-purple-500/20 rounded-lg transition-all bg-purple-950/40 text-purple-400 hover:text-white">Spatial Control</button>
+                            <button id="kts-tab-btn-takeaways" onclick="ktsSwitchTab('takeaways')" class="kts-tab-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-purple-500/20 rounded-lg transition-all bg-purple-950/40 text-purple-400 hover:text-white">Tactical Takeaways</button>
+                        </div>
+
+                        <div class="min-h-[300px] border border-purple-500/10 rounded-xl p-4 bg-purple-950/5 relative">
+                            <!-- Punch Stats Tab -->
+                            <div id="kts-tab-content-stats" class="kts-tab-content hidden space-y-4">
+                                <div class="grid grid-cols-2 gap-4 text-center border-b border-purple-500/10 pb-3 mb-3">
+                                    <div>
+                                        <div class="text-[10px] text-purple-400 uppercase">Anthony Joshua</div>
+                                        <div class="text-xs font-bold text-white">AJ</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[10px] text-purple-400 uppercase">Opponent</div>
+                                        <div id="kts-stats-opp-name" class="text-xs font-bold text-white uppercase">OPPONENT</div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4" id="kts-punch-stats-bars"></div>
+                            </div>
+
+                            <!-- Kinematics Tab -->
+                            <div id="kts-tab-content-kinematics" class="kts-tab-content hidden space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="kts-kinematics-cards"></div>
+                            </div>
+
+                            <!-- Round By Round Tab -->
+                            <div id="kts-tab-content-round" class="kts-tab-content hidden overflow-x-auto">
+                                <table class="w-full text-left border-collapse text-xs">
+                                    <thead>
+                                        <tr class="border-b border-purple-500/20 text-purple-400 uppercase text-[9px] tracking-wider bg-purple-950/20">
+                                            <th class="py-2 px-3">Round</th>
+                                            <th class="py-2 px-3">Fighter</th>
+                                            <th class="py-2 px-3">Left Guard</th>
+                                            <th class="py-2 px-3">Right Guard</th>
+                                            <th class="py-2 px-3">Disengagement</th>
+                                            <th class="py-2 px-3">Vulnerability</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="kts-round-table-body" class="divide-y divide-purple-500/10"></tbody>
+                                </table>
+                            </div>
+
+                            <!-- Spatial Control Tab -->
+                            <div id="kts-tab-content-spatial" class="kts-tab-content hidden space-y-6">
+                                <div class="text-[10px] text-purple-400 uppercase tracking-widest border-b border-purple-500/10 pb-2">Center Ring Evasion vs Ropes Pressure</div>
+                                <div class="space-y-6 py-4" id="kts-spatial-bars"></div>
+                            </div>
+
+                            <!-- Tactical Takeaways Tab -->
+                            <div id="kts-tab-content-takeaways" class="kts-tab-content hidden font-mono p-4 bg-black/50 border border-purple-500/20 rounded-xl relative min-h-[220px]">
+                                <div class="absolute top-2 right-3 text-[8px] text-purple-500/60 uppercase">INTEL CORRELATOR // OUTLIST</div>
+                                <div class="space-y-3 text-xs leading-relaxed text-purple-300" id="kts-takeaways-output"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Javascript Logic -->
+                <script>
+                    (function() {
+                        const ktsFightData = {
+                            usyk2: {
+                                title: "AJ vs Oleksandr Usyk II (Aug 20, 2022)",
+                                oppName: "Usyk II",
+                                punchStats: [
+                                    { label: "Total Punches Landed", val1: 124, val2: 189, max: 189 },
+                                    { label: "Total Punches Thrown", val1: 492, val2: 712, max: 712 },
+                                    { label: "Punch Accuracy %", val1: 25.2, val2: 26.5, max: 100, isPct: true },
+                                    { label: "Jabs Landed/Thrown", val1: "23/168", val2: "39/397", pct1: 13.7, pct2: 9.8, customBar: true },
+                                    { label: "Power Punches Landed/Thrown", val1: "101/324", val2: "150/315", pct1: 31.2, pct2: 47.6, customBar: true },
+                                    { label: "Counters Landed", val1: 29, val2: 41, max: 41 }
+                                ],
+                                kinematics: {
+                                    f1: { name: "Anthony Joshua", diseng: "0.521s", vuln: "74.7%", ldrop: "-0.321", rdrop: "-0.219" },
+                                    f2: { name: "Oleksandr Usyk", diseng: "0.452s", vuln: "71.3%", ldrop: "-0.112", rdrop: "-0.098" }
+                                },
+                                rounds: [
+                                    { round: 1, f1: { lguard: 1.25, rguard: 1.28, diseng: "0.450s", vuln: "71.0%" }, f2: { lguard: 1.30, rguard: 1.32, diseng: "0.420s", vuln: "68.0%" } },
+                                    { round: 2, f1: { lguard: 1.24, rguard: 1.26, diseng: "0.460s", vuln: "72.0%" }, f2: { lguard: 1.31, rguard: 1.30, diseng: "0.410s", vuln: "69.0%" } },
+                                    { round: 3, f1: { lguard: 1.22, rguard: 1.25, diseng: "0.480s", vuln: "73.0%" }, f2: { lguard: 1.29, rguard: 1.28, diseng: "0.430s", vuln: "70.0%" } },
+                                    { round: 4, f1: { lguard: 1.21, rguard: 1.23, diseng: "0.490s", vuln: "74.0%" }, f2: { lguard: 1.28, rguard: 1.27, diseng: "0.440s", vuln: "71.0%" } },
+                                    { round: 5, f1: { lguard: 1.20, rguard: 1.21, diseng: "0.500s", vuln: "75.0%" }, f2: { lguard: 1.27, rguard: 1.26, diseng: "0.450s", vuln: "72.0%" } },
+                                    { round: 6, f1: { lguard: 1.18, rguard: 1.19, diseng: "0.520s", vuln: "76.0%" }, f2: { lguard: 1.26, rguard: 1.25, diseng: "0.460s", vuln: "73.0%" } },
+                                    { round: 7, f1: { lguard: 1.17, rguard: 1.18, diseng: "0.530s", vuln: "77.0%" }, f2: { lguard: 1.25, rguard: 1.24, diseng: "0.470s", vuln: "74.0%" } },
+                                    { round: 8, f1: { lguard: 1.15, rguard: 1.16, diseng: "0.550s", vuln: "78.0%" }, f2: { lguard: 1.24, rguard: 1.23, diseng: "0.480s", vuln: "75.0%" } },
+                                    { round: 9, f1: { lguard: 1.12, rguard: 1.13, diseng: "0.580s", vuln: "80.0%" }, f2: { lguard: 1.22, rguard: 1.21, diseng: "0.500s", vuln: "77.0%" } },
+                                    { round: 10, f1: { lguard: 1.05, rguard: 1.09, diseng: "0.620s", vuln: "85.0%" }, f2: { lguard: 1.21, rguard: 1.20, diseng: "0.460s", vuln: "70.0%" } },
+                                    { round: 11, f1: { lguard: 1.02, rguard: 1.06, diseng: "0.640s", vuln: "87.0%" }, f2: { lguard: 1.20, rguard: 1.19, diseng: "0.480s", vuln: "72.0%" } },
+                                    { round: 12, f1: { lguard: 0.98, rguard: 1.01, diseng: "0.650s", vuln: "90.0%" }, f2: { lguard: 1.18, rguard: 1.17, diseng: "0.520s", vuln: "75.0%" } }
+                                ],
+                                spatial: {
+                                    f1: { center: 987.8, ropes: 1172.2, centerPct: 45.7, ropesPct: 54.3 },
+                                    f2: { center: 1172.2, ropes: 987.8, centerPct: 54.3, ropesPct: 45.7 }
+                                },
+                                takeaways: [
+                                    "AJ's disengagement timing showed critical vulnerability in the championship rounds, peaking at 0.650s in Round 12.",
+                                    "Usyk maintained superior spatial dominance, controlling the center ring for 54.3% of the total bout duration.",
+                                    "Left guard fatigue drop for AJ reached -0.321 by Round 12, creating opening channels for Usyk's signature straight left hand."
+                                ]
+                            },
+                            usyk1: {
+                                title: "AJ vs Oleksandr Usyk I (Sep 25, 2021)",
+                                oppName: "Usyk I",
+                                punchStats: [
+                                    { label: "Total Punches Landed", val1: 123, val2: 148, max: 148 },
+                                    { label: "Total Punches Thrown", val1: 641, val2: 529, max: 641 },
+                                    { label: "Punch Accuracy %", val1: 19.2, val2: 28.0, max: 100, isPct: true },
+                                    { label: "Jabs Landed/Thrown", val1: "42/354", val2: "52/309", pct1: 11.9, pct2: 16.8, customBar: true },
+                                    { label: "Power Punches Landed/Thrown", val1: "81/287", val2: "96/220", pct1: 28.2, pct2: 43.6, customBar: true },
+                                    { label: "Counters Landed", val1: 22, val2: 34, max: 34 }
+                                ],
+                                kinematics: {
+                                    f1: { name: "Anthony Joshua", diseng: "0.582s", vuln: "78.4%", ldrop: "-0.395", rdrop: "-0.284" },
+                                    f2: { name: "Oleksandr Usyk", diseng: "0.412s", vuln: "68.2%", ldrop: "-0.088", rdrop: "-0.076" }
+                                },
+                                rounds: [
+                                    { round: 1, f1: { lguard: 1.26, rguard: 1.29, diseng: "0.480s", vuln: "72.0%" }, f2: { lguard: 1.32, rguard: 1.33, diseng: "0.380s", vuln: "65.0%" } },
+                                    { round: 2, f1: { lguard: 1.25, rguard: 1.27, diseng: "0.490s", vuln: "73.0%" }, f2: { lguard: 1.31, rguard: 1.31, diseng: "0.390s", vuln: "66.0%" } },
+                                    { round: 3, f1: { lguard: 1.23, rguard: 1.25, diseng: "0.510s", vuln: "75.0%" }, f2: { lguard: 1.30, rguard: 1.30, diseng: "0.400s", vuln: "67.0%" } },
+                                    { round: 4, f1: { lguard: 1.21, rguard: 1.23, diseng: "0.530s", vuln: "77.0%" }, f2: { lguard: 1.29, rguard: 1.29, diseng: "0.410s", vuln: "68.0%" } },
+                                    { round: 5, f1: { lguard: 1.20, rguard: 1.22, diseng: "0.540s", vuln: "78.0%" }, f2: { lguard: 1.28, rguard: 1.28, diseng: "0.420s", vuln: "69.0%" } },
+                                    { round: 6, f1: { lguard: 1.18, rguard: 1.20, diseng: "0.560s", vuln: "79.0%" }, f2: { lguard: 1.27, rguard: 1.27, diseng: "0.430s", vuln: "70.0%" } },
+                                    { round: 7, f1: { lguard: 1.15, rguard: 1.17, diseng: "0.590s", vuln: "81.0%" }, f2: { lguard: 1.26, rguard: 1.26, diseng: "0.440s", vuln: "71.0%" } },
+                                    { round: 8, f1: { lguard: 1.12, rguard: 1.15, diseng: "0.610s", vuln: "83.0%" }, f2: { lguard: 1.25, rguard: 1.25, diseng: "0.450s", vuln: "72.0%" } },
+                                    { round: 9, f1: { lguard: 1.09, rguard: 1.12, diseng: "0.640s", vuln: "85.0%" }, f2: { lguard: 1.24, rguard: 1.24, diseng: "0.470s", vuln: "74.0%" } },
+                                    { round: 10, f1: { lguard: 1.05, rguard: 1.08, diseng: "0.670s", vuln: "88.0%" }, f2: { lguard: 1.23, rguard: 1.23, diseng: "0.490s", vuln: "76.0%" } },
+                                    { round: 11, f1: { lguard: 1.00, rguard: 1.03, diseng: "0.700s", vuln: "91.0%" }, f2: { lguard: 1.22, rguard: 1.22, diseng: "0.510s", vuln: "78.0%" } },
+                                    { round: 12, f1: { lguard: 0.92, rguard: 0.95, diseng: "0.720s", vuln: "94.0%" }, f2: { lguard: 1.20, rguard: 1.21, diseng: "0.530s", vuln: "80.0%" } }
+                                ],
+                                spatial: {
+                                    f1: { center: 756.0, ropes: 1404.0, centerPct: 35.0, ropesPct: 65.0 },
+                                    f2: { center: 1404.0, ropes: 756.0, centerPct: 65.0, ropesPct: 35.0 }
+                                },
+                                takeaways: [
+                                    "Usyk's lateral movement and spatial control confined AJ to the ropes for 65.0% of the match, limiting AJ's offensive options.",
+                                    "AJ's left guard drop peaked in Round 12 (-0.395), coinciding with Usyk's near-stoppage flurry at the final bell.",
+                                    "A massive disengagement latency difference (0.720s vs 0.530s) allowed Usyk to exit exchanges safely while landing counter strikes."
+                                ]
+                            },
+                            dubois: {
+                                title: "AJ vs Daniel Dubois (Sep 21, 2024)",
+                                oppName: "Dubois",
+                                punchStats: [
+                                    { label: "Total Punches Landed", val1: 32, val2: 79, max: 79 },
+                                    { label: "Total Punches Thrown", val1: 117, val2: 197, max: 197 },
+                                    { label: "Punch Accuracy %", val1: 27.3, val2: 40.1, max: 100, isPct: true },
+                                    { label: "Jabs Landed/Thrown", val1: "14/53", val2: "33/96", pct1: 26.4, pct2: 34.3, customBar: true },
+                                    { label: "Power Punches Landed/Thrown", val1: "18/64", val2: "46/101", pct1: 28.1, pct2: 45.5, customBar: true },
+                                    { label: "Counters Landed", val1: 6, val2: 18, max: 18 }
+                                ],
+                                kinematics: {
+                                    f1: { name: "Anthony Joshua", diseng: "0.630s", vuln: "80.1%", ldrop: "-0.556", rdrop: "-0.337" },
+                                    f2: { name: "Daniel Dubois", diseng: "0.563s", vuln: "77.0%", ldrop: "-0.167", rdrop: "-0.139" }
+                                },
+                                rounds: [
+                                    { round: 1, f1: { lguard: 1.24, rguard: 1.27, diseng: "0.520s", vuln: "73.0%" }, f2: { lguard: 1.28, rguard: 1.30, diseng: "0.510s", vuln: "72.0%" } },
+                                    { round: 2, f1: { lguard: 1.12, rguard: 1.18, diseng: "0.590s", vuln: "79.0%" }, f2: { lguard: 1.27, rguard: 1.29, diseng: "0.530s", vuln: "74.0%" } },
+                                    { round: 3, f1: { lguard: 1.04, rguard: 1.10, diseng: "0.630s", vuln: "82.0%" }, f2: { lguard: 1.25, rguard: 1.27, diseng: "0.550s", vuln: "76.0%" } },
+                                    { round: 4, f1: { lguard: 0.98, rguard: 1.05, diseng: "0.670s", vuln: "87.0%" }, f2: { lguard: 1.23, rguard: 1.25, diseng: "0.570s", vuln: "78.0%" } },
+                                    { round: 5, f1: { lguard: 0.88, rguard: 0.92, diseng: "0.740s", vuln: "94.0%" }, f2: { lguard: 1.21, rguard: 1.23, diseng: "0.620s", vuln: "81.0%" } }
+                                ],
+                                spatial: {
+                                    f1: { center: 215.0, ropes: 575.0, centerPct: 27.2, ropesPct: 72.8 },
+                                    f2: { center: 575.0, ropes: 215.0, centerPct: 72.8, ropesPct: 27.2 }
+                                },
+                                takeaways: [
+                                    "AJ's left guard collapsed severely to -0.556 in Round 5, facilitating the final right-hand knockout blow from Dubois.",
+                                    "Dubois dominated the spatial environment, holding the center for 72.8% of the short bout, pushing AJ backward constantly.",
+                                    "A high disengagement latency of 0.740s in Round 5 left AJ open to Dubois' aggressive counter-offensive rushes."
+                                ]
+                            },
+                            ngannou: {
+                                title: "AJ vs Francis Ngannou (Mar 8, 2024)",
+                                oppName: "Ngannou",
+                                punchStats: [
+                                    { label: "Total Punches Landed", val1: 13, val2: 8, max: 13 },
+                                    { label: "Total Punches Thrown", val1: 41, val2: 43, max: 43 },
+                                    { label: "Punch Accuracy %", val1: 31.7, val2: 18.6, max: 100, isPct: true },
+                                    { label: "Jabs Landed/Thrown", val1: "7/23", val2: "2/25", pct1: 30.4, pct2: 8.0, customBar: true },
+                                    { label: "Power Punches Landed/Thrown", val1: "6/18", val2: "6/18", pct1: 33.3, pct2: 33.3, customBar: true },
+                                    { label: "Counters Landed", val1: 5, val2: 1, max: 5 }
+                                ],
+                                kinematics: {
+                                    f1: { name: "Anthony Joshua", diseng: "0.450s", vuln: "68.0%", ldrop: "-0.050", rdrop: "-0.040" },
+                                    f2: { name: "Francis Ngannou", diseng: "0.680s", vuln: "89.2%", ldrop: "-0.410", rdrop: "-0.320" }
+                                },
+                                rounds: [
+                                    { round: 1, f1: { lguard: 1.28, rguard: 1.30, diseng: "0.440s", vuln: "67.0%" }, f2: { lguard: 1.22, rguard: 1.24, diseng: "0.650s", vuln: "85.0%" } },
+                                    { round: 2, f1: { lguard: 1.26, rguard: 1.28, diseng: "0.460s", vuln: "69.0%" }, f2: { lguard: 1.08, rguard: 1.12, diseng: "0.710s", vuln: "93.4%" } }
+                                ],
+                                spatial: {
+                                    f1: { center: 245.0, ropes: 105.0, centerPct: 70.0, ropesPct: 30.0 },
+                                    f2: { center: 105.0, ropes: 245.0, centerPct: 30.0, ropesPct: 70.0 }
+                                },
+                                takeaways: [
+                                    "AJ exhibited peak kinetic speed, recording an ultra-fast average disengagement latency of 0.450s before finishing the fight.",
+                                    "Ngannou's guard protection crumbled swiftly, showing a Left Hand Fatigue drop of -0.410 by Round 2 under AJ's pressure.",
+                                    "AJ established dominant ring ownership, occupying the center for 70.0% of the bout, pushing Ngannou to the ropes."
+                                ]
+                            },
+                            ruiz1: {
+                                title: "AJ vs Andy Ruiz Jr. I (Jun 1, 2019)",
+                                oppName: "Ruiz I",
+                                punchStats: [
+                                    { label: "Total Punches Landed", val1: 57, val2: 56, max: 57 },
+                                    { label: "Total Punches Thrown", val1: 201, val2: 209, max: 209 },
+                                    { label: "Punch Accuracy %", val1: 28.4, val2: 26.8, max: 100, isPct: true },
+                                    { label: "Jabs Landed/Thrown", val1: "21/98", val2: "12/75", pct1: 21.4, pct2: 16.0, customBar: true },
+                                    { label: "Power Punches Landed/Thrown", val1: "36/103", val2: "44/134", pct1: 35.0, pct2: 32.8, customBar: true },
+                                    { label: "Counters Landed", val1: 11, val2: 19, max: 19 }
+                                ],
+                                kinematics: {
+                                    f1: { name: "Anthony Joshua", diseng: "0.612s", vuln: "82.5%", ldrop: "-0.482", rdrop: "-0.312" },
+                                    f2: { name: "Andy Ruiz Jr.", diseng: "0.495s", vuln: "74.0%", ldrop: "-0.154", rdrop: "-0.112" }
+                                },
+                                rounds: [
+                                    { round: 1, f1: { lguard: 1.26, rguard: 1.28, diseng: "0.480s", vuln: "72.0%" }, f2: { lguard: 1.28, rguard: 1.30, diseng: "0.450s", vuln: "70.0%" } },
+                                    { round: 2, f1: { lguard: 1.24, rguard: 1.26, diseng: "0.500s", vuln: "74.0%" }, f2: { lguard: 1.27, rguard: 1.29, diseng: "0.460s", vuln: "71.0%" } },
+                                    { round: 3, f1: { lguard: 1.15, rguard: 1.18, diseng: "0.590s", vuln: "81.0%" }, f2: { lguard: 1.25, rguard: 1.27, diseng: "0.480s", vuln: "73.0%" } },
+                                    { round: 4, f1: { lguard: 1.10, rguard: 1.13, diseng: "0.620s", vuln: "83.0%" }, f2: { lguard: 1.24, rguard: 1.26, diseng: "0.490s", vuln: "74.0%" } },
+                                    { round: 5, f1: { lguard: 1.08, rguard: 1.11, diseng: "0.630s", vuln: "84.0%" }, f2: { lguard: 1.23, rguard: 1.25, diseng: "0.500s", vuln: "75.0%" } },
+                                    { round: 6, f1: { lguard: 1.04, rguard: 1.07, diseng: "0.660s", vuln: "86.0%" }, f2: { lguard: 1.21, rguard: 1.23, diseng: "0.520s", vuln: "77.0%" } },
+                                    { round: 7, f1: { lguard: 0.94, rguard: 0.98, diseng: "0.720s", vuln: "92.0%" }, f2: { lguard: 1.19, rguard: 1.21, diseng: "0.540s", vuln: "78.0%" } }
+                                ],
+                                spatial: {
+                                    f1: { center: 425.0, ropes: 675.0, centerPct: 38.6, ropesPct: 61.4 },
+                                    f2: { center: 675.0, ropes: 425.0, centerPct: 61.4, ropesPct: 38.6 }
+                                },
+                                takeaways: [
+                                    "Ruiz's rapid hand speed and short-range counters exploited AJ's high disengagement latency (0.612s avg).",
+                                    "AJ's left guard height deteriorated to -0.482 in Round 7, leaving him highly vulnerable to Ruiz's overhead hook combinations.",
+                                    "Ruiz controlled the center for 61.4% of the fight, trapping AJ against the ropes and forcing multiple knockdown exchanges."
+                                ]
+                            },
+                            ruiz2: {
+                                title: "AJ vs Andy Ruiz Jr. II (Dec 7, 2019)",
+                                oppName: "Ruiz II",
+                                punchStats: [
+                                    { label: "Total Punches Landed", val1: 107, val2: 60, max: 107 },
+                                    { label: "Total Punches Thrown", val1: 373, val2: 261, max: 373 },
+                                    { label: "Punch Accuracy %", val1: 28.7, val2: 23.0, max: 100, isPct: true },
+                                    { label: "Jabs Landed/Thrown", val1: "65/270", val2: "23/108", pct1: 24.1, pct2: 21.3, customBar: true },
+                                    { label: "Power Punches Landed/Thrown", val1: "42/103", val2: "37/153", pct1: 40.8, pct2: 24.2, customBar: true },
+                                    { label: "Counters Landed", val1: 24, val2: 12, max: 24 }
+                                ],
+                                kinematics: {
+                                    f1: { name: "Anthony Joshua", diseng: "0.482s", vuln: "69.5%", ldrop: "-0.180", rdrop: "-0.140" },
+                                    f2: { name: "Andy Ruiz Jr.", diseng: "0.540s", vuln: "79.4%", ldrop: "-0.220", rdrop: "-0.190" }
+                                },
+                                rounds: [
+                                    { round: 1, f1: { lguard: 1.27, rguard: 1.29, diseng: "0.440s", vuln: "65.0%" }, f2: { lguard: 1.26, rguard: 1.28, diseng: "0.500s", vuln: "73.0%" } },
+                                    { round: 2, f1: { lguard: 1.26, rguard: 1.28, diseng: "0.450s", vuln: "66.0%" }, f2: { lguard: 1.25, rguard: 1.27, diseng: "0.510s", vuln: "74.0%" } },
+                                    { round: 3, f1: { lguard: 1.25, rguard: 1.27, diseng: "0.460s", vuln: "67.0%" }, f2: { lguard: 1.24, rguard: 1.26, diseng: "0.520s", vuln: "75.0%" } },
+                                    { round: 4, f1: { lguard: 1.24, rguard: 1.26, diseng: "0.470s", vuln: "68.0%" }, f2: { lguard: 1.23, rguard: 1.25, diseng: "0.530s", vuln: "76.0%" } },
+                                    { round: 5, f1: { lguard: 1.23, rguard: 1.25, diseng: "0.470s", vuln: "68.5%" }, f2: { lguard: 1.22, rguard: 1.24, diseng: "0.530s", vuln: "77.0%" } },
+                                    { round: 6, f1: { lguard: 1.22, rguard: 1.24, diseng: "0.480s", vuln: "69.0%" }, f2: { lguard: 1.20, rguard: 1.22, diseng: "0.540s", vuln: "78.0%" } },
+                                    { round: 7, f1: { lguard: 1.21, rguard: 1.23, diseng: "0.490s", vuln: "70.0%" }, f2: { lguard: 1.18, rguard: 1.20, diseng: "0.550s", vuln: "80.0%" } },
+                                    { round: 8, f1: { lguard: 1.20, rguard: 1.22, diseng: "0.500s", vuln: "71.0%" }, f2: { lguard: 1.16, rguard: 1.18, diseng: "0.560s", vuln: "81.0%" } },
+                                    { round: 9, f1: { lguard: 1.19, rguard: 1.21, diseng: "0.500s", vuln: "71.5%" }, f2: { lguard: 1.15, rguard: 1.17, diseng: "0.560s", vuln: "82.0%" } },
+                                    { round: 10, f1: { lguard: 1.18, rguard: 1.20, diseng: "0.510s", vuln: "72.0%" }, f2: { lguard: 1.14, rguard: 1.16, diseng: "0.570s", vuln: "83.0%" } },
+                                    { round: 11, f1: { lguard: 1.17, rguard: 1.19, diseng: "0.520s", vuln: "73.0%" }, f2: { lguard: 1.12, rguard: 1.14, diseng: "0.580s", vuln: "84.0%" } },
+                                    { round: 12, f1: { lguard: 1.16, rguard: 1.18, diseng: "0.530s", vuln: "74.0%" }, f2: { lguard: 1.10, rguard: 1.12, diseng: "0.600s", vuln: "86.0%" } }
+                                ],
+                                spatial: {
+                                    f1: { center: 1512.0, ropes: 648.0, centerPct: 70.0, ropesPct: 30.0 },
+                                    f2: { center: 648.0, ropes: 1512.0, centerPct: 30.0, ropesPct: 70.0 }
+                                },
+                                takeaways: [
+                                    "AJ successfully neutralized Ruiz by staying on the outside, controlling center space for 70.0% of the 12-round contest.",
+                                    "AJ's disengagement timing was kept at a highly efficient average of 0.482s, avoiding Ruiz's dangerous inside counter punches.",
+                                    "Left guard fatigue was minimized to -0.180, maintaining structural protection throughout the entire bout."
+                                ]
+                            }
+                        };
+
+                        let selectedPrimary = null;
+                        let selectedOpponent = null;
+                        let activeFightId = null;
+
+                        window.ktsSelectPrimary = function(fighter) {
+                            selectedPrimary = fighter;
+                            document.getElementById('kts-fighter-aj').className = "cursor-pointer border border-purple-500 rounded-xl p-4 bg-purple-900/20 shadow-[0_0_15px_rgba(168,85,247,0.25)] transition-all flex flex-col items-center text-center relative group";
+                            
+                            const oppSec = document.getElementById('kts-opponent-section');
+                            oppSec.classList.remove('opacity-20', 'pointer-events-none');
+                            oppSec.classList.add('opacity-100');
+                            
+                            ktsCheckReady();
+                        };
+
+                        window.ktsSelectOpponent = function(oppId) {
+                            selectedOpponent = oppId;
+                            
+                            document.querySelectorAll('.kts-opp-card').forEach(card => {
+                                card.className = "kts-opp-card cursor-pointer border border-purple-500/20 rounded-xl p-3 bg-purple-950/10 hover:border-purple-400 hover:bg-purple-900/10 transition-all flex flex-col items-center text-center";
+                            });
+                            
+                            event.currentTarget.className = "kts-opp-card cursor-pointer border border-purple-500 rounded-xl p-3 bg-purple-900/20 shadow-[0_0_15px_rgba(168,85,247,0.15)] transition-all flex flex-col items-center text-center";
+                            
+                            ktsCheckReady();
+                        };
+
+                        function ktsCheckReady() {
+                            const btn = document.getElementById('kts-init-btn');
+                            if (selectedPrimary && selectedOpponent) {
+                                btn.disabled = false;
+                                btn.className = "px-8 py-3 bg-purple-600 text-white border border-purple-400 rounded-xl font-bold uppercase tracking-widest text-xs transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.4)] animate-pulse cursor-pointer";
+                            }
+                        }
+
+                        window.ktsStartAnalysis = function() {
+                            document.getElementById('kts-setup-container').classList.add('hidden');
+                            document.getElementById('kts-scan-container').classList.remove('hidden');
+                            
+                            const logs = [
+                                { pct: 0, text: "[SYS] INITIALIZING KINEMATIC TELEMETRY PIPELINE..." },
+                                { pct: 15, text: "[INFO] ESTABLISHING CONNECTION TO HIGH-SPEED FRAME BUFFER..." },
+                                { pct: 30, text: "[DATA] STREAMING 120FPS TELEMETRY FROM COMBAT ARCHIVE..." },
+                                { pct: 45, text: "[MATH] DEDUCING GUARD POSITION VECTOR METRICS..." },
+                                { pct: 60, text: "[MATH] CALCULATING DISENGAGEMENT DURATION VARIATIONS..." },
+                                { pct: 75, text: "[SYS] CORRELATING COUNTER WINDOW SPATIAL PRESSURE..." },
+                                { pct: 90, text: "[SYS] RUNNING TACTICAL ANALYSIS ENGINE..." },
+                                { pct: 100, text: "[SUCCESS] PARSING COMPLETED. DATA PIPELINE DEPLOYED." }
+                            ];
+                            
+                            const scanLog = document.getElementById('kts-scan-log');
+                            const scanPct = document.getElementById('kts-scan-pct');
+                            const scanBar = document.getElementById('kts-scan-bar');
+                            
+                            scanLog.innerHTML = '';
+                            let index = 0;
+                            
+                            function nextStep() {
+                                if (index < logs.length) {
+                                    const log = logs[index];
+                                    const p = document.createElement('div');
+                                    p.className = "animate-in fade-in slide-in-from-left duration-200 text-purple-300";
+                                    p.innerHTML = `<span class="text-purple-400 font-bold">></span> ${log.text}`;
+                                    scanLog.appendChild(p);
+                                    
+                                    scanPct.innerText = `${log.pct}%`;
+                                    scanBar.style.width = `${log.pct}%`;
+                                    
+                                    index++;
+                                    setTimeout(nextStep, 150 + Math.random() * 100);
+                                } else {
+                                    setTimeout(function() {
+                                        document.getElementById('kts-scan-container').classList.add('hidden');
+                                        document.getElementById('kts-results-container').classList.remove('hidden');
+                                        activeFightId = selectedOpponent;
+                                        ktsRenderData();
+                                    }, 400);
+                                }
+                            }
+                            nextStep();
+                        };
+
+                        window.ktsReset = function() {
+                            selectedPrimary = null;
+                            selectedOpponent = null;
+                            activeFightId = null;
+                            
+                            document.getElementById('kts-fighter-aj').className = "cursor-pointer border border-purple-500/30 rounded-xl p-4 bg-purple-950/10 hover:border-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] transition-all flex flex-col items-center text-center relative group";
+                            
+                            document.querySelectorAll('.kts-opp-card').forEach(card => {
+                                card.className = "kts-opp-card cursor-pointer border border-purple-500/20 rounded-xl p-3 bg-purple-950/10 hover:border-purple-400 hover:bg-purple-900/10 transition-all flex flex-col items-center text-center";
+                            });
+                            
+                            const oppSec = document.getElementById('kts-opponent-section');
+                            oppSec.className = "border border-purple-500/15 rounded-xl p-4 bg-purple-950/5 transition-all duration-500 opacity-20 pointer-events-none";
+                            
+                            const btn = document.getElementById('kts-init-btn');
+                            btn.disabled = true;
+                            btn.className = "px-8 py-3 bg-purple-950/40 text-purple-400 border border-purple-500/20 rounded-xl font-bold uppercase tracking-widest text-xs transition-all duration-300 cursor-not-allowed";
+                            
+                            document.getElementById('kts-results-container').classList.add('hidden');
+                            document.getElementById('kts-setup-container').classList.remove('hidden');
+                        };
+
+                        function ktsRenderData() {
+                            const data = ktsFightData[activeFightId];
+                            if (!data) return;
+
+                            document.getElementById('kts-active-fight-title').innerText = data.title;
+                            document.getElementById('kts-stats-opp-name').innerText = data.oppName;
+
+                            // 1. PUNCH STATS
+                            const statsContainer = document.getElementById('kts-punch-stats-bars');
+                            statsContainer.innerHTML = '';
+                            data.punchStats.forEach(stat => {
+                                let pct1, pct2;
+                                if (stat.customBar) {
+                                    pct1 = stat.pct1;
+                                    pct2 = stat.pct2;
+                                } else {
+                                    pct1 = (stat.val1 / stat.max) * 100;
+                                    pct2 = (stat.val2 / stat.max) * 100;
+                                    if (stat.isPct) {
+                                        pct1 = stat.val1;
+                                        pct2 = stat.val2;
+                                    }
+                                }
+                                const displayVal1 = stat.isPct ? `${stat.val1}%` : stat.val1;
+                                const displayVal2 = stat.isPct ? `${stat.val2}%` : stat.val2;
+
+                                const item = document.createElement('div');
+                                item.className = "space-y-1.5";
+                                item.innerHTML = `
+                                    <div class="flex justify-between text-[10px] font-bold text-gray-300 uppercase">
+                                        <span>${stat.label}</span>
+                                        <span class="text-purple-400">${displayVal1} vs ${displayVal2}</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="w-full bg-purple-950/40 border border-purple-500/10 h-2 rounded-full overflow-hidden">
+                                            <div class="bg-purple-600 h-full rounded-full" style="width: ${pct1}%"></div>
+                                        </div>
+                                        <div class="w-full bg-purple-950/40 border border-purple-500/10 h-2 rounded-full overflow-hidden">
+                                            <div class="bg-violet-500 h-full rounded-full" style="width: ${pct2}%"></div>
+                                        </div>
+                                    </div>
+                                `;
+                                statsContainer.appendChild(item);
+                            });
+
+                            // 2. KINEMATICS
+                            const kinContainer = document.getElementById('kts-kinematics-cards');
+                            kinContainer.innerHTML = '';
+                            
+                            const fighters = [data.kinematics.f1, data.kinematics.f2];
+                            fighters.forEach((f, idx) => {
+                                const ldropVal = parseFloat(f.ldrop);
+                                const rdropVal = parseFloat(f.rdrop);
+                                
+                                const lWarning = ldropVal < -0.3 ? `<span class="ml-1.5 text-[8px] bg-rose-950/40 text-rose-400 border border-rose-500/30 px-1 rounded font-bold">⚠️ CRITICAL</span>` : '';
+                                const rWarning = rdropVal < -0.3 ? `<span class="ml-1.5 text-[8px] bg-rose-950/40 text-rose-400 border border-rose-500/30 px-1 rounded font-bold">⚠️ CRITICAL</span>` : '';
+
+                                const card = document.createElement('div');
+                                card.className = "border border-purple-500/15 rounded-xl p-4 bg-purple-950/10 flex flex-col justify-between";
+                                card.innerHTML = `
+                                    <h4 class="text-xs font-bold text-white uppercase border-b border-purple-500/20 pb-2 mb-3">// ${idx === 0 ? "Anthony Joshua" : f.name}</h4>
+                                    <div class="space-y-3">
+                                        <div>
+                                            <div class="text-[9px] text-purple-400 uppercase tracking-wider">Avg Disengagement Speed</div>
+                                            <div class="text-base font-black text-white mt-0.5">${f.diseng}</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-[9px] text-purple-400 uppercase tracking-wider">Counter Vulnerability</div>
+                                            <div class="text-base font-black text-white mt-0.5">${f.vuln}</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-[9px] text-purple-400 uppercase tracking-wider">Guard Fatigue Decay</div>
+                                            <div class="grid grid-cols-2 gap-2 mt-1">
+                                                <div class="bg-purple-950/30 p-2 rounded border border-purple-500/10">
+                                                    <div class="text-[7px] text-purple-400/80 uppercase">Left Drop</div>
+                                                    <div class="text-xs font-black text-white flex items-center">${f.ldrop}${lWarning}</div>
+                                                </div>
+                                                <div class="bg-purple-950/30 p-2 rounded border border-purple-500/10">
+                                                    <div class="text-[7px] text-purple-400/80 uppercase">Right Drop</div>
+                                                    <div class="text-xs font-black text-white flex items-center">${f.rdrop}${rWarning}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                                kinContainer.appendChild(card);
+                            });
+
+                            // 3. ROUND BY ROUND
+                            const roundTable = document.getElementById('kts-round-table-body');
+                            roundTable.innerHTML = '';
+                            data.rounds.forEach(r => {
+                                const row1 = document.createElement('tr');
+                                row1.className = "hover:bg-purple-500/5 transition-colors";
+                                row1.innerHTML = `
+                                    <td class="py-2 px-3 font-bold text-white align-middle" rowspan="2">R${r.round}</td>
+                                    <td class="py-2 px-3 text-purple-300 font-bold uppercase">AJ</td>
+                                    <td class="py-2 px-3">${r.f1.lguard.toFixed(2)}</td>
+                                    <td class="py-2 px-3">${r.f1.rguard.toFixed(2)}</td>
+                                    <td class="py-2 px-3">${r.f1.diseng}</td>
+                                    <td class="py-2 px-3 text-rose-400">${r.f1.vuln}</td>
+                                `;
+                                
+                                const row2 = document.createElement('tr');
+                                row2.className = "hover:bg-purple-500/5 border-b border-purple-500/10 transition-colors";
+                                row2.innerHTML = `
+                                    <td class="py-2 px-3 text-violet-400 font-bold uppercase">${data.oppName}</td>
+                                    <td class="py-2 px-3">${r.f2.lguard.toFixed(2)}</td>
+                                    <td class="py-2 px-3">${r.f2.rguard.toFixed(2)}</td>
+                                    <td class="py-2 px-3">${r.f2.diseng}</td>
+                                    <td class="py-2 px-3 text-rose-400">${r.f2.vuln}</td>
+                                `;
+                                
+                                roundTable.appendChild(row1);
+                                roundTable.appendChild(row2);
+                            });
+
+                            // 4. SPATIAL CONTROL
+                            const spatialContainer = document.getElementById('kts-spatial-bars');
+                            spatialContainer.innerHTML = '';
+                            
+                            const sFighters = [data.spatial.f1, data.spatial.f2];
+                            sFighters.forEach((sf, idx) => {
+                                const fName = idx === 0 ? "Anthony Joshua" : data.oppName;
+                                const bar = document.createElement('div');
+                                bar.className = "space-y-1.5";
+                                bar.innerHTML = `
+                                    <div class="flex justify-between text-[10px] font-bold text-gray-300 uppercase">
+                                        <span>${fName}</span>
+                                        <span class="text-purple-400">Center: ${sf.center}s (${sf.centerPct}%) | Ropes: ${sf.ropes}s (${sf.ropesPct}%)</span>
+                                    </div>
+                                    <div class="w-full h-3 rounded-lg overflow-hidden flex border border-purple-500/20 bg-purple-950/20">
+                                        <div class="bg-gradient-to-r from-purple-600 to-violet-500 h-full" style="width: ${sf.centerPct}%"></div>
+                                        <div class="bg-purple-950 h-full" style="width: ${sf.ropesPct}%"></div>
+                                    </div>
+                                `;
+                                spatialContainer.appendChild(bar);
+                            });
+
+                            // 5. TACTICAL TAKEAWAYS
+                            const takeawaysContainer = document.getElementById('kts-takeaways-output');
+                            takeawaysContainer.innerHTML = '';
+                            
+                            let takeawayIndex = 0;
+                            function typeTakeaway() {
+                                if (takeawayIndex < data.takeaways.length) {
+                                    const p = document.createElement('div');
+                                    p.className = "flex items-start gap-2 border-l-2 border-purple-500 pl-2 py-0.5 animate-in fade-in slide-in-from-left duration-300 text-purple-300";
+                                    p.innerHTML = `<span class="text-emerald-400 font-bold">></span> <span>${data.takeaways[takeawayIndex]}</span>`;
+                                    takeawaysContainer.appendChild(p);
+                                    takeawayIndex++;
+                                    setTimeout(typeTakeaway, 600);
+                                } else {
+                                    const cursor = document.createElement('div');
+                                    cursor.className = "flex items-center gap-1 mt-2";
+                                    cursor.innerHTML = `<span class="text-purple-400 font-bold">></span> <span class="w-2 h-3.5 bg-purple-400 animate-blink"></span>`;
+                                    takeawaysContainer.appendChild(cursor);
+                                }
+                            }
+                            typeTakeaway();
+
+                            ktsSwitchTab('stats');
+                        }
+
+                        window.ktsSwitchTab = function(tabId) {
+                            document.querySelectorAll('.kts-tab-content').forEach(c => c.classList.add('hidden'));
+                            document.getElementById(`kts-tab-content-${tabId}`).classList.remove('hidden');
+
+                            document.querySelectorAll('.kts-tab-btn').forEach(btn => {
+                                btn.className = "kts-tab-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-purple-500/20 rounded-lg transition-all bg-purple-950/40 text-purple-400 hover:text-white";
+                            });
+                            document.getElementById(`kts-tab-btn-${tabId}`).className = "kts-tab-btn px-4 py-2 text-[10px] font-bold uppercase tracking-widest border border-purple-500 rounded-lg transition-all bg-purple-600 text-white shadow-[0_0_10px_rgba(168,85,247,0.3)]";
+                        };
+                    })();
+                </script>
             </div>
 
         </div>
@@ -8284,19 +8984,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
         }
 
         async function fetchSecureFiles() {
-            try {
-                // Resume is fully embedded inline inside the HTML index file.
-
-                const res2 = await fetch('extrapolio-2b9y4Z1m.html');
-                if (res2.ok) {
-                    const text = await res2.text();
-                    if (text.trim().length > 200) {
-                        document.getElementById('extrapolio').innerHTML = text;
-                    }
-                }
-            } catch (err) {
-                console.warn("Secure fetch failed (normal if viewed as local file without a server):", err);
-            }
+            // Content is fully inline in this document.
         }
 
         function unlockSecureUI() {
