@@ -1685,8 +1685,8 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                             </div>
                         </div>
 
-                        <!-- Gamefii Card -->
-                        <div onclick="selectStudyModule('gamefii')" class="p-6 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
+                        <!-- Gamefii Card (Hidden) -->
+                        <div onclick="selectStudyModule('gamefii')" class="hidden p-6 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] cursor-pointer flex flex-col justify-between group">
                             <div>
                                 <div class="text-3xl mb-4 group-hover:scale-110 transition-transform w-fit">🎮</div>
                                 <h3 class="font-black text-purple-950 text-sm uppercase tracking-wider mb-2">Gamefii Quests</h3>
@@ -8249,8 +8249,8 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                 </div>
                                 <div class="opacity-40 cursor-not-allowed border border-purple-500/10 rounded-xl p-4 bg-purple-950/5 flex flex-col items-center text-center relative">
                                     <div class="w-12 h-12 rounded-full border border-purple-500/10 flex items-center justify-center bg-purple-950/10 text-xl mb-3">🔒</div>
-                                    <div class="text-xs font-bold text-purple-400/60 uppercase mb-1">Daniel Dubois</div>
-                                    <div class="text-[9px] text-purple-400/40">Record: 22-2</div>
+                                    <div class="text-xs font-bold text-purple-400/60 uppercase mb-1">Terence Crawford</div>
+                                    <div class="text-[9px] text-purple-400/40">Record: 41-0, 31 KO</div>
                                     <div class="absolute top-2 right-2 text-[8px] text-purple-400/50 border border-purple-500/10 px-1 rounded bg-purple-950/10">COMING SOON</div>
                                 </div>
                             </div>
@@ -8667,14 +8667,14 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                     scanBar.style.width = `${log.pct}%`;
                                     
                                     index++;
-                                    setTimeout(nextStep, 150 + Math.random() * 100);
+                                    setTimeout(nextStep, 15 + Math.random() * 15);
                                 } else {
                                     setTimeout(function() {
                                         document.getElementById('kts-scan-container').classList.add('hidden');
                                         document.getElementById('kts-results-container').classList.remove('hidden');
                                         activeFightId = selectedOpponent;
                                         ktsRenderData();
-                                    }, 400);
+                                    }, 50);
                                 }
                             }
                             nextStep();
@@ -8853,7 +8853,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
                                     p.innerHTML = `<span class="text-emerald-400 font-bold">></span> <span>${data.takeaways[takeawayIndex]}</span>`;
                                     takeawaysContainer.appendChild(p);
                                     takeawayIndex++;
-                                    setTimeout(typeTakeaway, 600);
+                                    setTimeout(typeTakeaway, 100);
                                 } else {
                                     const cursor = document.createElement('div');
                                     cursor.className = "flex items-center gap-1 mt-2";
