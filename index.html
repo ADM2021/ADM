@@ -16919,7 +16919,8 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
     <!-- FLASHCARD AUDIO PLAYER LOGIC (Listen Mode) -->
     <script>
     (function () {
-        const synth = window.speechSynthesis;
+        // Look up the speech engine each time (not just once at page load)
+        function getSynth() { return ('speechSynthesis' in window && window.speechSynthesis) ? window.speechSynthesis : null; }
         let session = 0;      // bumped on every stop/skip so old timers and speech quit
         let playing = false;
         let timers = [];
@@ -16939,6 +16940,7 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
         }
         function speak(text, token) {
             return new Promise((res) => {
+                const synth = getSynth();
                 if (!synth || token !== session) return res(false);
                 const u = new SpeechSynthesisUtterance(text);
                 u.rate = parseFloat(($('fc-audio-rate') || {}).value || '1');
@@ -17004,10 +17006,13 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             }
         }
 
-        function halt() { session++; clearTimers(); if (synth) synth.cancel(); }
+        function halt() { session++; clearTimers(); const synth = getSynth(); if (synth) synth.cancel(); }
 
         window.fcAudioPlay = function () {
-            if (!synth) { setStatus('Audio not supported'); return; }
+            if (!getSynth() || typeof SpeechSynthesisUtterance === 'undefined') {
+                setStatus('No audio here – open the live site in Chrome or Safari');
+                return;
+            }
             if (typeof loadVoices === 'function') loadVoices();
             halt();
             playing = true; setPlayIcon();
