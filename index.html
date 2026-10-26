@@ -16995,6 +16995,82 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
         }
     </script>
 
+    <!-- SHARED SPEECH HELPER for the Flashcard + Study Guide players (Chrome, Safari, iPhone safe) -->
+    <script>
+    (function () {
+        const ua = navigator.userAgent || '';
+        const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        // Novelty voices that sound odd or play silently on some iPhones
+        const novelty = /Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Ralph|Rocko|Fred|Junior|Kathy|Grandma|Grandpa|Eddy|Flo|Reed|Sandy|Shelley/i;
+        const iosSafeNames = ['Samantha', 'Ava', 'Zoe', 'Allison', 'Susan', 'Nicky', 'Evan', 'Nathan', 'Tom', 'Alex', 'Daniel', 'Karen', 'Moira', 'Tessa'];
+        let voiceBroken = false;   // flips on if a chosen voice turns out to be silent
+        let iosVoice;              // cached safe pick for iPhone/iPad
+
+        function pickIOSVoice() {
+            if (iosVoice !== undefined) return iosVoice;
+            const all = (window.speechSynthesis && speechSynthesis.getVoices()) || [];
+            if (!all.length) return null; // voices not loaded yet: let iOS use its default
+            const ok = all.filter(v => /^en[-_]/i.test(v.lang) && !novelty.test(v.name) && v.localService !== false);
+            let pick = null;
+            for (const n of iosSafeNames) {
+                pick = ok.find(v => v.name.indexOf(n) === 0 && /en[-_]US/i.test(v.lang)) || ok.find(v => v.name.indexOf(n) === 0);
+                if (pick) break;
+            }
+            iosVoice = pick || ok.find(v => /en[-_]US/i.test(v.lang)) || null;
+            return iosVoice;
+        }
+        function chooseVoice() {
+            if (voiceBroken) return null;
+            if (isIOS) return pickIOSVoice();
+            if (typeof preferredVoice !== 'undefined' && preferredVoice && !novelty.test(preferredVoice.name)) return preferredVoice;
+            return null;
+        }
+
+        // Speaks one piece of text. Resolves true when done, false if cancelled (isValid() turned false).
+        window.studySpeak = function (text, rate, isValid) {
+            return new Promise((res) => {
+                const synth = ('speechSynthesis' in window) ? window.speechSynthesis : null;
+                if (!synth || !isValid()) return res(false);
+                let done = false, started = false, poll = null, cap = null, check = null;
+                const finish = () => {
+                    if (done) return; done = true;
+                    clearInterval(poll); clearTimeout(cap); clearTimeout(check);
+                    res(isValid());
+                };
+                function make(useVoice) {
+                    const u = new SpeechSynthesisUtterance(text);
+                    u.rate = rate; u.pitch = 1; u.volume = 1;
+                    const v = useVoice ? chooseVoice() : null;
+                    u.lang = v ? v.lang : 'en-US';
+                    if (v) u.voice = v; // voice set last (Safari quirk)
+                    u.onstart = () => { started = true; };
+                    u.onend = finish; u.onerror = finish;
+                    window.__studyUtterance = u; // keep a reference so the browser doesn't drop onend
+                    return { u, usedVoice: !!v };
+                }
+                const first = make(true);
+                if (synth.paused) synth.resume();
+                synth.speak(first.u);
+                poll = setInterval(() => {
+                    if (!isValid()) return finish();
+                    if (synth.speaking || synth.pending) { started = true; return; }
+                    if (started) finish();
+                }, 250);
+                // If nothing starts within 2.5s and a specific voice was used, that voice is silent on
+                // this device: switch to the device default voice and try this sentence again.
+                check = setTimeout(() => {
+                    if (done || started || !isValid() || !first.usedVoice) return;
+                    voiceBroken = true;
+                    synth.cancel();
+                    setTimeout(() => { if (!done && isValid()) synth.speak(make(false).u); }, 150);
+                }, 2500);
+                cap = setTimeout(finish, (text.length / (13 * rate)) * 1000 + 6500);
+            });
+        };
+        window.studySpeechIsIOS = isIOS;
+    })();
+    </script>
+
     <!-- FLASHCARD AUDIO PLAYER LOGIC (Listen Mode) -->
     <script>
     (function () {
@@ -17018,39 +17094,8 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
             return new Promise((res) => timers.push(setTimeout(() => res(token === session), ms)));
         }
         function speak(text, token) {
-            return new Promise((res) => {
-                const synth = getSynth();
-                if (!synth || token !== session) return res(false);
-                let done = false, started = false, poll = null, cap = null;
-                const finish = () => {
-                    if (done) return; done = true;
-                    clearInterval(poll); clearTimeout(cap);
-                    res(token === session);
-                };
-                const u = new SpeechSynthesisUtterance(text);
-                u.rate = parseFloat(($('fc-audio-rate') || {}).value || '1');
-                u.pitch = 1; u.volume = 1;
-                if (typeof preferredVoice !== 'undefined' && preferredVoice) {
-                    u.lang = preferredVoice.lang;
-                    u.voice = preferredVoice; // voice set last (Safari quirk)
-                } else {
-                    u.lang = 'en-US';
-                }
-                u.onstart = () => { started = true; };
-                u.onend = finish;
-                u.onerror = finish;
-                window.__fcUtterance = u; // keep a reference so the browser doesn't drop onend
-                if (synth.paused) synth.resume();
-                synth.speak(u);
-                // Safari sometimes never fires onend: watch the engine ourselves as a backup
-                poll = setInterval(() => {
-                    if (token !== session) return finish();
-                    if (synth.speaking || synth.pending) { started = true; return; }
-                    if (started) finish();
-                }, 250);
-                // Hard cap in case the engine goes silent: ~ text length / speaking speed + 4s
-                cap = setTimeout(finish, (text.length / (13 * u.rate)) * 1000 + 4000);
-            });
+            const rate = parseFloat(($('fc-audio-rate') || {}).value || '1');
+            return studySpeak(text, rate, () => token === session);
         }
         function countdown(seconds, token) {
             const bar = $('fc-audio-countdown');
@@ -17203,28 +17248,8 @@ cp ~/Desktop/"riverside_podcast_#1 whats up and triggers _ oct 17, 2025 0_aisha'
 
         // ---------- Speech (Chrome + Safari safe) ----------
         function speakOne(text, token) {
-            return new Promise((res) => {
-                const synth = getSynth();
-                if (!synth || token !== session) return res(false);
-                let done = false, started = false, poll = null, cap = null;
-                const finish = () => { if (done) return; done = true; clearInterval(poll); clearTimeout(cap); res(token === session); };
-                const u = new SpeechSynthesisUtterance(text);
-                u.rate = parseFloat(($('sg-audio-rate') || {}).value || '1');
-                u.pitch = 1; u.volume = 1;
-                if (typeof preferredVoice !== 'undefined' && preferredVoice) { u.lang = preferredVoice.lang; u.voice = preferredVoice; }
-                else { u.lang = 'en-US'; }
-                u.onstart = () => { started = true; };
-                u.onend = finish; u.onerror = finish;
-                window.__sgUtterance = u;
-                if (synth.paused) synth.resume();
-                synth.speak(u);
-                poll = setInterval(() => {
-                    if (token !== session) return finish();
-                    if (synth.speaking || synth.pending) { started = true; return; }
-                    if (started) finish();
-                }, 250);
-                cap = setTimeout(finish, (text.length / (13 * u.rate)) * 1000 + 4000);
-            });
+            const rate = parseFloat(($('sg-audio-rate') || {}).value || '1');
+            return studySpeak(text, rate, () => token === session);
         }
         // Long paragraphs are split into sentences (Chrome cuts off very long speech)
         function chunk(text) {
